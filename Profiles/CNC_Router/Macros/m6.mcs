@@ -39,16 +39,16 @@ local FixedPlate_Y = GetRegister("2025/YPlate") -- fixed plate Y location
 local FirstTouchSpeed = GetRegister("2025/FirstTouchSpeed") -- speed in inches per minute to probe for finding the surface before going slower
 local SecondTouchSpeed = GetRegister("2025/SecondTouchSpeed") -- slower speed to touch at
 local TouchRetractHeight = GetRegister("2025/TouchRetractHeight") -- how much to move up before touching slower
-local moveToPlateDistance = GetRegister("2025//MoveToPlateDistance") -- how much to move up before touching slower
+local moveToPlateDistance = GetRegister("2025/MoveToPlateDistance") -- how much to move up before touching slower
 local ZClearance = GetRegister("2025/ZClearance")
 --switch the distance input for moving the z to a negative to move in the correct direction
-moveToPlateDistance = -moveToPlateDistance 
+moveToPlateDistance = - tonumber(moveToPlateDistance)
 local probingSearchDistance = GetRegister("2025/ProbingSearchDistance") -- how much to move up before touching slower
 --switch the distance input for probing to a negative to move in the correct direction
 probingSearchDistance = -probingSearchDistance
 
 local IgnoreM6 = GetRegister("2025/IgnoreM6")
---IgnoreM6 = tointeger(IgnoreM6)
+IgnoreM6 = tonumber(IgnoreM6)
 
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
@@ -104,7 +104,7 @@ end
   selectedTool = mc.mcToolGetSelected(inst)
    mc.mcCntlSetLastError(inst, "Starting M6")
   local posmode = mc.mcCntlGetPoundVar(inst, mc.SV_MOD_GROUP_3) --get the current mode so we can return to it when macro ends
-  local feedRate = mc.mcCntlGetPoundVar(inst, mc.FEEDRATE)
+  local feedRate = mc.mcCntlGetPoundVar(inst, 2134)
    mc.mcCntlSetLastError(inst, "Starting M6 -2")
 ----------------------------------------------------------------------------------------------------------------- 
   --Get positions before moving to do tool change
@@ -216,7 +216,7 @@ end
 	mc.mcToolSetCurrent(inst, selectedTool)
   end
  mc.mcCntlSetPoundVar(inst, mc.SV_MOD_GROUP_3, posmode)
- mc.mcCntlGetPoundVar(inst, mc.FEEDRATE, feedRate);
+ mc.mcCntlGetPoundVar(inst, 2134, feedRate);
  end -- end of check if new tool is the same as the old
 
 
