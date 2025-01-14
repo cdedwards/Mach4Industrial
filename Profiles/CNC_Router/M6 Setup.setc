@@ -1,0 +1,1877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mach4ScreenInfo>
+  <mcNotebookPage>
+    <Property name="Name">M6 Setup</Property>
+    <Property name="Enabled">1</Property>
+    <Property name="Hidden">0</Property>
+    <Property name="Shown">1</Property>
+    <Property name="Label">M6 Setup</Property>
+    <Property name="Hide Tab">0</Property>
+    <Property name="Bg Color">#F0F0F0</Property>
+    <Property name="Background Color">#F0F0F0</Property>
+    <Property name="Bg Image"></Property>
+    <Property name="Scale Method">0</Property>
+    <Property name="Text Height">9</Property>
+    <Property name="Global Script"></Property>
+    <Event name="On Enter Script"></Event>
+    <Event name="On Exit Script"></Event>
+    <mcGroup>
+      <Property name="Name">MultiProbing(1)</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">8</Property>
+      <Property name="Left">10</Property>
+      <Property name="Height">437</Property>
+      <Property name="Width">1317</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="Label"></Property>
+      <Property name="Fg Color"></Property>
+      <Property name="Bg Color"></Property>
+      <Property name="Bg Image"></Property>
+      <Property name="Scale Method">0</Property>
+      <Property name="No Border">0</Property>
+      <Property name="Global Script"></Property>
+      <mcButton2>
+        <Property name="Name">ProbingSetup1(1)</Property>
+        <Property name="Instance">0</Property>
+        <Property name="Top">261</Property>
+        <Property name="Left">24</Property>
+        <Property name="Height">65</Property>
+        <Property name="Width">150</Property>
+        <Property name="Enabled">1</Property>
+        <Property name="Hidden">0</Property>
+        <Property name="Shown">1</Property>
+        <Property name="Enable With Machine">0</Property>
+        <Property name="Enabled States">0</Property>
+        <Property name="Label">Probe Sequence\nStart</Property>
+        <Property name="Font">1;10;-13;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+        <Property name="Fg Color">#FFFFFF</Property>
+        <Property name="Text Color">#FFFFFF</Property>
+        <Property name="Bg Color">#D50000</Property>
+        <Property name="Mouse Over Color"></Property>
+        <Property name="Down Color"></Property>
+        <Property name="Border Color"></Property>
+        <Property name="Button Color">#D50000</Property>
+        <Property name="Border">2</Property>
+        <Property name="Corner Radius">0</Property>
+        <Property name="Leave Is Up">0</Property>
+        <Event name="Left Down Action">0</Event>
+        <Event name="Left Up Action">0</Event>
+        <Event name="Left Down Script"></Event>
+        <Event name="Left Up Script"></Event>
+        <Event name="Clicked Action">0</Event>
+        <Event name="Clicked Script">local inst = mc.mcGetInstance();
+
+local hreg = mc.mcRegGetHandle(inst, 'ESS/Probing_State') -- registry location for Probing_State value. We will use this later to make sure the probe stops when the gcode for probing occurs
+local isHomed = 1 --, rc = acHoming:GetAllAxesHomed() -- used to make sure homing has occured
+local zOrigin = 0
+
+
+function GetRegister(regname)
+ local inst = mc.mcGetInstance()
+ local hreg = mc.mcRegGetHandle(inst, string.format("iRegs0/%s", regname))
+ return mc.mcRegGetValueString(hreg)
+end
+
+ function WriteRegister(regname, regvalue)
+ local inst = mc.mcGetInstance()
+ local hreg = mc.mcRegGetHandle(inst, string.format("iRegs0/%s", regname))
+ mc.mcRegSetValueString(hreg, tostring(regvalue))
+end
+
+
+zHeightSurface = GetRegister("2025/ZHeightSurface")
+fixedPlateTouchZ = GetRegister("2025/FixedPlateTouchZ") -- the variable to store the height of tool that probed the permanent plate
+LastFixedPlateTouchZ = GetRegister("2025/LastFixedPlateTouchZ") -- var to store first touch in after m6.
+fixedPlate_X = GetRegister("2025/PlateX") -- fixed plate X location
+fixedPlate_Y = GetRegister("2025/PlateY") -- fixed plate Y location
+plateThickness = GetRegister("2025/PlateThickness") -- the thickness of the plate used to touch the surface z zero. For subtracting from touch position
+firstTouchSpeed = GetRegister("2025/FirstTouchSpeed") -- speed in inches per minute to probe for finding the surface before going slower
+secondTouchSpeed = GetRegister("2025/SecondTouchSpeed") -- slower speed to touch at
+touchRetractHeight = GetRegister("2025/TouchRetractHeight") -- how much to move up before touching slower
+moveToPlateDistance = GetRegister("2025/MoveToPlateDistance") -- how much to move up before touching slower
+--switch the distance input for moving the z to a negative to move in the correct direction
+moveToPlateDistance = -moveToPlateDistance 
+probingSearchDistance = GetRegister("2025/ProbingSearchDistance") -- how much to move up before touching slower
+--switch the distance input for probing to a negative to move in the correct direction
+probingSearchDistance = -probingSearchDistance
+
+--[[ 
+This function will be called to turn off and on soft limits 
+of the Z axis during the probing routine. Otherwise, it will 
+error or you ahve to manually click on soft limits button]]
+
+function SetSoftLimits(axis, state)
+	mc.mcSoftLimitSetState(inst, axis, state);
+end
+
+
+function SetAxisPosition(axis, AxisPos)
+	
+	 mc.mcAxisSetPos(inst, axis, AxisPos)
+	 
+	end
+
+----------------------------------------------------------------------------------------------------------------------------------
+--Before we start probing anything, let's check and make sure we are homed
+----------------------------------------------------------------------------------------------------------------------------------
+if (rc ~= mc.MERROR_NOERROR) then
+	mc.mcCntlLog(inst, "Failed to determine if machine is homed, rc = "..rc, "", -1)
+	wx.wxMessageBox("Homing check failed, cannot set up M6 settings without homing first.", "Manual Tool Change")
+	return
+end
+if isHomed then
+   SetSoftLimits(mc.Z_AXIS, mc.MC_OFF) -- turn off z axis soft limit for probing. Have to do this because you can input a large number in the probing distance input box. 
+   local posmode = mc.mcCntlGetPoundVar(inst, mc.SV_MOD_GROUP_3) --get the current mode so we can return to it when macro ends
+----------------------------------------------------------------------------------------------------------------------------------   
+-- First move tool over the moveable plate and zero out to the surface. This will become the current offset z0 and give us a number to work with when finding the fixed plate height difference
+-- Start the probing for Z first move
+----------------------------------------------------------------------------------------------------------------------------------
+   mc.mcCntlGcodeExecuteWait(inst,'G91 G31 Z'..probingSearchDistance .. 'F' .. firstTouchSpeed)
+   if mc.mcRegGetValue(hreg) == -1 then
+	wx.wxMessageBox('No probe strike. Aborting the rest of the routine')
+	return
+   end
+   mc.mcCntlGcodeExecuteWait(inst, 'G91 Z'.. touchRetractHeight) -- retract and probe slower
+----------------------------------------------------------------------------------------------------------------------------------   
+-- Second probing with slower speed   
+----------------------------------------------------------------------------------------------------------------------------------
+   mc.mcCntlGcodeExecuteWait(inst,'G91 G31 Z'..probingSearchDistance .. 'F' .. secondTouchSpeed)
+   
+   if mc.mcRegGetValue(hreg) == -1 then
+	wx.wxMessageBox('No probe strike. Aborting the rest of the routine')
+	return
+   end
+   mc.mcCntlSetLastError(inst, "First probe complete")
+
+
+  local AxisNumber = mc.Z_AXIS --
+  local ZAxisPos = 0  -- just setting to 0 before measure. 
+  SetAxisPosition(AxisNumber, ZAxisPos)  
+
+  zOrigin = mc.mcAxisGetPos(inst, mc.Z_AXIS) -- need to store this in zHeightSurface for later. First, we need to subtract the palte thickness from this number.
+----------------------------------------------------------------------------------------------------------------------------------
+-- End probing for Z first move and setting work surface to 0
+----------------------------------------------------------------------------------------------------------------------------------
+  zHeightSurface = math.abs(zOrigin - plateThickness) -- subtracts the thickness of the moveable plate from the measurement of the probing touch height
+  WriteRegister("2025/ZHeightSurface", zHeightSurface) -- Now store the machine z location that is currently used for work coordinate z0
+-- Set position of z axis with mcAxisSetPos and use this as the z height for your work coordinate Z0
+  local double ZAxisPos = zHeightSurface
+  local int AxisNumber = mc.Z_AXIS
+  SetAxisPosition(AxisNumber, ZAxisPos)    
+  
+--------------------------------------------------------------------------------------------------------------------------------------
+-- End of first surface probe routine. Ask to move the plate over to the permanent position before moving the tool there
+--------------------------------------------------------------------------------------------------------------------------------------
+   wx.wxMessageBox("Moving to mounted plate now. Press OK to Continue")
+
+ --------------------------------------------------------------------------------------------------------------------------------------
+-- Move to permanent probe plate xy and probe
+--------------------------------------------------------------------------------------------------------------------------------------
+mc.mcCntlSetLastError(inst, "Moving to permanent plate")
+mc.mcCntlGcodeExecuteWait(inst, "G90 G53 G0 Z0.0"); -- Move the Z axis all the way up before XY moves
+mc.mcCntlGcodeExecuteWait(inst, "G53 G01 X" .. fixedPlate_X .. "y" .. fixedPlate_Y .. "f350");-- use variables from gui for location
+mc.mcCntlGcodeExecuteWait(inst, 'G90 G53 G0 Z' .. moveToPlateDistance); -- Move the Z axis down. second probing pre-move in m6 setup screen is the input for this number.
+----------------------------------------------------------------------------------------------------------------------------------
+-- probing 2 times. 1 fast and 2 is slow
+----------------------------------------------------------------------------------------------------------------------------------
+   mc.mcCntlGcodeExecuteWait(inst,'G91 G31 Z'..probingSearchDistance .. 'F' .. firstTouchSpeed) -- probing distance and first touch speed on m6 setup screen is the input for this number.
+   if mc.mcRegGetValue(hreg) == -1 then -- look for error input from ess to confirm touch happened and exit if not
+	wx.wxMessageBox('No probe strike. Aborting the rest of the routine')
+	return
+   end
+   mc.mcCntlGcodeExecuteWait(inst, 'G91 Z'.. touchRetractHeight) -- retract and probe slower
+-- Second probing with slower speed   
+   mc.mcCntlGcodeExecuteWait(inst,'G91 G31 Z'..probingSearchDistance .. 'F' .. secondTouchSpeed) -- probe again and use the second touch speed input on m6 screen
+   if mc.mcRegGetValue(hreg) == -1 then --look for error input from ess to confirm touch happened and exit if not
+	wx.wxMessageBox('No probe strike. Aborting the rest of the routine')
+	return
+   end
+   
+fixedPlateTouchZ = mc.mcAxisGetPos(inst, mc.Z_AXIS) -- store the current height as the touch plate height
+WriteRegister("2025/FixedPlateTouchZ", fixedPlateTouchZ) -- store the current plate height for use in the m6 macro later
+resetLastFixedPlateTouchz = "reset"
+WriteRegister("2025/LastFixedPlateTouchZ", resetLastFixedPlateTouchz) -- just to get rid of an old value to show it has not run yet
+
+--wx.wxMessageBox(
+ mc.mcCntlSetLastError(inst, "Fixed Plate height is " .. fixedPlateTouchZ) 
+-- End Move to permanent probe plate xy and probe
+----------------------------------------------------------------------------------------------------------------------------------
+-- finish up
+----------------------------------------------------------------------------------------------------------------------------------
+  local ProbeChoice = wx.wxMessageBox("Remove Probe Clip","Click YES to move z to top and NO to prevent z from going to top" , 18)  -- brings up a dialog box and waits for a selection to proceed
+  if (ProbeChoice == 16) then  --16 is cancel
+      rc = mc.mcCntlSetLastError(inst, 'probing.')  
+  
+  return
+  elseif (ProbeChoice == 2) then
+ -- mc.mcCntlGcodeExecute(inst, "G04 p.5") -- Dwell for half a second
+  mc.mcCntlGcodeExecuteWait(inst, "G90 G53 G0 Z0.0"); -- Move the Z axis all the way up before XY moves
+  elseif (ProbeChoice == 8) then  
+  mc.mcCntlGcodeExecute(inst, string.format('G ' .. posmode))--return to pre macro mode G90, or G91
+  SetSoftLimits(mc.Z_AXIS, mc.MC_ON) -- turn soft limits back on
+  mc.mcCntlSetLastError(inst, "M6 Setup Complete and Soft Limits Enabled")
+end
+
+else
+  wx.wxMessageBox("Your machine must be homed\nbefore we can set up M6.", "Manual Tool Change") -- if not yet homed, exit with this message to home before trying again
+end
+
+
+</Event>
+        <Event name="Goto Page"></Event>
+        <Event name="Run MDI"></Event>
+      </mcButton2>
+      <mcTextCtrl>
+        <Property name="Name">txt(7)</Property>
+        <Property name="Instance">0</Property>
+        <Property name="Top">398</Property>
+        <Property name="Left">357</Property>
+        <Property name="Height">25</Property>
+        <Property name="Width">113</Property>
+        <Property name="Enabled">1</Property>
+        <Property name="Hidden">0</Property>
+        <Property name="Shown">1</Property>
+        <Property name="Enable With Machine">0</Property>
+        <Property name="Enabled States">0</Property>
+        <Property name="Editor">0</Property>
+        <Property name="Justify">1</Property>
+        <Property name="Border">3</Property>
+        <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+        <Property name="Fg Color">#000000</Property>
+        <Property name="Bg Color"></Property>
+        <Property name="Value">22</Property>
+        <Property name="Register">iRegs0/2025/FixedPlateTouchZ</Property>
+        <Event name="On Update Script"></Event>
+        <Event name="On Modify Script"></Event>
+      </mcTextCtrl>
+      <mcStaticText>
+        <Property name="Name">lbl(65)</Property>
+        <Property name="Instance">0</Property>
+        <Property name="Top">405</Property>
+        <Property name="Left">193</Property>
+        <Property name="Height">19</Property>
+        <Property name="Width">160</Property>
+        <Property name="Enabled">1</Property>
+        <Property name="Hidden">0</Property>
+        <Property name="Shown">1</Property>
+        <Property name="Enable With Machine">0</Property>
+        <Property name="Enabled States">0</Property>
+        <Property name="Justify">-1</Property>
+        <Property name="Border">0</Property>
+        <Property name="Label">Last Probed Height</Property>
+        <Property name="Lines"></Property>
+        <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+        <Property name="Fg Color">#000000</Property>
+        <Property name="Bg Color"></Property>
+        <Property name="Label Code">-1</Property>
+        <Property name="Register"></Property>
+        <Property name="SysVar">0</Property>
+        <Property name="SysParam">0</Property>
+        <Event name="On Update Script"></Event>
+      </mcStaticText>
+      <mcStaticText>
+        <Property name="Name">lbl(66)</Property>
+        <Property name="Instance">0</Property>
+        <Property name="Top">369</Property>
+        <Property name="Left">193</Property>
+        <Property name="Height">22</Property>
+        <Property name="Width">160</Property>
+        <Property name="Enabled">1</Property>
+        <Property name="Hidden">0</Property>
+        <Property name="Shown">1</Property>
+        <Property name="Enable With Machine">0</Property>
+        <Property name="Enabled States">0</Property>
+        <Property name="Justify">-1</Property>
+        <Property name="Border">0</Property>
+        <Property name="Label">Current Probed Height</Property>
+        <Property name="Lines"></Property>
+        <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+        <Property name="Fg Color">#000000</Property>
+        <Property name="Bg Color"></Property>
+        <Property name="Label Code">-1</Property>
+        <Property name="Register"></Property>
+        <Property name="SysVar">0</Property>
+        <Property name="SysParam">0</Property>
+        <Event name="On Update Script"></Event>
+      </mcStaticText>
+      <mcTextCtrl>
+        <Property name="Name">txt(8)</Property>
+        <Property name="Instance">0</Property>
+        <Property name="Top">369</Property>
+        <Property name="Left">357</Property>
+        <Property name="Height">25</Property>
+        <Property name="Width">113</Property>
+        <Property name="Enabled">1</Property>
+        <Property name="Hidden">0</Property>
+        <Property name="Shown">1</Property>
+        <Property name="Enable With Machine">0</Property>
+        <Property name="Enabled States">0</Property>
+        <Property name="Editor">0</Property>
+        <Property name="Justify">1</Property>
+        <Property name="Border">3</Property>
+        <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+        <Property name="Fg Color">#000000</Property>
+        <Property name="Bg Color"></Property>
+        <Property name="Value">22</Property>
+        <Property name="Register">iRegs0/2025/FixedPlateTouchZ</Property>
+        <Event name="On Update Script"></Event>
+        <Event name="On Modify Script"></Event>
+      </mcTextCtrl>
+      <mcButton2>
+        <Property name="Name">btn(82)</Property>
+        <Property name="Instance">0</Property>
+        <Property name="Top">125</Property>
+        <Property name="Left">485</Property>
+        <Property name="Height">30</Property>
+        <Property name="Width">129</Property>
+        <Property name="Enabled">1</Property>
+        <Property name="Hidden">0</Property>
+        <Property name="Shown">1</Property>
+        <Property name="Enable With Machine">0</Property>
+        <Property name="Enabled States">0</Property>
+        <Property name="Label">Go To Fixed Plate</Property>
+        <Property name="Font">1;10;-13;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+        <Property name="Fg Color">#000000</Property>
+        <Property name="Text Color">#000000</Property>
+        <Property name="Bg Color"></Property>
+        <Property name="Mouse Over Color"></Property>
+        <Property name="Down Color"></Property>
+        <Property name="Border Color"></Property>
+        <Property name="Button Color"></Property>
+        <Property name="Border">2</Property>
+        <Property name="Corner Radius">0</Property>
+        <Property name="Leave Is Up">0</Property>
+        <Event name="Left Down Action">0</Event>
+        <Event name="Left Up Action">0</Event>
+        <Event name="Left Down Script"></Event>
+        <Event name="Left Up Script"></Event>
+        <Event name="Clicked Action">0</Event>
+        <Event name="Clicked Script">
+local inst = mc.mcGetInstance()
+
+ function GetRegister(regname)
+ local inst = mc.mcGetInstance()
+ local hreg = mc.mcRegGetHandle(inst, string.format("iRegs0/%s", regname))
+ return mc.mcRegGetValueString(hreg)
+end
+
+
+function GoToPermPlate()
+	mc.mcCntlGcodeExecute(inst, 'G53 X'.. FixedPlate_X .. 'Y' .. FixedPlate_Y .. 'f300')
+end
+
+FixedPlate_X = GetRegister("2025/XPlate") -- fixed plate X location
+FixedPlate_Y = GetRegister("2025/YPlate") -- fixed plate Y location
+
+mc.mcCntlGcodeExecuteWait(inst, "G90 G53 G0 Z0.0");--Move the Z axis all the way up
+GoToPermPlate()
+
+
+
+
+
+
+
+
+--SetSoftLimits(mc.Z_AXIS, mc.MC_ON)
+
+--wx.wxMessageBox(tostring(mc.mcSoftLimitGetState, "Z_Axis is set to: "))
+</Event>
+        <Event name="Goto Page"></Event>
+        <Event name="Run MDI"></Event>
+      </mcButton2>
+      <mcLuaPanel>
+        <Property name="Name">luaFixtureTable(1)</Property>
+        <Property name="Instance">0</Property>
+        <Property name="Top">10</Property>
+        <Property name="Left">623</Property>
+        <Property name="Height">350</Property>
+        <Property name="Width">700</Property>
+        <Property name="Enabled">1</Property>
+        <Property name="Hidden">0</Property>
+        <Property name="Shown">1</Property>
+        <Property name="Enable With Machine">0</Property>
+        <Property name="Enabled States">0</Property>
+        <Event name="Script">local inst = mc.mcGetInstance("panelFixtureTable")
+
+-- local profile = mc.mcProfileGetName(inst)
+local path = mc.mcCntlGetMachDir(inst)
+
+package.path = package.path .. ";" .. path .. "\\Modules\\AvidCNC\\?.luac;" 
+
+package.loaded.FixtureTable = nil
+touFT = require "FixtureTable"
+
+touFT.FixtureOffsets()</Event>
+      </mcLuaPanel>
+      <mcGroup>
+        <Property name="Name">grp(22)</Property>
+        <Property name="Instance">0</Property>
+        <Property name="Top">16</Property>
+        <Property name="Left">272</Property>
+        <Property name="Height">218</Property>
+        <Property name="Width">199</Property>
+        <Property name="Enabled">1</Property>
+        <Property name="Hidden">0</Property>
+        <Property name="Shown">1</Property>
+        <Property name="Enable With Machine">0</Property>
+        <Property name="Enabled States">0</Property>
+        <Property name="Label">Plate Positions - machine coord</Property>
+        <Property name="Fg Color"></Property>
+        <Property name="Bg Color">#7ECDF8</Property>
+        <Property name="Bg Image"></Property>
+        <Property name="Scale Method">0</Property>
+        <Property name="No Border">0</Property>
+        <Property name="Global Script"></Property>
+        <mcTextCtrl>
+          <Property name="Name">txt(14)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">75</Property>
+          <Property name="Left">128</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">50</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Editor">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">3</Property>
+          <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Value">1.5</Property>
+          <Property name="Register">iRegs0/2025/TCZ</Property>
+          <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+          <Event name="On Modify Script"></Event>
+        </mcTextCtrl>
+        <mcStaticText>
+          <Property name="Name">lbl(434)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">50</Property>
+          <Property name="Left">115</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">70</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Justify">0</Property>
+          <Property name="Border">0</Property>
+          <Property name="Label">MTC Z</Property>
+          <Property name="Lines"></Property>
+          <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Label Code">-1</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Event name="On Update Script"></Event>
+        </mcStaticText>
+        <mcStaticText>
+          <Property name="Name">lbl(73)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">50</Property>
+          <Property name="Left">-2</Property>
+          <Property name="Height">22</Property>
+          <Property name="Width">70</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Justify">0</Property>
+          <Property name="Border">0</Property>
+          <Property name="Label">MTC X</Property>
+          <Property name="Lines"></Property>
+          <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Label Code">-1</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Event name="On Update Script"></Event>
+        </mcStaticText>
+        <mcTextCtrl>
+          <Property name="Name">txt(24)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">75</Property>
+          <Property name="Left">9</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">50</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Editor">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">3</Property>
+          <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Value">24</Property>
+          <Property name="Register">iRegs0/2025/TCX</Property>
+          <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+          <Event name="On Modify Script"></Event>
+        </mcTextCtrl>
+        <mcStaticText>
+          <Property name="Name">lbl(71)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">105</Property>
+          <Property name="Left">17</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">160</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Justify">0</Property>
+          <Property name="Border">5</Property>
+          <Property name="Label">Fixed Plate Location</Property>
+          <Property name="Lines"></Property>
+          <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color">#00FF40</Property>
+          <Property name="Label Code">-1</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Event name="On Update Script"></Event>
+        </mcStaticText>
+        <mcStaticText>
+          <Property name="Name">lbl(72)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">132</Property>
+          <Property name="Left">19</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">72</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">0</Property>
+          <Property name="Label">X - Location</Property>
+          <Property name="Lines"></Property>
+          <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Label Code">-1</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Event name="On Update Script"></Event>
+        </mcStaticText>
+        <mcTextCtrl>
+          <Property name="Name">txt(9)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">155</Property>
+          <Property name="Left">9</Property>
+          <Property name="Height">28</Property>
+          <Property name="Width">85</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Editor">0</Property>
+          <Property name="Justify">0</Property>
+          <Property name="Border">3</Property>
+          <Property name="Font">1;9;-15;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Value">4</Property>
+          <Property name="Register">iRegs0/2025/XPlate</Property>
+          <Event name="On Update Script"></Event>
+          <Event name="On Modify Script"></Event>
+        </mcTextCtrl>
+        <mcTextCtrl>
+          <Property name="Name">txt(11)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">155</Property>
+          <Property name="Left">102</Property>
+          <Property name="Height">28</Property>
+          <Property name="Width">85</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Editor">0</Property>
+          <Property name="Justify">0</Property>
+          <Property name="Border">3</Property>
+          <Property name="Font">1;9;-15;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Value">7</Property>
+          <Property name="Register">iRegs0/2025/YPlate</Property>
+          <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+          <Event name="On Modify Script"></Event>
+        </mcTextCtrl>
+        <mcStaticText>
+          <Property name="Name">lbl(73)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">132</Property>
+          <Property name="Left">106</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">76</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">0</Property>
+          <Property name="Label">Y - Location</Property>
+          <Property name="Lines"></Property>
+          <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Label Code">-1</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Event name="On Update Script"></Event>
+        </mcStaticText>
+        <mcStaticText>
+          <Property name="Name">lbl(125)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">21</Property>
+          <Property name="Left">51</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">84</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Justify">0</Property>
+          <Property name="Border">5</Property>
+          <Property name="Label">MTC Position</Property>
+          <Property name="Lines"></Property>
+          <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color">#00FF40</Property>
+          <Property name="Label Code">-1</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Event name="On Update Script"></Event>
+        </mcStaticText>
+        <mcStaticText>
+          <Property name="Name">lbl(68)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">50</Property>
+          <Property name="Left">55</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">70</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Justify">0</Property>
+          <Property name="Border">0</Property>
+          <Property name="Label">MTC Y</Property>
+          <Property name="Lines"></Property>
+          <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Label Code">-1</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Event name="On Update Script"></Event>
+        </mcStaticText>
+        <mcTextCtrl>
+          <Property name="Name">txt(8)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">75</Property>
+          <Property name="Left">68</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">50</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Editor">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">3</Property>
+          <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Value">6</Property>
+          <Property name="Register">iRegs0/2025/TCY</Property>
+          <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+          <Event name="On Modify Script"></Event>
+        </mcTextCtrl>
+      </mcGroup>
+      <mcGroup>
+        <Property name="Name">ProbingSettings</Property>
+        <Property name="Instance">0</Property>
+        <Property name="Top">16</Property>
+        <Property name="Left">26</Property>
+        <Property name="Height">218</Property>
+        <Property name="Width">238</Property>
+        <Property name="Enabled">1</Property>
+        <Property name="Hidden">0</Property>
+        <Property name="Shown">1</Property>
+        <Property name="Enable With Machine">0</Property>
+        <Property name="Enabled States">0</Property>
+        <Property name="Label">Probing Settings</Property>
+        <Property name="Fg Color"></Property>
+        <Property name="Bg Color">#7ECDF8</Property>
+        <Property name="Bg Image"></Property>
+        <Property name="Scale Method">0</Property>
+        <Property name="No Border">0</Property>
+        <Property name="Global Script"></Property>
+        <mcTextCtrl>
+          <Property name="Name">txt(15)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">170</Property>
+          <Property name="Left">149</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">50</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Editor">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">3</Property>
+          <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Value">2</Property>
+          <Property name="Register">iRegs0/2025/MoveToPlateDistance</Property>
+          <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+          <Event name="On Modify Script"></Event>
+        </mcTextCtrl>
+        <mcStaticText>
+          <Property name="Name">lbl(203)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">168</Property>
+          <Property name="Left">10</Property>
+          <Property name="Height">40</Property>
+          <Property name="Width">120</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">0</Property>
+          <Property name="Label">2nd Probing\nPre-Move</Property>
+          <Property name="Lines"></Property>
+          <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Label Code">-1</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Event name="On Update Script"></Event>
+        </mcStaticText>
+        <mcStaticText>
+          <Property name="Name">lbl(79)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">138</Property>
+          <Property name="Left">10</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">114</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">0</Property>
+          <Property name="Label">Probing Distance</Property>
+          <Property name="Lines"></Property>
+          <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Label Code">-1</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Event name="On Update Script"></Event>
+        </mcStaticText>
+        <mcTextCtrl>
+          <Property name="Name">txt(10)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">140</Property>
+          <Property name="Left">149</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">50</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Editor">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">3</Property>
+          <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Value">7</Property>
+          <Property name="Register">iRegs0/2025/ProbingSearchDistance</Property>
+          <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+          <Event name="On Modify Script"></Event>
+        </mcTextCtrl>
+        <mcTextCtrl>
+          <Property name="Name">txt(13)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">108</Property>
+          <Property name="Left">152</Property>
+          <Property name="Height">26</Property>
+          <Property name="Width">44</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Editor">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">3</Property>
+          <Property name="Font">1;10.5;-14;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Value">0.5</Property>
+          <Property name="Register">iRegs0/2025/TouchRetractHeight</Property>
+          <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+          <Event name="On Modify Script"></Event>
+        </mcTextCtrl>
+        <mcStaticText>
+          <Property name="Name">lbl(77)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">109</Property>
+          <Property name="Left">9</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">123</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">0</Property>
+          <Property name="Label">Retract Height</Property>
+          <Property name="Lines"></Property>
+          <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Label Code">-1</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Event name="On Update Script"></Event>
+        </mcStaticText>
+        <mcStaticText>
+          <Property name="Name">lbl(78)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">79</Property>
+          <Property name="Left">9</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">127</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">0</Property>
+          <Property name="Label">Second Touch Speed</Property>
+          <Property name="Lines"></Property>
+          <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Label Code">-1</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Event name="On Update Script"></Event>
+        </mcStaticText>
+        <mcTextCtrl>
+          <Property name="Name">txt(14)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">77</Property>
+          <Property name="Left">152</Property>
+          <Property name="Height">26</Property>
+          <Property name="Width">44</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Editor">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">3</Property>
+          <Property name="Font">1;10.5;-14;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Value">5</Property>
+          <Property name="Register">iRegs0/2025/SecondTouchSpeed</Property>
+          <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+          <Event name="On Modify Script"></Event>
+        </mcTextCtrl>
+        <mcTextCtrl>
+          <Property name="Name">txt(15)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">44</Property>
+          <Property name="Left">150</Property>
+          <Property name="Height">26</Property>
+          <Property name="Width">44</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Editor">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">3</Property>
+          <Property name="Font">1;10.5;-14;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Value">10</Property>
+          <Property name="Register">iRegs0/2025/FirstTouchSpeed</Property>
+          <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+          <Event name="On Modify Script"></Event>
+        </mcTextCtrl>
+        <mcStaticText>
+          <Property name="Name">lbl(79)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">48</Property>
+          <Property name="Left">9</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">110</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">0</Property>
+          <Property name="Label">First Touch Speed</Property>
+          <Property name="Lines"></Property>
+          <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Label Code">-1</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Event name="On Update Script"></Event>
+        </mcStaticText>
+        <mcStaticText>
+          <Property name="Name">lbl(80)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">21</Property>
+          <Property name="Left">9</Property>
+          <Property name="Height">22</Property>
+          <Property name="Width">131</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">0</Property>
+          <Property name="Label">Touch Plate Thickness</Property>
+          <Property name="Lines"></Property>
+          <Property name="Font">1;9;-12;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Label Code">-1</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Event name="On Update Script"></Event>
+        </mcStaticText>
+        <mcTextCtrl>
+          <Property name="Name">txt(14)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">15</Property>
+          <Property name="Left">152</Property>
+          <Property name="Height">26</Property>
+          <Property name="Width">44</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Editor">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">3</Property>
+          <Property name="Font">1;9;-14;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Value">0.125</Property>
+          <Property name="Register">iRegs0/2025/PlateThickness</Property>
+          <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+          <Event name="On Modify Script"></Event>
+        </mcTextCtrl>
+      </mcGroup>
+      <mcGroup>
+        <Property name="Name">grp(24)</Property>
+        <Property name="Instance">0</Property>
+        <Property name="Top">185</Property>
+        <Property name="Left">486</Property>
+        <Property name="Height">240</Property>
+        <Property name="Width">360</Property>
+        <Property name="Enabled">1</Property>
+        <Property name="Hidden">0</Property>
+        <Property name="Shown">1</Property>
+        <Property name="Enable With Machine">0</Property>
+        <Property name="Enabled States">0</Property>
+        <Property name="Label"></Property>
+        <Property name="Fg Color"></Property>
+        <Property name="Bg Color"></Property>
+        <Property name="Bg Image"></Property>
+        <Property name="Scale Method">0</Property>
+        <Property name="No Border">0</Property>
+        <Property name="Global Script"></Property>
+        <mcButton2>
+          <Property name="Name">btnZeroX(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">18</Property>
+          <Property name="Left">17</Property>
+          <Property name="Height">35</Property>
+          <Property name="Width">55</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">1</Property>
+          <Property name="Enabled States">1</Property>
+          <Property name="Label">Zero\nX</Property>
+          <Property name="Font">1;10;-13;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Text Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Mouse Over Color"></Property>
+          <Property name="Down Color"></Property>
+          <Property name="Border Color"></Property>
+          <Property name="Button Color"></Property>
+          <Property name="Border">2</Property>
+          <Property name="Corner Radius">0</Property>
+          <Property name="Leave Is Up">0</Property>
+          <Event name="Left Down Action">0</Event>
+          <Event name="Left Up Action">100</Event>
+          <Event name="Left Down Script"></Event>
+          <Event name="Left Up Script"></Event>
+          <Event name="Clicked Action">0</Event>
+          <Event name="Clicked Script"></Event>
+          <Event name="Goto Page"></Event>
+          <Event name="Run MDI"></Event>
+        </mcButton2>
+        <mcButton2>
+          <Property name="Name">btnZeroY(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">55</Property>
+          <Property name="Left">17</Property>
+          <Property name="Height">35</Property>
+          <Property name="Width">55</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">1</Property>
+          <Property name="Enabled States">1</Property>
+          <Property name="Label">Zero\nY</Property>
+          <Property name="Font">1;10;-13;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Text Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Mouse Over Color"></Property>
+          <Property name="Down Color"></Property>
+          <Property name="Border Color"></Property>
+          <Property name="Button Color"></Property>
+          <Property name="Border">2</Property>
+          <Property name="Corner Radius">0</Property>
+          <Property name="Leave Is Up">0</Property>
+          <Event name="Left Down Action">0</Event>
+          <Event name="Left Up Action">101</Event>
+          <Event name="Left Down Script"></Event>
+          <Event name="Left Up Script"></Event>
+          <Event name="Clicked Action">0</Event>
+          <Event name="Clicked Script"></Event>
+          <Event name="Goto Page"></Event>
+          <Event name="Run MDI"></Event>
+        </mcButton2>
+        <mcButton2>
+          <Property name="Name">btnZeroZ(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">92</Property>
+          <Property name="Left">17</Property>
+          <Property name="Height">35</Property>
+          <Property name="Width">55</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">1</Property>
+          <Property name="Enabled States">1</Property>
+          <Property name="Label">Zero\nZ</Property>
+          <Property name="Font">1;10;-13;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Text Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Mouse Over Color"></Property>
+          <Property name="Down Color"></Property>
+          <Property name="Border Color"></Property>
+          <Property name="Button Color"></Property>
+          <Property name="Border">2</Property>
+          <Property name="Corner Radius">0</Property>
+          <Property name="Leave Is Up">0</Property>
+          <Event name="Left Down Action">0</Event>
+          <Event name="Left Up Action">102</Event>
+          <Event name="Left Down Script">local inst = mc.mcGetInstance("Zero Z Btn, left down script")
+local hreg, rc = mc.mcRegGetHandle(inst, "ESS/HC/Z_DRO_Force_Sync_With_Aux")
+if (rc ~= mc.MERROR_NOERROR) then
+  mc.mcCntlLog(
+    inst,
+    string.format("Failure to acquire register handle for ESS/HC/Z_DRO_Force_Sync_With_Aux, rc=%s", rc)
+    "",
+    -1)
+else
+  mc.mcRegSetValueLong(hreg, 1)
+  mc.mcCntlLog(inst, "Zero Z button forcing an ESS Z sync", "", -1)
+end
+
+hreg, rc = mc.mcRegGetHandle(inst, string.format("ESS/HC/Command"))
+if (rc ~= mc.MERROR_NOERROR) then
+  mc.mcCntlLog(
+    inst,
+    string.format("Failure to acquire register handle for ESS/HC/Command, rc=%s", rc)
+    "",
+    -1)
+else
+  mc.mcRegSetValueString(hreg, "(HC_WORK_Z_ZEROED=1)")
+  mc.mcCntlLog(inst, '....ZeroZButton() said that Z was zeroed', "", -1)
+end</Event>
+          <Event name="Left Up Script"></Event>
+          <Event name="Clicked Action">0</Event>
+          <Event name="Clicked Script"></Event>
+          <Event name="Goto Page"></Event>
+          <Event name="Run MDI"></Event>
+        </mcButton2>
+        <mcDro>
+          <Property name="Name">droXoffpage(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">17</Property>
+          <Property name="Left">162</Property>
+          <Property name="Height">30</Property>
+          <Property name="Width">180</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="DRO Code">520</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Property name="Analog In"></Property>
+          <Property name="Analog Out"></Property>
+          <Property name="Value">6.000000</Property>
+          <Property name="Format">%.4f</Property>
+          <Property name="Min"></Property>
+          <Property name="Max"></Property>
+          <Property name="Editor">0</Property>
+          <Property name="Justify">1</Property>
+          <Property name="Border">0</Property>
+          <Property name="Font">1;19.5;-26;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+          <Property name="UseFontScaling">0</Property>
+          <Property name="Fg Color">#00FF00</Property>
+          <Property name="Bg Color">#000000</Property>
+          <Property name="Editor Fg Color"></Property>
+          <Property name="Editor Bg Color"></Property>
+          <Property name="Show Units">1</Property>
+          <Property name="Units">0</Property>
+          <Property name="Inch Display">in</Property>
+          <Property name="Metric Display">mm</Property>
+          <Event name="On Update Script"></Event>
+          <Event name="On Modify Script"></Event>
+        </mcDro>
+        <mcDro>
+          <Property name="Name">droYoffpage(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">54</Property>
+          <Property name="Left">162</Property>
+          <Property name="Height">30</Property>
+          <Property name="Width">180</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="DRO Code">521</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Property name="Analog In"></Property>
+          <Property name="Analog Out"></Property>
+          <Property name="Value">5.000000</Property>
+          <Property name="Format">%.4f</Property>
+          <Property name="Min"></Property>
+          <Property name="Max"></Property>
+          <Property name="Editor">0</Property>
+          <Property name="Justify">1</Property>
+          <Property name="Border">0</Property>
+          <Property name="Font">1;19.5;-26;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+          <Property name="UseFontScaling">0</Property>
+          <Property name="Fg Color">#00FF00</Property>
+          <Property name="Bg Color">#000000</Property>
+          <Property name="Editor Fg Color"></Property>
+          <Property name="Editor Bg Color"></Property>
+          <Property name="Show Units">1</Property>
+          <Property name="Units">0</Property>
+          <Property name="Inch Display">in</Property>
+          <Property name="Metric Display">mm</Property>
+          <Event name="On Update Script"></Event>
+          <Event name="On Modify Script"></Event>
+        </mcDro>
+        <mcDro>
+          <Property name="Name">droZoffpage(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">89</Property>
+          <Property name="Left">162</Property>
+          <Property name="Height">30</Property>
+          <Property name="Width">180</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="DRO Code">522</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Property name="Analog In"></Property>
+          <Property name="Analog Out"></Property>
+          <Property name="Value">3.772860</Property>
+          <Property name="Format">%.4f</Property>
+          <Property name="Min"></Property>
+          <Property name="Max"></Property>
+          <Property name="Editor">0</Property>
+          <Property name="Justify">1</Property>
+          <Property name="Border">0</Property>
+          <Property name="Font">1;19.5;-26;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+          <Property name="UseFontScaling">0</Property>
+          <Property name="Fg Color">#00FF00</Property>
+          <Property name="Bg Color">#000000</Property>
+          <Property name="Editor Fg Color"></Property>
+          <Property name="Editor Bg Color"></Property>
+          <Property name="Show Units">1</Property>
+          <Property name="Units">0</Property>
+          <Property name="Inch Display">in</Property>
+          <Property name="Metric Display">mm</Property>
+          <Event name="On Update Script"></Event>
+          <Event name="On Modify Script"></Event>
+        </mcDro>
+        <mcDro>
+          <Property name="Name">droAoffpage(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">124</Property>
+          <Property name="Left">162</Property>
+          <Property name="Height">30</Property>
+          <Property name="Width">180</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="DRO Code">526</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Property name="Analog In"></Property>
+          <Property name="Analog Out"></Property>
+          <Property name="Value">0.000000</Property>
+          <Property name="Format">%.4f</Property>
+          <Property name="Min"></Property>
+          <Property name="Max"></Property>
+          <Property name="Editor">0</Property>
+          <Property name="Justify">1</Property>
+          <Property name="Border">0</Property>
+          <Property name="Font">1;19.5;-26;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+          <Property name="UseFontScaling">0</Property>
+          <Property name="Fg Color">#00FF00</Property>
+          <Property name="Bg Color">#000000</Property>
+          <Property name="Editor Fg Color"></Property>
+          <Property name="Editor Bg Color"></Property>
+          <Property name="Show Units">1</Property>
+          <Property name="Units">0</Property>
+          <Property name="Inch Display">in</Property>
+          <Property name="Metric Display">mm</Property>
+          <Event name="On Update Script"></Event>
+          <Event name="On Modify Script"></Event>
+        </mcDro>
+        <mcStaticText>
+          <Property name="Name">panelA(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">126</Property>
+          <Property name="Left">104</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">23</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">0</Property>
+          <Property name="Label">U</Property>
+          <Property name="Lines">1</Property>
+          <Property name="Font">1;12.75;-17;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Label Code">-1</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Event name="On Update Script"></Event>
+        </mcStaticText>
+        <mcStaticText>
+          <Property name="Name">panelZ(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">91</Property>
+          <Property name="Left">104</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">23</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">0</Property>
+          <Property name="Label">Z</Property>
+          <Property name="Lines">1</Property>
+          <Property name="Font">1;12.75;-17;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Label Code">-1</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Event name="On Update Script"></Event>
+        </mcStaticText>
+        <mcStaticText>
+          <Property name="Name">panelY(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">55</Property>
+          <Property name="Left">104</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">22</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">0</Property>
+          <Property name="Label">Y</Property>
+          <Property name="Lines">1</Property>
+          <Property name="Font">1;12.75;-17;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Label Code">-1</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Event name="On Update Script"></Event>
+        </mcStaticText>
+        <mcStaticText>
+          <Property name="Name">panelX(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">19</Property>
+          <Property name="Left">104</Property>
+          <Property name="Height">25</Property>
+          <Property name="Width">22</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Justify">-1</Property>
+          <Property name="Border">0</Property>
+          <Property name="Label">X</Property>
+          <Property name="Lines">1</Property>
+          <Property name="Font">1;12.75;-17;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Label Code">-1</Property>
+          <Property name="Register"></Property>
+          <Property name="SysVar">0</Property>
+          <Property name="SysParam">0</Property>
+          <Event name="On Update Script"></Event>
+        </mcStaticText>
+        <mcButton2>
+          <Property name="Name">btnMachCoordOffsetsTab(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">165</Property>
+          <Property name="Left">13</Property>
+          <Property name="Height">40</Property>
+          <Property name="Width">140</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Label">Switch to\nMachine Coordinates</Property>
+          <Property name="Font">1;10;-13;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Text Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Mouse Over Color"></Property>
+          <Property name="Down Color"></Property>
+          <Property name="Border Color"></Property>
+          <Property name="Button Color"></Property>
+          <Property name="Border">2</Property>
+          <Property name="Corner Radius">0</Property>
+          <Property name="Leave Is Up">0</Property>
+          <Event name="Left Down Action">0</Event>
+          <Event name="Left Up Action">14</Event>
+          <Event name="Left Down Script"></Event>
+          <Event name="Left Up Script"></Event>
+          <Event name="Clicked Action">0</Event>
+          <Event name="Clicked Script"></Event>
+          <Event name="Goto Page"></Event>
+          <Event name="Run MDI"></Event>
+        </mcButton2>
+        <mcLed>
+          <Property name="Name">ledMachCoordOffsetsTab(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">205</Property>
+          <Property name="Left">13</Property>
+          <Property name="Height">15</Property>
+          <Property name="Width">140</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Shape">1</Property>
+          <Property name="Square Border">134217728</Property>
+          <Property name="Value">0</Property>
+          <Property name="Color">16</Property>
+          <Property name="Image On"></Property>
+          <Property name="Image Off"></Property>
+          <Property name="Scale Method">0</Property>
+          <Property name="Type">1</Property>
+          <Property name="Blink Rate">500</Property>
+          <Property name="Input Signal">-1</Property>
+          <Property name="Output Signal">1123</Property>
+          <Property name="Register"></Property>
+          <Property name="Invert State">0</Property>
+        </mcLed>
+        <mcButton2>
+          <Property name="Name">btnGotoZero(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">165</Property>
+          <Property name="Left">175</Property>
+          <Property name="Height">40</Property>
+          <Property name="Width">125</Property>
+          <Property name="Enabled">0</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">1</Property>
+          <Property name="Enabled States">-2147483647</Property>
+          <Property name="Label">Go To Work\nX / Y Zero</Property>
+          <Property name="Font">1;10;-13;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Text Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Mouse Over Color"></Property>
+          <Property name="Down Color"></Property>
+          <Property name="Border Color"></Property>
+          <Property name="Button Color"></Property>
+          <Property name="Border">2</Property>
+          <Property name="Corner Radius">0</Property>
+          <Property name="Leave Is Up">0</Property>
+          <Event name="Left Down Action">0</Event>
+          <Event name="Left Up Action">0</Event>
+          <Event name="Left Down Script"></Event>
+          <Event name="Left Up Script">local show = avd.WarningDialog("Machine Movement Warning!", "Machine will move at the rapid rate and current Z height to the X and Y zero positions of the current work coordinates.", "iShowWarningMoveToWorkZero");
+if (show == 0) then
+	GoToWorkZero()
+end</Event>
+          <Event name="Clicked Action">0</Event>
+          <Event name="Clicked Script"></Event>
+          <Event name="Goto Page"></Event>
+          <Event name="Run MDI"></Event>
+        </mcButton2>
+        <mcButton2>
+          <Property name="Name">btnZeroA(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">127</Property>
+          <Property name="Left">18</Property>
+          <Property name="Height">35</Property>
+          <Property name="Width">55</Property>
+          <Property name="Enabled">0</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">1</Property>
+          <Property name="Enabled States">1</Property>
+          <Property name="Label">Zero\nU</Property>
+          <Property name="Font">1;10;-13;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+          <Property name="Fg Color">#000000</Property>
+          <Property name="Text Color">#000000</Property>
+          <Property name="Bg Color"></Property>
+          <Property name="Mouse Over Color"></Property>
+          <Property name="Down Color"></Property>
+          <Property name="Border Color"></Property>
+          <Property name="Button Color"></Property>
+          <Property name="Border">2</Property>
+          <Property name="Corner Radius">0</Property>
+          <Property name="Leave Is Up">0</Property>
+          <Event name="Left Down Action">0</Event>
+          <Event name="Left Up Action">103</Event>
+          <Event name="Left Down Script"></Event>
+          <Event name="Left Up Script"></Event>
+          <Event name="Clicked Action">0</Event>
+          <Event name="Clicked Script"></Event>
+          <Event name="Goto Page"></Event>
+          <Event name="Run MDI"></Event>
+        </mcButton2>
+        <mcLed>
+          <Property name="Name">ledAhomed(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">121</Property>
+          <Property name="Left">126</Property>
+          <Property name="Height">35</Property>
+          <Property name="Width">30</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Shape">1</Property>
+          <Property name="Square Border">134217728</Property>
+          <Property name="Value">0</Property>
+          <Property name="Color">9</Property>
+          <Property name="Image On"></Property>
+          <Property name="Image Off"></Property>
+          <Property name="Scale Method">0</Property>
+          <Property name="Type">0</Property>
+          <Property name="Blink Rate">500</Property>
+          <Property name="Input Signal">-1</Property>
+          <Property name="Output Signal">1132</Property>
+          <Property name="Register"></Property>
+          <Property name="Invert State">0</Property>
+        </mcLed>
+        <mcLed>
+          <Property name="Name">ledZhomed(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">86</Property>
+          <Property name="Left">126</Property>
+          <Property name="Height">35</Property>
+          <Property name="Width">30</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Shape">1</Property>
+          <Property name="Square Border">134217728</Property>
+          <Property name="Value">0</Property>
+          <Property name="Color">9</Property>
+          <Property name="Image On"></Property>
+          <Property name="Image Off"></Property>
+          <Property name="Scale Method">0</Property>
+          <Property name="Type">0</Property>
+          <Property name="Blink Rate">500</Property>
+          <Property name="Input Signal">-1</Property>
+          <Property name="Output Signal">1131</Property>
+          <Property name="Register"></Property>
+          <Property name="Invert State">0</Property>
+        </mcLed>
+        <mcLed>
+          <Property name="Name">ledYhomed(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">50</Property>
+          <Property name="Left">126</Property>
+          <Property name="Height">35</Property>
+          <Property name="Width">30</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Shape">1</Property>
+          <Property name="Square Border">134217728</Property>
+          <Property name="Value">0</Property>
+          <Property name="Color">9</Property>
+          <Property name="Image On"></Property>
+          <Property name="Image Off"></Property>
+          <Property name="Scale Method">0</Property>
+          <Property name="Type">0</Property>
+          <Property name="Blink Rate">500</Property>
+          <Property name="Input Signal">-1</Property>
+          <Property name="Output Signal">1130</Property>
+          <Property name="Register"></Property>
+          <Property name="Invert State">0</Property>
+        </mcLed>
+        <mcLed>
+          <Property name="Name">ledXhomed(1)</Property>
+          <Property name="Instance">0</Property>
+          <Property name="Top">14</Property>
+          <Property name="Left">126</Property>
+          <Property name="Height">35</Property>
+          <Property name="Width">30</Property>
+          <Property name="Enabled">1</Property>
+          <Property name="Hidden">0</Property>
+          <Property name="Shown">1</Property>
+          <Property name="Enable With Machine">0</Property>
+          <Property name="Enabled States">0</Property>
+          <Property name="Shape">1</Property>
+          <Property name="Square Border">134217728</Property>
+          <Property name="Value">0</Property>
+          <Property name="Color">9</Property>
+          <Property name="Image On"></Property>
+          <Property name="Image Off"></Property>
+          <Property name="Scale Method">0</Property>
+          <Property name="Type">0</Property>
+          <Property name="Blink Rate">500</Property>
+          <Property name="Input Signal">-1</Property>
+          <Property name="Output Signal">1129</Property>
+          <Property name="Register"></Property>
+          <Property name="Invert State">0</Property>
+        </mcLed>
+      </mcGroup>
+      <mcButton2>
+        <Property name="Name">btn(89)</Property>
+        <Property name="Instance">0</Property>
+        <Property name="Top">155</Property>
+        <Property name="Left">485</Property>
+        <Property name="Height">30</Property>
+        <Property name="Width">129</Property>
+        <Property name="Enabled">1</Property>
+        <Property name="Hidden">0</Property>
+        <Property name="Shown">1</Property>
+        <Property name="Enable With Machine">0</Property>
+        <Property name="Enabled States">0</Property>
+        <Property name="Label">Save Fixed Pos</Property>
+        <Property name="Font">1;10;-13;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+        <Property name="Fg Color">#000000</Property>
+        <Property name="Text Color">#000000</Property>
+        <Property name="Bg Color"></Property>
+        <Property name="Mouse Over Color"></Property>
+        <Property name="Down Color"></Property>
+        <Property name="Border Color"></Property>
+        <Property name="Button Color"></Property>
+        <Property name="Border">2</Property>
+        <Property name="Corner Radius">0</Property>
+        <Property name="Leave Is Up">0</Property>
+        <Event name="Left Down Action">0</Event>
+        <Event name="Left Up Action">0</Event>
+        <Event name="Left Down Script"></Event>
+        <Event name="Left Up Script"></Event>
+        <Event name="Clicked Action">0</Event>
+        <Event name="Clicked Script">local inst = mc.mcGetInstance()
+
+ function GetRegister(regname)
+ local inst = mc.mcGetInstance()
+ local hreg = mc.mcRegGetHandle(inst, string.format("iRegs0/%s", regname))
+ return mc.mcRegGetValueString(hreg)
+end
+
+ function WriteRegister(regname, regvalue)
+ local inst = mc.mcGetInstance()
+ local hreg = mc.mcRegGetHandle(inst, string.format("iRegs0/%s", regname))
+ mc.mcRegSetValueString(hreg, tostring(regvalue))
+end
+
+xLoc = mc.mcAxisGetMachinePos(inst, mc.X_AXIS)   -- store the x loc
+WriteRegister("2025/XPlate", xLoc)
+yLoc = mc.mcAxisGetMachinePos(inst, mc.Y_AXIS)   -- store the y loc
+WriteRegister("2025/YPlate", yLoc)
+
+
+
+
+
+</Event>
+        <Event name="Goto Page"></Event>
+        <Event name="Run MDI"></Event>
+      </mcButton2>
+      <mcButton2>
+        <Property name="Name">btn(90)</Property>
+        <Property name="Instance">0</Property>
+        <Property name="Top">40</Property>
+        <Property name="Left">485</Property>
+        <Property name="Height">30</Property>
+        <Property name="Width">129</Property>
+        <Property name="Enabled">1</Property>
+        <Property name="Hidden">0</Property>
+        <Property name="Shown">1</Property>
+        <Property name="Enable With Machine">0</Property>
+        <Property name="Enabled States">0</Property>
+        <Property name="Label">Go To MTC Pos</Property>
+        <Property name="Font">1;10;-13;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+        <Property name="Fg Color">#000000</Property>
+        <Property name="Text Color">#000000</Property>
+        <Property name="Bg Color"></Property>
+        <Property name="Mouse Over Color"></Property>
+        <Property name="Down Color"></Property>
+        <Property name="Border Color"></Property>
+        <Property name="Button Color"></Property>
+        <Property name="Border">2</Property>
+        <Property name="Corner Radius">0</Property>
+        <Property name="Leave Is Up">0</Property>
+        <Event name="Left Down Action">0</Event>
+        <Event name="Left Up Action">0</Event>
+        <Event name="Left Down Script"></Event>
+        <Event name="Left Up Script"></Event>
+        <Event name="Clicked Action">0</Event>
+        <Event name="Clicked Script">local inst = mc.mcGetInstance()
+
+ function GetRegister(regname)
+ local inst = mc.mcGetInstance()
+ local hreg = mc.mcRegGetHandle(inst, string.format("iRegs0/%s", regname))
+ return mc.mcRegGetValueString(hreg)
+end
+
+ function WriteRegister(regname, regvalue)
+ local inst = mc.mcGetInstance()
+ local hreg = mc.mcRegGetHandle(inst, string.format("iRegs0/%s", regname))
+ mc.mcRegSetValueString(hreg, tostring(regvalue))
+end
+
+
+function GoToPermPlate()
+	mc.mcCntlGcodeExecute(inst, 'G53 X'.. FixedPlate_X .. 'Y' .. FixedPlate_Y .. 'f300')
+end
+
+function GoToMTCLocation()
+	mc.mcCntlGcodeExecuteWait(inst, 'G53 X'.. mTCPositionX .. 'Y' .. mTCPositionY)
+end
+
+
+FixedPlate_X = GetRegister("2025/XPlate") -- fixed plate X location
+FixedPlate_Y = GetRegister("2025/YPlate") -- fixed plate Y location
+mTCPositionX = GetRegister("2025/TCX") -- fixed plate X location
+mTCPositionY = GetRegister("2025/TCY") -- fixed plate Y location
+MTCZHeight =   GetRegister("2025/TCZ") -- mtc z heightr to move to after going to the location
+
+
+mc.mcCntlGcodeExecuteWait(inst, "G90 G53 G0 Z0.0");--Move the Z axis all the way up
+GoToMTCLocation()
+mc.mcCntlGcodeExecuteWait(inst, "G90 G53 G0 Z" .. MTCZHeight);--Move the Z axis toi change height
+
+
+
+</Event>
+        <Event name="Goto Page"></Event>
+        <Event name="Run MDI"></Event>
+      </mcButton2>
+      <mcButton2>
+        <Property name="Name">btn(91)</Property>
+        <Property name="Instance">0</Property>
+        <Property name="Top">75</Property>
+        <Property name="Left">485</Property>
+        <Property name="Height">30</Property>
+        <Property name="Width">129</Property>
+        <Property name="Enabled">1</Property>
+        <Property name="Hidden">0</Property>
+        <Property name="Shown">1</Property>
+        <Property name="Enable With Machine">0</Property>
+        <Property name="Enabled States">0</Property>
+        <Property name="Label">Save MTC Pos</Property>
+        <Property name="Font">1;10;-13;0;0;0;400;0;0;0;1;0;0;0;32;Arial</Property>
+        <Property name="Fg Color">#000000</Property>
+        <Property name="Text Color">#000000</Property>
+        <Property name="Bg Color"></Property>
+        <Property name="Mouse Over Color"></Property>
+        <Property name="Down Color"></Property>
+        <Property name="Border Color"></Property>
+        <Property name="Button Color"></Property>
+        <Property name="Border">2</Property>
+        <Property name="Corner Radius">0</Property>
+        <Property name="Leave Is Up">0</Property>
+        <Event name="Left Down Action">0</Event>
+        <Event name="Left Up Action">0</Event>
+        <Event name="Left Down Script"></Event>
+        <Event name="Left Up Script"></Event>
+        <Event name="Clicked Action">0</Event>
+        <Event name="Clicked Script">local inst = mc.mcGetInstance()
+
+ function WriteRegister(regname, regvalue)
+ local inst = mc.mcGetInstance()
+ local hreg = mc.mcRegGetHandle(inst, string.format("iRegs0/%s", regname))
+ mc.mcRegSetValueString(hreg, tostring(regvalue))
+end
+
+local zLoc, xLoc, yLoc
+
+zLoc = mc.mcAxisGetMachinePos(inst, mc.Z_AXIS)   -- store the z loc
+WriteRegister("2025/TCZ", zLoc) 
+xLoc = mc.mcAxisGetMachinePos(inst, mc.X_AXIS)   -- store the x loc
+WriteRegister("2025/TCX", xLoc)
+yLoc = mc.mcAxisGetMachinePos(inst, mc.Y_AXIS)   -- store the y loc
+WriteRegister("2025/TCY", yLoc)
+
+
+
+
+
+</Event>
+        <Event name="Goto Page"></Event>
+        <Event name="Run MDI"></Event>
+      </mcButton2>
+    </mcGroup>
+  </mcNotebookPage>
+</Mach4ScreenInfo>

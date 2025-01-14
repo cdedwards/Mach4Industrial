@@ -1,0 +1,4 @@
+--Any files in the AdvaancedExamples folder will require some work before you can run them.
+--You cannot just open these scripts in editor and step through them without getting errors.
+--They should all be commented well enough so beginners can set them up for their purpose.
+--Some are combination scripts that use scripts in multiple places. Buttons, screen load, signal, modules, etc.

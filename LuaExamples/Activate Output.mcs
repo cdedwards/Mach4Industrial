@@ -1,0 +1,24 @@
+--This example shows how to turn on an output for any amount of time. 
+
+----------Variables----------
+local inst = mc.mcGetInstance() --Get the instance of Mach4
+local IOName = mc.OSIG_OUTPUT1 --Save the name of the Signal (as stored inside of Mach4)
+local ActivateSignalTime = 5000 --Time in milliseconds that we want the signal to be active.
+local hReg = 0 --The handle to the signal
+local rc = 0
+
+hSig, rc = mc.mcSignalGetHandle(inst, IOName)
+if (rc ~= 0) then --There was error	
+	mc.mcCntlSetLastError(inst, "There was an error")
+else
+	rc = mc.mcSignalSetState(hSig, 1) --Turn the output on
+	if (rc ~= 0) then --There was error	
+		mc.mcCntlSetLastError(inst, "There was an error")
+	else
+		wx.wxMilliSleep(ActivateSignalTime) --Sleep for the commanded time (so that the output stays on as long as we want).
+		rc = mc.mcSignalSetState(hSig, 0) --Turn the output off
+		if (rc ~= 0) then --There was error	
+			mc.mcCntlSetLastError(inst, "There was an error")
+		end
+	end
+end

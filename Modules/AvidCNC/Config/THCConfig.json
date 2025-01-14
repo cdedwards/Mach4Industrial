@@ -1,0 +1,196 @@
+{
+    "THCConfig": {
+        "ScreenImages": {
+            "ToggleOn": "toggle_ON.png",
+            "ToggleOff": "toggle_OFF.png"
+        },
+        "ValueGroups": [
+            {
+                "Name": "Avid CNC Default",
+                "Description": "General default settings for all material types"
+            },{
+                "Name": "Test settings thin metal",
+                "Description": "These settings are good for thin material"
+            },{
+                "Name": "Test settings thick metal",
+                "Description": "These settings are good for thick material"
+            }
+        ],
+        "AntiDiveTypes": {
+            "TimeDelay": {
+                "Description": "Time delay after arc okay",
+                "Settings": {
+                    "EnableDisable": {
+                        "Description": "Delay after Arc ok enabled",
+                        "IniParameter": "iAD1DelayAfterArcOkayEnabled",
+                        "DataType": "int",
+                        "RegPath": "W9_HC/AD1_DELAY_ENABLED",
+                        "ScreenElement": {
+                            "IsUsed": true,
+                            "Name": "bmbTHCDelayAfterArcOk",
+                            "Type": "toggleButton"
+                        },
+                        "Value": {
+                            "Avid-CNC-Default": "0"
+                        }
+                    },
+                    "DelayTime": {
+                        "Description": "Time of delay after arc ok",
+                        "IniParameter": "dAD1DelayValueAfterArcOkay",
+                        "DataType": "double",
+                        "RegPath": "W9_HC/AD1_DELAY_VALUE",
+                        "ScreenElement": {
+                            "IsUsed": true,
+                            "Name": "droTHCDelayAfterArcOkValue",
+                            "Type": "dro"
+                        },
+                        "Value": {
+                            "Avid-CNC-Default": "0.75"
+                        }
+                    }
+                }
+            },
+            "M62M63": {
+                "Description": "Use M62/M63 to enable/disable THC",
+                "Settings": {
+                    "EnableDisable": {
+                        "Description": "Use M62/M63 to enable/disable THC",
+                        "IniParameter": "iAD2M62M63Enabled",
+                        "DataType": "int",
+                        "RegPath": "W9_HC/AD2_M62_M63_ENABLED",
+                        "ScreenElement": {
+                            "IsUsed": false,
+                            "Name": "",
+                            "Type": ""
+                        },
+                        "Value": {
+                            "Avid-CNC-Default": "1"
+                        }
+                    }
+                }
+            },
+            "VelocityBased": {
+                "Description": "Velocity based anti-dive",
+                "Settings": {
+                    "EnableDisable": {
+                        "Description": "Velocity based anti-dive enabled",
+                        "IniParameter": "iAD3VelocityEnabled",
+                        "DataType": "int",
+                        "RegPath": "W9_HC/AD3_VELOCITY_ENABLED",
+                        "ScreenElement": {
+                            "IsUsed": true,
+                            "Name": "bmbTHCVelocityBased",
+                            "Type": "toggleButton"
+                        },
+                        "Value": {
+                            "Avid-CNC-Default": "1"
+                        }
+                    },
+                    "Percentage": {
+                        "Description": "Velocity based anti-dive, percentage of feedrate",
+                        "IniParameter": "dAD3VelocityPercentage",
+                        "DataType": "double",
+                        "RegPath": "W9_HC/AD3_VELOCITY_PERCENT",
+                        "ScreenElement": {
+                            "IsUsed": true,
+                            "Name": "droTHCVelocityBasedValue",
+                            "Type": "dro"
+                        },
+                        "Value": {
+                            "Avid-CNC-Default": "97.0"
+                        }
+                    }
+                }
+            },
+            "VoltageBased": {
+                "Description": "Voltage based anti-dive",
+                "Settings": {
+                    "EnableDisable": {
+                        "Description": "Voltage based anti-dive enabled",
+                        "IniParameter": "iVoltageAD_Enabled",
+                        "DataType": "int",
+                        "RegPath": "W9_HC/VOLTAGE_AD_ENABLED",
+                        "ScreenElement": {
+                            "IsUsed": true,
+                            "Name": "bmbTHCVoltageBased",
+                            "Type": "toggleButton"
+                        },
+                        "Value": {
+                            "Avid-CNC-Default": "1"
+                        }
+                    },
+                    "Buffer": {
+                        "Description": "Voltage based anti-dive ATV buffer size",
+                        "IniParameter": "iVoltageAD_ATV_BufferSize",
+                        "DataType": "int",
+                        "RegPath": "W9_HC/VOLTAGE_AD_ATV_BUFFER_SIZE",
+                        "ScreenElement": {
+                            "IsUsed": true,
+                            "Name": "droTHCVoltageBasedBuffer",
+                            "Type": "dro"
+                        },
+                        "Value": {
+                            "Avid-CNC-Default": "800"
+                        }
+                    },
+                    "Precondition": {
+                        "Description": "Voltage based anti-dive precondition percentage",
+                        "IniParameter": "dVoltageAD_PreconditionWindowPercent",
+                        "DataType": "double",
+                        "RegPath": "W9_HC/VOLTAGE_AD_PRECONDITION_WINDOW_PERCENT",
+                        "ScreenElement": {
+                            "IsUsed": true,
+                            "Name": "droTHCVoltagePreconditionPercent",
+                            "Type": "dro"
+                        },
+                        "Value": {
+                            "Avid-CNC-Default": "4.0"
+                        }
+                    },
+                    "ThrottlingPercentage": {
+                        "Description": "Voltage based anti-dive throttling percentage",
+                        "IniParameter": "dAD4VoltageThrottlingPercent",
+                        "DataType": "double",
+                        "RegPath": "W9_HC/VOLTAGE_AD_AD4_THC_THROTTLING_PERCENT",
+                        "ScreenElement": {
+                            "IsUsed": true,
+                            "Name": "droTHCVoltageBasedThrottlePercent",
+                            "Type": "dro"
+                        },
+                        "Value": {
+                            "Avid-CNC-Default": "0.00"
+                        }
+                    },
+                    "PercentAbove": {
+                        "Description": "Voltage based anti-dive percentage above current tip volts",
+                        "IniParameter": "dVoltageAD5ATV_PercentAboveCurrentTipVolts",
+                        "DataType": "double",
+                        "RegPath": "W9_HC/VOLTAGE_AD_AD5_ATV_PERCENT_ABOVE_CURRENT_TIP_VOLTS",
+                        "ScreenElement": {
+                            "IsUsed": true,
+                            "Name": "droTHCVoltageBasedAboveActualTipVolts",
+                            "Type": "dro"
+                        },
+                        "Value": {
+                            "Avid-CNC-Default": "10.0"
+                        }
+                    },
+                    "PercentBelow": {
+                        "Description": "Voltage based anti-dive percentage below current tip volts",
+                        "IniParameter": "dVoltageAD6ATV_PercentBelowCurrentTipVolts",
+                        "DataType": "double",
+                        "RegPath": "W9_HC/VOLTAGE_AD_AD6_ATV_PERCENT_BELOW_CURRENT_TIP_VOLTS",
+                        "ScreenElement": {
+                            "IsUsed": true,
+                            "Name": "droTHCVoltageBasedBelowActualTipVolts",
+                            "Type": "dro"
+                        },
+                        "Value": {
+                            "Avid-CNC-Default": "10.0"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

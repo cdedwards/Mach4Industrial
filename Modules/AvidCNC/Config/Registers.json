@@ -1,0 +1,442 @@
+{
+    "Registers": {
+        "Instance": {
+            "Active": [{
+                "Name": "AvidCNC/State",
+                "Description": "State",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "0"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/Restart",
+                "Description": "Restart",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "0"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/ToolChange/Ignore_Tool_Changes",
+                "Description": "Ignore all tool change commands",
+                "InitialValue": {
+                    "SetFromIni": true,
+                    "IniKey": "iConfigIgnoreToolChanges",
+                    "Value": "0"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": true
+            }, {
+                "Name": "AvidCNC/Laser/XOffset",
+                "Description": "Laser X Offset",
+                "InitialValue": {
+                    "SetFromIni": true,
+                    "IniKey": "iConfigLaserXOffset",
+                    "Units": "200",
+                    "Value": "0"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/Laser/YOffset",
+                "Description": "Laser Y Offset",
+                "InitialValue": {
+                    "SetFromIni": true,
+                    "IniKey": "iConfigLaserYOffset",
+                    "Units": "200",
+                    "Value": "0"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/THC_Sensitivity_Up_1",
+                "Description": "Unitless setting to increase THC response for Material 1",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "100"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/THC_Sensitivity_Up_2",
+                "Description": "Unitless setting to increase THC response for material 2",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "100"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/THC_Sensitivity_Up_3",
+                "Description": "Unitless setting to increase THC response for material 3",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "100"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/THC_Sensitivity_Down_1",
+                "Description": "Unitless setting to decrease THC response for Material 1",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "100"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/THC_Sensitivity_Down_2",
+                "Description": "Unitless setting to decrease THC response for material 2",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "100"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/THC_Sensitivity_Down_3",
+                "Description": "Unitless setting to decrease THC response for material 3",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "100"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/Material_Profile",
+                "Description": "Used for LRB calculations",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "1"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/Material_Slope_1",
+                "Description": "Flat Slope for LRB calculations",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": ".025"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/Material_Slope_2",
+                "Description": "Moderate Slope for LRB calculations",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": ".1"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/Material_Slope_3",
+                "Description": "Severe Slope for LRB calculations",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": ".2"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/Volt_Error",
+                "Description": "Used for LRB calculations",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "5"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/LRB_min",
+                "Description": "Sets minimum allowable LRB",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "10"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/LRB_max",
+                "Description": "Sets maximum allowable LRB",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "200"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/Cut_Height_Low",
+                "Description": "Threshold for low cut height, in",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": ".05"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/Cut_Height_High",
+                "Description": "Threshold for high cut height, in",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": ".1"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/Low_LRB_Scale",
+                "Description": "scale factor for LRB based on cut height. Applied as (1/x) so a value <1 increases the LRB",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": ".6"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/Med_LRB_Scale",
+                "Description": "scale factor for LRB based on cut height. Applied as (1/x) so a value <1 increases the LRB",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": ".8"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/High_LRB_Scale",
+                "Description": "scale factor for LRB based on cut height. Applied as (1/x) so a value <1 increases the LRB",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "1"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/THC/THC_Distance_Last",
+                "Description": "the most recent total THC motion distance. Used to find distance moved on current cut",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "0"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/Overrides/FRO_Increment",
+                "Description": "Sets feedrate override increment percent",
+                "InitialValue": {
+                    "SetFromIni": true,
+                    "IniKey": "iConfigFROOverride",
+                    "Value": "25"
+                },
+                "Persistent": "1",
+                "UpdateAfterAvidConfig": true
+            }, {
+                "Name": "AvidCNC/ToolChange/Check_Tool_Numbers",
+                "Description": "Check file for tools",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "0"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/ToolChange/Respect_File_Name",
+                "Description": "File name to respect tool changes for",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": ""
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/ToolChange/MTC/In_Progress",
+                "Description": "Manual tool change in progress",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "0"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/ToolChange/MTC/On_Demand",
+                "Description": "Manual tool change on demand",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "0"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/GCode/File_Loaded",
+                "Description": "G-Code file loaded",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "0"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/Extents/X_min",
+                "Description": "X axis minimum program extents",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "0"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/Extents/X_max",
+                "Description": "X axis maximum program extents",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "0"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/Extents/Y_min",
+                "Description": "Y axis minimum program extents",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "0"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/Extents/Y_max",
+                "Description": "Y axis maximum program extents",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "0"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/Extents/Z_min",
+                "Description": "Z axis minimum program extents",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "0"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/Extents/Z_max",
+                "Description": "Z axis maximum program extents",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "0"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/Config/Soft_Limits/Reset_Enabled_States",
+                "Description": "Reset soft limit enabled states",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "0"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/Config/Soft_Limits/Enabled_Axis_0",
+                "Description": "Soft limits enabled axis 0",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "-1"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/Config/Soft_Limits/Enabled_Axis_1",
+                "Description": "Soft limits enabled axis 1",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "-1"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/Config/Soft_Limits/Enabled_Axis_2",
+                "Description": "Soft limits enabled axis 2",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "-1"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/Config/Soft_Limits/Enabled_Axis_3",
+                "Description": "Soft limits enabled axis 3",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "-1"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/Config/Soft_Limits/Enabled_Axis_4",
+                "Description": "Soft limits enabled axis 4",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "-1"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }, {
+                "Name": "AvidCNC/Config/Soft_Limits/Enabled_Axis_5",
+                "Description": "Soft limits enabled axis 5",
+                "InitialValue": {
+                    "SetFromIni": false,
+                    "IniKey": "",
+                    "Value": "-1"
+                },
+                "Persistent": "0",
+                "UpdateAfterAvidConfig": false
+            }],
+            "Deprecated": [
+                "AvidCNC/GCode/Last_Cycle_Time"
+            ]
+        }
+    }
+}

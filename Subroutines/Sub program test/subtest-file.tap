@@ -1,0 +1,15 @@
+%
+(MACH4 VERSION)
+ 
+G21 G40
+G91 G28 X0 Y0 Z0
+ 
+N1(SPOT DRILL)
+G54 G00 G90 G43 X0 Y0 Z25. H1 T2 S2500 M3
+G82 Z-5. R2. P0.250 F100. L0 (L0 says wait dont drill until next move)
+M98 Q1 (Subroutines\9010.tap)
+G80
+G91 G28 Z0 M6
+N2 G80
+M30
+%

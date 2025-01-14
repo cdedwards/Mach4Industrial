@@ -1,0 +1,202 @@
+{
+  "Laser_Types": [
+    "15W Opt Laser"
+  ],
+  "Lasers": {
+    "15W Opt Laser": {
+    }
+  },
+  "Profile": {
+    "AnalogOutput1": [
+      {
+        "Description": "Analog Output #1",
+        "Enable": {
+          "DeviceName": { "Type": "string", "Enable": "ESS" },
+          "RegisterName": { "Type": "string", "Enable": "Analog/Output/1_Laser_PWM" },
+          "Numerator": { "Type": "int", "Enable": "1" },
+          "Denominator": { "Type": "int", "Enable": "1" },
+          "Offset": { "Type": "int", "Enable": "0" }
+        },
+        "Disable": { }
+      }
+    ],
+    "ESS": [
+      {
+        "Description": "Analog tab",
+        "Enable": {
+          "iAnalogOutSendAllMessagesToLog": { "Type": "int", "Enable": "1", "Disable": "DeleteKey" },
+          "iUseAnalogOut0": { "Type": "int", "Enable": "0", "Disable": "DeleteKey" },
+          "iUseAnalogOut1": { "Type": "int", "Enable": "1", "Disable": "DeleteKey" }
+        }
+      },
+      {
+        "Description": "Laser tab 1 settings",
+        "Enable": {
+          "PermitLaserTestMode": { "Type": "int", "Enable": "1", "Disable": "0" },
+          "dLaserTestModePowerLevel": { "Type": "double", "Enable": "1.0", "Disable": "DeleteKey" },
+          "Use5kHzTickle": { "Type": "int", "Enable": "0", "Disable": "0" },
+          "LaserPwmFrequencyMax": { "Type": "double", "Enable": "30000.00", "Disable": "130000.00" },
+          "LaserAllowsHigherHz": { "Type": "int", "Enable": "1", "Disable": "1" },
+          "LaserOnOffOutputNumber": { "Type": "int", "Enable": "5", "Disable": "-1" },
+          "iLaserAirAssistOutputNumber": { "Type": "int", "Enable": "7", "Disable": "DeleteKey" },
+          "LaserPwmFrequencyRaster": { "Type": "double", "Enable": "15000.00", "Disable": "15000.00" },
+          "LaserGateDelayRaster": { "Type": "double", "Enable": "5.0000", "Disable": "20.0000" },
+          "LaserGateDurationRaster": { "Type": "double", "Enable": "95.0000", "Disable": "80.0000" },
+          "LaserPwmFrequencyVector": { "Type": "double", "Enable": "15000.00", "Disable": "15000.00" },
+          "LaserGateDelayVector": { "Type": "double", "Enable": "0.000", "Disable": "20.0000" },
+          "LaserGateDurationVector": { "Type": "double", "Enable": "100.0000", "Disable": "80.0000" },
+          "iEnableLaserVectorSpeedComp": { "Type": "int", "Enable": "1", "Disable": "0" },
+          "iEnableLaserVectorSpeedCompNonLinear": { "Type": "int", "Enable": "0", "Disable": "0" }
+        }
+      },
+      {
+        "Description": "Laser tab 2 settings",
+        "Enable": {
+          "i_LaserShowUsersImage": { "Type": "int", "Enable": "1", "Disable": "DeleteKey" },
+          "i_LaserShowProcessedImage": { "Type": "int", "Enable": "1", "Disable": "DeleteKey" },
+          "iVerifyImageSizeAgainstSoftLimtsBeforeRaster": { "Type": "int", "Enable": "1", "Disable": "DeleteKey" },
+          "LaserFlipImageVertically": { "Type": "int", "Enable": "0", "Disable": "-1" },
+          "LaserFlipImageHorizontally": { "Type": "int", "Enable": "0", "Disable": "0" },
+          "LaserInvertImageIntensities": { "Type": "int", "Enable": "0", "Disable": "0" },
+          "LaserCompsForAccelDistanceX": { "Type": "int", "Enable": "0", "Disable": "0" },
+          "iShowStartLaserRasterWindow": { "Type": "int", "Enable": "1", "Disable": "DeleteKey" },
+          "LaserRasterEvenRowsOnly": { "Type": "int", "Enable": "0", "Disable": "0" },
+          "iLaserUsePwmMinForAccelerationDistance": { "Type": "int", "Enable": "0", "Disable": "DeleteKey" },
+          "dLaserPwmMinPowerSubtractionDuringAccel": { "Type": "double", "Enable": "0.000", "Disable": "DeleteKey" },
+          "iLaserGateGatesLaserPWM": { "Type": "int", "Enable": "1", "Disable": "DeleteKey" },
+          "iLaserRasterStartingCorner": { "Type": "int", "Enable": "1", "Disable": "1" }
+        }
+      },
+      {
+        "Description": "HC tab",
+        "Enable": {
+          "i_HC_ControlledManually": { "Type": "int", "Enable": "0", "Disable": "0" },
+          "i_HC_ControlledByHardwareUpDownPins": { "Type": "int", "Enable": "0" , "Disable": "0"},
+          "i_HC_ControlledByHardwareW9_HC": { "Type": "int", "Enable": "0", "Disable": "0" },
+          "i_HC_UseXYVelocityPWM": { "Type": "int", "Enable": "0", "Disable": "1" }
+        }
+      },
+      {
+        "Description": "Pins config - Laser enable",
+        "Enable": {
+          "Port3-Pin5-Alias": { "Type": "string", "Enable": "{P3-5} Laser Enable (not wired)", "Disable": "{P3-5}" },
+          "Port3-Pin5-ActiveLow": { "Type": "int", "Enable": "0", "Disable": "0" },
+          "Port3-Pin5-NoiseFilterValue": { "Type": "double", "Enable": "0.00", "Disable": "0.00" },
+          "Port3-Pin5-OutputPinStopState": { "Type": "string", "Enable": "No Change", "Disable": "No Change" },
+          "Port3-Pin5-OutputPinFeedHoldState": { "Type": "string", "Enable": "No Change", "Disable": "No Change" }
+        }
+      },
+      {
+        "Description": "Output signal map - Laser enable",
+        "Enable": {
+          "OSigMap-Output5-MappedPin0": { "Type": "string", "Enable": "{P3-5} Laser Enable (not wired)", "Disable": "DeleteKey" },
+          "OSigMap-Output5-Enable": { "Type": "int", "Enable": "1", "Disable": "0" }
+        }
+      },
+      {
+        "Description": "Pins config - Laser deploy",
+        "Enable": {
+          "Port3-Pin2-Alias": { "Type": "string", "Enable": "{P3-2} Laser Deploy", "Disable": "{P3-2}" },
+          "Port3-Pin2-ActiveLow": { "Type": "int", "Enable": "0", "Disable": "0" },
+          "Port3-Pin2-NoiseFilterValue": { "Type": "double", "Enable": "0.00", "Disable": "0.00" },
+          "Port3-Pin2-OutputPinStopState": { "Type": "string", "Enable": "Force OFF", "Disable": "No Change" },
+          "Port3-Pin2-OutputPinFeedHoldState": { "Type": "string", "Enable": "No Change", "Disable": "No Change" }
+        }
+      },
+      {
+        "Description": "Output signal map - Laser deploy",
+        "Enable": {
+          "OSigMap-Output6-MappedPin0": { "Type": "string", "Enable": "{P3-2} Laser Deploy", "Disable": "DeleteKey" },
+          "OSigMap-Output6-Enable": { "Type": "int", "Enable": "1", "Disable": "0" }
+        }
+      },
+      {
+        "Description": "Pins config - Laser air assist",
+        "Enable": {
+          "Port3-Pin3-Alias": { "Type": "string", "Enable": "{P3-3} Laser Air Assist", "Disable": "{P3-3}" },
+          "Port3-Pin3-ActiveLow": { "Type": "int", "Enable": "0", "Disable": "0" },
+          "Port3-Pin3-NoiseFilterValue": { "Type": "double", "Enable": "0.00", "Disable": "0.00" },
+          "Port3-Pin3-OutputPinStopState": { "Type": "string", "Enable": "Force OFF", "Disable": "No Change" },
+          "Port3-Pin3-OutputPinFeedHoldState": { "Type": "string", "Enable": "Force OFF", "Disable": "No Change" }
+        }
+      },
+      {
+        "Description": "Output signal map - Laser air assist",
+        "Enable": {
+          "OSigMap-Output7-MappedPin0": { "Type": "string", "Enable": "{P3-3} Laser Air Assist", "Disable": "DeleteKey" },
+          "OSigMap-Output7-Enable": { "Type": "int", "Enable": "1", "Disable": "0" }
+        }
+      },
+      {
+        "Description": "Pins config - Laser PWM",
+        "Enable": {
+          "Port3-Pin4-Alias": { "Type": "string", "Enable": "{P3-4} Laser PWM", "Disable": "{P3-4}" },
+          "Port3-Pin4-ActiveLow": { "Type": "int", "Enable": "0", "Disable": "0" },
+          "Port3-Pin4-NoiseFilterValue": { "Type": "double", "Enable": "0.00", "Disable": "0.00" },
+          "Port3-Pin4-OutputPinStopState": { "Type": "string", "Enable": "Force OFF", "Disable": "No Change" },
+          "Port3-Pin4-OutputPinFeedHoldState": { "Type": "string", "Enable": "No Change", "Disable":"No Change" }
+        }
+      },
+      {
+        "Description": "Output signal map - Laser PWM",
+        "Enable": {
+          "OSigMap-LaserPWMOrAOut1-MappedPin0": { "Type": "string", "Enable": "{P3-4} Laser PWM", "Disable": "{P3-16} XY Velocity PWM" },
+          "OSigMap-LaserPWMOrAOut1-Enable": { "Type": "int", "Enable": "1", "Disable": "1" }
+        }
+      },
+      {
+        "Description": "Pins config - Air pressure",
+        "Enable": {
+          "Port2-Pin12-Alias": { "Type": "string", "Enable": "{P2-12} Air Pressure OK", "Disable": "{P2-12}" },
+          "Port2-Pin12-ActiveLow": { "Type": "int", "Enable": "1", "Disable": "0" },
+          "Port2-Pin12-NoiseFilterValue": { "Type": "double", "Enable": "0.00", "Disable": "0.00" },
+          "Port2-Pin12-OutputPinStopState": { "Type": "string", "Enable": "No Change", "Disable": "-----" },
+          "Port2-Pin12-OutputPinFeedHoldState": { "Type": "string", "Enable": "No Change", "Disable": "-----" }
+        }
+      },
+      {
+        "Description": "Input signal map - Air pressure",
+        "Enable": {
+          "ISigMap-Input12-Enable": { "Type": "int", "Enable": "1", "Disable": "0" },
+          "ISigMap-Input12": { "Type": "string", "Enable": "{P2-12} Air Pressure OK", "Disable": "DeleteKey" }
+        }
+      }
+    ],
+    "Signal13": [
+      {
+        "Description": "Input signal #2",
+        "Enable": {
+          "enabled": { "Type": "int", "Enable": "1", "Disable": "0" },
+          "mapping": { "Type": "string", "Enable": "ESS/{P2-12} Air Pressure OK", "Disable": "None" }
+        }
+      }
+    ],
+    "Signal1055": [
+      {
+        "Description": "Output signal #5",
+        "Enable": {
+          "enabled": { "Type": "int", "Enable": "1", "Disable": "0" },
+          "mapping": { "Type": "string", "Enable": "ESS/{P3-5} Laser Enable (not wired)", "Disable": "None" }
+        }
+      }
+    ],
+    "Signal1056": [
+      {
+        "Description": "Output signal #6",
+        "Enable": {
+          "enabled": { "Type": "int", "Enable": "1", "Disable": "0" },
+          "mapping": { "Type": "string", "Enable": "ESS/{P3-2} Laser Deploy", "Disable": "None" }
+        }
+      }
+    ],
+    "Signal1057": [
+      {
+        "Description": "Output signal #7",
+        "Enable": {
+          "enabled": { "Type": "int", "Enable": "1", "Disable": "0" },
+          "mapping": { "Type": "string", "Enable": "ESS/{P3-3} Laser Air Assist", "Disable": "None" }
+        }
+      }
+    ]
+  }
+}

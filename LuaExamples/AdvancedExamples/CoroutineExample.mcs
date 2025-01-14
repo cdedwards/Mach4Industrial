@@ -1,0 +1,40 @@
+--[[
+This header can not be removed
+
+Copyright Newfangled Solutions (c) 2018 All Rights Reserved, www.machsupport.com  
+
+THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, 
+EITHER EXPRESSED OR IMPLIED , INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES 
+OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+
+Author - Newfangled Solutions
+Liscence - mit
+Date - 05/17/2018
+Modified - Brett Price 05/17/2018
+--]]
+
+--Button script
+wait = coroutine.create (RefAllHome) --Run the RefAllHome function as a coroutine named wait.
+
+--Screen Load Script
+---------------------------------------------------------------
+-- Ref All Home() function.
+---------------------------------------------------------------
+function RefAllHome()
+    mc.mcAxisDerefAll(inst)  --Just to turn off all ref leds
+    mc.mcAxisHomeAll(inst)
+    coroutine.yield() --yield coroutine so we can do the following after motion stops
+    ----See ref all home button and plc script for coroutine.create and coroutine.resume
+    wx.wxMessageBox('Referencing is complete')
+end
+
+--PLC Script
+-------------------------------------------------------
+--  Coroutine resume
+-------------------------------------------------------
+if (wait ~= nil) and (machState == 0) then --wait exist and state == idle
+	local state = coroutine.status(wait) --Get the status of the coroutine named wait
+    if state == "suspended" then --Coroutine named wait is suspended
+        coroutine.resume(wait) --Resume coroutine named wait
+    end
+end

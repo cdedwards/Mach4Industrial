@@ -1,0 +1,37 @@
+--Signal Script example. This code allows the user to do certain actions when signal changes occur in Mach.
+--This signal script code must go in the screen load script to work properly.
+
+--Signal Script.
+if(SigLib[sig] ~= nil)then
+	SigLib[sig](state);
+end
+
+--Screen Load Script
+SigLib = {
+   --Enable
+    [mc.OSIG_MACHINE_ENABLED] = function (state)
+        machEnabled = state;
+    end,
+    [mc.ISIG_INPUT1] = function (on_off)--mc.ISIG_INPUT1
+        if( on_off==1 ) then
+            -- On
+        else
+            -- Off
+        end
+    end,
+    [mc.ISIG_INPUT2] = function (state)--mc.ISIG_INPUT2
+        if( state == 1 ) then
+            -- On 
+        else
+            -- Off Call A function here if you wanted
+        end
+    end,
+	--The user can add additional Signal events if they wish by following the same format as above.
+	--[SIGNAL NAME] = function(state)
+		--if(state is active) then
+		--	do active code
+		--else
+		--	do inactive code
+		--end
+	--end,
+}

@@ -1,0 +1,102 @@
+-----------------------------------------------------------------------------
+-- Name:        CV_Feedrate.mcs
+-- Author:      Brian Barker
+-- Modified by:	Brett Price 9/29/2017
+-- Created:     11/20/15
+-- Copyright:   (c) 2017 Newfangled Solutions. All rights reserved.
+-- License:     BSD license - This header can not be removed 
+-----------------------------------------------------------------------------
+local inst = mc.mcGetInstance()
+-- User Settings here --
+NumVars = 180
+TableLable = "mcCvFeedrateV002"
+
+CV_ANGLE_ON_OFF_BUT = 1
+function SaveCellData(row, col)
+	local v = grid:GetCellValue(row, col)
+    mc.mcMotionSetCVAngle(inst, tonumber(row), tonumber(v))
+	grid:SetCellValue(row, col, string.format("%.4f",v))
+end 
+
+function main()
+local frame = wx.wxFrame(wx.NULL, wx.wxID_ANY, TableLable,
+                         wx.wxPoint(25, 25), wx.wxSize(340, 540))
+
+panel = wx.wxPanel(frame, wx.wxID_ANY)	
+panel:SetSize(350, 450)
+
+
+panel:Connect(wx.wxEVT_CLOSE_WINDOW, 
+			function (event)
+
+			frame:Destroy 	()
+			
+		end)
+
+
+panel:Connect(wx.wxID_EXIT, wx.wxEVT_COMMAND_MENU_SELECTED,
+    function (event)
+        frame:Close()
+    end )
+
+local mainSizer = wx.wxBoxSizer(wx.wxVERTICAL)
+
+grid = wx.wxGrid(panel, wx.wxID_ANY)
+button = wx.wxToggleButton(panel,CV_ANGLE_ON_OFF_BUT, "CV Feedrate Off")
+
+mainSizer:Add(button, 0, wx.wxALIGN_CENTER, 2)
+mainSizer:Add(grid, 0,  wx.wxALIGN_CENTER, 2)
+panel:SetSizer( mainSizer )
+			
+local IsCVangleOn = mc.mcMotionGetCVAngleEnable(inst);
+if(IsCVangleOn == 1)then
+    button:SetLabel(tostring("CV Feedrate On"))
+    button:SetValue(true)
+end
+button:Connect( wx.wxEVT_COMMAND_TOGGLEBUTTON_CLICKED,
+function(event) 
+    local val = button:GetValue()
+    local s = "CV Feedrate Off"
+    if(val)then
+        s = "CV Feedrate On"
+    end
+
+    button:SetLabel(tostring(s))
+    button:Refresh(true)
+    
+    if(val)then
+        mc.mcMotionSetCVAngleEnable(inst, 1)
+    else
+        mc.mcMotionSetCVAngleEnable(inst, 0)
+    end
+    event:Skip()
+end)
+panel:SetAutoLayout(true)
+grid:CreateGrid(NumVars, 2) --2 columns
+local i
+grid:SetColLabelValue (0, "Feedrate")
+grid:SetColLabelValue (1, "Blend Radius")
+grid:SetColSize(0, 125) --Column 0 width
+grid:SetColSize(1, 125) --Column 1 width
+
+for i = 0, NumVars, 1 do
+       grid:SetRowLabelValue (i,"Angle " .. tostring(i)) 
+       local feedrate = mc.mcMotionGetCVAngle(inst, i)
+	   grid:SetCellValue(i, 0, string.format("%.3f",feedrate))
+	   local MyKey = string.format("Angle_" .. tostring(i))
+	   local BlendRadius = mc.mcProfileGetDouble(inst, "CVBlendRadius", MyKey, 0.0000)
+	   --grid:SetCellValue(i, 1, string.format("%.4f", tostring(BlendRadius)))
+	   grid:SetCellValue(i, 1, string.format("%.4f", BlendRadius))
+end
+
+grid:Connect(wx.wxEVT_GRID_CELL_CHANGE,
+    function (event)
+	SaveCellData(event:GetRow(), event:GetCol())      
+end)
+
+frame:Show(true)
+
+end
+
+main()
+

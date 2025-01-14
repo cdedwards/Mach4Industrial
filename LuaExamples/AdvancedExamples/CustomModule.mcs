@@ -1,0 +1,46 @@
+--[[
+This header can not be removed
+
+Copyright Newfangled Solutions (c) 2018 All Rights Reserved, www.machsupport.com  
+
+THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, 
+EITHER EXPRESSED OR IMPLIED , INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES 
+OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+
+Author - Newfangled Solutions
+Liscence - mit
+Date - 05/17/2018
+Modified - Brett Price 05/17/2018
+--]]
+
+--This is the mcUserScript.lua module that goes in the modules folder
+local mcUserScript = {}
+
+function mcUserScript.UserMessage(Message)
+	if (Message == nil) then --No message was passed
+		Message = "No message passed" --If no message is passed this will be the default message
+	end
+	wx.wxMessageBox(Message)
+end
+
+return mcUserScript -- Module End
+
+--This is what loads the module above.
+--Add this to the modules load section of the screen load script so you can call its functions from buttons on the screen.
+--Add this to the load_modules.mcs file in the macros folder of the profile that will be using it so you can call its functions from M codes.
+package.loaded.mcUserScript = nil
+us = require "mcUserScript"
+
+--Put this in a buttons clicked script and when you click it a message box will pop up that says... No message passed
+us.UserMessage() --This is not passing a message for the Message parameter so the message will be the default
+
+--m110 goes in the macros folder of the profile that will be using it. It will be named m110.mcs
+function m110()
+
+	us.UserMessage("This is my message from m110") --When M110 is executed in Gcode or MDI a message box will pop up that says This is my message.
+
+end
+
+if (mc.mcInEditor() == 1) then
+	m110()
+end

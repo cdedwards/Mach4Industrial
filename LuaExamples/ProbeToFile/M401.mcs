@@ -1,0 +1,32 @@
+function m401()
+inst = mc.mcGetInstance();
+    -- create the wxFrame window
+    mainframe = wx.wxFrame( wx.NULL,          -- no parent
+                        wx.wxID_ANY,          -- whatever for wxWindow ID
+                        "DummyFrame", -- frame caption
+                        wx.wxDefaultPosition, -- place the frame in default position
+                        wx.wxDefaultSize,     -- default frame size
+                        wx.wxDEFAULT_FRAME_STYLE ) -- use default frame styles
+
+    -- create a panel in the frame
+    panel = wx.wxPanel(mainframe, wx.wxID_ANY)--We are not going to show it but we need to have this to use the File dialog
+
+local file = wx.wxFileDialog(panel, "Select Probe File", "", "", "Text files (*.txt)|*.txt|Tap files (*.tap)|*.tap", 
+                             wx.wxFD_SAVE,wx.wxDefaultPosition,wx.wxDefaultSize, "File Dialog" );
+        if(file:ShowModal() == wx.wxID_OK)then
+            local path = file:GetPath()   
+			--wx.wxMessageBox(tostring(path))
+			--[[
+			Set the output of the probe points with the format String
+			Example:
+			X%.3AXIS_X
+			will output X<xprobevalue> 
+			]]--
+			mc.mcCntlProbeFileOpen(inst, path, "X%.3AXIS_X Y%.3AXIS_Y Z%.3AXIS_Z A%.3AXIS_A\r\n", true);
+        end 
+
+end
+
+if (mc.mcInEditor() == 1) then
+    m401()
+end

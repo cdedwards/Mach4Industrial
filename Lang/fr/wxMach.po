@@ -1,0 +1,2212 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wxMach\n"
+"POT-Creation-Date: 2015-02-06 13:43-0600\n"
+"PO-Revision-Date: 2015-02-15 18:16+0100\n"
+"Last-Translator: Steve Murphree <smurph@smcomp.com>\n"
+"Language-Team: Mach <support@machsupport.com>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SearchPath-0: ../..\n"
+"X-Poedit-SearchPath-1: ../../../Mach4GUI-common\n"
+"X-Poedit-SearchPath-2: ../../../CoreConf\n"
+"X-Poedit-SearchPath-3: ../../../ColorPicker\n"
+
+msgid ""
+"\n"
+" The PLC is now disabled.  Correct the script error and restart."
+msgstr ""
+"\n"
+" Le PLC est désactivé. Corrigez le script et relancez."
+
+msgid " - CNC Control Software"
+msgstr " - Commande numérique"
+
+msgid " - Demo"
+msgstr " - Demo"
+
+msgid " - Expert"
+msgstr " - Expert"
+
+msgid " - Hobby"
+msgstr " - Hobby"
+
+msgid " - Industrial"
+msgstr " - Industrial"
+
+msgid " - Lite"
+msgstr " - Lite"
+
+msgid " does not exist."
+msgstr " n'existe pas."
+
+msgid " does not exist.  Could not remove directory."
+msgstr " n'existe pas. Impossible d'effacer le répertoire."
+
+msgid "\" for writing!"
+msgstr "\" for writing!"
+
+msgid "\" please alter the RemDirRF() definition."
+msgstr "\" please alter the RemDirRF() definition."
+
+msgid "\" profile?"
+msgstr "\" profil ?"
+
+msgid "# Variable"
+msgstr "# Variable"
+
+msgid "%"
+msgstr "%"
+
+msgid "%s files (*.%s)|*.%s|"
+msgstr "Fichiers %s (*.%s)|*.%s|"
+
+msgid "&Absolute"
+msgstr "&Absolu"
+
+msgid "&Apply"
+msgstr "&Appliquer"
+
+msgid "&Cancel"
+msgstr "&Annuler"
+
+msgid "&Close"
+msgstr "&Fermer"
+
+msgid "&Const. RPM"
+msgstr "&Rot. Const."
+
+msgid "&Const. Surface"
+msgstr "&Vcoupe Const."
+
+msgid "&Constant Velocity"
+msgstr "&Vitesse constante"
+
+msgid "&Diagnostic"
+msgstr "&Diagnostic"
+
+msgid "&Edit PLC script..."
+msgstr "&Editer script PLC..."
+
+msgid "&Edit/Debug Script"
+msgstr "&Editer/déboguer script..."
+
+msgid "&Exact Stop"
+msgstr "Parcours &exact"
+
+msgid "&Feed"
+msgstr "&Avance"
+
+msgid "&File"
+msgstr "&Fichier"
+
+msgid "&Inch"
+msgstr "&Pouces"
+
+msgid "&Incremental"
+msgstr "&Incrémental"
+
+msgid "&Initial Z"
+msgstr "&Z Initial"
+
+msgid "&Input"
+msgstr "&Entrée"
+
+msgid "&Lathe (Diameter)"
+msgstr "&Tournage (Diamètre)"
+
+msgid "&Mach..."
+msgstr "&Mach..."
+
+msgid "&Measure"
+msgstr "&Mesurer"
+
+msgid "&Metric"
+msgstr "&Métrique"
+
+msgid "&Mill"
+msgstr "&Fraisage"
+
+msgid "&No"
+msgstr "&Non"
+
+msgid "&OK"
+msgstr "&OK"
+
+msgid "&Open"
+msgstr "&Ouvrir"
+
+msgid "&Operator"
+msgstr "&Opérateur"
+
+msgid "&Per Min."
+msgstr "&Par Min."
+
+msgid "&Per Rev."
+msgstr "&Par Tr."
+
+msgid "&Plugins..."
+msgstr "&Modules..."
+
+msgid "&Quit"
+msgstr "&Quitter"
+
+msgid "&Rapid"
+msgstr "&Rapide"
+
+msgid "&Rapid Plane"
+msgstr "&Plan rapides"
+
+msgid "&Save"
+msgstr "&Sauver"
+
+msgid "&Set Motion Device..."
+msgstr "Allouer périphérique..."
+
+msgid "&System Information"
+msgstr "Informations &système"
+
+msgid "&Tangential"
+msgstr "&Tangentiel"
+
+msgid "&X-Y"
+msgstr "&X-Y"
+
+msgid "&Y-Z"
+msgstr "&Y-Z"
+
+msgid "&Yes"
+msgstr "&Oui"
+
+msgid "(Axis must be enabled and mapped.)"
+msgstr "(L'axe doit être activé et affecté)"
+
+msgid "(Each keyword group is a space seperated list.)"
+msgstr "(Chaque groupe de mot-clé est une liste séparée par des espaces.)"
+
+msgid "(Units/Sec)^2"
+msgstr "(Unités.s²)"
+
+msgid "(milliseconds)"
+msgstr "(millisecondes)"
+
+msgid ")|"
+msgstr ")|"
+
+msgid "*"
+msgstr "*"
+
+msgid "*.*"
+msgstr "*.*"
+
+msgid "*.tap; *.nc"
+msgstr "*.tap; *.nc"
+
+msgid "+"
+msgstr "+"
+
+msgid "+000.0000"
+msgstr "+000.0000"
+
+msgid "-"
+msgstr "-"
+
+msgid "."
+msgstr "."
+
+msgid "..."
+msgstr "..."
+
+msgid "/"
+msgstr "/"
+
+msgid "0"
+msgstr "0"
+
+msgid "0.1000"
+msgstr "0.1000"
+
+msgid "000.0000"
+msgstr "000.0000"
+
+msgid "1"
+msgstr "1"
+
+msgid "1/x"
+msgstr "1/x"
+
+msgid "1000"
+msgstr "1000"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "4+"
+msgstr "4+"
+
+msgid "4-"
+msgstr "4-"
+
+msgid "4.0.01"
+msgstr "4.0.01"
+
+msgid "5"
+msgstr "5"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "<-"
+msgstr "<-"
+
+msgid "="
+msgstr "="
+
+msgid "A"
+msgstr "A"
+
+msgid "A (3)"
+msgstr "A (3)"
+
+msgid "A Home"
+msgstr "Origine A"
+
+msgid "A general failure occured while loading %s."
+msgstr "Une erreur générale est apparue lors du chargement de %s."
+
+msgid "A new motion device has been selected.  The control must be restarted."
+msgstr ""
+"Un nouveau périphérique de mouvement à été sélectionné. Redémarrez Mach."
+
+msgid "A sharing violation occured while loading %s"
+msgstr "Une violation de partage est apparue lors du chargement de %s."
+
+msgid "A++ Limit"
+msgstr "Limite A+"
+
+msgid "A-- Limit"
+msgstr "Limite A-"
+
+msgid "A:"
+msgstr "A:"
+
+msgid "About"
+msgstr "À propos"
+
+msgid "Accel Time"
+msgstr "Accélération"
+
+msgid "Acceleration"
+msgstr "Accélération"
+
+msgid "Active Low"
+msgstr "Actif à 0"
+
+msgid "Active Plane"
+msgstr "Plan actif"
+
+msgid "Add..."
+msgstr "Ajouter..."
+
+msgid "Always on top."
+msgstr "Toujours au premier plan"
+
+msgid "Arc Center Mode"
+msgstr "Mode centre d'arc"
+
+msgid "Arc Color"
+msgstr "Couleur arc"
+
+msgid "Are you sure you want to delete the \""
+msgstr "Êtes vous sur de vouloir supprimer\""
+
+msgid "Are you sure you want to exit?"
+msgstr "Êtes vous sur de vouloir quitter ?"
+
+msgid "Auto Tool Zero"
+msgstr "Auto Tool Zero"
+
+msgid "Axis Color"
+msgstr "Couleur axe"
+
+msgid "Axis Control"
+msgstr "Contrôle d'axes"
+
+msgid "Axis Mapping"
+msgstr "Affectation axe"
+
+msgid "B"
+msgstr "B"
+
+msgid "B (4)"
+msgstr "B (4)"
+
+msgid "B Home"
+msgstr "Origine B"
+
+msgid "B++ Limit"
+msgstr "Limite B+"
+
+msgid "B-- Limit"
+msgstr "Limite B-"
+
+msgid "B:"
+msgstr "B:"
+
+msgid "Background:"
+msgstr "Arrière plan :"
+
+msgid "Backlash (Units)"
+msgstr "Rattrapage de jeu(unités)"
+
+msgid "Block Skip"
+msgstr "Ignorer bloc"
+
+msgid "Blue:"
+msgstr "Bleu :"
+
+msgid "Bold"
+msgstr "Gras"
+
+msgid "Buffer"
+msgstr "Tampon"
+
+msgid "Build:"
+msgstr "Révision :"
+
+msgid "C"
+msgstr "C"
+
+msgid "C (5)"
+msgstr "C (5)"
+
+msgid "C Home"
+msgstr "Origine C"
+
+msgid "C++ Limit"
+msgstr "Limite C+"
+
+msgid "C:"
+msgstr "C:"
+
+msgid "CE"
+msgstr "CE"
+
+msgid "Cancel"
+msgstr "Annuler"
+
+msgid "Cannot determin the size of file %s."
+msgstr "Impossible de déterminer la taille de %s."
+
+msgid ""
+"Cannot find Blank.set!  Check your installation.  \n"
+"The profile will NOT be created."
+msgstr ""
+"Impossible de trouver Blank.set ! Vérifier votre installation\n"
+"Le profil ne sera PAS créé."
+
+msgid "Center"
+msgstr "Centre"
+
+msgid "Center plot view to this position"
+msgstr "Centrer l'affichage sur cette position"
+
+msgid "Change Tool"
+msgstr "Changez l'outil"
+
+msgid "Cl&ear"
+msgstr "&Effacer"
+
+msgid "Clear"
+msgstr "Effacer"
+
+msgid "Close"
+msgstr "Fermer"
+
+msgid "Close G Code"
+msgstr "Fermer GCode"
+
+msgid "Color Settings"
+msgstr "Réglage des couleurs"
+
+msgid "Command"
+msgstr "Commande"
+
+msgid "Comment"
+msgstr "Commentaire"
+
+msgid "Config"
+msgstr "Configuration"
+
+msgid "Configure"
+msgstr "Configurer"
+
+msgid "Configure Plugins"
+msgstr "Configuration des modules"
+
+msgid "Configure..."
+msgstr "Configuration..."
+
+msgid "Confirm"
+msgstr "Confirmer"
+
+msgid "Confirm:"
+msgstr "Confirmer :"
+
+msgid "Cont."
+msgstr "Cont."
+
+msgid "Control"
+msgstr "Contrôle"
+
+msgid "Control Mode"
+msgstr "Mode de contrôle"
+
+msgid "Coolant Delay:"
+msgstr "Délai arrosage :"
+
+msgid "Coolant On"
+msgstr "Arrosage actif"
+
+msgid "Copy ID To Clipboard"
+msgstr "Copier l'ID dans le presse papier"
+
+msgid "Copy Profile"
+msgstr "Copier le profil"
+
+msgid "Copy profile "
+msgstr "Copier le profil"
+
+msgid ""
+"Copyright 2001-2015\n"
+"Newfanged Solutions, LLC.\n"
+"All rights reserved."
+msgstr ""
+"Copyright 2001-2015\n"
+"Newfanged Solutions, LLC.\n"
+"Tous droits réservés."
+
+msgid "Core"
+msgstr "Coeur"
+
+msgid "CoreConf Error"
+msgstr "Erreur CoreConf"
+
+msgid "Could not allocate new memory on the heap!"
+msgstr "Impossible d'allouer de la mémoire (heap)"
+
+msgid "Could not copy file \""
+msgstr "Impossible de copier le fichier\""
+
+msgid "Could not create directory \""
+msgstr "Impossible de créer le dossier\""
+
+msgid "Could not remove directory "
+msgstr "Impossible de supprimer le dossier"
+
+msgid "Could not remove file \""
+msgstr "Impossible de supprimer le fichier\""
+
+msgid "Could not restore file \""
+msgstr "Impossible de restaurer le fichier \""
+
+msgid "Counts"
+msgstr "Nombre de pas"
+
+msgid "Create Profile"
+msgstr "Créer un profil"
+
+msgid "Current File:"
+msgstr "Fichier en cours :"
+
+msgid "Current Profiles"
+msgstr "Profils existants"
+
+msgid "Cycle Jog Step"
+msgstr "Changer le saut"
+
+msgid "Cycle Retract"
+msgstr "Retractation"
+
+msgid "Cycle Start"
+msgstr "Départ cycle"
+
+msgid "Cycle Stop Is Controlled Stop?"
+msgstr "Arrêt contrôlé ?"
+
+msgid "DRO &Auto Calc"
+msgstr "Visu &Auto Calc"
+
+msgid ""
+"De-Ref\n"
+"All Axes"
+msgstr ""
+"Déréférencer\n"
+"les axes"
+
+msgid "Decel Time"
+msgstr "Décélération"
+
+msgid "Decscription"
+msgstr "Decscription"
+
+msgid "Default"
+msgstr "Défaut"
+
+msgid "Default Modes"
+msgstr "Modes par défaut"
+
+msgid "Delay (ms)"
+msgstr "Délai (ms)"
+
+msgid "Delays (secs)"
+msgstr "Délais (sec)"
+
+msgid "Delete Profile"
+msgstr "Supprimer un profil"
+
+msgid "Deref Axes In E-Stop?"
+msgstr "Déréférencer les axes sur AU"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Device"
+msgstr "Périphérique"
+
+msgid "Dia        "
+msgstr "Ø"
+
+msgid "Dia Wear   "
+msgstr "Usure Ø"
+
+msgid "Diagnostics"
+msgstr "Diagnostics"
+
+msgid "Diameter:"
+msgstr "Diamètre :"
+
+msgid "Directory Error!"
+msgstr "Erreur de dossier !"
+
+msgid "Disable"
+msgstr "Désactiver"
+
+msgid "Disable VBO Tool Path"
+msgstr "Désactiver le parcours d'outil VBO"
+
+msgid ""
+"Display\n"
+"Mode"
+msgstr ""
+"Mode\n"
+"affichage"
+
+msgid "Distance Mode"
+msgstr "Mode distance"
+
+msgid "Distance To Go"
+msgstr "Distance restante"
+
+msgid "Don't require password."
+msgstr "Pas de mot de passe requis"
+
+msgid "Don't show this dialog in the future."
+msgstr "Ne plus afficher à l'avenir"
+
+msgid "Dwell"
+msgstr "Pause"
+
+msgid "E&xit"
+msgstr "&Sortie"
+
+msgid "E-Stop is in effect.  Clear the E-Stop condition."
+msgstr "Arrêt d'urgence actif ! Vérifiez les condition d'AU"
+
+msgid "Edit G Code"
+msgstr "Éditer GCode"
+
+msgid "Emergency"
+msgstr "Urgence"
+
+msgid "Enable"
+msgstr "Activer"
+
+msgid "Enable 0"
+msgstr "Activation 0"
+
+msgid "Enable 1"
+msgstr "Activation 1"
+
+msgid "Enable 2"
+msgstr "Activation 2"
+
+msgid "Enable 3"
+msgstr "Activation 3"
+
+msgid "Enable 4"
+msgstr "Activation 4"
+
+msgid "Enable 5"
+msgstr "Activation 5"
+
+msgid "Enabled"
+msgstr "Activé"
+
+msgid "Ent"
+msgstr "Ent"
+
+msgid "Entry error!"
+msgstr "Erreur d'entrée !"
+
+msgid "Error %d while loading file %s."
+msgstr "Erreur %d au chargement du fichier %s"
+
+msgid "Error Openining\""
+msgstr "Erreur en ouvrant\""
+
+msgid "Error initializing the core!"
+msgstr "Erreur à l'initialisation du cœur"
+
+msgid "Error!"
+msgstr "Erreur !"
+
+msgid "Esc"
+msgstr "Esc"
+
+msgid "Exit Confirmation"
+msgstr "Confirmation de sortie"
+
+msgid "FRO%"
+msgstr "FRO%"
+
+msgid "Failed to create Macros directory!"
+msgstr "Échec de la création du dossier Macros !"
+
+msgid "Failed to init API."
+msgstr "Échec de l'initialisation de l'API"
+
+msgid "Failed to open Profiles directory"
+msgstr "Échec de l'ouverture du dossier Profils"
+
+msgid "Feature "
+msgstr "Fonctionnalité"
+
+msgid "Feed Hold"
+msgstr "Pause"
+
+msgid "Feed Mode"
+msgstr "Mode avances"
+
+msgid "Feed Rate"
+msgstr "Avance"
+
+msgid "Feed Rate:"
+msgstr "Avance :"
+
+msgid "Feed Rate: %.2f"
+msgstr "Avance : %.2f"
+
+msgid "FeedBack Ratio"
+msgstr "Ratio de retour"
+
+msgid "File Error!"
+msgstr "Erreur fichier !"
+
+msgid "File Extensions:"
+msgstr "Extensions de fichier :"
+
+msgid "File Name"
+msgstr "Nom de fichier"
+
+msgid "File Ops"
+msgstr "Opérations fichier"
+
+msgid "Fit"
+msgstr "Adapter"
+
+msgid "Fixture Offsets"
+msgstr "Décalages"
+
+msgid "Flood"
+msgstr "Arrosage"
+
+msgid "For more information, please visit our webpage:"
+msgstr "Pour plus d'informations, visitez notre page web :"
+
+msgid "For more information, please visit:"
+msgstr "Pour plus d'informations, visitez :"
+
+msgid "For support with this version, please contact:"
+msgstr "Pour le support de cette version, contactez :"
+
+msgid "Foreground:"
+msgstr "Premier plan"
+
+msgid "Front"
+msgstr "Face"
+
+msgid "G Force"
+msgstr "G"
+
+msgid "G code"
+msgstr "G code"
+
+msgid "G code file extensions"
+msgstr "Extension de fichier Gcode"
+
+msgid "G code files ("
+msgstr "Fichiers GCode ("
+
+msgid "G54"
+msgstr "G54"
+
+msgid "G55"
+msgstr "G55"
+
+msgid "G56"
+msgstr "G56"
+
+msgid "G57"
+msgstr "G57"
+
+msgid "General"
+msgstr "Général"
+
+msgid ""
+"Goto\n"
+"Zero"
+msgstr ""
+"Aller\n"
+"à zéro"
+
+msgid "Green:"
+msgstr "Vert :"
+
+msgid "Height:"
+msgstr "Hauteur :"
+
+msgid "Help"
+msgstr "Aide"
+
+msgid "Highlite and Past Move Color"
+msgstr "Couleur pour mise en évidence et mouvement effectué"
+
+msgid "History"
+msgstr "Historique"
+
+msgid "Home Dir"
+msgstr "Direction origine"
+
+msgid "Home In Place"
+msgstr "Origine sur place"
+
+msgid "Home Offset"
+msgstr "Décalage origine"
+
+msgid "Home Order"
+msgstr "Hiérarchie origine"
+
+msgid "Home Speed%"
+msgstr "Vitesse de référencement (%)"
+
+msgid "Homing"
+msgstr "Origine"
+
+msgid "Homing/SoftLimits"
+msgstr "Origines et limites"
+
+msgid "I&nput +"
+msgstr "E&ntrée +"
+
+msgid "I/O Status"
+msgstr "État E/S"
+
+msgid "Identifier"
+msgstr "Identifiant"
+
+msgid "Important!"
+msgstr "Important !"
+
+msgid "Include Comments In Messages?"
+msgstr "Inclure les commentaires dans les messages ?"
+
+msgid "Index"
+msgstr "Index"
+
+msgid "Information"
+msgstr "Information"
+
+msgid "Initialization Codes"
+msgstr "Codes d'initialisation"
+
+msgid "Input"
+msgstr "Entrée"
+
+msgid "Input +"
+msgstr "Entrée +"
+
+msgid "Input 0"
+msgstr "Entrée 0"
+
+msgid "Input 1"
+msgstr "Entrée 1"
+
+msgid "Input 2"
+msgstr "Entrée 2"
+
+msgid "Input 3"
+msgstr "Entrée 3"
+
+msgid "Input Name"
+msgstr "Nom de l'entrée"
+
+msgid "Input Signals"
+msgstr "Signaux d'entrées"
+
+msgid "Inputs"
+msgstr "Entrées"
+
+msgid "Italic"
+msgstr "Italique"
+
+msgid ""
+"Jog\n"
+"Follow"
+msgstr ""
+"Suivi\n"
+"déplacement"
+
+msgid "Jog Increments"
+msgstr "Incréments de déplacement"
+
+msgid "Jog Mode"
+msgstr "Mode de déplacement"
+
+msgid "Jog Rate"
+msgstr "Vitesse de déplacement"
+
+msgid ""
+"Jog axis close to start ponit then use the \"Move\" buttons to get into the "
+"correct position."
+msgstr "Déplacez les axes près du point de départ..."
+
+msgid "Jogging"
+msgstr "Déplacement"
+
+msgid "KeyWords"
+msgstr "Mots clé"
+
+msgid ""
+"Keyboard Jog \n"
+"Off"
+msgstr ""
+"Déplacement clavier\n"
+"inactif"
+
+msgid "Keyboard Jog Off"
+msgstr "Déplacement clavier inactif"
+
+msgid "Keyboard Jog On"
+msgstr "Déplacement clavier actif"
+
+msgid "Keypad"
+msgstr "Pavé numérique"
+
+msgid "KeypadEx"
+msgstr "KeypadEx"
+
+msgid "Keyword 1"
+msgstr "Mot-clé 1"
+
+msgid "Keyword 2"
+msgstr "Mot-clé 2"
+
+msgid "Keyword 3"
+msgstr "Mot-clé 3"
+
+msgid "Keyword 4"
+msgstr "Mot-clé 4"
+
+msgid "Keyword 5"
+msgstr "Mot-clé 5"
+
+msgid "Keyword 6"
+msgstr "Mot-clé 6"
+
+msgid "Keyword 7"
+msgstr "Mot-clé 7"
+
+msgid "Keyword 8"
+msgstr "Mot-clé 8"
+
+msgid "Keywords 1:"
+msgstr "Mots-clé 1 :"
+
+msgid "Keywords 2:"
+msgstr "Mots-clé 2 :"
+
+msgid "Keywords 3:"
+msgstr "Mots-clé 3 :"
+
+msgid "Keywords 4:"
+msgstr "Mots-clé 4 :"
+
+msgid "Keywords 5:"
+msgstr "Mots-clé 5 :"
+
+msgid "Keywords 6:"
+msgstr "Mots-clé 6 :"
+
+msgid "Keywords 7:"
+msgstr "Mots-clé 7 :"
+
+msgid "Keywords 8:"
+msgstr "Mots-clé 8 :"
+
+msgid "LUA Error code "
+msgstr "Erreur code LUA"
+
+msgid "LUA Error!"
+msgstr "Erreur LUA !"
+
+msgid "Language"
+msgstr "Langue"
+
+msgid "Last Wizard"
+msgstr "Dernier assistant"
+
+msgid "Lathe (&Radius)"
+msgstr "Tournage (&Rayon)"
+
+msgid "Length     "
+msgstr "Longueur"
+
+msgid "Length Wear"
+msgstr "Usure longueur"
+
+msgid "License Files (*.txt;*.dat)|*.txt;*.dat|All files (*)|*"
+msgstr "Fichiers licence (*.txt;*.dat)|*.txt;*.dat|Tous (*)|*"
+
+msgid "License by OEM from Artsoft @ "
+msgstr "Licence par OEM venant d'Artsoft @"
+
+msgid "License file installation failed!!!"
+msgstr "Échec de l'installation de la licence"
+
+msgid ""
+"License file installed successfully.  Please restart for the changes to take "
+"effect."
+msgstr ""
+"Fichier de licence installé correctement. Redémarrez le programme pour "
+"activer."
+
+msgid "Licensed"
+msgstr "Licencié"
+
+msgid "Licesne File Dialog"
+msgstr "Dialogue fichier de licence"
+
+msgid "Limit Override"
+msgstr "Dépassement limites"
+
+msgid "Line:"
+msgstr "Ligne :"
+
+msgid "Linear Color"
+msgstr "Couleur linéaire"
+
+msgid "Load Error"
+msgstr "Erreur de chargement"
+
+msgid "Load G Code"
+msgstr "Charger GCode"
+
+msgid "Load License File"
+msgstr "Charger un fichier de licence"
+
+msgid "Load Wizard"
+msgstr "Charger un assistant"
+
+msgid "Load Wizards"
+msgstr "Charger un assistant"
+
+msgid "Lock aspect"
+msgstr "Verrouiller l'aspect"
+
+msgid "Lock horizontal and vertical zoom aspect."
+msgstr "Verrouiller l'aspect horizontal et vertical du zoom"
+
+msgid "Log Facility"
+msgstr "Fonction journalisation"
+
+msgid "Log files (*.log)|*.log|Text files (*.txt)|*.txt|All files (*)|*"
+msgstr ""
+"Fichiers journaux (*.log)|*.log|Fichiers texte (*.txt)|*.txt|Tous (*)|*"
+
+msgid "Logging..."
+msgstr "Journalisation..."
+
+msgid "Look Ahead Lines"
+msgstr "Lignes lues en avance"
+
+msgid "M code"
+msgstr "Code M"
+
+msgid "M+"
+msgstr "M+"
+
+msgid "M-"
+msgstr "M-"
+
+msgid "M1 Opt Stp"
+msgstr "Arrêt M1"
+
+msgid "M3s"
+msgstr "M3s"
+
+msgid "M4s"
+msgstr "M4s"
+
+msgid "M6s"
+msgstr "M6s"
+
+msgid "MC"
+msgstr "MC"
+
+msgid "MDI"
+msgstr "MDI"
+
+msgid "MDI Commands (Press \"Cycle Start\" to execute) "
+msgstr "Commandes MDI (Appuyez sur Départ pour exécuter)"
+
+msgid "MR"
+msgstr "MR"
+
+msgid "MS"
+msgstr "MS"
+
+msgid "Mach Configuration"
+msgstr "Configuration de Mach"
+
+msgid "Mach Error!"
+msgstr "Erreur Mach !"
+
+msgid "Mach4"
+msgstr "Mach4"
+
+msgid "Mach4 Demo"
+msgstr "Mach4 Demo"
+
+msgid "Mach4 Expert"
+msgstr "Mach4 Expert"
+
+msgid "Mach4 Hobby"
+msgstr "Mach4 Hobby"
+
+msgid "Mach4 Industrial"
+msgstr "Mach4 Industrial"
+
+msgid "Mach4 Lite"
+msgstr "Mach4 Lite"
+
+msgid ""
+"Machine\n"
+"Coordinates"
+msgstr ""
+"Coordonnées\n"
+"machine"
+
+msgid ""
+"Machine\n"
+"Coords."
+msgstr ""
+"Coordonnées\n"
+"machine"
+
+msgid "Machine Limits"
+msgstr "Limites de la machine"
+
+msgid "Machine Mode"
+msgstr "Mode machine"
+
+msgid "Machine Setup Units"
+msgstr "Unités natives"
+
+msgid "Maintenance Statistics"
+msgstr "Statistiques de maintenance"
+
+msgid "Mapping Enabled"
+msgstr "Affecté"
+
+msgid "Master"
+msgstr "Maître"
+
+msgid "Max Spindle Motor RPM:"
+msgstr "Vitesse maxi de la broche :"
+
+msgid "MaxRPM"
+msgstr "Vmax"
+
+msgid "Measure"
+msgstr "Mesurer"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "MinRPM"
+msgstr "Vmin"
+
+msgid "Misc."
+msgstr "Divers"
+
+msgid "Mist Delay:"
+msgstr "Délai brouillard :"
+
+msgid "Mist On"
+msgstr "Brouillard actif"
+
+msgid "Modals:"
+msgstr "Codes modaux :"
+
+msgid "Motion Mode"
+msgstr "Mode mouvements"
+
+msgid "Motor0"
+msgstr "Moteur0"
+
+msgid "Motors"
+msgstr "Moteurs"
+
+msgid "Move Axis to Start Position"
+msgstr "Déplacer à la position de départ"
+
+msgid "Move Selected"
+msgstr "Déplacer sélectionné"
+
+msgid "Move Unselected"
+msgstr "Déplacer désélectionné"
+
+msgid "Must be in idle state for this function"
+msgstr "Doit être au repos pour cette fonction."
+
+msgid "N code"
+msgstr "Code N"
+
+msgid "NFS Wizards"
+msgstr "Assistants NFS"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Neg"
+msgstr "Nég"
+
+msgid "New motion device selected!"
+msgstr "Nouveau périphérique sélectionné !"
+
+msgid "Newest"
+msgstr "Plus récent"
+
+msgid "No"
+msgstr "Non"
+
+msgid "None"
+msgstr "Aucun"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Number"
+msgstr "Nombre"
+
+msgid "OB%d (%d)"
+msgstr "OB%d (%d)"
+
+msgid "OB1 (3)"
+msgstr "OB1 (3)"
+
+msgid "OB1 (6)"
+msgstr "OB1 (6)"
+
+msgid "OB2 (7)"
+msgstr "OB2 (7)"
+
+msgid "OB3 (8)"
+msgstr "OB3 (8)"
+
+msgid "OB4 (9)"
+msgstr "OB4 (9)"
+
+msgid "OB5 (10)"
+msgstr "OB5 (10)"
+
+msgid "OB6 (11)"
+msgstr "OB6 (11)"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Oldest"
+msgstr "Plus ancien"
+
+msgid "Open Recent File"
+msgstr "Ouvrir fichier récent"
+
+msgid "Operator"
+msgstr "Opérateur"
+
+msgid "Output 0"
+msgstr "Sortie 0"
+
+msgid "Output 1"
+msgstr "Sortie 1"
+
+msgid "Output 2"
+msgstr "Sortie 2"
+
+msgid "Output 3"
+msgstr "Sortie 3"
+
+msgid "Output 4"
+msgstr "Sortie 4"
+
+msgid "Output 5"
+msgstr "Sortie 5"
+
+msgid "Output Name"
+msgstr "Nom de la sortie"
+
+msgid "Output Signals"
+msgstr "Signaux de sortie"
+
+msgid "Outputs"
+msgstr "Sorties"
+
+msgid "PC ID:"
+msgstr "PC ID:"
+
+msgid "PLC Script Interval"
+msgstr "Intervalle du script PLC"
+
+msgid "Parameter"
+msgstr "Paramètre"
+
+msgid "Password:"
+msgstr "Mot de passe :"
+
+msgid "Per Unit"
+msgstr "Par unité"
+
+msgid "Pi"
+msgstr "Pi"
+
+msgid ""
+"Please enter a password that will be used to unlock the operator functions."
+msgstr "Entrez un mot de passe pour protéger les fonction opérateur."
+
+msgid "Please enter the unlock password."
+msgstr "Entrez le mot de passe"
+
+msgid "Please restart for the changes to take effect."
+msgstr "Redémarrez pour prendre en compte les changements"
+
+msgid "Plugin Package Name (No extension)"
+msgstr "Nom du pack module (sans extension)"
+
+msgid "Plugin Package Path"
+msgstr "Chemin du pack module"
+
+msgid "Plugin package files (*.m4plugl)|*.m4plugl"
+msgstr "Fichiers module (*.m4plugl)|*.m4plugl"
+
+msgid "Plugin package files (*.m4plugm)|*.m4plugm"
+msgstr "Fichiers module (*.m4plugm)|*.m4plugm"
+
+msgid "Plugin package files (*.m4plugw)|*.m4plugw"
+msgstr "Fichiers modules (*.m4plugw)|*.m4plugw"
+
+msgid "Pos"
+msgstr "Pos"
+
+msgid "Position 1"
+msgstr "Position 1"
+
+msgid "Position 10"
+msgstr "Position 10"
+
+msgid "Post"
+msgstr "Post"
+
+msgid "Press to enable keayboard jogging, Jogging is active when Green"
+msgstr ""
+"Appuyez pour activer le déplacement au clavier, Bouton vert lorsque activé."
+
+msgid "Probe"
+msgstr "Palpeur"
+
+msgid "Probe Method 2"
+msgstr "Méthode palpage 2"
+
+msgid "Profile Information"
+msgstr "Information sur le profil"
+
+msgid "Profile Name (No extension)"
+msgstr "Nom du profil (sans extension)"
+
+msgid "Profile Name:"
+msgstr "Nom du profil :"
+
+msgid "Profile:"
+msgstr "Profil :"
+
+msgid "Profile: "
+msgstr "Profil : "
+
+msgid "Program Run"
+msgstr "Exécution programme"
+
+msgid "Provides Configuration"
+msgstr "Provides Configuration"
+
+msgid "Provides Diagnostics"
+msgstr "Provides Diagnostics"
+
+msgid "Provides I/O"
+msgstr "Provides I/O"
+
+msgid "Provides Motion"
+msgstr "Provides Motion"
+
+msgid "Provides Registers"
+msgstr "Provides Registers"
+
+msgid "Provides Scripting"
+msgstr "Provides Scripting"
+
+msgid "RPM:"
+msgstr "Tr/min :"
+
+msgid "RPM: %0.0f"
+msgstr "Tr/min : %0.0f"
+
+msgid "Rapid Color"
+msgstr "Couleur rapides"
+
+msgid "Rapid FRO%"
+msgstr "Rapid FRO%"
+
+msgid "Rear"
+msgstr "Arrière"
+
+msgid "Recent File"
+msgstr "Fichier récent"
+
+msgid "Recent Files"
+msgstr "Fichiers récents"
+
+msgid "Red:"
+msgstr "Rouge :"
+
+msgid ""
+"Ref\n"
+"All\n"
+"Home"
+msgstr ""
+"Origine\n"
+"tous\n"
+"les axes"
+
+msgid "Ref A"
+msgstr "Origine A"
+
+msgid "Ref X"
+msgstr "Origine X"
+
+msgid "Ref Y"
+msgstr "Origine Y"
+
+msgid "Ref Z"
+msgstr "Origine Z"
+
+msgid "Reg 0:"
+msgstr "Reg 0:"
+
+msgid "Reg 1:"
+msgstr "Reg 1:"
+
+msgid "Reg 2:"
+msgstr "Reg 2:"
+
+msgid "Reg 3:"
+msgstr "Reg 3:"
+
+msgid "Reg 4:"
+msgstr "Reg 4:"
+
+msgid "Reg 5:"
+msgstr "Reg 5:"
+
+msgid "Reg 6:"
+msgstr "Reg 6:"
+
+msgid "Reg 7:"
+msgstr "Reg 7:"
+
+msgid "Reg 8:"
+msgstr "Reg 8:"
+
+msgid "Reg 9:"
+msgstr "Reg 9:"
+
+msgid ""
+"Regen\n"
+"Toolpath"
+msgstr ""
+"Rafraichir\n"
+"parcours"
+
+msgid "Remember"
+msgstr "Mémoriser"
+
+msgid "Remember Position Set to: X%.4f Y%.4f"
+msgstr "Mémoriser la position à : X%.4f Y%.4f"
+
+msgid "Remember Position..."
+msgstr "Mémoriser la position..."
+
+msgid "Remove"
+msgstr "Enlever"
+
+msgid "Removing a plugin will require a restart.  Are you sure?"
+msgstr "Enlever un module nécessite un redémarrage. Êtes vous sur ?"
+
+msgid "Required file is missing."
+msgstr "Fichier requis manquant"
+
+msgid "Reset"
+msgstr "RàZ"
+
+msgid "Reset All"
+msgstr "Tout ràz"
+
+msgid "Restore Backup"
+msgstr "Restaurer la sauvegarde"
+
+msgid "Restore Error"
+msgstr "Restaurer erreur"
+
+msgid "Return"
+msgstr "Retour"
+
+msgid "Rev. Run"
+msgstr "Inverse"
+
+msgid "Reverse?"
+msgstr "Inverser ?"
+
+msgid "Reversed"
+msgstr "Inversé"
+
+msgid "Rewind"
+msgstr "Rembobiner"
+
+msgid "Rollover A"
+msgstr "Boucler A"
+
+msgid "Rollover B"
+msgstr "Boucler B"
+
+msgid "Rollover C"
+msgstr "Boucler C"
+
+msgid "Rotary Axes"
+msgstr "Axes rotatifs"
+
+msgid "Run From Here"
+msgstr "Démarrer d'ici"
+
+msgid "Run From Here Prep Move"
+msgstr "Mouvement préparatoire"
+
+msgid "Run Ops"
+msgstr "Opérations exécution"
+
+msgid "SRO%"
+msgstr "SRO%"
+
+msgid "Sample Text"
+msgstr "Texte exemple"
+
+msgid "Save"
+msgstr "Sauver"
+
+msgid "Save Status History As..."
+msgstr "Enregistrer historique état sous..."
+
+msgid "Save file"
+msgstr "Sauver fichier"
+
+msgid "Screen Element:"
+msgstr "Élément d'écran :"
+
+msgid "Screen Set:"
+msgstr "Jeu d'écrans :"
+
+msgid "Screen files (*.set)|*.set"
+msgstr "Fichiers écrans (*.set)|*.set"
+
+msgid "Script Error"
+msgstr "Erreur script"
+
+msgid "Select &Language..."
+msgstr "Sélectionner la &langue"
+
+msgid "Select License File"
+msgstr "Sélectionnez le fichier de licence"
+
+msgid "Select Motion Device"
+msgstr "Sélectionner le périphérique de mouvement"
+
+msgid "Select Profile"
+msgstr "Sélectionner le profil"
+
+msgid "Select file"
+msgstr "Sélectionner le fichier"
+
+msgid "Select one permanent adapter:"
+msgstr "Sélectionnez une carte réseau permanente :"
+
+msgid "Select plugin package..."
+msgstr "Sélectionner un pack module"
+
+msgid "Select the file to restore:"
+msgstr "Sélectionnez le fichier à restaurer"
+
+msgid "Select the language"
+msgstr "Sélectionner la &langue"
+
+msgid ""
+"Select the motion control device.\n"
+"WARNING!  \n"
+"Changing the motion control device will destroy any existing \n"
+"axis to motor mapping and motor tuning."
+msgstr ""
+"Sélection du périphérique de mouvements.\n"
+"ATTENTION !\n"
+"Le changement de périphérique détruira l'affectation\n"
+"et le réglage des moteurs."
+
+msgid "Select the screen set..."
+msgstr "Sélectionnez le jeu d'écran"
+
+msgid "Set Next Line"
+msgstr "Prochaine ligne"
+
+msgid "Set plot view to show all items"
+msgstr "Régler l'affichage pour tout voir"
+
+msgid "Show Tool Path Limits"
+msgstr "Montrer les limites du parcours"
+
+msgid "Show help about the mouse commands."
+msgstr "Afficher l'aide des commandes de souris"
+
+msgid "Show mouse commands..."
+msgstr "Afficher les commandes souris"
+
+msgid "Single Block"
+msgstr "Bloc par bloc"
+
+msgid "Skip /"
+msgstr "Ignorer /"
+
+msgid "Skip /1"
+msgstr "Ignorer /1"
+
+msgid "Skip /2"
+msgstr "Ignorer /2"
+
+msgid "Skip /3"
+msgstr "Ignorer /3"
+
+msgid "Slave 1"
+msgstr "Esclave 1"
+
+msgid "Slave 2"
+msgstr "Esclave 2"
+
+msgid "Slave 3"
+msgstr "Esclave 3"
+
+msgid "Slave 4"
+msgstr "Esclave 4"
+
+msgid "Slave 5"
+msgstr "Esclave 5"
+
+msgid ""
+"Soft\n"
+"Limits"
+msgstr ""
+"Limites\n"
+"logicielles"
+
+msgid "Soft Enable"
+msgstr "Activation soft"
+
+msgid "Soft Max"
+msgstr "Max soft"
+
+msgid "Soft Min"
+msgstr "Min soft"
+
+msgid "Spindle"
+msgstr "Broche"
+
+msgid "Spindle CW"
+msgstr "Broche sens horaire"
+
+msgid "Spindle Delay:"
+msgstr "Délai broche :"
+
+msgid "Spindle Fwd."
+msgstr "Broche endroit"
+
+msgid "Spindle Mode"
+msgstr "Mode broche"
+
+msgid "Spindle On"
+msgstr "Broche activée"
+
+msgid "Spindle Range"
+msgstr "Plage broche"
+
+msgid "Spindle Rev."
+msgstr "Broche envers"
+
+msgid "Splash"
+msgstr "Splash"
+
+msgid "Start logging."
+msgstr "Journalisation démarrée"
+
+msgid "State:"
+msgstr "État :"
+
+msgid "Status History"
+msgstr "Historique état"
+
+msgid "Step"
+msgstr "Pas"
+
+msgid "Step/Dir Spindle Axis:"
+msgstr "Axe pour broche en pas/dir :"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "Stop logging."
+msgstr "Arrêter journalisation."
+
+msgid "Strings"
+msgstr "Chaines"
+
+msgid "Style"
+msgstr "Style"
+
+msgid "Support email address:"
+msgstr "Adresse e-mail du support :"
+
+msgid ""
+"Supported Mouse commands:\n"
+"         - Left button down + Mark area: Rectangular zoom\n"
+"         - Right button down + Move: Pan (Move)\n"
+"         - Wheel: Vertical scroll\n"
+"         - Wheel + SHIFT: Horizontal scroll\n"
+"         - Wheel + CTRL: Zoom in/out"
+msgstr ""
+"Commande souris :\n"
+"         - Bouton gauche + déplacement : zoom boite\n"
+"         - Bouton droit + déplacement : déplacer la vue\n"
+"         - Molette : défilement vertical\n"
+"         - Molette + shift : défilement horizontal\n"
+"         - Molette + ctrl : zoom +/-"
+
+msgid "T code"
+msgstr "Code T"
+
+msgid "Test Registers"
+msgstr "Tester registres"
+
+msgid "Text files (*.txt)|*.txt|All files (*)|*"
+msgstr "Fichiers texte (*.txt)|*.txt|Tous (*)|*"
+
+msgid "The control can't load a file at this time."
+msgstr "Impossible de charger un fichier en ce moment."
+
+msgid "The file %s is empty!"
+msgstr "Le fichier %s est vide !"
+
+msgid "The file %s is invalid!"
+msgstr "Le fichier %s est invalide !"
+
+msgid "The passwords do not match!"
+msgstr "Les mots de passe ne concordent pas"
+
+msgid "There is another instance of Mach already running."
+msgstr "Il y existe déjà une instance de Mach4 en cours d'exécution."
+
+msgid "This OEM version of Mach 4 is licensed and supported by %s."
+msgstr "Cette version OEM de Mach4 est licenciée et supportée par %s."
+
+msgid "This Session"
+msgstr "Cette session"
+
+msgid "Thread Method 2"
+msgstr "Méthode de filetage 2"
+
+msgid "Time in Seconds"
+msgstr "Temps en secondes"
+
+msgid "Timing"
+msgstr "Timing"
+
+msgid "Tip"
+msgstr "Extrémité"
+
+msgid "Tip rad"
+msgstr "Rayon extrémité"
+
+msgid "Title"
+msgstr "Titre"
+
+msgid "To Go"
+msgstr "Distance restante"
+
+msgid "Tool Information"
+msgstr "Informations Outil"
+
+msgid "Tool Offsets"
+msgstr "Décalages outils"
+
+msgid "Tool Path"
+msgstr "Parcours d'outil"
+
+msgid "Tool Path Background Botton Color"
+msgstr "Couleur du bas de l'arrière plan du parcours d'outil"
+
+msgid "Tool Path Background Top Color"
+msgstr "Couleur du haut de l'arrière plan du parcours d'outil"
+
+msgid "Tool Path Ops"
+msgstr "Opération parcours"
+
+msgid "Tool Path Progress"
+msgstr "Progression du parcours d'outil"
+
+msgid "Tool path colors"
+msgstr "Couleurs du parcours d'outil"
+
+msgid "Tool path options"
+msgstr "Options du parcours d'outil"
+
+msgid "Tool#%i"
+msgstr "Outil#%i"
+
+msgid "Tool:"
+msgstr "Outil :"
+
+msgid "Total Counts"
+msgstr "Total compteur"
+
+msgid "Total Distance (Units)"
+msgstr "Distance totale (unités)"
+
+msgid "Total Time"
+msgstr "Temps total"
+
+msgid "Total Time (Hours)"
+msgstr "Temps total (heures)"
+
+msgid "Traverse Mode"
+msgstr "Mode de traversée"
+
+msgid "Turn on debugging code"
+msgstr "Activer le débogage du code"
+
+msgid "Underline"
+msgstr "Souligner"
+
+msgid "Units Mode"
+msgstr "Mode unités"
+
+msgid "Units/Minute"
+msgstr "Unités/minute"
+
+msgid "Unlicensed"
+msgstr "Pas de licence"
+
+msgid "Unlock Password"
+msgstr "Mot de passe de déverrouillage"
+
+msgid "Unrecognized license file!"
+msgstr "Fichier licence non reconnu !"
+
+msgid "Use 0 to disable"
+msgstr "Entrer 0 pour désactiver"
+
+msgid "Valid"
+msgstr "Valide"
+
+msgid "Velocity"
+msgstr "Vitesse"
+
+msgid "Velocity (U/min)"
+msgstr "Vitesse (Unités/min)"
+
+msgid "Verify"
+msgstr "Vérifier"
+
+msgid "Version"
+msgstr "Version"
+
+msgid "Version:"
+msgstr "Version :"
+
+msgid "Work Shift"
+msgstr "Travail posté"
+
+msgid ""
+"Would you like to move to machine position: \n"
+"X = %.4f\n"
+"Y = %.4f\n"
+"Z = %.4f\n"
+"A = %.4f\n"
+"B = %.4f\n"
+"C = %.4f\n"
+msgstr ""
+"Voulez vous positionner la machine à : \n"
+"X = %.4f\n"
+"Y = %.4f\n"
+"Z = %.4f\n"
+"A = %.4f\n"
+"B = %.4f\n"
+"C = %.4f\n"
+
+msgid "Would you like to move to remembered position : X%.4f Y%.4f"
+msgstr "Voulez vous aller à la position mémorisée :  X%.4f Y%.4f"
+
+msgid "X"
+msgstr "X"
+
+msgid "X     "
+msgstr "X     "
+
+msgid "X (0)"
+msgstr "X (0)"
+
+msgid "X Home"
+msgstr "Origine X"
+
+msgid "X Wear"
+msgstr "X Usure"
+
+msgid "X+"
+msgstr "X+"
+
+msgid "X++ Limit"
+msgstr "Limite X+"
+
+msgid "X-"
+msgstr "X-"
+
+msgid "X-- Limit"
+msgstr "Limite X-"
+
+msgid "X-Z"
+msgstr "X-Z"
+
+msgid "X:"
+msgstr "X :"
+
+msgid "Y"
+msgstr "Y"
+
+msgid "Y (1)"
+msgstr "Y (1)"
+
+msgid "Y Home"
+msgstr "Origine Y"
+
+msgid "Y+"
+msgstr "Y+"
+
+msgid "Y++ Limit"
+msgstr "Limite Y+"
+
+msgid "Y-"
+msgstr "Y-"
+
+msgid "Y-- Limit"
+msgstr "Limite Y-"
+
+msgid "Y:"
+msgstr "Y :"
+
+msgid "Yes"
+msgstr "Oui"
+
+msgid ""
+"You asked RemDirRF() to delete a possible root directory.\t\t\t\t   This is "
+"disabled by default.  If you really need to delete \""
+msgstr ""
+"Vous avez demandé à RemDirRF() d'effacer un répertoire racine.\t\t\t\t Ceci "
+"est impossible en l'état. Si vous devez réellement supprimer\""
+
+msgid "Z"
+msgstr "Z"
+
+msgid "Z     "
+msgstr "Z     "
+
+msgid "Z (2)"
+msgstr "Z (2)"
+
+msgid "Z Home"
+msgstr "Origine Z"
+
+msgid "Z Wear"
+msgstr "Z Usure"
+
+msgid "Z+"
+msgstr "Z+"
+
+msgid "Z++ Limit"
+msgstr "Limite Z+"
+
+msgid "Z-"
+msgstr "Z-"
+
+msgid "Z-- Limit"
+msgstr "Limite Z-"
+
+msgid "Z:"
+msgstr "Z :"
+
+msgid ""
+"Zero\n"
+"A"
+msgstr ""
+"Zéro\n"
+"A"
+
+msgid ""
+"Zero\n"
+"X"
+msgstr ""
+"Zéro\n"
+"X"
+
+msgid ""
+"Zero\n"
+"Y"
+msgstr ""
+"Zéro\n"
+"Y"
+
+msgid ""
+"Zero\n"
+"Z"
+msgstr ""
+"Zéro\n"
+"Z"
+
+msgid "Zoom in"
+msgstr "Zoom +"
+
+msgid "Zoom in plot view."
+msgstr "Zoom + affichage"
+
+msgid "Zoom out"
+msgstr "Zoom -"
+
+msgid "Zoom out plot view."
+msgstr "Zoom - affichage"
+
+msgid "Zoom: (%f,%f)-(%f,%f)"
+msgstr "Zoom: (%f,%f)-(%f,%f)"
+
+msgid "[mpBitmapLayer::Plot] offset: x=%i y=%i  bmpWidth=%ix%i"
+msgstr "[mpBitmapLayer::Plot] offset: x=%i y=%i  bmpWidth=%ix%i"
+
+msgid "[mpBitmapLayer::Plot] screenPixel: x=%f y=%f  d_width=%ix%i"
+msgstr "[mpBitmapLayer::Plot] screenPixel: x=%f y=%f  d_width=%ix%i"
+
+msgid "[mpWindow::OnMouseMove] Ax:%i Ay:%i m_posX:%f m_posY:%f"
+msgstr "[mpWindow::OnMouseMove] Ax:%i Ay:%i m_posX:%f m_posY:%f"
+
+msgid "[mpWindow::OnPaint] vis.area:%ix%i px=%i py=%i"
+msgstr "[mpWindow::OnPaint] vis.area:%ix%i px=%i py=%i"
+
+msgid "cos"
+msgstr "cos"
+
+msgid "debug"
+msgstr "debug"
+
+msgid "history.txt"
+msgstr "history.txt"
+
+msgid "http://www.machsupport.com"
+msgstr "http://www.machsupport.com"
+
+msgid "install"
+msgstr "installation"
+
+msgid "ln"
+msgstr "Pouces"
+
+msgid "log"
+msgstr "log"
+
+msgid "mcInformation"
+msgstr "mcInformation"
+
+msgid "mcUnlock"
+msgstr "mcUnlock"
+
+msgid "mod"
+msgstr "mod"
+
+msgid ""
+"mpWindow::DoZoomInXCalc() prior X coord: (%f), new X coord: (%f) SHOULD BE "
+"EQUAL!!"
+msgstr ""
+"mpWindow::DoZoomInXCalc() prior X coord: (%f), new X coord: (%f) SHOULD BE "
+"EQUAL!!"
+
+msgid ""
+"mpWindow::DoZoomInYCalc() prior Y coord: (%f), new Y coord: (%f) SHOULD BE "
+"EQUAL!!"
+msgstr ""
+"mpWindow::DoZoomInYCalc() prior Y coord: (%f), new Y coord: (%f) SHOULD BE "
+"EQUAL!!"
+
+msgid ""
+"mpWindow::DoZoomOutXCalc() prior X coord: (%f), new X coord: (%f) SHOULD BE "
+"EQUAL!!"
+msgstr ""
+"mpWindow::DoZoomOutXCalc() prior X coord: (%f), new X coord: (%f) SHOULD BE "
+"EQUAL!!"
+
+msgid ""
+"mpWindow::DoZoomOutYCalc() prior Y coord: (%f), new Y coord: (%f) SHOULD BE "
+"EQUAL!!"
+msgstr ""
+"mpWindow::DoZoomOutYCalc() prior Y coord: (%f), new Y coord: (%f) SHOULD BE "
+"EQUAL!!"
+
+msgid ""
+"mpWindow::Fit() m_desiredXmin=%f m_desiredXmax=%f  m_desiredYmin=%f "
+"m_desiredYmax=%f"
+msgstr ""
+"mpWindow::Fit() m_desiredXmin=%f m_desiredXmax=%f  m_desiredYmin=%f "
+"m_desiredYmax=%f"
+
+msgid ""
+"mpWindow::Fit() m_scaleX = %f , m_scrX = %d,m_scrY=%d, Ax=%f, Ay=%f, m_posX="
+"%f, m_posY=%f"
+msgstr ""
+"mpWindow::Fit() m_scaleX = %f , m_scrX = %d,m_scrY=%d, Ax=%f, Ay=%f, m_posX="
+"%f, m_posY=%f"
+
+msgid "mpWindow::Fit()(lock) m_scaleX=%f,m_scaleY=%f"
+msgstr "mpWindow::Fit()(lock) m_scaleX=%f,m_scaleY=%f"
+
+msgid "mpWindow::IsInsideInfoLayer() examinining layer = %p"
+msgstr "mpWindow::IsInsideInfoLayer() examinining layer = %p"
+
+msgid "mpWindow::IsInsideInfoLayer() layer = %p"
+msgstr "mpWindow::IsInsideInfoLayer() layer = %p"
+
+msgid "mpWindow::OnMouseLeftDown() X = %d , Y = %d"
+msgstr "mpWindow::OnMouseLeftDown() X = %d , Y = %d"
+
+msgid "mpWindow::OnMouseLeftDown() started moving layer %lx"
+msgstr "mpWindow::OnMouseLeftDown() started moving layer %lx"
+
+msgid "mpWindow::OnSize() m_scrX = %d, m_scrY = %d"
+msgstr "mpWindow::OnSize() m_scrX = %d, m_scrY = %d"
+
+msgid ""
+"mpWindow::ZoomIn() prior coords: (%f,%f), new coords: (%f,%f) SHOULD BE "
+"EQUAL!!"
+msgstr ""
+"mpWindow::ZoomIn() prior coords: (%f,%f), new coords: (%f,%f) SHOULD BE "
+"EQUAL!!"
+
+msgid ""
+"mpWindow::ZoomOut() prior coords: (%f,%f), new coords: (%f,%f) SHOULD BE "
+"EQUAL!!"
+msgstr ""
+"mpWindow::ZoomOut() prior coords: (%f,%f), new coords: (%f,%f) SHOULD BE "
+"EQUAL!!"
+
+msgid "n!"
+msgstr "n!"
+
+msgid "profile"
+msgstr "profil"
+
+msgid "remove"
+msgstr "enlever"
+
+msgid "sin"
+msgstr "sin"
+
+msgid "sqr"
+msgstr "sqr"
+
+msgid "support@machsupport.com"
+msgstr "support@machsupport.com"
+
+msgid "tan"
+msgstr "tan"
+
+msgid "tanh"
+msgstr "tanh"
+
+msgid "wxMathPlot error: X and Y vector are not of the same length!"
+msgstr "wxMathPlot error: X and Y vector are not of the same length!"
+
+msgid "wxMathPlot help"
+msgstr "wxMathPlot help"
+
+msgid "x^y"
+msgstr "x^y"
+
+msgid "|Text files (*.txt)|*.txt|All files (*)|*"
+msgstr "|Fichiers texte (*.txt)|*.txt|Tous (*)|*"

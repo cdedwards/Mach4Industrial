@@ -1,0 +1,38 @@
+%
+(MACH4 VERSION)
+ 
+G21 G40
+G91 G28 X0 Y0 Z0
+ 
+N1(SPOT DRILL)
+G54 G00 G90 G43 X0 Y0 Z25. H1 T2 S2500 M3
+G82 Z-5. R2. P0.250 F100. L0 (L0 says wait dont drill until next move)
+M98 P9010 Q1
+G80
+G91 G28 Z0 M6
+N2 G80
+M30
+ 
+O9010(P.C.R.)
+#500=#24
+N1#1=0 (START ANGLE)
+#11=6 (NUMBER OF HOLES)
+#24=0 (X POS)
+#25=0 (Y POS)
+#18=50 (P.C. RADIUS)
+#101=#24
+#102=#25
+#30=#101
+#31=#102
+#32=1
+WHILE[#32LEABS[#11]]DO1
+#33=#1+360*[#32-1]/#11
+#101=[[#30+#18]*COS[#33]]
+#102=#31+#18*SIN[#33]
+X#101 Y#102 (move to next position)
+#32=#32+1
+END1
+#101=#30
+#102=#31
+M99 P2
+%

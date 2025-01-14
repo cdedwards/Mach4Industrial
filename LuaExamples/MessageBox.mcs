@@ -1,0 +1,2 @@
+--This example shows how to display a message box in Mach4
+wx.wxMessageBox("This is how you display a message box!")

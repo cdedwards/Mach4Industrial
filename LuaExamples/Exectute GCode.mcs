@@ -1,0 +1,21 @@
+local inst = mc.mcGetInstance()
+local a,b
+function GCodeExecute(GCodeString)
+	local rc = mc.mcCntlGCodeExecuteWait(inst, GCodeString) --This is the standard function call for executing gcode. it waits for motor feedback before continuing in the file.
+	if rc ~= mc.MERROR_NOERROR then return "GCode failed", false end
+end
+
+a,b = GCodeExecute("G0 X1 Y2.5 Z3.5")
+if b == true then
+	mc.mcCntlSetLastError(inst, "Motion Succeeded")
+else
+	mc.mcCntlSetLastError(inst, a)
+end
+--You can even incorporate variables into the function call.
+local travelxdistance = 1.45
+a,b = GCodeExecute("G1 X"..travelxdistance.."Y0")--You can concatenate to the end of the gcode string using '..'
+if b == true then
+	mc.mcCntlSetLastError(inst, "Motion Succeeded")
+else
+	mc.mcCntlSetLastError(inst, a)
+end

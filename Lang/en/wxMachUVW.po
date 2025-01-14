@@ -1,0 +1,538 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wxMachUVW-strings\n"
+"POT-Creation-Date: 2020-05-15 00:50-0500\n"
+"PO-Revision-Date: 2020-05-15 00:50-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: ../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-SearchPath-0: wxMachUVW-strings.c\n"
+
+#: wxMachUVW-strings.c:3
+msgid "Mach 4"
+msgstr ""
+
+#: wxMachUVW-strings.c:4
+msgid "Control"
+msgstr ""
+
+#: wxMachUVW-strings.c:5
+msgid "Cycle Start"
+msgstr ""
+
+#: wxMachUVW-strings.c:6
+msgid "Feed Hold"
+msgstr ""
+
+#: wxMachUVW-strings.c:7
+msgid "Stop"
+msgstr ""
+
+#: wxMachUVW-strings.c:8
+msgid "Reset"
+msgstr ""
+
+#: wxMachUVW-strings.c:9
+msgid "Enable"
+msgstr ""
+
+#: wxMachUVW-strings.c:10
+msgid "Disable"
+msgstr ""
+
+#: wxMachUVW-strings.c:11
+msgid "File Ops"
+msgstr ""
+
+#: wxMachUVW-strings.c:12
+msgid "Edit G Code"
+msgstr ""
+
+#: wxMachUVW-strings.c:13
+msgid "Recent File"
+msgstr ""
+
+#: wxMachUVW-strings.c:14
+msgid "Close G Code"
+msgstr ""
+
+#: wxMachUVW-strings.c:15
+msgid "Load G Code"
+msgstr ""
+
+#: wxMachUVW-strings.c:16
+msgid "Set Next Line"
+msgstr ""
+
+#: wxMachUVW-strings.c:17
+msgid ""
+"Run From\n"
+"Here"
+msgstr ""
+
+#: wxMachUVW-strings.c:18
+msgid "Run Ops"
+msgstr ""
+
+#: wxMachUVW-strings.c:19
+msgid "Rewind"
+msgstr ""
+
+#: wxMachUVW-strings.c:20
+msgid "Single Block"
+msgstr ""
+
+#: wxMachUVW-strings.c:21
+msgid "Rev. Run"
+msgstr ""
+
+#: wxMachUVW-strings.c:22
+msgid "M1 Opt. Stop"
+msgstr ""
+
+#: wxMachUVW-strings.c:23
+msgid "Flood"
+msgstr ""
+
+#: wxMachUVW-strings.c:24
+msgid "Mist"
+msgstr ""
+
+#: wxMachUVW-strings.c:25
+msgid "Skip /"
+msgstr ""
+
+#: wxMachUVW-strings.c:26
+msgid "Skip /1"
+msgstr ""
+
+#: wxMachUVW-strings.c:27
+msgid "Skip /2"
+msgstr ""
+
+#: wxMachUVW-strings.c:28
+msgid "Skip /3"
+msgstr ""
+
+#: wxMachUVW-strings.c:29
+msgid "Tool Path Ops"
+msgstr ""
+
+#: wxMachUVW-strings.c:30
+msgid ""
+"Regen\n"
+"Toolpath"
+msgstr ""
+
+#: wxMachUVW-strings.c:31 wxMachUVW-strings.c:71
+msgid ""
+"Display\n"
+"Mode"
+msgstr ""
+
+#: wxMachUVW-strings.c:32 wxMachUVW-strings.c:72
+msgid ""
+"Jog\n"
+"Follow"
+msgstr ""
+
+#: wxMachUVW-strings.c:33
+msgid "Jogging"
+msgstr ""
+
+#: wxMachUVW-strings.c:34
+msgid "X+"
+msgstr ""
+
+#: wxMachUVW-strings.c:35
+msgid "X-"
+msgstr ""
+
+#: wxMachUVW-strings.c:36
+msgid "Y+"
+msgstr ""
+
+#: wxMachUVW-strings.c:37
+msgid "Y-"
+msgstr ""
+
+#: wxMachUVW-strings.c:38
+msgid "A+"
+msgstr ""
+
+#: wxMachUVW-strings.c:39
+msgid "A-"
+msgstr ""
+
+#: wxMachUVW-strings.c:40
+msgid "Z+"
+msgstr ""
+
+#: wxMachUVW-strings.c:41
+msgid "Z-"
+msgstr ""
+
+#: wxMachUVW-strings.c:42
+msgid "Cycle Jog Inc"
+msgstr ""
+
+#: wxMachUVW-strings.c:43
+msgid "Jog Mode"
+msgstr ""
+
+#: wxMachUVW-strings.c:44
+msgid "Keyboard Jog Off"
+msgstr ""
+
+#: wxMachUVW-strings.c:45
+msgid "Inch"
+msgstr ""
+
+#: wxMachUVW-strings.c:46
+msgid "mm"
+msgstr ""
+
+#: wxMachUVW-strings.c:47
+msgid "OB Test"
+msgstr ""
+
+#: wxMachUVW-strings.c:48 wxMachUVW-strings.c:50
+msgid "-"
+msgstr ""
+
+#: wxMachUVW-strings.c:49 wxMachUVW-strings.c:51
+msgid "+"
+msgstr ""
+
+#: wxMachUVW-strings.c:52
+msgid "Ref"
+msgstr ""
+
+#: wxMachUVW-strings.c:53
+msgid "Deref"
+msgstr ""
+
+#: wxMachUVW-strings.c:54
+msgid "Diag"
+msgstr ""
+
+#: wxMachUVW-strings.c:55 wxMachUVW-strings.c:93
+msgid "Outputs"
+msgstr ""
+
+#: wxMachUVW-strings.c:56
+msgid "Program Run"
+msgstr ""
+
+#: wxMachUVW-strings.c:57 wxMachUVW-strings.c:89
+msgid "Tool Path"
+msgstr ""
+
+#: wxMachUVW-strings.c:58 wxMachUVW-strings.c:78
+msgid "Axis Control"
+msgstr ""
+
+#: wxMachUVW-strings.c:59 wxMachUVW-strings.c:80
+msgid ""
+"Zero\n"
+"X"
+msgstr ""
+
+#: wxMachUVW-strings.c:60 wxMachUVW-strings.c:81
+msgid ""
+"Zero\n"
+"Y"
+msgstr ""
+
+#: wxMachUVW-strings.c:61 wxMachUVW-strings.c:82
+msgid ""
+"Zero\n"
+"Z"
+msgstr ""
+
+#: wxMachUVW-strings.c:62 wxMachUVW-strings.c:83
+msgid ""
+"Zero\n"
+"A"
+msgstr ""
+
+#: wxMachUVW-strings.c:63
+msgid "Goto Zero"
+msgstr ""
+
+#: wxMachUVW-strings.c:64 wxMachUVW-strings.c:86
+msgid ""
+"Machine\n"
+"Coordinates"
+msgstr ""
+
+#: wxMachUVW-strings.c:65
+msgid ""
+"Soft\n"
+"Limits"
+msgstr ""
+
+#: wxMachUVW-strings.c:66 wxMachUVW-strings.c:79
+msgid ""
+"Ref\n"
+"All\n"
+"Home"
+msgstr ""
+
+#: wxMachUVW-strings.c:67 wxMachUVW-strings.c:85
+msgid "To Go"
+msgstr ""
+
+#: wxMachUVW-strings.c:68
+msgid "Current File"
+msgstr ""
+
+#: wxMachUVW-strings.c:69
+msgid "G Code"
+msgstr ""
+
+#: wxMachUVW-strings.c:70
+msgid ""
+"Regen\n"
+"ToolPath"
+msgstr ""
+
+#: wxMachUVW-strings.c:73
+msgid "Load Wizards"
+msgstr ""
+
+#: wxMachUVW-strings.c:74
+msgid "Load Last Wiz."
+msgstr ""
+
+#: wxMachUVW-strings.c:75 wxMachUVW-strings.c:76 wxMachUVW-strings.c:104
+msgid "Limit Ovr."
+msgstr ""
+
+#: wxMachUVW-strings.c:77
+msgid "MDI"
+msgstr ""
+
+#: wxMachUVW-strings.c:84
+msgid ""
+"De-Ref\n"
+"All Axes"
+msgstr ""
+
+#: wxMachUVW-strings.c:87
+msgid "Verify"
+msgstr ""
+
+#: wxMachUVW-strings.c:88
+msgid "MDI Commands (Press "
+msgstr ""
+
+#: wxMachUVW-strings.c:90
+msgid "Machine Diagnostics"
+msgstr ""
+
+#: wxMachUVW-strings.c:91
+msgid "I/O Status"
+msgstr ""
+
+#: wxMachUVW-strings.c:92
+msgid "Inputs"
+msgstr ""
+
+#: wxMachUVW-strings.c:94
+msgid "Homing"
+msgstr ""
+
+#: wxMachUVW-strings.c:95
+msgid "Ref A"
+msgstr ""
+
+#: wxMachUVW-strings.c:96
+msgid "Ref X"
+msgstr ""
+
+#: wxMachUVW-strings.c:97
+msgid "Ref Y"
+msgstr ""
+
+#: wxMachUVW-strings.c:98
+msgid "Ref Z"
+msgstr ""
+
+#: wxMachUVW-strings.c:99
+msgid "Top"
+msgstr ""
+
+#: wxMachUVW-strings.c:100
+msgid "Iso"
+msgstr ""
+
+#: wxMachUVW-strings.c:101
+msgid "Bottom"
+msgstr ""
+
+#: wxMachUVW-strings.c:102
+msgid "Left"
+msgstr ""
+
+#: wxMachUVW-strings.c:103
+msgid "Right"
+msgstr ""
+
+#: wxMachUVW-strings.c:105
+msgid "Limt Ovr."
+msgstr ""
+
+#: wxMachUVW-strings.c:106
+msgid "Test"
+msgstr ""
+
+#: wxMachUVW-strings.c:107 wxMachUVW-strings.c:108 wxMachUVW-strings.c:109
+msgid "Button"
+msgstr ""
+
+#: wxMachUVW-strings.c:110
+msgid "Rio0/1"
+msgstr ""
+
+#: wxMachUVW-strings.c:111
+msgid "Rio0/2"
+msgstr ""
+
+#: wxMachUVW-strings.c:112
+msgid "Rio0/3"
+msgstr ""
+
+#: wxMachUVW-strings.c:113
+msgid "Rio0/4"
+msgstr ""
+
+#: wxMachUVW-strings.c:114
+msgid "Up"
+msgstr ""
+
+#: wxMachUVW-strings.c:115
+msgid "Dn"
+msgstr ""
+
+#: wxMachUVW-strings.c:116 wxMachUVW-strings.c:117
+msgid "X"
+msgstr ""
+
+#: wxMachUVW-strings.c:118
+msgid "1"
+msgstr ""
+
+#: wxMachUVW-strings.c:119
+msgid "0.01"
+msgstr ""
+
+#: wxMachUVW-strings.c:120
+msgid "0.1"
+msgstr ""
+
+#: wxMachUVW-strings.c:121
+msgid "0.001"
+msgstr ""
+
+#: wxMachUVW-strings.c:122
+msgid "FontTest"
+msgstr ""
+
+#: wxMachUVW-strings.c:123
+msgid "Do Font Test"
+msgstr ""
+
+#: wxMachUVW-strings.c:124
+msgid "Hover"
+msgstr ""
+
+#: wxMachUVW-strings.c:125
+msgid "No Hover"
+msgstr ""
+
+#: wxMachUVW-strings.c:126
+msgid "Override On"
+msgstr ""
+
+#: wxMachUVW-strings.c:127
+msgid "Override Off"
+msgstr ""
+
+#: wxMachUVW-strings.c:128
+msgid "Tool Table"
+msgstr ""
+
+#: wxMachUVW-strings.c:129
+msgid "Fixture Offsets"
+msgstr ""
+
+#: wxMachUVW-strings.c:130
+msgid "Panel Test Tab"
+msgstr ""
+
+#: wxMachUVW-strings.c:131
+msgid "LuaTest"
+msgstr ""
+
+#: wxMachUVW-strings.c:132
+msgid "Editor Test"
+msgstr ""
+
+#: wxMachUVW-strings.c:133
+msgid "Video Test"
+msgstr ""
+
+#: wxMachUVW-strings.c:134
+msgid "Tool Information"
+msgstr ""
+
+#: wxMachUVW-strings.c:135
+msgid "Remember"
+msgstr ""
+
+#: wxMachUVW-strings.c:136
+msgid "Return"
+msgstr ""
+
+#: wxMachUVW-strings.c:137
+msgid "Auto Tool Zero"
+msgstr ""
+
+#: wxMachUVW-strings.c:138
+msgid "Retract"
+msgstr ""
+
+#: wxMachUVW-strings.c:139
+msgid ""
+"Cut\n"
+"Recovery"
+msgstr ""
+
+#: wxMachUVW-strings.c:140
+msgid "Feed Rate"
+msgstr ""
+
+#: wxMachUVW-strings.c:141
+msgid "Spindle"
+msgstr ""
+
+#: wxMachUVW-strings.c:142
+msgid "Spindle CW"
+msgstr ""
+
+#: wxMachUVW-strings.c:143
+msgid "Probe Sim"
+msgstr ""
+
+#: wxMachUVW-strings.c:144
+msgid "History"
+msgstr ""

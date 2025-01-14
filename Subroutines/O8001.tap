@@ -1,0 +1,44 @@
+%
+O8001
+(last programed point)
+#101=#5001
+#102=#5002
+#103=#5003
+#104=#5004
+#105=#5005
+#106=#5006
+G80G40G90G20
+(Actual point of interrupt along programmed path read AFTER non moving NC statements)
+#111=#5001
+#112=#5002
+#113=#5003
+#114=#5004
+#115=#5005
+#116=#5006
+(Actual point of interrupt in machine coordinates)
+#121=#5021
+#122=#5022
+#123=#5023
+#124=#5024
+#125=#5025
+#126=#5026
+(Actual point of interrupt in work coordinates)
+#141=#5021
+#142=#5042
+#143=#5043
+#144=#5044
+#145=#5045
+#146=#5046
+#147=#4109 (Save Feed Rate)
+G53 G00 Z0
+M5
+G53 G00 X0Y0
+M0 (stop and wait for cycle start)
+G53 G00 X#121Y#122
+#123 = #123 + .100
+G53 G00 Z#123
+#123 = #123 - .100
+G53 G01 Z#123 F5
+F#147
+M99
+%

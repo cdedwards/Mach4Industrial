@@ -1,0 +1,46 @@
+--[[
+This header can not be removed
+
+Copyright Newfangled Solutions (c) 2018 All Rights Reserved, www.machsupport.com  
+
+THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, 
+EITHER EXPRESSED OR IMPLIED , INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES 
+OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+
+Author - Newfangled Solutions
+Liscence - mit
+Date - 05/17/2018
+Modified - Brett Price 05/17/2018
+--]]
+
+-- sample spindle orient script
+
+function spindleorient(angel, direction)
+    -- angel = degrees (0 to 360)
+    -- direction = 0 == shortest angle, 1 == clockwise, -1 == counterclockwise
+	local inst = mc.mcGetInstance() -- Get the current instance
+	local msg = "spindleorient Ran Successfully"
+	
+
+    -- Do whatever the spindle requires to make the above come true.
+    -- This will have to be modified for automatic spindle orientation.
+	--For example, you may need to send an output to a digital input on a VFD to orient the spindle.
+	--Or, maybe you write to modbus registers in the drive that sets the angle, direction and request orientation. 
+	
+	-- Controllers supporting spindle orientation will provide a means to accept values and commands from script
+	-- This script will have to be modified to get and/or set any values required by the controller for spindle orientation.
+	
+   -- In this case, we are going to do a manual spindle orient.
+	
+    rc = mc.mcCntlWaitOnCycleStart(inst, "Press Cycle Start when the spindle is oriented.", 0)
+	
+	if (rc ~= mc.MERROR_NOERROR) then
+		msg = "function spindleorient Error"
+	end
+	
+	return msg, rc
+end
+
+if (mc.mcInEditor() == 1) then
+    spindleorient(0.0, 1)
+end

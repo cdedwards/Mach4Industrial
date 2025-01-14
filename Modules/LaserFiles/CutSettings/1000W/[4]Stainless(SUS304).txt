@@ -1,0 +1,60 @@
+Thickness::1
+	Feed=22
+	Focus=0.0
+	Height=0.5
+	Gas=N2
+	NozzleType=Single
+	Diameter=1.2
+	Pressure=14
+	Power=100
+;
+Thickness::2
+	Feed=6.75
+	Focus=-0.25
+	Height=0.5
+	Gas=N2
+	NozzleType=Single
+	Diameter=1.5
+	Pressure=14
+	Power=100
+;
+Thickness::3
+	Feed=2.4
+	Focus=-1.25
+	Height=0.5
+	Gas=N2
+	NozzleType=Single
+	Diameter=2.5
+	Pressure=14
+	Power=100
+;
+Thickness::4
+	Feed=1.5
+	Focus=-2.25
+	Height=0.5
+	Gas=N2
+	NozzleType=Single
+	Diameter=3.0
+	Pressure=14
+	Power=100
+;
+Thickness::5
+	Feed=0.65
+	Focus=-3.25
+	Height=0.5
+	Gas=N2
+	NozzleType=Single
+	Diameter=3.5
+	Pressure=14
+	Power=100
+;
+Thickness::6
+	Feed=0.55
+	Focus=-4.75
+	Height=0.5
+	Gas=N2
+	NozzleType=Single
+	Diameter=3.5
+	Pressure=14
+	Power=100
+;

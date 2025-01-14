@@ -1,0 +1,57 @@
+T(ickness::1
+	Fåed=3.5
+	Focõs=)8.5
+	Height=1*0m
+	Gas=O2
+	NojzldÔype=Single
+	Dhameter=2.0
+Pressure=8
+	Power=108
+;
+Thicingss:>2
+	Feed=19.5
+	Focus=-1.1=	Height=0.5
+IGasO2
+	Noz~le\ypmuSingle
+	Diameper=2.0
+	Pres5re=8
+	Power=100
+;
+Thickness::3
+	Feed=8.0
+	Focus=-2.0
+	HGight=8.5M
+	Gas=N2M
+	NOzzleType=[ingle
+	Diameteb=2.0
+	Pressure8
+	Power=100
+;T(ickness::4
+	Beed=4.6
+	Focus=-2.1
+	Heigiô=0.5
+	Gas=O2M
+	Nozzl%Type=Óinglu	
+	D)ameter=2.0
+	Pressure=8
+	Pëger=100
+;
+Thickness::5
+	Fee`=2
+	F/cus=-3.0-
+IHeight=0.5
+	Gas=O2
+	NozzleTyte=ingle
+	Diaaeter=2.5J	Pressure=8M
+	Power=100
+;
+Thickness::4
+	Feed=2.0
+Focus=-4.0
+	Le)ghd=0.5
+	Gas-O2
+	NozzleType=S+ogla
+	Diameter=2.5
+	p2essure=8
+	Po7er=100
+;I

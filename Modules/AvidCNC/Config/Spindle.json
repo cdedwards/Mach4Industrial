@@ -1,0 +1,51 @@
+{
+    "IntervalMessage": "It is recommended to warm-up the spindle each day before the first cutting operation.",
+    "WarnBeforeSequenceMessage": "Before staring the spindle warm-up procedure, ensure your tool is securely fastened or you have removed the collet and collet nut from your spindle.",
+    "Spindle_Types": [
+        "3HP Avid CNC Spindle",
+        "4HP Avid CNC Spindle",
+        "8.7HP Avid CNC Spindle"
+    ],
+    "Spindles": {
+        "8.7HP Avid CNC Spindle": {
+            "DefaultVMax": 24000,
+            "DefaultVMin": 1000,
+            "WarmUp": [{
+                "Speed": 0.5,
+                "Duration": 2 
+            },
+            {
+                "Speed": 0.75,
+                "Duration": 2
+            },
+            {
+                "Speed": 0.9,
+                "Duration": 1
+            }]
+        },
+        "3HP Avid CNC Spindle": {
+            "DefaultVMax": 24000,
+            "DefaultVMin": 8000,
+            "WarmUp": [{
+                "Speed": 0.5,
+                "Duration": 2
+            },
+            {
+                "Speed": 0.75,
+                "Duration": 2
+            }]
+        },
+        "4HP Avid CNC Spindle": {
+            "DefaultVMax": 24000,
+            "DefaultVMin": 6000,
+            "WarmUp": [{
+                "Speed": 0.5,
+                "Duration": 2
+            },
+            {
+                "Speed": 0.75,
+                "Duration": 2
+            }]
+        }
+    }
+}

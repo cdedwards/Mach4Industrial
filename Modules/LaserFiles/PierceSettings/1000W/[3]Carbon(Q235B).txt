@@ -1,0 +1,135 @@
+ Thickness::1
+	PierceStart=.48
+	PierceEnd=.05
+	PierceIncs=0
+	PierceIncDistance=.02
+	PierceAuxGas=0
+	PierceDwell=.3
+	PierceFocusStart=-1.0
+	PierceFocusEnd=.04
+	Engage=0
+	PierceIndex=0
+	DutyCycle=80
+	Frequency=5000
+	PowerLevel=70
+;
+Thickness::2
+	PierceStart=.48
+	PierceEnd=.05
+	PierceIncs=0
+	PierceIncDistance=.02
+	PierceAuxGas=0
+	PierceDwell=.3
+	PierceFocusStart=-1.0
+	PierceFocusEnd=.04
+	Engage=0
+	PierceIndex=0
+	DutyCycle=80
+	Frequency=5000
+	PowerLevel=70
+;
+Thickness::3
+	PierceStart=.48
+	PierceEnd=.05
+	PierceIncs=0
+	PierceIncDistance=.02
+	PierceAuxGas=0
+	PierceDwell=.3
+	PierceFocusStart=-1.0
+	PierceFocusEnd=.04
+	Engage=0
+	PierceIndex=0
+	DutyCycle=80
+	Frequency=5000
+	PowerLevel=70
+;
+Thickness::4
+	PierceStart=.48
+	PierceEnd=.05
+	PierceIncs=0
+	PierceIncDistance=.02
+	PierceAuxGas=0
+	PierceDwell=.3
+	PierceFocusStart=-1.0
+	PierceFocusEnd=.04
+	Engage=0
+	PierceIndex=0
+	DutyCycle=80
+	Frequency=5000
+	PowerLevel=70
+;
+Thickness::5
+	PierceStart=.48
+	PierceEnd=.05
+	PierceIncs=0
+	PierceIncDistance=.02
+	PierceAuxGas=0
+	PierceDwell=.3
+	PierceFocusStart=-1.0
+	PierceFocusEnd=.04
+	Engage=0
+	PierceIndex=0
+	DutyCycle=80
+	Frequency=5000
+	PowerLevel=70
+;
+Thickness::6
+	PierceStart=.46
+	PierceEnd=.052
+	PierceIncs=0
+	PierceIncDistance=.02
+	PierceAuxGas=0
+	PierceDwell=.3
+	PierceFocusStart=-1.0
+	PierceFocusEnd=.052
+	Engage=0
+	PierceIndex=0
+	DutyCycle=80
+	Frequency=5000
+	PowerLevel=70
+;
+Thickness::8
+	PierceStart=.48
+	PierceEnd=.05
+	PierceIncs=0
+	PierceIncDistance=.02
+	PierceAuxGas=0
+	PierceDwell=.3
+	PierceFocusStart=-1.0
+	PierceFocusEnd=.04
+	Engage=0
+	PierceIndex=0
+	DutyCycle=80
+	Frequency=5000
+	PowerLevel=70
+;
+Thickness::10
+	PierceStart=.48
+	PierceEnd=.05
+	PierceIncs=0
+	PierceIncDistance=.02
+	PierceAuxGas=0
+	PierceDwell=.3
+	PierceFocusStart=-1.0
+	PierceFocusEnd=.04
+	Engage=0
+	PierceIndex=0
+	DutyCycle=80
+	Frequency=5000
+	PowerLevel=70
+;
+Thickness::12
+	PierceStart=.48
+	PierceEnd=.05
+	PierceIncs=0
+	PierceIncDistance=.02
+	PierceAuxGas=0
+	PierceDwell=.3
+	PierceFocusStart=-1.0
+	PierceFocusEnd=.04
+	Engage=0
+	PierceIndex=0
+	DutyCycle=55
+	Frequency=5000
+	PowerLevel=70
+;

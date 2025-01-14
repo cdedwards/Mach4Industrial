@@ -1,0 +1,64 @@
+--[[
+This header can not be removed
+
+Copyright Newfangled Solutions (c) 2018 All Rights Reserved, www.machsupport.com  
+
+THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, 
+EITHER EXPRESSED OR IMPLIED , INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES 
+OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+
+Author - Newfangled Solutions
+Liscence - mit
+Date - 05/17/2018
+Modified - Brett Price 05/17/2018
+--]]
+
+--This example shows how to display a message box in Mach4
+wx.wxMessageBox("This is how you display a message box!")
+
+--Get input from user
+local MyPass = wx.wxGetPasswordFromUser("Message", "Caption", "Default Value")
+local MyText = wx.wxGetTextFromUser("Message", "Caption", "Default Value")
+local MyNum = wx.wxGetNumberFromUser("Message", "Prompt", "Caption", 50, 0, 100) --Default, min, max
+local MyChoice = wx.wxGetSingleChoice ("message", "caption", ({"Choice1", "Choice2", "Choice3"})) --, wxWindow *parent=NULL, int x=wxDefaultCoord, int y=wxDefaultCoord, bool centre=true, int width=wxCHOICE_WIDTH, int height=wxCHOICE_HEIGHT, int initialSelection=0)
+local dir = wx.wxDirSelector ("Choose a Directory", "C:\\")--Caption, default directory --long style=0, const wxPoint &pos=wxDefaultPosition, wxWindow *parent=NULL)
+
+--wxMessageBox Types
+--2 = Yes, No
+--4 = Ok
+--16 = Ok, Cancel
+--18 = Yes, No, Cancel
+
+--wxMessageBox Return Values
+--Yes = 2
+--OK = 4
+--No = 8
+--Cancel = 16
+
+--Have user click a button
+local Iclicked = wx.wxMessageBox("This is my Message", "This is my Caption",2) --Yes,No
+wx.wxMessageBox(tostring(Iclicked)) --Show in another message box what the button click in the previous message box returns
+Iclicked = wx.wxMessageBox("This is my Message", "This is my Caption",2) --Yes,No
+wx.wxMessageBox(tostring(Iclicked)) --Show in another message box what the button click in the previous message box returns
+Iclicked = wx.wxMessageBox("This is my Message", "This is my Caption",4) --Ok
+wx.wxMessageBox(tostring(Iclicked)) --Show in another message box what the button click in the previous message box returns
+Iclicked = wx.wxMessageBox("This is my Message", "This is my Caption",16) --Ok, Cancel
+wx.wxMessageBox(tostring(Iclicked)) --Show in another message box what the button click in the previous message box returns
+Iclicked = wx.wxMessageBox("This is my Message", "This is my Caption",16) --Ok, Cancel
+wx.wxMessageBox(tostring(Iclicked)) --Show in another message box what the button click in the previous message box returns
+Iclicked = wx.wxMessageBox("This is my Message", "This is my Caption",18) --Yes, No, Cancel
+wx.wxMessageBox(tostring(Iclicked)) --Show in another message box what the button click in the previous message box returns
+Iclicked = wx.wxMessageBox("This is my Message", "This is my Caption",18) --Yes, No, Cancel
+wx.wxMessageBox(tostring(Iclicked)) --Show in another message box what the button click in the previous message box returns
+Iclicked = wx.wxMessageBox("This is my Message", "This is my Caption",18) --Yes, No, Cancel
+wx.wxMessageBox(tostring(Iclicked)) --Show in another message box what the button click in the previous message box returns
+
+--Another way of using a messagebox Type defined with a wx constant
+local yesno = wx.wxMessageBox("This is my Message", "This is my Caption", wx.wxYES_NO)
+if (yesno == wx.wxYES) then
+	
+elseif (yesno == wx.wxNO) then
+	
+end
+
+--http://docs.wxwidgets.org/3.0.1/group__group__funcmacro__dialog.html#ga193c64ed4802e379799cdb42de252647

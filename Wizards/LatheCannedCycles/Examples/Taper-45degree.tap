@@ -1,0 +1,103 @@
+N0000 (Machine type - MachMotion Lathe Canned Cycles)
+N0005 (Filename: C:\Mach4Dev\Wizards\LatheCannedCycles\Examples\Taper-45degree.tap)
+N0010 (Generated on 3/16/2016 at 11:21:08 AM)
+
+N0015 %
+N0020 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0025 %
+
+N0030 (Starting Gcode for Taper Cycle: TaperCycle-0)
+N0035 ([Xi, Zi] = [3, 0]; [Xf, Zf] = [1, -1]; Angle = 0.785 Radians; Z- Direction; OD)
+N0040 G50 S2750 (Spindle Speed Cap)
+N0045 (Roughing)
+
+N0050 %
+N0055 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0060 %
+
+N0065 T0101 (Tool Change)
+N0070 G99 (Feed per Revolution)
+N0075 G96 S900 (Constant Surface Speed)
+N0080 M03 (Spindle Forward)
+N0085 G00 X3.200 Z0.100  (Rapid move to Clearance Height)
+N0090 G01 X2.800 F0.019  (Cut in on X-Axis)
+N0095 G01 Z-0.860 F0.019  (Cut in on Z-Axis)
+N0100 G01 X3.000 Z-0.960 F0.019  (Spring Pass)
+N0105 G00 X3.200 Z-0.760  (Pull out to Retreat)
+N0110 G00 Z0.100  (Pull out to Clearance)
+N0115 G00 X3.000 Z0.100  (Rapid move to Clearance Height)
+N0120 G01 X2.600 F0.019  (Cut in on X-Axis)
+N0125 G01 Z-0.760 F0.019  (Cut in on Z-Axis)
+N0130 G01 X2.800 Z-0.860 F0.019  (Spring Pass)
+N0135 G00 X3.000 Z-0.660  (Pull out to Retreat)
+N0140 G00 Z0.100  (Pull out to Clearance)
+N0145 G00 X2.800 Z0.100  (Rapid move to Clearance Height)
+N0150 G01 X2.400 F0.019  (Cut in on X-Axis)
+N0155 G01 Z-0.660 F0.019  (Cut in on Z-Axis)
+N0160 G01 X2.600 Z-0.760 F0.019  (Spring Pass)
+N0165 G00 X2.800 Z-0.560  (Pull out to Retreat)
+N0170 G00 Z0.100  (Pull out to Clearance)
+N0175 G00 X2.600 Z0.100  (Rapid move to Clearance Height)
+N0180 G01 X2.200 F0.019  (Cut in on X-Axis)
+N0185 G01 Z-0.560 F0.019  (Cut in on Z-Axis)
+N0190 G01 X2.400 Z-0.660 F0.019  (Spring Pass)
+N0195 G00 X2.600 Z-0.460  (Pull out to Retreat)
+N0200 G00 Z0.100  (Pull out to Clearance)
+N0205 G00 X2.400 Z0.100  (Rapid move to Clearance Height)
+N0210 G01 X2.000 F0.019  (Cut in on X-Axis)
+N0215 G01 Z-0.460 F0.019  (Cut in on Z-Axis)
+N0220 G01 X2.200 Z-0.560 F0.019  (Spring Pass)
+N0225 G00 X2.400 Z-0.360  (Pull out to Retreat)
+N0230 G00 Z0.100  (Pull out to Clearance)
+N0235 G00 X2.200 Z0.100  (Rapid move to Clearance Height)
+N0240 G01 X1.800 F0.019  (Cut in on X-Axis)
+N0245 G01 Z-0.360 F0.019  (Cut in on Z-Axis)
+N0250 G01 X2.000 Z-0.460 F0.019  (Spring Pass)
+N0255 G00 X2.200 Z-0.260  (Pull out to Retreat)
+N0260 G00 Z0.100  (Pull out to Clearance)
+N0265 G00 X2.000 Z0.100  (Rapid move to Clearance Height)
+N0270 G01 X1.600 F0.019  (Cut in on X-Axis)
+N0275 G01 Z-0.260 F0.019  (Cut in on Z-Axis)
+N0280 G01 X1.800 Z-0.360 F0.019  (Spring Pass)
+N0285 G00 X2.000 Z-0.160  (Pull out to Retreat)
+N0290 G00 Z0.100  (Pull out to Clearance)
+N0295 G00 X1.800 Z0.100  (Rapid move to Clearance Height)
+N0300 G01 X1.400 F0.019  (Cut in on X-Axis)
+N0305 G01 Z-0.160 F0.019  (Cut in on Z-Axis)
+N0310 G01 X1.600 Z-0.260 F0.019  (Spring Pass)
+N0315 G00 X1.800 Z-0.060  (Pull out to Retreat)
+N0320 G00 Z0.100  (Pull out to Clearance)
+N0325 G00 X1.600 Z0.100  (Rapid move to Clearance Height)
+N0330 G01 X1.200 F0.019  (Cut in on X-Axis)
+N0335 G01 Z-0.060 F0.019  (Cut in on Z-Axis)
+N0340 G01 X1.400 Z-0.160 F0.019  (Spring Pass)
+N0345 G00 X1.600 Z0.040  (Pull out to Retreat)
+N0350 G00 Z0.100  (Pull out to Clearance)
+N0355 G00 X1.400 Z0.100  (Rapid move to Clearance Height)
+N0360 G01 X1.000 F0.019  (Cut in on X-Axis)
+N0365 G01 Z0.040 F0.019  (Cut in on Z-Axis)
+N0370 G01 X1.200 Z-0.060 F0.019  (Spring Pass)
+N0375 G00 X1.400 Z0.100  (Pull out to Retreat)
+N00380 (Finishing)
+
+N0385 %
+N0390 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0395 %
+
+N0400 T0101 (Tool Change)
+N0405 G99 (Feed per Revolution)
+N0410 G96 S900 (Constant Surface Speed)
+N0415 M03 (Spindle Forward)
+N0420 G01 G41 X1 Z0.14 (Turn on Compensation)
+N0425 G01 X1.000 Z0.000 F0.019 (Finish Adjust Move)
+N0430 G01 X3.000 Z-1.000 F0.019 (Finish Line Move)
+N0435 G00 G40 X3.2 Z0.1 (Return to clearance)
+N0440 (End Gcode for Taper Cycle: TaperCycle-0)
+
+N0445 %
+N0450 M05
+N0455 M30
+N0460 %
+N0465 (End Gcode file)
+N0470 %
+

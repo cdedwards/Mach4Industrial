@@ -1,0 +1,24 @@
+Thickness::3
+	Feed::
+		Production=9.2
+		Quality=6.8
+	;
+	Voltage::
+		Production=120
+		Quality=122
+	;
+	Height=1.5
+	Flow=235
+;
+Thickness::4
+	Feed::
+		Production=7.3
+		Quality=5.65
+	;
+	Voltage::
+		Production=122
+		Quality=122
+	;
+	Height=1.5
+	Flow=235
+;

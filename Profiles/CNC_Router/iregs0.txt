@@ -1,0 +1,87 @@
+[iReg34]
+Name=2010/TCX
+Desc=Tool Change Position X
+InitialValue=0
+Persistent=0
+[iReg35]
+Name=2010/TCY
+Desc=Tool Change Position Y
+InitialValue=0
+Persistent=0
+[iReg36]
+Name=2010/TCZ
+Desc=Tool Change Position Z
+InitialValue=0
+Persistent=0
+[iReg37]
+Name=2010/XPlate
+Desc=Fix Plate Location X
+InitialValue=0
+Persistent=0
+[iReg38]
+Name=2010/YPlate
+Desc=Fix Plate Location Y
+InitialValue=0
+Persistent=0
+[iReg39]
+Name=2010/PlateThickness
+Desc=Fix Plate Thickness
+InitialValue=0
+Persistent=0
+[iReg40]
+Name=2010/ZClearance
+Desc=Z Clearance or Safe Z
+InitialValue=0
+Persistent=0
+[iReg41]
+Name=2010/MaterialOffset
+Desc=Material Offset
+InitialValue=0
+Persistent=0
+[iReg42]
+Name=2010/LaserOffsetX
+Desc=Laser Offset from Router X
+InitialValue=0
+Persistent=1
+Value=3
+[iReg43]
+Name=2010/LaserOffsetY
+Desc=Laser Offset from Router Y
+InitialValue=0
+Persistent=1
+Value=3
+[iReg44]
+Name=2010/UseSafeZ
+Desc=Use Safe Z when moving.
+Persistent=0
+[iReg45]
+Name=2010/UseMachineCoord
+Desc=Use Machine Coordinates when Parking/ToolChange
+InitialValue=1
+Persistent=0
+[iReg46]
+Name=2010/IgnoreM6
+Desc=Ignore ALL M6 calls
+InitialValue=0
+Persistent=1
+Value=1
+[iReg47]
+Name=2010/ParkLocationX
+Desc=do NOT park here
+InitialValue=0.0
+Persistent=0
+[iReg48]
+Name=2010/ParkLocationY
+Desc=do Not Park Here
+InitialValue=0.0
+Persistent=0
+[iReg49]
+Name=2010/ParkLocationZ
+Desc=do NOT Park Here
+InitialValue=0.0
+Persistent=0
+[iReg50]
+Name=2010/UseMatOffset
+Desc=Using Material Offset
+InitialValue=0
+Persistent=0

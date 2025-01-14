@@ -1,0 +1,47 @@
+--[[
+This header can not be removed
+
+Copyright Newfangled Solutions (c) 2018 All Rights Reserved, www.machsupport.com  
+
+THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, 
+EITHER EXPRESSED OR IMPLIED , INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES 
+OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+
+Author - Newfangled Solutions
+Liscence - mit
+Date - 05/17/2018
+Modified - Brett Price 05/17/2018
+--]]
+
+--Button script
+local inst = mc.mcGetInstance('MySoftlimitsButton')
+local dir, name, ex = GetDirAndName(mc.mcCntlGetGcodeFileName(inst)) --Get the components of the current loaded file
+wx.wxMessageBox(string.format(dir .. name .. "." .. ex))
+
+--Screen load script
+function GetDirAndName(s) --When you call this function pass it a string for the only parameter
+	
+	local MyFile = wx.wxFileName(s) --Create "MyFile" object of wxFileName type ....Stuff our file string into a table and get its address so we can manipulate it.
+	local MyDirOnly = MyFile:GetPathWithSep() --Gets just the directory
+	local MyNameOnly = MyFile:GetName()--Gets the name only
+	local MyExtOnly = MyFile:GetExt() --Gets just the extension
+	return  MyDirOnly, MyNameOnly, MyExtOnly
+	
+end
+
+--Button script
+CreateNewFile()
+
+--Screen load script
+function CreateNewFile()
+
+	local MyNum = wx.wxGetNumberFromUser("Select or enter a feed rate", "Feed Rate:", "Enter Feed Rate", 50, 1, 1500) --Default, min, max
+	local MyGcode = string.format("(File created using CreateNewFile function)\nF%0.4f", MyNum)	
+	local MyFile = wx.wxGetCwd() .. "\\GcodeFiles\\MyFile.tap" --Define the file name and location
+	file = io.open(MyFile, "w+") --Open the file in update mode, all previous data is erased
+	--file = io.open(MyFile, "a+") --Append update mode, previous data is preserved, writing is only allowed at the end of file.
+	file:write (MyGcode) --Write the Gcode file
+	file:flush (MyFile) --Save written data
+	file:close (MyFile) --Close file
+	
+end

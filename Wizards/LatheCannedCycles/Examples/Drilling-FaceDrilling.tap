@@ -1,0 +1,33 @@
+N0000 (Machine type - MachMotion Lathe Canned Cycles)
+N0005 (Filename: C:\Mach4Dev\Wizards\LatheCannedCycles\Examples\Drilling-FaceDrilling.tap)
+N0010 (Generated on 6/6/2016 at 4:33:23 PM)
+
+N0015 %
+N0020 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0025 %
+
+N0030 (Starting Gcode for Drilling Cycle: DrillingCycle-0)
+
+N0035 %
+N0040 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0045 %
+
+N0050 T0101 (Tool Change)
+N0055 G98 (Feed per Minute)
+N0060 G97 S900 (Constant Speed)
+N0065 M03 (Spindle Forward)
+N0070 M09
+N0075 G00 X0.000 Z1.000
+N0080 G83 X0 Z-3 R1 F45
+N0085 G80
+N0090 G00 X0.000 Z1.000
+N0095 (End Gcode for Drilling Cycle: DrillingCycle-0)
+
+N0100 %
+N0105 M09
+N0110 M05
+N0115 M30
+N0120 %
+N0125 (End Gcode file)
+N0130 %
+

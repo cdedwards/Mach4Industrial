@@ -1,0 +1,33 @@
+--[[
+This header can not be removed
+
+Copyright Newfangled Solutions (c) 2018 All Rights Reserved, www.machsupport.com  
+
+THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, 
+EITHER EXPRESSED OR IMPLIED , INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES 
+OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+
+Author - Newfangled Solutions
+Liscence - mit
+Date - 07/08/2015
+Modified - Brett Price 05/17/2018
+
+--Down script goes in a buttons down script event and the up script goes in the same buttons up script event.
+--It will get the vale from the JogRate DRO and jog the X axis negative at 50% of that percentage and it will jog the Z axis positive at 100% of that percentage.
+--Requires a dro in the screen named "droJogRate". Its value must be greater then 0
+--]]
+
+--Down Script
+local inst = mc.mcGetInstance()
+local rate = scr.GetProperty("droJogRate", "Value")
+rate = tonumber(rate)
+	
+mc.mcJogSetRate(inst, mc.X_AXIS, (rate/2))
+mc.mcJogSetRate(inst, mc.Z_AXIS, rate)
+mc.mcJogVelocityStart(inst, mc.X_AXIS, mc.MC_JOG_NEG)
+mc.mcJogVelocityStart(inst, mc.Z_AXIS, mc.MC_JOG_POS)
+
+--Up Script
+local inst = mc.mcGetInstance()
+mc.mcJogVelocityStop(inst, mc.X_AXIS)
+mc.mcJogVelocityStop(inst, mc.Z_AXIS)

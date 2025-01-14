@@ -1,0 +1,100 @@
+--[[
+This header can not be removed
+
+Copyright Newfangled Solutions (c) 2018 All Rights Reserved, www.machsupport.com  
+
+THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, 
+EITHER EXPRESSED OR IMPLIED , INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES 
+OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+
+Author - Newfangled Solutions
+Liscence - mit
+Date - 05/17/2018
+Modified - Brett Price 05/17/2018
+--]]
+
+function m19(hParam) --hParam is a handle to all parameters on same line as m19 --The  R and P params are optional. M19 R90 P0 for example.
+	
+	local function ErrorOut(msgp, msg)
+		local inst = mc.mcGetInstance()
+		mc.mcCntlMacroAlarm(inst, 19, msgp .. msg)
+	end
+    --R is angle from 0 to 360.
+    --P is direction: 0 == shortest angle, 1 == clockwise, 2 == counterclockwise
+	--Fanuc uses S for angle
+	local inst = mc.mcGetInstance()
+	
+	local pcallRet = true
+	local stat = 1
+	local msgPre = "M19: "
+	local msg = "Completed successfully"
+    local varR = 0
+    local varP = 0
+	if (hParam ~= nil) then
+        local rc, flagR, flagP
+		flagR, rc = mc.mcCntlGetLocalVarFlag(inst, hParam, mc.SV_R)
+		if (rc ~= mc.MERROR_NOERROR) then
+			msg = mc.mcCntlGetErrorString(inst, rc)
+			msg = mc.mcCntlGetErrorString(inst, rc) --Get the returned error string
+			ErrorOut(msgPre, msg)
+			return
+		end
+        flagP, rc = mc.mcCntlGetLocalVarFlag(inst, hParam, mc.SV_P)
+		if (rc ~= mc.MERROR_NOERROR) then
+			msg = mc.mcCntlGetErrorString(inst, rc) --Get the returned error string
+			ErrorOut(msgPre, msg)
+			return
+		end
+        if (flagR == 1) then --Check that the flag has been set so we do not get an unexpected value for mc.SV_R
+            varR, rc = mc.mcCntlGetLocalVar(inst, hParam, mc.SV_R)
+			if (rc ~= mc.MERROR_NOERROR) then
+				msg = mc.mcCntlGetErrorString(inst, rc) --Get the returned error string
+				ErrorOut(msgPre, msg)
+				return
+			end
+			if (varR < 0) or (varR > 360) then --It is out of range
+				msg = string.format("R" .. tostring(varR) .. " is out of range (0-360)")
+				ErrorOut(msgPre, msg)
+				return
+			end
+        end
+		
+		if (flagP == 1) then --Check that the flag has been set so we do not get an unexpected value for mc.SV_P
+			varP, rc = mc.mcCntlGetLocalVar(inst, hParam, mc.SV_P)
+			if (rc ~= mc.MERROR_NOERROR) then
+				msg = mc.mcCntlGetErrorString(inst, rc) --Get the returned error string
+				ErrorOut(msgPre, msg)
+                return
+			end
+            -- fixup the values to pass to the spindleorient script.
+            if (varP == 0) then 
+                varP = mc.MC_SPINDLE_OFF -- 0
+            elseif (varP == 1) then 
+                varP = mc.MC_SPINDLE_FWD  -- 1
+            elseif (varP == 2) then 
+                varP = mc.MC_SPINDLE_REV  -- -1
+			else
+				msg = string.format("P" .. tostring(varP) .. " is out of range (0-2)")
+				ErrorOut(msgPre, msg)
+				return
+            end
+		end
+    end
+
+    pcallRet, msg, rc = pcall(spindleorient, varR, varP);
+	
+    if (pcallRet == false) or (rc ~= mc.MERROR_NOERROR) then 
+		ErrorOut(msgPre, msg)
+	else
+		mc.mcCntlSetLastError(inst, msgPre .. msg)
+	end
+	
+end
+
+
+if (mc.mcInEditor() == 1) then
+	local inst = mc.mcGetInstance()
+	hParam = mc.mcCntlCreateLocalVars(inst, "R0 P0") --Set R and P parameters to values you want to test with while in editor
+    m19(hParam);
+end
+	

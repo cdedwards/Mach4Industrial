@@ -1,0 +1,69 @@
+function m6()
+
+	local inst = mc.mcGetInstance() ;
+	
+	local currentTool = mc.mcToolGetCurrent(inst)
+	local selectedTool = mc.mcToolGetSelected(inst)
+	local posmode = mc.mcCntlGetPoundVar(inst, mc.SV_MOD_GROUP_3) --get the current mode so we can return to it when macro ends
+	   	  		
+		--Get positions before moving to do tool change
+	local valX, rc = mc.mcAxisGetMachinePos(inst, mc.X_AXIS) --Get the position of the X axis in Machine Position
+	local valY, rc = mc.mcAxisGetMachinePos(inst, mc.Y_AXIS) --Get the position of the Y axis in Machine Position
+	local valZ, rc = mc.mcAxisGetMachinePos(inst, mc.Z_AXIS) --Get the position of the Z axis in Machine Position
+	
+	
+	if selectedTool == currentTool then
+		return
+		mc.mcCntlSetLastError(inst, "Current tool == Selected tool so there is nothing to do")
+	else
+		
+	
+		mc.mcCntlGcodeExecute(inst, "G90 G53 G0 Z0.0");--Move the Z axis all the way up
+		mc.mcCntlGcodeExecute(inst, "G53 X24.0 y2.0");--Move the X axis to the middle and Y axis to the end and
+		mc.mcCntlSetLastError(inst, "Change to tool " .. tostring(selectedTool) .. " and press start to continue") --Message at beginning of tool change
+		mc.mcCntlToolChangeManual(inst, true) --This will pause the tool change here and wait for a press of cycle start to continue
+		mc.mcCntlGcodeExecute(inst, "G53 G01 X47.66 y.92 f350");--Move the X axis and Y axis to the tool setter
+		mc.mcCntlGcodeExecute(inst, "G53 G0 z-3")--Moves the z axis down 3 inches rapid
+	end	
+	
+	local MyChoice = wx.wxMessageBox("Click Ok to Begin Probing the New Tool","Click OK to continue" , 16)  -- brings up a dialog box and waits for a selectio to proceed
+	
+	if (MyChoice == 16) then  --16 is cancel
+		rc = mc.mcCntlSetLastError(inst, 'Auto Tool Zero was cancelled.') 
+		mc.mcCntlGcodeExecuteWait(inst, "G90 G53 G0 Z0.0000 F15.0") --Retract back to Z home
+		mc.mcCntlGcodeExecuteWait(inst, "G90 G53 G0 X" .. tonumber(valX) .. "Y" .. tonumber(valY)) --Move back to X & Y initial location
+		return
+	elseif (MyChoice == 4) then
+        mc.mcCntlGcodeExecute(inst, "g53 G31 z-9 f15")--Probes z axis to the tool setter
+		mc.mcCntlSetLastError(inst, "Current tool == " .. tostring(selectedTool) .. "   Previous Tool == " .. tostring(currentTool)) --Message that shows after Cycle Start
+		mc.mcToolSetCurrent(inst, selectedTool) --sets the current tool displayed in mach to the selected tool
+		--local probedzW = mc.mcAxisGetPos(inst, 2)  --This would give 0 axis (z on my machine) coordinates in work coordinate syste, ive shown it just for educational purposes
+		local probedz = mc.mcCntlGetPoundVar(inst, 5073) --this retreives the Saved varible of the z position (#5073) in machine coordinates and assigns it to the name probedz
+	    local ToolLength = math.abs(9.5238 + probedz)  -- this calculates the value of the tool lenght by using a gage line off of my spindle to the tool setter.  uses the absolute value fuction
+		mc.mcCntlSetLastError(inst, "Tool Length" .. tostring(ToolLength))
+		
+		mc.mcToolSetData(inst, mc.MTOOL_MILL_HEIGHT, selectedTool, ToolLength)  --- this sets the tool length value into the tool table into the selected tool position number, Note - i havent reassigned current tool varible so i have to use the "selectedTool" name
+		mc.mcCntlGcodeExecute(inst, "G04 p2.")
+		mc.mcCntlGcodeExecute(inst, "G90 G53 G1 Z0.0000 F40.0") --Retract back to Z home
+		
+		local MyChoice = wx.wxMessageBox("Remove Probe Clip","Click OK to continue" , 16)  -- brings up a dialog box and waits for a selection to proceed
+		
+		if (MyChoice == 16) then  --16 is cancel
+		    rc = mc.mcCntlSetLastError(inst, 'probing.') 
+		
+		return
+		elseif (MyChoice == 4) then
+		
+		mc.mcCntlGcodeExecute(inst, "G90 G53 G0 X" .. tonumber(valX) .. "Y" .. tonumber(valY)) --Move back to X & Y initial location
+		mc.mcCntlSetLastError(inst, "Tool Change Complete H ".. tostring(selectedTool) .. "   set to  ".. tostring(ToolLength).."  inches")
+		end
+		
+       
+		
+	end
+end
+
+if (mc.mcInEditor() == 1) then
+	m6()
+end
+

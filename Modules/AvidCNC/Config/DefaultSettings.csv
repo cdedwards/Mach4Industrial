@@ -1,0 +1,1179 @@
+Electronics,Model,Model Rev,Motor Type,Reverse Motor Dir,Config Tool,Cutting Tool,Spindle Type,Config Rotary,Rotary Active,Swap Axes,Sensor Config,Parameter,Section,Type,Value
+CRP800,,,,,,,,,,,,ISigMap-EStop,ESS,string,{P2-15} E Stop
+CRP800-revA,,,,,,,,,,,,ISigMap-EStop,ESS,string,{P2-15} E Stop
+CRP100,,,,,,,,,,,,ISigMap-EStop,ESS,string,{P1-15} E Stop
+CRP500,,,,,,,,,,,,ISigMap-EStop,ESS,string,{P1-15} E Stop
+CRP300,,,,,,,,,,,,ISigMap-EStop,ESS,string,{P1-10} E Stop
+,,,,,,,,,,,,ISigMap-EStop-Enable,ESS,string,1
+CRP800,,,,,,,,,,,,Port1-Pin1-Alias,ESS,string,{P1-1} C Step
+CRP800-revA,,,,,,,,,,,,Port1-Pin1-Alias,ESS,string,{P1-1} C Step
+CRP100,,,,,,,,,,,,Port1-Pin1-Alias,ESS,string,{P1-1} CRP100 Output 2
+CRP500,,,,,,,,,,,,Port1-Pin1-Alias,ESS,string,{P1-1} Spindle PWM
+CRP300,,,,,Router,,,,,,,Port1-Pin1-Alias,ESS,string,{P1-1} Spindle Relay
+CRP300,,,,,,,,,,,,Port1-Pin1-Alias,ESS,string,{P1-1} Relay 1
+CRP800,,,,,,,,,,,,Port1-Pin1-ActiveLow,ESS,string,0
+CRP800-revA,,,,,,,,,,,,Port1-Pin1-ActiveLow,ESS,string,0
+CRP100,,,,,,,,,,,,Port1-Pin1-ActiveLow,ESS,string,0
+CRP500,,,,,,,,,,,,Port1-Pin1-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port1-Pin1-ActiveLow,ESS,string,0
+CRP800,,,,,,,,,,,,Port1-Pin2-Alias,ESS,string,{P1-2} X Step
+CRP800-revA,,,,,,,,,,,,Port1-Pin2-Alias,ESS,string,{P1-2} X Step
+CRP100,,,,,,,,,,,,Port1-Pin2-Alias,ESS,string,{P1-2} X Step
+CRP500,,,,,,,,,,,,Port1-Pin2-Alias,ESS,string,{P1-2} X Step
+CRP300,,,,,,,,,,,,Port1-Pin2-Alias,ESS,string,{P1-2} X Dir
+CRP800,,,,,,,,,,,,Port1-Pin2-ActiveLow,ESS,string,0
+CRP800-revA,,,,,,,,,,,,Port1-Pin2-ActiveLow,ESS,string,0
+CRP100,,,,,,,,,,,,Port1-Pin2-ActiveLow,ESS,string,0
+CRP500,,,,,,,,,,,,Port1-Pin2-ActiveLow,ESS,string,0
+CRP300,PRO CNC,,,,,,,,,,,Port1-Pin2-ActiveLow,ESS,string,1
+CRP300,Standard CNC,,,,,,,,,,,Port1-Pin2-ActiveLow,ESS,string,0
+CRP300,Benchtop PRO,,,,,,,,,,,Port1-Pin2-ActiveLow,ESS,string,1
+CRP300,Benchtop Standard,,,,,,,,,,,Port1-Pin2-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port1-Pin3-Alias,ESS,string,{P1-3} X Dir
+CRP800-revA,,,,,,,,,,,,Port1-Pin3-Alias,ESS,string,{P1-3} X Dir
+CRP100,,,,,,,,,,,,Port1-Pin3-Alias,ESS,string,{P1-3} X Dir
+CRP500,,,,,,,,,,,,Port1-Pin3-Alias,ESS,string,{P1-3} X Dir
+CRP300,,,,,,,,,,,,Port1-Pin3-Alias,ESS,string,{P1-3} X Step
+CRP800,PRO CNC,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,1
+CRP800,Standard CNC,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,0
+CRP800,Benchtop PRO,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,1
+CRP800,Benchtop Standard,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,1
+CRP800-revA,PRO CNC,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,0
+CRP800-revA,Standard CNC,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,1
+CRP800-revA,Benchtop PRO,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,0
+CRP800-revA,Benchtop Standard,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,0
+CRP800-revA,PRO CNC,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,1
+CRP800-revA,Standard CNC,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,0
+CRP800-revA,Benchtop PRO,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,1
+CRP800-revA,Benchtop Standard,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,1
+CRP100,PRO CNC,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,1
+CRP100,Standard CNC,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,0
+CRP100,Benchtop PRO,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,1
+CRP100,Benchtop Standard,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,1
+CRP500,PRO CNC,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,1
+CRP500,Standard CNC,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,0
+CRP500,Benchtop PRO,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,1
+CRP500,Benchtop Standard,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port1-Pin3-ActiveLow,ESS,string,0
+CRP800,,,,,,,,,,,,Port1-Pin4-Alias,ESS,string,{P1-4} Y Step
+CRP800-revA,,,,,,,,,,,,Port1-Pin4-Alias,ESS,string,{P1-4} Y Step
+CRP100,,,,,,,,,,,,Port1-Pin4-Alias,ESS,string,{P1-4} Y Step
+CRP500,,,,,,,,,,,,Port1-Pin4-Alias,ESS,string,{P1-4} Y Step
+CRP300,,,,,,,,,,,,Port1-Pin4-Alias,ESS,string,{P1-4} Y Dir
+CRP800,,,,,,,,,,,,Port1-Pin4-ActiveLow,ESS,string,0
+CRP800-revA,,,,,,,,,,,,Port1-Pin4-ActiveLow,ESS,string,0
+CRP100,,,,,,,,,,,,Port1-Pin4-ActiveLow,ESS,string,0
+CRP500,,,,,,,,,,,,Port1-Pin4-ActiveLow,ESS,string,0
+CRP300,,,,,,,,,,1,,Port1-Pin4-ActiveLow,ESS,string,0
+CRP300,,,,,,,,,,0,,Port1-Pin4-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port1-Pin5-Alias,ESS,string,{P1-5} Y Dir
+CRP800-revA,,,,,,,,,,,,Port1-Pin5-Alias,ESS,string,{P1-5} Y Dir
+CRP100,,,,,,,,,,,,Port1-Pin5-Alias,ESS,string,{P1-5} Y Dir
+CRP500,,,,,,,,,,,,Port1-Pin5-Alias,ESS,string,{P1-5} Y Dir
+CRP300,,,,,,,,,,,,Port1-Pin5-Alias,ESS,string,{P1-5} Y Step
+CRP800,,,,,,,,,,1,,Port1-Pin5-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,0,,Port1-Pin5-ActiveLow,ESS,string,0
+CRP800-revA,,,,,,,,,,1,,Port1-Pin5-ActiveLow,ESS,string,0
+CRP800-revA,,,,,,,,,,0,,Port1-Pin5-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,1,,Port1-Pin5-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,0,,Port1-Pin5-ActiveLow,ESS,string,0
+CRP100,,,,,,,,,,1,,Port1-Pin5-ActiveLow,ESS,string,1
+CRP100,,,,,,,,,,0,,Port1-Pin5-ActiveLow,ESS,string,0
+CRP500,,,,,,,,,,1,,Port1-Pin5-ActiveLow,ESS,string,0
+CRP500,,,,,,,,,,0,,Port1-Pin5-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port1-Pin5-ActiveLow,ESS,string,0
+CRP800,,,,,,,,,,,,Port1-Pin6-Alias,ESS,string,{P1-6} Z Step
+CRP800-revA,,,,,,,,,,,,Port1-Pin6-Alias,ESS,string,{P1-6} Z Step
+CRP100,,,,,,,,,,,,Port1-Pin6-Alias,ESS,string,{P1-6} Z Step
+CRP500,,,,,,,,,,,,Port1-Pin6-Alias,ESS,string,{P1-6} Z Step
+CRP300,,,,,,,,,,,,Port1-Pin6-Alias,ESS,string,{P1-6} Z Dir
+CRP800,,,,,,,,,,,,Port1-Pin6-ActiveLow,ESS,string,0
+CRP800-revA,,,,,,,,,,,,Port1-Pin6-ActiveLow,ESS,string,0
+CRP100,,,,,,,,,,,,Port1-Pin6-ActiveLow,ESS,string,0
+CRP500,,,,,,,,,,,,Port1-Pin6-ActiveLow,ESS,string,0
+CRP300,Standard CNC,12.2,,,,,,,,,,Port1-Pin6-ActiveLow,ESS,string,0
+CRP300,Standard CNC,,,,,,,,,,,Port1-Pin6-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port1-Pin6-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port1-Pin7-Alias,ESS,string,{P1-7} Z Dir
+CRP800-revA,,,,,,,,,,,,Port1-Pin7-Alias,ESS,string,{P1-7} Z Dir
+CRP100,,,,,,,,,,,,Port1-Pin7-Alias,ESS,string,{P1-7} Z Dir
+CRP500,,,,,,,,,,,,Port1-Pin7-Alias,ESS,string,{P1-7} Z Dir
+CRP300,,,,,,,,,,,,Port1-Pin7-Alias,ESS,string,{P1-7} Z Step
+CRP800,PRO CNC,14.1,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,1
+CRP800,Standard CNC,12.2,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,1
+CRP800,Benchtop PRO,14.1,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,0
+CRP800-revA,PRO CNC,14.1,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,0
+CRP800-revA,Standard CNC,12.2,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,0
+CRP800-revA,Benchtop PRO,14.1,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,0
+CRP800-revA,,,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,1
+CRP800-revA,PRO CNC,14.1,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,1
+CRP800-revA,Standard CNC,12.2,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,1
+CRP800-revA,Benchtop PRO,14.1,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,0
+CRP100,Standard CNC,12.2,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,1
+CRP100,Standard CNC,,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,0
+CRP100,,,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,0
+CRP500,Standard CNC,12.2,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,0
+CRP500,Standard CNC,,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,1
+CRP500,,,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port1-Pin7-ActiveLow,ESS,string,0
+CRP800,,,,,,,,,,,,Port1-Pin8-Alias,ESS,string,{P1-8} B Step
+CRP800-revA,,,,,,,,,,,,Port1-Pin8-Alias,ESS,string,{P1-8} B Step
+CRP100,,,,,,,,,,,,Port1-Pin8-Alias,ESS,string,{P1-8} B Step
+CRP500,,,,,,,,,,,,Port1-Pin8-Alias,ESS,string,{P1-8} B Step
+CRP300,,,,,,,,,,,,Port1-Pin8-Alias,ESS,string,{P1-8} B Dir
+CRP800,,,,,,,,,,,,Port1-Pin8-ActiveLow,ESS,string,0
+CRP800-revA,,,,,,,,,,,,Port1-Pin8-ActiveLow,ESS,string,0
+CRP100,,,,,,,,,,,,Port1-Pin8-ActiveLow,ESS,string,0
+CRP500,,,,,,,,,,,,Port1-Pin8-ActiveLow,ESS,string,0
+CRP300,PRO CNC,,,,,,,,,1,,Port1-Pin8-ActiveLow,ESS,string,1
+CRP300,PRO CNC,,,,,,,,,0,,Port1-Pin8-ActiveLow,ESS,string,0
+CRP300,Standard CNC,,,,,,,,,1,,Port1-Pin8-ActiveLow,ESS,string,1
+CRP300,Standard CNC,,,,,,,,,0,,Port1-Pin8-ActiveLow,ESS,string,0
+CRP300,Benchtop PRO,,,,,,,,,1,,Port1-Pin8-ActiveLow,ESS,string,0
+CRP300,Benchtop PRO,,,,,,,,,0,,Port1-Pin8-ActiveLow,ESS,string,1
+CRP300,Benchtop Standard,,,,,,,,,1,,Port1-Pin8-ActiveLow,ESS,string,0
+CRP300,Benchtop Standard,,,,,,,,,0,,Port1-Pin8-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port1-Pin9-Alias,ESS,string,{P1-9} B Dir
+CRP800-revA,,,,,,,,,,,,Port1-Pin9-Alias,ESS,string,{P1-9} B Dir
+CRP100,,,,,,,,,,,,Port1-Pin9-Alias,ESS,string,{P1-9} B Dir
+CRP500,,,,,,,,,,,,Port1-Pin9-Alias,ESS,string,{P1-9} B Dir
+CRP300,,,,,,,,,,,,Port1-Pin9-Alias,ESS,string,{P1-9} B Step
+CRP800,PRO CNC,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP800,PRO CNC,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP800,Standard CNC,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP800,Standard CNC,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP800,Benchtop PRO,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP800,Benchtop PRO,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP800,Benchtop Standard,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP800,Benchtop Standard,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP800-revA,PRO CNC,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP800-revA,PRO CNC,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP800-revA,Standard CNC,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP800-revA,Standard CNC,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP800-revA,Benchtop PRO,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP800-revA,Benchtop PRO,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP800-revA,Benchtop Standard,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP800-revA,Benchtop Standard,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP800-revA,PRO CNC,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP800-revA,PRO CNC,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP800-revA,Standard CNC,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP800-revA,Standard CNC,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP800-revA,Benchtop PRO,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP800-revA,Benchtop PRO,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP800-revA,Benchtop Standard,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP800-revA,Benchtop Standard,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP100,PRO CNC,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP100,PRO CNC,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP100,Standard CNC,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP100,Standard CNC,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP100,Benchtop PRO,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP100,Benchtop PRO,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP100,Benchtop Standard,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP100,Benchtop Standard,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP500,PRO CNC,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP500,PRO CNC,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP500,Standard CNC,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP500,Standard CNC,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP500,Benchtop PRO,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP500,Benchtop PRO,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP500,Benchtop Standard,,,,,,,,,1,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP500,Benchtop Standard,,,,,,,,,0,,Port1-Pin9-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port1-Pin9-ActiveLow,ESS,string,0
+CRP800,,,,,,,,,,,,Port1-Pin10-Alias,ESS,string,{P1-10}
+CRP800-revA,,,,,,,,,,,,Port1-Pin10-Alias,ESS,string,{P1-10}
+CRP100,,,,,,,,,,,,Port1-Pin10-Alias,ESS,string,{P1-10} X--
+CRP500,,,,,,,,,,,,Port1-Pin10-Alias,ESS,string,{P1-10} X--
+CRP300,,,,,,,,,,,,Port1-Pin10-Alias,ESS,string,{P1-10} E Stop
+CRP800,,,,,,,,,,,,Port1-Pin10-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port1-Pin10-ActiveLow,ESS,string,1
+CRP100,,,,,,,,,,,,Port1-Pin10-ActiveLow,ESS,string,1
+CRP500,,,,,,,,,,,,Port1-Pin10-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port1-Pin10-ActiveLow,ESS,string,0
+CRP800,,,,,,,,,,,,Port1-Pin10-NoiseFilterValue,ESS,string,10000
+CRP800-revA,,,,,,,,,,,,Port1-Pin10-NoiseFilterValue,ESS,string,10000
+CRP100,,,,,,,,,,,,Port1-Pin10-NoiseFilterValue,ESS,string,10000
+CRP500,,,,,,,,,,,,Port1-Pin10-NoiseFilterValue,ESS,string,10000
+CRP300,,,,,,,,,,,,Port1-Pin10-NoiseFilterValue,ESS,string,20000
+CRP800,,,,,,,,,,,,Port1-Pin11-Alias,ESS,string,{P1-11}
+CRP800-revA,,,,,,,,,,,,Port1-Pin11-Alias,ESS,string,{P1-11}
+CRP100,,,,,,,,,,,,Port1-Pin11-Alias,ESS,string,{P1-11} Y--
+CRP500,,,,,,,,,,,,Port1-Pin11-Alias,ESS,string,{P1-11} Y--
+CRP300,,,,,,,,,,,,Port1-Pin11-Alias,ESS,string,{P1-11} X--
+CRP800,,,,,,,,,,,,Port1-Pin11-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port1-Pin11-ActiveLow,ESS,string,1
+CRP100,,,,,,,,,,,,Port1-Pin11-ActiveLow,ESS,string,1
+CRP500,,,,,,,,,,,,Port1-Pin11-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port1-Pin11-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port1-Pin11-NoiseFilterValue,ESS,string,10000
+CRP800-revA,,,,,,,,,,,,Port1-Pin11-NoiseFilterValue,ESS,string,10000
+CRP100,,,,,,,,,,,,Port1-Pin11-NoiseFilterValue,ESS,string,10000
+CRP500,,,,,,,,,,,,Port1-Pin11-NoiseFilterValue,ESS,string,10000
+CRP300,,,,,,,,,,,,Port1-Pin11-NoiseFilterValue,ESS,string,10000
+CRP800,,,,,,,,,,,,Port1-Pin12-Alias,ESS,string,{P1-12}
+CRP800-revA,,,,,,,,,,,,Port1-Pin12-Alias,ESS,string,{P1-12}
+CRP100,,,,,,,,,,,,Port1-Pin12-Alias,ESS,string,{P1-12} Z++
+CRP500,,,,,,,,,,,,Port1-Pin12-Alias,ESS,string,{P1-12} B Home
+CRP300,,,,,,,,,,,,Port1-Pin12-Alias,ESS,string,{P1-12} Y--
+CRP800,,,,,,,,,,,,Port1-Pin12-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port1-Pin12-ActiveLow,ESS,string,1
+CRP100,,,,,,,,,,,,Port1-Pin12-ActiveLow,ESS,string,1
+CRP500,,,,,,,,,,,,Port1-Pin12-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port1-Pin12-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port1-Pin12-NoiseFilterValue,ESS,string,10000
+CRP800-revA,,,,,,,,,,,,Port1-Pin12-NoiseFilterValue,ESS,string,10000
+CRP100,,,,,,,,,,,,Port1-Pin12-NoiseFilterValue,ESS,string,10000
+CRP500,,,,,,,,,,,,Port1-Pin12-NoiseFilterValue,ESS,string,10000
+CRP300,,,,,,,,,,,,Port1-Pin12-NoiseFilterValue,ESS,string,10000
+CRP800,,,,,,,,,,,,Port1-Pin13-Alias,ESS,string,{P1-13}
+CRP800-revA,,,,,,,,,,,,Port1-Pin13-Alias,ESS,string,{P1-13}
+CRP100,,,,,,,,,,,,Port1-Pin13-Alias,ESS,string,{P1-13} Probe
+CRP500,,,,,,,,,,,,Port1-Pin13-Alias,ESS,string,{P1-13} Probe
+CRP300,,,,,,,,,,,,Port1-Pin13-Alias,ESS,string,{P1-13} B Home
+CRP800,,,,,,,,,,,,Port1-Pin13-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port1-Pin13-ActiveLow,ESS,string,1
+CRP100,,,,,,,,,,,,Port1-Pin13-ActiveLow,ESS,string,1
+CRP500,,,,,,,,,,,,Port1-Pin13-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port1-Pin13-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port1-Pin13-NoiseFilterValue,ESS,string,500
+CRP800-revA,,,,,,,,,,,,Port1-Pin13-NoiseFilterValue,ESS,string,500
+CRP100,,,,,,,,,,,,Port1-Pin13-NoiseFilterValue,ESS,string,500
+CRP500,,,,,,,,,,,,Port1-Pin13-NoiseFilterValue,ESS,string,500
+CRP300,,,,,,,,,,,,Port1-Pin13-NoiseFilterValue,ESS,string,10000
+CRP800,,,,,,,,,,,,Port1-Pin14-Alias,ESS,string,{P1-14} A Step
+CRP800-revA,,,,,,,,,,,,Port1-Pin14-Alias,ESS,string,{P1-14} A Step
+CRP100,,,,,,,,,,,,Port1-Pin14-Alias,ESS,string,{P1-14} Spindle PWM
+CRP500,,,,,,,,,,,,Port1-Pin14-Alias,ESS,string,{P1-14}
+CRP300,,,,,Router,,,,,,,Port1-Pin14-Alias,ESS,string,{P1-14}
+CRP300,,,,,,,,,,,,Port1-Pin14-Alias,ESS,string,{P1-14} Spindle Relay
+CRP800,,,,,,,,,,,,Port1-Pin14-ActiveLow,ESS,string,0
+CRP800-revA,,,,,,,,,,,,Port1-Pin14-ActiveLow,ESS,string,0
+CRP100,,,,,,,,,,,,Port1-Pin14-ActiveLow,ESS,string,0
+CRP500,,,,,,,,,,,,Port1-Pin14-ActiveLow,ESS,string,0
+CRP300,,,,,Router,,,,,,,Port1-Pin14-ActiveLow,ESS,string,0
+CRP300,,,,,,,,,,,,Port1-Pin14-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port1-Pin15-Alias,ESS,string,{P1-15}
+CRP800-revA,,,,,,,,,,,,Port1-Pin15-Alias,ESS,string,{P1-15}
+CRP100,,,,,,,,,,,,Port1-Pin15-Alias,ESS,string,{P1-15} E Stop
+CRP500,,,,,,,,,,,,Port1-Pin15-Alias,ESS,string,{P1-15} E Stop
+CRP300,,,,,,,,,,,,Port1-Pin15-Alias,ESS,string,{P1-15} Probe
+CRP800,,,,,,,,,,,,Port1-Pin15-ActiveLow,ESS,string,0
+CRP800-revA,,,,,,,,,,,,Port1-Pin15-ActiveLow,ESS,string,0
+CRP100,,,,,,,,,,,,Port1-Pin15-ActiveLow,ESS,string,0
+CRP500,,,,,,,,,,,,Port1-Pin15-ActiveLow,ESS,string,0
+CRP300,,,,,,,,,,,,Port1-Pin15-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port1-Pin15-NoiseFilterValue,ESS,string,20000
+CRP800-revA,,,,,,,,,,,,Port1-Pin15-NoiseFilterValue,ESS,string,20000
+CRP100,,,,,,,,,,,,Port1-Pin15-NoiseFilterValue,ESS,string,20000
+CRP500,,,,,,,,,,,,Port1-Pin15-NoiseFilterValue,ESS,string,20000
+CRP300,,,,,,,,,,,,Port1-Pin15-NoiseFilterValue,ESS,string,500
+CRP800,,,,,,,,,,,,Port1-Pin16-Alias,ESS,string,{P1-16} A Dir
+CRP800-revA,,,,,,,,,,,,Port1-Pin16-Alias,ESS,string,{P1-16} A Dir
+CRP100,,,,,,,,,,,,Port1-Pin16-Alias,ESS,string,{P1-16} Charge Pump
+CRP500,,,,,,,,,,,,Port1-Pin16-Alias,ESS,string,{P1-16}
+CRP300,,,,,Router,,,,,,,Port1-Pin16-Alias,ESS,string,{P1-16}
+CRP300,,,,,,,,,,,,Port1-Pin16-Alias,ESS,string,{P1-16} Spindle PWM
+CRP800,,,,,,,,,,,,Port1-Pin16-ActiveLow,ESS,string,0
+CRP800-revA,,,,,,,,,,,,Port1-Pin16-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port1-Pin16-ActiveLow,ESS,string,0
+CRP100,,,,,,,,,,,,Port1-Pin16-ActiveLow,ESS,string,0
+CRP500,,,,,,,,,,,,Port1-Pin16-ActiveLow,ESS,string,0
+CRP300,,,,,,,,,,,,Port1-Pin16-ActiveLow,ESS,string,0
+CRP800,,,,,,,,,,,,Port1-Pin17-Alias,ESS,string,{P1-17} C Dir
+CRP800-revA,,,,,,,,,,,,Port1-Pin17-Alias,ESS,string,{P1-17} C Dir
+CRP100,,,,,,,,,,,,Port1-Pin17-Alias,ESS,string,{P1-17} Spindle Relay
+CRP500,,,,,,,,,,,,Port1-Pin17-Alias,ESS,string,{P1-17} Spindle Relay
+CRP300,,,,,,,,,,,,Port1-Pin17-Alias,ESS,string,{P1-17} Charge Pump
+CRP800,,,,,,,,,,,,Port1-Pin17-ActiveLow,ESS,string,0
+CRP800-revA,,,,,,,,,,,,Port1-Pin17-ActiveLow,ESS,string,0
+CRP100,,,,,,,,,,,,Port1-Pin17-ActiveLow,ESS,string,0
+CRP500,,,,,,,,,,,,Port1-Pin17-ActiveLow,ESS,string,0
+CRP300,,,,,,,,,,,,Port1-Pin17-ActiveLow,ESS,string,0
+CRP800,,,,,,,,,,,,Port2-Pin1-Alias,ESS,string,{P2-1} Spindle PWM
+CRP800-revA,,,,,,,,,,,,Port2-Pin1-Alias,ESS,string,{P2-1} Spindle PWM
+CRP100,,,,,,,,,,,,Port2-Pin1-Alias,ESS,string,{P2-1}
+CRP500,,,,,,,,,,,,Port2-Pin1-Alias,ESS,string,{P2-1}
+CRP300,,,,,,,,,,,,Port2-Pin1-Alias,ESS,string,{P2-1} A Step
+CRP800,,,,,,,,,,,,Port2-Pin1-ActiveLow,ESS,string,0
+CRP800-revA,,,,,,,,,,,,Port2-Pin1-ActiveLow,ESS,string,0
+CRP100,,,,,,,,,,,,Port2-Pin1-ActiveLow,ESS,string,0
+CRP500,,,,,,,,,,,,Port2-Pin1-ActiveLow,ESS,string,0
+CRP300,,,,,,,,,,,,Port2-Pin1-ActiveLow,ESS,string,0
+CRP800,,,,,,,,,,,,Port2-Pin2-Alias,ESS,string,{P2-2} X--
+CRP800-revA,,,,,,,,,,,,Port2-Pin2-Alias,ESS,string,{P2-2} X--
+CRP100,,,,,,,,,,,,Port2-Pin2-Alias,ESS,string,{P2-2}
+CRP500,,,,,,,,,,,,Port2-Pin2-Alias,ESS,string,{P2-2}
+CRP300,,,,,,,,,,,,Port2-Pin2-Alias,ESS,string,{P2-2}
+CRP800,,,,,,,,,,,,Port2-Pin2-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port2-Pin2-ActiveLow,ESS,string,1
+CRP100,,,,,,,,,,,,Port2-Pin2-ActiveLow,ESS,string,1
+CRP500,,,,,,,,,,,,Port2-Pin2-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port2-Pin2-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port2-Pin2-NoiseFilterValue,ESS,string,10000
+CRP800-revA,,,,,,,,,,,,Port2-Pin2-NoiseFilterValue,ESS,string,10000
+CRP100,,,,,,,,,,,,Port2-Pin2-NoiseFilterValue,ESS,string,10000
+CRP500,,,,,,,,,,,,Port2-Pin2-NoiseFilterValue,ESS,string,10000
+CRP300,,,,,,,,,,,,Port2-Pin2-NoiseFilterValue,ESS,string,10000
+CRP800,,,,,,,,,,,,Port2-Pin3-Alias,ESS,string,{P2-3} A--
+CRP800-revA,,,,,,,,,,,,Port2-Pin3-Alias,ESS,string,{P2-3} Y--
+CRP100,,,,,,,,,,,,Port2-Pin3-Alias,ESS,string,{P2-3}
+CRP500,,,,,,,,,,,,Port2-Pin3-Alias,ESS,string,{P2-3}
+CRP300,,,,,,,,,,,,Port2-Pin3-Alias,ESS,string,{P2-3}
+CRP800,,,,,,,,,,,,Port2-Pin3-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port2-Pin3-ActiveLow,ESS,string,1
+CRP100,,,,,,,,,,,,Port2-Pin3-ActiveLow,ESS,string,1
+CRP500,,,,,,,,,,,,Port2-Pin3-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port2-Pin3-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port2-Pin3-NoiseFilterValue,ESS,string,10000
+CRP800-revA,,,,,,,,,,,,Port2-Pin3-NoiseFilterValue,ESS,string,10000
+CRP100,,,,,,,,,,,,Port2-Pin3-NoiseFilterValue,ESS,string,10000
+CRP500,,,,,,,,,,,,Port2-Pin3-NoiseFilterValue,ESS,string,10000
+CRP300,,,,,,,,,,,,Port2-Pin3-NoiseFilterValue,ESS,string,10000
+CRP800,,,,,,,,,,,,Port2-Pin4-Alias,ESS,string,{P2-4} Y--
+CRP800-revA,,,,,,,,,,,,Port2-Pin4-Alias,ESS,string,{P2-4} Z++
+CRP100,,,,,,,,,,,,Port2-Pin4-Alias,ESS,string,{P2-4}
+CRP500,,,,,,,,,,,,Port2-Pin4-Alias,ESS,string,{P2-4}
+CRP300,,,,,,,,,,,,Port2-Pin4-Alias,ESS,string,{P2-4}
+CRP800,,,,,,,,,,,,Port2-Pin4-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port2-Pin4-ActiveLow,ESS,string,1
+CRP100,,,,,,,,,,,,Port2-Pin4-ActiveLow,ESS,string,1
+CRP500,,,,,,,,,,,,Port2-Pin4-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port2-Pin4-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port2-Pin4-NoiseFilterValue,ESS,string,10000
+CRP800-revA,,,,,,,,,,,,Port2-Pin4-NoiseFilterValue,ESS,string,500
+CRP100,,,,,,,,,,,,Port2-Pin4-NoiseFilterValue,ESS,string,10000
+CRP500,,,,,,,,,,,,Port2-Pin4-NoiseFilterValue,ESS,string,10000
+CRP300,,,,,,,,,,,,Port2-Pin4-NoiseFilterValue,ESS,string,10000
+CRP800,,,,,,,,,,,,Port2-Pin5-Alias,ESS,string,{P2-5} Y++
+CRP800-revA,,,,,,,,,,,,Port2-Pin5-Alias,ESS,string,{P2-5} Ohmic Probe
+CRP100,,,,,,,,,,,,Port2-Pin5-Alias,ESS,string,{P2-5}
+CRP500,,,,,,,,,,,,Port2-Pin5-Alias,ESS,string,{P2-5}
+CRP300,,,,,,,,,,,,Port2-Pin5-Alias,ESS,string,{P2-5}
+CRP800,,,,,,,,,,,,Port2-Pin5-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port2-Pin5-ActiveLow,ESS,string,1
+CRP100,,,,,,,,,,,,Port2-Pin5-ActiveLow,ESS,string,1
+CRP500,,,,,,,,,,,,Port2-Pin5-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port2-Pin5-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port2-Pin5-NoiseFilterValue,ESS,string,10000
+CRP800-revA,,,,,,,,,,,,Port2-Pin5-NoiseFilterValue,ESS,string,2000
+CRP100,,,,,,,,,,,,Port2-Pin5-NoiseFilterValue,ESS,string,10000
+CRP500,,,,,,,,,,,,Port2-Pin5-NoiseFilterValue,ESS,string,10000
+CRP300,,,,,,,,,,,,Port2-Pin5-NoiseFilterValue,ESS,string,10000
+CRP800,,,,,,,,,,,,Port2-Pin6-Alias,ESS,string,{P2-6} Z++
+CRP800-revA,,,,,,,,,,,,Port2-Pin6-Alias,ESS,string,{P2-6} A--
+CRP100,,,,,,,,,,,,Port2-Pin6-Alias,ESS,string,{P2-6}
+CRP500,,,,,,,,,,,,Port2-Pin6-Alias,ESS,string,{P2-6}
+CRP300,,,,,,,,,,,,Port2-Pin6-Alias,ESS,string,{P2-6}
+CRP800,,,,,,,,,,,,Port2-Pin6-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port2-Pin6-ActiveLow,ESS,string,1
+CRP100,,,,,,,,,,,,Port2-Pin6-ActiveLow,ESS,string,1
+CRP500,,,,,,,,,,,,Port2-Pin6-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port2-Pin6-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port2-Pin6-NoiseFilterValue,ESS,string,10000
+CRP800-revA,,,,,,,,,,,,Port2-Pin6-NoiseFilterValue,ESS,string,10000
+CRP100,,,,,,,,,,,,Port2-Pin6-NoiseFilterValue,ESS,string,10000
+CRP500,,,,,,,,,,,,Port2-Pin6-NoiseFilterValue,ESS,string,10000
+CRP300,,,,,,,,,,,,Port2-Pin6-NoiseFilterValue,ESS,string,10000
+CRP800,,,,,,,,,,,,Port2-Pin7-Alias,ESS,string,{P2-7} B Home
+CRP800-revA,,,,,,,,,,,,Port2-Pin7-Alias,ESS,string,{P2-7} Y++
+CRP100,,,,,,,,,,,,Port2-Pin7-Alias,ESS,string,{P2-7}
+CRP500,,,,,,,,,,,,Port2-Pin7-Alias,ESS,string,{P2-7}
+CRP300,,,,,,,,,,,,Port2-Pin7-Alias,ESS,string,{P2-7}
+CRP800,,,,,,,,,,,,Port2-Pin7-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port2-Pin7-ActiveLow,ESS,string,1
+CRP100,,,,,,,,,,,,Port2-Pin7-ActiveLow,ESS,string,1
+CRP500,,,,,,,,,,,,Port2-Pin7-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port2-Pin7-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port2-Pin7-NoiseFilterValue,ESS,string,10000
+CRP800-revA,,,,,,,,,,,,Port2-Pin7-NoiseFilterValue,ESS,string,10000
+CRP100,,,,,,,,,,,,Port2-Pin7-NoiseFilterValue,ESS,string,10000
+CRP500,,,,,,,,,,,,Port2-Pin7-NoiseFilterValue,ESS,string,10000
+CRP300,,,,,,,,,,,,Port2-Pin7-NoiseFilterValue,ESS,string,10000
+CRP800,,,,,,,,,,,,Port2-Pin8-Alias,ESS,string,{P2-8} Ohmic Probe
+CRP800-revA,,,,,,,,,,,,Port2-Pin8-Alias,ESS,string,{P2-8} B Home
+CRP100,,,,,,,,,,,,Port2-Pin8-Alias,ESS,string,{P2-8} A Step
+CRP500,,,,,,,,,,,,Port2-Pin8-Alias,ESS,string,{P2-8}
+CRP300,,,,,,,,,,,,Port2-Pin8-Alias,ESS,string,{P2-8}
+CRP800,,,,,,,,,,,,Port2-Pin8-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port2-Pin8-ActiveLow,ESS,string,1
+CRP100,,,,,,,,,,,,Port2-Pin8-ActiveLow,ESS,string,1
+CRP500,,,,,,,,,,,,Port2-Pin8-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port2-Pin8-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port2-Pin8-NoiseFilterValue,ESS,string,2000
+CRP800-revA,,,,,,,,,,,,Port2-Pin8-NoiseFilterValue,ESS,string,10000
+CRP100,,,,,,,,,,,,Port2-Pin8-NoiseFilterValue,ESS,string,500
+CRP500,,,,,,,,,,,,Port2-Pin8-NoiseFilterValue,ESS,string,500
+CRP300,,,,,,,,,,,,Port2-Pin8-NoiseFilterValue,ESS,string,500
+CRP800,,,,,,,,,,,,Port2-Pin9-Alias,ESS,string,{P2-9} Probe
+CRP800-revA,,,,,,,,,,,,Port2-Pin9-Alias,ESS,string,{P2-9} Probe
+CRP100,,,,,,,,,,,,Port2-Pin9-Alias,ESS,string,{P2-9} A Dir
+CRP500,,,,,,,,,,,,Port2-Pin9-Alias,ESS,string,{P2-9}
+CRP300,,,,,,,,,,,,Port2-Pin9-Alias,ESS,string,{P2-9}
+CRP800,,,,,,,,,,,,Port2-Pin9-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port2-Pin9-ActiveLow,ESS,string,1
+CRP100,,,,,,,,,,,,Port2-Pin9-ActiveLow,ESS,string,1
+CRP500,,,,,,,,,,,,Port2-Pin9-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port2-Pin9-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port2-Pin9-NoiseFilterValue,ESS,string,500
+CRP800-revA,,,,,,,,,,,,Port2-Pin9-NoiseFilterValue,ESS,string,500
+CRP100,,,,,,,,,,,,Port2-Pin9-NoiseFilterValue,ESS,string,500
+CRP500,,,,,,,,,,,,Port2-Pin9-NoiseFilterValue,ESS,string,500
+CRP300,,,,,,,,,,,,Port2-Pin9-NoiseFilterValue,ESS,string,500
+CRP800,,,,,,,,,,,,Port2-Pin10-Alias,ESS,string,{P2-10}
+CRP800-revA,,,,,,,,,,,,Port2-Pin10-Alias,ESS,string,{P2-10} PTC
+CRP100,,,,,,,,,,,,Port2-Pin10-Alias,ESS,string,{P2-10}
+CRP500,,,,,,,,,,,,Port2-Pin10-Alias,ESS,string,{P2-10}
+CRP300,,,,,,,,,,,,Port2-Pin10-Alias,ESS,string,{P2-10}
+CRP800,,,,,,,,,,,,Port2-Pin10-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port2-Pin10-ActiveLow,ESS,string,1
+CRP100,,,,,,,,,,,,Port2-Pin10-ActiveLow,ESS,string,1
+CRP500,,,,,,,,,,,,Port2-Pin10-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port2-Pin10-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port2-Pin10-NoiseFilterValue,ESS,string,20000
+CRP800-revA,,,,,,,,,,,,Port2-Pin10-NoiseFilterValue,ESS,string,20000
+CRP100,,,,,,,,,,,,Port2-Pin10-NoiseFilterValue,ESS,string,20000
+CRP500,,,,,,,,,,,,Port2-Pin10-NoiseFilterValue,ESS,string,20000
+CRP300,,,,,,,,,,,,Port2-Pin10-NoiseFilterValue,ESS,string,20000
+CRP800,,,,,,,,,,,,Port2-Pin11-Alias,ESS,string,{P2-11}
+CRP800-revA,,,,,,,,,,,,Port2-Pin11-Alias,ESS,string,{P2-11}
+CRP100,,,,,,,,,,,,Port2-Pin11-Alias,ESS,string,{P2-11}
+CRP500,,,,,,,,,,,,Port2-Pin11-Alias,ESS,string,{P2-11}
+CRP300,,,,,,,,,,,,Port2-Pin11-Alias,ESS,string,{P2-11} Z++
+CRP800,,,,,,,,,,,,Port2-Pin11-ActiveLow,ESS,string,0
+CRP800-revA,,,,,,,,,,,,Port2-Pin11-ActiveLow,ESS,string,0
+CRP100,,,,,,,,,,,,Port2-Pin11-ActiveLow,ESS,string,0
+CRP500,,,,,,,,,,,,Port2-Pin11-ActiveLow,ESS,string,0
+CRP300,,,,,,,,,,,,Port2-Pin11-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port2-Pin11-NoiseFilterValue,ESS,string,0
+CRP800-revA,,,,,,,,,,,,Port2-Pin11-NoiseFilterValue,ESS,string,0
+CRP100,,,,,,,,,,,,Port2-Pin11-NoiseFilterValue,ESS,string,0
+CRP500,,,,,,,,,,,,Port2-Pin11-NoiseFilterValue,ESS,string,0
+CRP300,,,,,,,,,,,,Port2-Pin11-NoiseFilterValue,ESS,string,10000
+CRP800,,,,,,,,,,,,Port2-Pin12-Alias,ESS,string,{P2-12}
+CRP800-revA,,,,,,,,,,,,Port2-Pin12-Alias,ESS,string,{P2-12}
+CRP100,,,,,,,,,,,,Port2-Pin12-Alias,ESS,string,{P2-12}
+CRP500,,,,,,,,,,,,Port2-Pin12-Alias,ESS,string,{P2-12}
+CRP300,,,,,,,,,,,,Port2-Pin12-Alias,ESS,string,{P2-12} A--
+CRP800,,,,,,,,,,,,Port2-Pin12-ActiveLow,ESS,string,0
+CRP800-revA,,,,,,,,,,,,Port2-Pin12-ActiveLow,ESS,string,0
+CRP100,,,,,,,,,,,,Port2-Pin12-ActiveLow,ESS,string,0
+CRP500,,,,,,,,,,,,Port2-Pin12-ActiveLow,ESS,string,0
+CRP300,,,,,,,,,,,,Port2-Pin12-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port2-Pin12-NoiseFilterValue,ESS,string,0
+CRP800-revA,,,,,,,,,,,,Port2-Pin12-NoiseFilterValue,ESS,string,0
+CRP100,,,,,,,,,,,,Port2-Pin12-NoiseFilterValue,ESS,string,0
+CRP500,,,,,,,,,,,,Port2-Pin12-NoiseFilterValue,ESS,string,0
+CRP300,,,,,,,,,,,,Port2-Pin12-NoiseFilterValue,ESS,string,10000
+CRP800,,,,,,,,,,,,Port2-Pin13-Alias,ESS,string,{P2-13} PTC
+CRP800-revA,,,,,,,,,,,,Port2-Pin13-Alias,ESS,string,{P2-13}
+CRP100,,,,,,,,,,,,Port2-Pin13-Alias,ESS,string,{P2-13}
+CRP500,,,,,,,,,,,,Port2-Pin13-Alias,ESS,string,{P2-13}
+CRP300,,,,,,,,,,,,Port2-Pin13-Alias,ESS,string,{P2-13} Ohmic Probe
+CRP800,,,,,,,,,,,,Port2-Pin13-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port2-Pin13-ActiveLow,ESS,string,1
+CRP100,,,,,,,,,,,,Port2-Pin13-ActiveLow,ESS,string,1
+CRP500,,,,,,,,,,,,Port2-Pin13-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port2-Pin13-ActiveLow,ESS,string,1
+CRP800,,,,,,,,,,,,Port2-Pin13-NoiseFilterValue,ESS,string,20000
+CRP800-revA,,,,,,,,,,,,Port2-Pin13-NoiseFilterValue,ESS,string,20000
+CRP100,,,,,,,,,,,,Port2-Pin13-NoiseFilterValue,ESS,string,20000
+CRP500,,,,,,,,,,,,Port2-Pin13-NoiseFilterValue,ESS,string,20000
+CRP300,,,,,,,,,,,,Port2-Pin13-NoiseFilterValue,ESS,string,2000
+CRP800,,,,,,,,,,,,Port2-Pin14-Alias,ESS,string,{P2-14} Spindle Relay
+CRP800-revA,,,,,,,,,,,,Port2-Pin14-Alias,ESS,string,{P2-14} Relay 2
+CRP100,,,,,,,,,,,,Port2-Pin14-Alias,ESS,string,{P2-14}
+CRP500,,,,,,,,,,,,Port2-Pin14-Alias,ESS,string,{P2-14}
+CRP300,,,,,,,,,,,,Port2-Pin14-Alias,ESS,string,{P2-14} A Dir
+CRP800,,,,,,,,,,,,Port2-Pin14-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port2-Pin14-ActiveLow,ESS,string,1
+CRP100,,,,,,,,,,,,Port2-Pin14-ActiveLow,ESS,string,1
+CRP500,,,,,,,,,,,,Port2-Pin14-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port2-Pin14-ActiveLow,ESS,string,0
+CRP800,,,,,,,,,,,,Port2-Pin15-Alias,ESS,string,{P2-15} E Stop
+CRP800-revA,,,,,,,,,,,,Port2-Pin15-Alias,ESS,string,{P2-15} E Stop
+CRP100,,,,,,,,,,,,Port2-Pin15-Alias,ESS,string,{P2-15}
+CRP500,,,,,,,,,,,,Port2-Pin15-Alias,ESS,string,{P2-15}
+CRP300,,,,,,,,,,,,Port2-Pin15-Alias,ESS,string,{P2-15}
+CRP800,,,,,,,,,,,,Port2-Pin15-ActiveLow,ESS,string,0
+CRP800-revA,,,,,,,,,,,,Port2-Pin15-ActiveLow,ESS,string,0
+CRP100,,,,,,,,,,,,Port2-Pin15-ActiveLow,ESS,string,0
+CRP500,,,,,,,,,,,,Port2-Pin15-ActiveLow,ESS,string,0
+CRP300,,,,,,,,,,,,Port2-Pin15-ActiveLow,ESS,string,0
+CRP800,,,,,,,,,,,,Port2-Pin15-NoiseFilterValue,ESS,string,20000
+CRP800-revA,,,,,,,,,,,,Port2-Pin15-NoiseFilterValue,ESS,string,20000
+CRP100,,,,,,,,,,,,Port2-Pin15-NoiseFilterValue,ESS,string,20000
+CRP500,,,,,,,,,,,,Port2-Pin15-NoiseFilterValue,ESS,string,20000
+CRP300,,,,,,,,,,,,Port2-Pin15-NoiseFilterValue,ESS,string,20000
+CRP800,,,,,,,,,,,,Port2-Pin16-Alias,ESS,string,{P2-16} Relay 2
+CRP800-revA,,,,,,,,,,,,Port2-Pin16-Alias,ESS,string,{P2-16} Relay 1
+CRP100,,,,,,,,,,,,Port2-Pin16-Alias,ESS,string,{P2-16}
+CRP500,,,,,,,,,,,,Port2-Pin16-Alias,ESS,string,{P2-16}
+CRP300,,,,,,,,,,,,Port2-Pin16-Alias,ESS,string,{P2-16}
+CRP800,,,,,,,,,,,,Port2-Pin16-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port2-Pin16-ActiveLow,ESS,string,1
+CRP100,,,,,,,,,,,,Port2-Pin16-ActiveLow,ESS,string,1
+CRP500,,,,,,,,,,,,Port2-Pin16-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port2-Pin16-ActiveLow,ESS,string,0
+CRP800,,,,,,,,,,,,Port2-Pin17-Alias,ESS,string,{P2-17} Relay 1
+CRP800-revA,,,,,,,,,,,,Port2-Pin17-Alias,ESS,string,{P2-17} Spindle Relay
+CRP100,,,,,,,,,,,,Port2-Pin17-Alias,ESS,string,{P2-17}
+CRP500,,,,,,,,,,,,Port2-Pin17-Alias,ESS,string,{P2-17}
+CRP300,,,,,,,,,,,,Port2-Pin17-Alias,ESS,string,{P2-17}
+CRP800,,,,,,,,,,,,Port2-Pin17-ActiveLow,ESS,string,1
+CRP800-revA,,,,,,,,,,,,Port2-Pin17-ActiveLow,ESS,string,1
+CRP100,,,,,,,,,,,,Port2-Pin17-ActiveLow,ESS,string,1
+CRP500,,,,,,,,,,,,Port2-Pin17-ActiveLow,ESS,string,1
+CRP300,,,,,,,,,,,,Port2-Pin17-ActiveLow,ESS,string,0
+,,,,,,,,,,,,Port3-Pin1-Alias,ESS,string,{P3-1} Temp TMC3in1 Gate
+,,,,,,,,,,,,Port3-Pin1-ActiveLow,ESS,string,0
+,,,,,,,,,,,,Port3-Pin2-Alias,ESS,string,{P3-2}
+,,,,,,,,,,,,Port3-Pin2-ActiveLow,ESS,string,0
+,,,,,,,,,,,,Port3-Pin3-Alias,ESS,string,{P3-3}
+,,,,,,,,,,,,Port3-Pin3-ActiveLow,ESS,string,0
+,,,,,,,,,,,,Port3-Pin4-Alias,ESS,string,{P3-4}
+,,,,,,,,,,,,Port3-Pin4-ActiveLow,ESS,string,0
+,,,,,,,,,,,,Port3-Pin5-Alias,ESS,string,{P3-5}
+,,,,,,,,,,,,Port3-Pin5-ActiveLow,ESS,string,0
+,,,,,,,,,,,,Port3-Pin6-Alias,ESS,string,{P3-6}
+,,,,,,,,,,,,Port3-Pin6-ActiveLow,ESS,string,0
+,,,,,,,,,,,,Port3-Pin7-Alias,ESS,string,{P3-7}
+,,,,,,,,,,,,Port3-Pin7-ActiveLow,ESS,string,0
+,,,,,,,,,,,,Port3-Pin8-Alias,ESS,string,{P3-8}
+,,,,,,,,,,,,Port3-Pin8-ActiveLow,ESS,string,0
+,,,,,,,,,,,,Port3-Pin9-Alias,ESS,string,{P3-9}
+,,,,,,,,,,,,Port3-Pin9-ActiveLow,ESS,string,0
+,,,,,,,,,,,,Port3-Pin10-Alias,ESS,string,{P3-10} THC On (Arc OK)
+,,,,,,,,,,,,Port3-Pin10-ActiveLow,ESS,string,0
+,,,,,,,,,,,,Port3-Pin11-Alias,ESS,string,{P3-11}
+,,,,,,,,,,,,Port3-Pin11-ActiveLow,ESS,string,0
+,,,,,,,,,,,,Port3-Pin12-Alias,ESS,string,{P3-12}
+,,,,,,,,,,,,Port3-Pin12-ActiveLow,ESS,string,0
+,,,,,,,,,,,,Port3-Pin13-Alias,ESS,string,{P3-13} THC Up
+,,,,,,,,,,,,Port3-Pin13-ActiveLow,ESS,string,0
+,,,,,,,,,,,,Port3-Pin14-Alias,ESS,string,{P3-14} Output 4
+,,,,,,,,,,,,Port3-Pin14-ActiveLow,ESS,string,0
+,,,,,,,,,,,,Port3-Pin15-Alias,ESS,string,{P3-15}
+,,,,,,,,,,,,Port3-Pin15-ActiveLow,ESS,string,0
+,,,,,,,,,,,,Port3-Pin16-Alias,ESS,string,{P3-16} XY Velocity PWM
+,,,,,,,,,,,,Port3-Pin16-ActiveLow,ESS,string,0
+,,,,,,,,,,,,Port3-Pin17-Alias,ESS,string,{P3-17} Torch Relay TMC3in1
+,,,,,,,,,,,,Port3-Pin17-ActiveLow,ESS,string,0
+,,,,,,,,,,,,ISigMap-EStop-Enable,ESS,string,1
+CRP800,,,,,,,,,,,,ISigMap-Estop,ESS,string,{P2-15} E Stop
+CRP800-revA,,,,,,,,,,,,ISigMap-Estop,ESS,string,{P2-15} E Stop
+CRP100,,,,,,,,,,,,ISigMap-Estop,ESS,string,{P1-15} E Stop
+CRP500,,,,,,,,,,,,ISigMap-Estop,ESS,string,{P1-15} E Stop
+CRP300,,,,,,,,,,,,ISigMap-Estop,ESS,string,{P1-10} E Stop
+,,,,,,,,,,,,ISigMap-Motor0-Home-Enable,ESS,string,1
+CRP800,,,,,,,,,,,,ISigMap-Motor0-Home,ESS,string,{P2-2} X--
+CRP800-revA,,,,,,,,,,,,ISigMap-Motor0-Home,ESS,string,{P2-2} X--
+CRP100,,,,,,,,,,,,ISigMap-Motor0-Home,ESS,string,{P1-10} X--
+CRP500,,,,,,,,,,,,ISigMap-Motor0-Home,ESS,string,{P1-10} X--
+CRP300,,,,,,,,,,,,ISigMap-Motor0-Home,ESS,string,{P1-11} X--
+,,,,,,,,,,,,ISigMap-Motor1-Home-Enable,ESS,string,1
+CRP800,,,,,,,,,,1,1,ISigMap-Motor1-Home,ESS,string,{P2-4} Y--
+CRP800,,,,,,,,,,1,2,ISigMap-Motor1-Home,ESS,string,{P2-5} Y++
+CRP800,,,,,,,,,,,,ISigMap-Motor1-Home,ESS,string,{P2-4} Y--
+CRP800-revA,,,,,,,,,,1,1,ISigMap-Motor1-Home,ESS,string,{P2-3} Y--
+CRP800-revA,,,,,,,,,,1,2,ISigMap-Motor1-Home,ESS,string,{P2-7} Y++
+CRP800-revA,,,,,,,,,,,,ISigMap-Motor1-Home,ESS,string,{P2-3} Y--
+CRP100,,,,,,,,,,,,ISigMap-Motor1-Home,ESS,string,{P1-11} Y--
+CRP500,,,,,,,,,,,,ISigMap-Motor1-Home,ESS,string,{P1-11} Y--
+CRP300,,,,,,,,,,,,ISigMap-Motor1-Home,ESS,string,{P1-12} Y--
+CRP800,,,,,,,,,,,,ISigMap-Motor2-Home-Enable,ESS,string,1
+CRP800-revA,,,,,,,,,,,,ISigMap-Motor2-Home-Enable,ESS,string,1
+CRP100,,,,,,,,,,,,ISigMap-Motor2-Home-Enable,ESS,string,1
+CRP500,,,,,,,,,,,,ISigMap-Motor2-Home-Enable,ESS,string,1
+CRP300,,,,,,,,,,,,ISigMap-Motor2-Home-Enable,ESS,string,1
+CRP800,,,,,,,,,,,,ISigMap-Motor2-Home,ESS,string,{P2-6} Z++
+CRP800-revA,,,,,,,,,,,,ISigMap-Motor2-Home,ESS,string,{P2-4} Z++
+CRP100,,,,,,,,,,,,ISigMap-Motor2-Home,ESS,string,{P1-12} Z++
+CRP500,,,,,,,,,,,,ISigMap-Motor2-Home,ESS,string,{P1-12} B Home
+CRP300,,,,,,,,,,,,ISigMap-Motor2-Home,ESS,string,{P2-11} Z++
+,,,,,,,,,,,,ISigMap-Motor3-Home-Enable,ESS,string,1
+CRP800,,,,,,,,,,1,1,ISigMap-Motor3-Home,ESS,string,{P2-5} Y++
+CRP800,,,,,,,,,,1,2,ISigMap-Motor3-Home,ESS,string,{P2-7} B Home
+CRP800,,,,,,,,,,,,ISigMap-Motor3-Home,ESS,string,{P2-7} B Home
+CRP800-revA,,,,,,,,,,1,1,ISigMap-Motor3-Home,ESS,string,{P2-7} Y++
+CRP800-revA,,,,,,,,,,1,2,ISigMap-Motor3-Home,ESS,string,{P2-8} B Home
+CRP800-revA,,,,,,,,,,,,ISigMap-Motor3-Home,ESS,string,{P2-8} B Home
+CRP100,,,,,,,,,,,,ISigMap-Motor3-Home,ESS,string,{P1-12} Z++
+CRP500,,,,,,,,,,,,ISigMap-Motor3-Home,ESS,string,{P1-12} B Home
+CRP300,,,,,,,,,,,,ISigMap-Motor3-Home,ESS,string,{P1-13} B Home
+CRP800,,,,,Spindle_Plasma,,,,0,,,ISigMap-Motor4-Home-Enable,ESS,string,1
+CRP800,,,,,Spindle_Plasma,,,,1,,,ISigMap-Motor4-Home-Enable,ESS,string,1
+CRP800,,,,,Router_Plasma,,,,0,,,ISigMap-Motor4-Home-Enable,ESS,string,1
+CRP800,,,,,Router_Plasma,,,,1,,,ISigMap-Motor4-Home-Enable,ESS,string,1
+CRP800,,,,,,,,,0,,,ISigMap-Motor4-Home-Enable,ESS,string,0
+CRP800,,,,,,,,,1,,,ISigMap-Motor4-Home-Enable,ESS,string,1
+CRP800-revA,,,,,Spindle_Plasma,,,,0,,,ISigMap-Motor4-Home-Enable,ESS,string,1
+CRP800-revA,,,,,Spindle_Plasma,,,,1,,,ISigMap-Motor4-Home-Enable,ESS,string,1
+CRP800-revA,,,,,Router_Plasma,,,,0,,,ISigMap-Motor4-Home-Enable,ESS,string,1
+CRP800-revA,,,,,Router_Plasma,,,,1,,,ISigMap-Motor4-Home-Enable,ESS,string,1
+CRP800-revA,,,,,,,,,0,,,ISigMap-Motor4-Home-Enable,ESS,string,0
+CRP800-revA,,,,,,,,,1,,,ISigMap-Motor4-Home-Enable,ESS,string,1
+CRP100,,,,,,,,,0,,,ISigMap-Motor4-Home-Enable,ESS,string,0
+CRP100,,,,,,,,,1,,,ISigMap-Motor4-Home-Enable,ESS,string,1
+CRP500,,,,,,,,,0,,,ISigMap-Motor4-Home-Enable,ESS,string,0
+CRP500,,,,,,,,,1,,,ISigMap-Motor4-Home-Enable,ESS,string,1
+CRP300,,,,,Spindle_Plasma,,,,0,,,ISigMap-Motor4-Home-Enable,ESS,string,1
+CRP300,,,,,Spindle_Plasma,,,,1,,,ISigMap-Motor4-Home-Enable,ESS,string,1
+CRP300,,,,,Router_Plasma,,,,0,,,ISigMap-Motor4-Home-Enable,ESS,string,1
+CRP300,,,,,Router_Plasma,,,,1,,,ISigMap-Motor4-Home-Enable,ESS,string,1
+CRP300,,,,,,,,,0,,,ISigMap-Motor4-Home-Enable,ESS,string,0
+CRP300,,,,,,,,,1,,,ISigMap-Motor4-Home-Enable,ESS,string,1
+CRP800,,,,,Spindle_Plasma,,,,0,,,ISigMap-Motor4-Home,ESS,string,{P2-6} Z++
+CRP800,,,,,Spindle_Plasma,,,,1,,,ISigMap-Motor4-Home,ESS,string,{P2-3} A--
+CRP800,,,,,Router_Plasma,,,,0,,,ISigMap-Motor4-Home,ESS,string,{P2-6} Z++
+CRP800,,,,,Router_Plasma,,,,1,,,ISigMap-Motor4-Home,ESS,string,{P2-3} A--
+CRP800,,,,,,,,0,,,,ISigMap-Motor4-Home,ESS,string,
+CRP800,,,,,,,,1,,,,ISigMap-Motor4-Home,ESS,string,{P2-3} A--
+CRP800,,,,,,,,2,,,,ISigMap-Motor4-Home,ESS,string,{P2-3} A--
+CRP800-revA,,,,,Spindle_Plasma,,,,0,,,ISigMap-Motor4-Home,ESS,string,{P2-4} Z++
+CRP800-revA,,,,,Spindle_Plasma,,,,1,,,ISigMap-Motor4-Home,ESS,string,{P2-6} A--
+CRP800-revA,,,,,Router_Plasma,,,,0,,,ISigMap-Motor4-Home,ESS,string,{P2-4} Z++
+CRP800-revA,,,,,Router_Plasma,,,,1,,,ISigMap-Motor4-Home,ESS,string,{P2-6} A--
+CRP800-revA,,,,,,,,0,,,,ISigMap-Motor4-Home,ESS,string,
+CRP800-revA,,,,,,,,1,,,,ISigMap-Motor4-Home,ESS,string,{P2-6} A--
+CRP800-revA,,,,,,,,2,,,,ISigMap-Motor4-Home,ESS,string,{P2-6} A--
+CRP100,,,,,,,,,,,,ISigMap-Motor4-Home,ESS,string,
+CRP500,,,,,,,,,,,,ISigMap-Motor4-Home,ESS,string,
+CRP300,,,,,Spindle_Plasma,,,,0,,,ISigMap-Motor4-Home,ESS,string,{P2-11} Z++
+CRP300,,,,,Spindle_Plasma,,,,1,,,ISigMap-Motor4-Home,ESS,string,{P2-12} A--
+CRP300,,,,,Router_Plasma,,,,0,,,ISigMap-Motor4-Home,ESS,string,{P2-11} Z++
+CRP300,,,,,Router_Plasma,,,,1,,,ISigMap-Motor4-Home,ESS,string,{P2-12} A--
+CRP300,,,,,,,,0,,,,ISigMap-Motor4-Home,ESS,string,
+CRP300,,,,,,,,1,,,,ISigMap-Motor4-Home,ESS,string,{P2-12} A--
+CRP300,,,,,,,,2,,,,ISigMap-Motor4-Home,ESS,string,{P2-12} A--
+,,,,,,,,,,,,ISigMap-Motor5-Home-Enable,ESS,string,0
+,,,,,,,,,,,,ISigMap-Motor5-Home,ESS,string,
+,,,,,,,,,0,,,ISigMap-Motor0-PosLimit-Enable,ESS,string,1
+,,,,,,,,,1,,,ISigMap-Motor0-PosLimit-Enable,ESS,string,0
+CRP800,,,,,,,,1,,,,ISigMap-Motor0-PosLimit,ESS,string,{P2-2} X--
+CRP800,,,,,,,,,,,,ISigMap-Motor0-PosLimit,ESS,string,{P2-3} A--
+CRP800-revA,,,,,,,,1,,,,ISigMap-Motor0-PosLimit,ESS,string,{P2-2} X--
+CRP800-revA,,,,,,,,,,,,ISigMap-Motor0-PosLimit,ESS,string,{P2-6} A--
+CRP100,,,,,,,,,,,,ISigMap-Motor0-PosLimit,ESS,string,{P1-10} X--
+CRP500,,,,,,,,,,,,ISigMap-Motor0-PosLimit,ESS,string,{P1-10} X--
+CRP300,,,,,,,,,,,,ISigMap-Motor0-PosLimit,ESS,string,{P1-11} X--
+,,,,,,,,,,,,ISigMap-Motor1-PosLimit-Enable,ESS,string,1
+CRP800,,,,,,,,,,0,,ISigMap-Motor1-PosLimit,ESS,string,{P2-5} Y++
+CRP800,,,,,,,,,,1,1,ISigMap-Motor1-PosLimit,ESS,string,{P2-7} B Home
+CRP800,,,,,,,,,,1,2,ISigMap-Motor1-PosLimit,ESS,string,{P2-4} Y--
+CRP800-revA,,,,,,,,,,0,,ISigMap-Motor1-PosLimit,ESS,string,{P2-7} Y++
+CRP800-revA,,,,,,,,,,1,1,ISigMap-Motor1-PosLimit,ESS,string,{P2-8} B Home
+CRP800-revA,,,,,,,,,,1,2,ISigMap-Motor1-PosLimit,ESS,string,{P2-3} Y--
+CRP100,,,,,,,,,,,,ISigMap-Motor1-PosLimit,ESS,string,{P1-11} Y--
+CRP500,,,,,,,,,,,,ISigMap-Motor1-PosLimit,ESS,string,{P1-11} Y--
+CRP300,,,,,,,,,,,,ISigMap-Motor1-PosLimit,ESS,string,{P1-12} Y--
+CRP800,,,,,,,,,,,,ISigMap-Motor2-PosLimit-Enable,ESS,string,1
+CRP800-revA,,,,,,,,,,,,ISigMap-Motor2-PosLimit-Enable,ESS,string,1
+CRP100,,,,,,,,,,,,ISigMap-Motor2-PosLimit-Enable,ESS,string,1
+CRP500,,,,,,,,,,,,ISigMap-Motor2-PosLimit-Enable,ESS,string,1
+CRP300,,,,,,,,,,,,ISigMap-Motor2-PosLimit-Enable,ESS,string,1
+CRP800,,,,,,,,,,,,ISigMap-Motor2-PosLimit,ESS,string,{P2-6} Z++
+CRP800-revA,,,,,,,,,,,,ISigMap-Motor2-PosLimit,ESS,string,{P2-4} Z++
+CRP100,,,,,,,,,,,,ISigMap-Motor2-PosLimit,ESS,string,{P1-12} Z++
+CRP500,,,,,,,,,,,,ISigMap-Motor2-PosLimit,ESS,string,{P1-12} B Home
+CRP300,,,,,,,,,,,,ISigMap-Motor2-PosLimit,ESS,string,{P2-11} Z++
+,,,,,,,,,,,,ISigMap-Motor3-PosLimit-Enable,ESS,string,0
+,,,,,,,,,,,,ISigMap-Motor3-PosLimit,ESS,string,
+CRP800,,,,,Spindle_Plasma,,,,0,,,ISigMap-Motor4-PosLimit-Enable,ESS,string,1
+CRP800,,,,,Router_Plasma,,,,0,,,ISigMap-Motor4-PosLimit-Enable,ESS,string,1
+CRP800,,,,,,,,,,,,ISigMap-Motor4-PosLimit-Enable,ESS,string,0
+CRP800-revA,,,,,Spindle_Plasma,,,,0,,,ISigMap-Motor4-PosLimit-Enable,ESS,string,1
+CRP800-revA,,,,,Router_Plasma,,,,0,,,ISigMap-Motor4-PosLimit-Enable,ESS,string,1
+CRP800-revA,,,,,,,,,,,,ISigMap-Motor4-PosLimit-Enable,ESS,string,0
+CRP100,,,,,,,,,,,,ISigMap-Motor4-PosLimit-Enable,ESS,string,0
+CRP500,,,,,,,,,,,,ISigMap-Motor4-PosLimit-Enable,ESS,string,0
+CRP300,,,,,Spindle_Plasma,,,,0,,,ISigMap-Motor4-PosLimit-Enable,ESS,string,1
+CRP300,,,,,Router_Plasma,,,,0,,,ISigMap-Motor4-PosLimit-Enable,ESS,string,1
+CRP300,,,,,,,,,,,,ISigMap-Motor4-PosLimit-Enable,ESS,string,0
+CRP800,,,,,Spindle_Plasma,,,,0,,,ISigMap-Motor4-PosLimit,ESS,string,{P2-6} Z++
+CRP800,,,,,Router_Plasma,,,,0,,,ISigMap-Motor4-PosLimit,ESS,string,{P2-6} Z++
+CRP800,,,,,,,,,,,,ISigMap-Motor4-PosLimit,ESS,string,
+CRP800-revA,,,,,Spindle_Plasma,,,,0,,,ISigMap-Motor4-PosLimit,ESS,string,{P2-4} Z++
+CRP800-revA,,,,,Router_Plasma,,,,0,,,ISigMap-Motor4-PosLimit,ESS,string,{P2-4} Z++
+CRP800-revA,,,,,,,,,,,,ISigMap-Motor4-PosLimit,ESS,string,
+CRP100,,,,,,,,,,,,ISigMap-Motor4-PosLimit,ESS,string,
+CRP500,,,,,,,,,,,,ISigMap-Motor4-PosLimit,ESS,string,
+CRP300,,,,,Spindle_Plasma,,,,0,,,ISigMap-Motor4-PosLimit,ESS,string,{P2-11} Z++
+CRP300,,,,,Router_Plasma,,,,0,,,ISigMap-Motor4-PosLimit,ESS,string,{P2-11} Z++
+CRP300,,,,,,,,,,,,ISigMap-Motor4-PosLimit,ESS,string,
+,,,,,,,,,,,,ISigMap-Motor5-PosLimit-Enable,ESS,string,0
+,,,,,,,,,,,,ISigMap-Motor5-PosLimit,ESS,string,
+,,,,,,,,,,,,ISigMap-Motor0-NegLimit-Enable,ESS,string,1
+CRP800,,,,,,,,,,,,ISigMap-Motor0-NegLimit,ESS,string,{P2-2} X--
+CRP800-revA,,,,,,,,,,,,ISigMap-Motor0-NegLimit,ESS,string,{P2-2} X--
+CRP100,,,,,,,,,,,,ISigMap-Motor0-NegLimit,ESS,string,{P1-10} X--
+CRP500,,,,,,,,,,,,ISigMap-Motor0-NegLimit,ESS,string,{P1-10} X--
+CRP300,,,,,,,,,,,,ISigMap-Motor0-NegLimit,ESS,string,{P1-11} X--
+,,,,,,,,,,,,ISigMap-Motor1-NegLimit-Enable,ESS,string,1
+CRP800,,,,,,,,,,1,1,ISigMap-Motor1-NegLimit,ESS,string,{P2-4} Y--
+CRP800,,,,,,,,,,1,2,ISigMap-Motor1-NegLimit,ESS,string,{P2-5} Y++
+CRP800,,,,,,,,,,,,ISigMap-Motor1-NegLimit,ESS,string,{P2-4} Y--
+CRP800-revA,,,,,,,,,,1,1,ISigMap-Motor1-NegLimit,ESS,string,{P2-3} Y--
+CRP800-revA,,,,,,,,,,1,2,ISigMap-Motor1-NegLimit,ESS,string,{P2-7} Y++
+CRP800-revA,,,,,,,,,,,,ISigMap-Motor1-NegLimit,ESS,string,{P2-3} Y--
+CRP100,,,,,,,,,,,,ISigMap-Motor1-NegLimit,ESS,string,{P1-11} Y--
+CRP500,,,,,,,,,,,,ISigMap-Motor1-NegLimit,ESS,string,{P1-11} Y--
+CRP300,,,,,,,,,,,,ISigMap-Motor1-NegLimit,ESS,string,{P1-12} Y--
+,,,,,,,,,,,,ISigMap-Motor2-NegLimit-Enable,ESS,string,0
+,,,,,,,,,,,,ISigMap-Motor2-NegLimit,ESS,string,
+,,,,,,,,,,,,ISigMap-Motor3-NegLimit-Enable,ESS,string,1
+CRP800,,,,,,,,,,1,1,ISigMap-Motor3-NegLimit,ESS,string,{P2-5} Y++
+CRP800,,,,,,,,,,1,2,ISigMap-Motor3-NegLimit,ESS,string,{P2-7} B Home
+CRP800,,,,,,,,,,,,ISigMap-Motor3-NegLimit,ESS,string,{P2-7} B Home
+CRP800-revA,,,,,,,,,,1,1,ISigMap-Motor3-NegLimit,ESS,string,{P2-7} Y++
+CRP800-revA,,,,,,,,,,1,2,ISigMap-Motor3-NegLimit,ESS,string,{P2-8} B Home
+CRP800-revA,,,,,,,,,,,,ISigMap-Motor3-NegLimit,ESS,string,{P2-8} B Home
+CRP100,,,,,,,,,,,,ISigMap-Motor3-NegLimit,ESS,string,{P1-12} Z++
+CRP500,,,,,,,,,,,,ISigMap-Motor3-NegLimit,ESS,string,{P1-12} B Home
+CRP300,,,,,,,,,,,,ISigMap-Motor3-NegLimit,ESS,string,{P1-13} B Home
+,,,,,,,,,,,,ISigMap-Motor4-NegLimit-Enable,ESS,string,0
+,,,,,,,,,,,,ISigMap-Motor4-NegLimit,ESS,string,
+,,,,,,,,,,,,ISigMap-Motor5-NegLimit-Enable,ESS,string,0
+,,,,,,,,,,,,ISigMap-Motor5-NegLimit,ESS,string,
+,,,,,,,,,,,,ISigMap-Probe-Enable,ESS,string,1
+CRP800,,,,,,Router,,,,,,ISigMap-Probe,ESS,string,{P2-9} Probe
+CRP800,,,,,,Spindle,,,,,,ISigMap-Probe,ESS,string,{P2-9} Probe
+CRP800,,,,,,Plasma,,,,,,ISigMap-Probe,ESS,string,{P2-8} Ohmic Probe
+CRP800-revA,,,,,,Router,,,,,,ISigMap-Probe,ESS,string,{P2-9} Probe
+CRP800-revA,,,,,,Spindle,,,,,,ISigMap-Probe,ESS,string,{P2-9} Probe
+CRP800-revA,,,,,,Plasma,,,,,,ISigMap-Probe,ESS,string,{P2-5} Ohmic Probe
+CRP100,,,,,,,,,,,,ISigMap-Probe,ESS,string,{P1-13} Probe
+CRP500,,,,,,,,,,,,ISigMap-Probe,ESS,string,{P1-13} Probe
+CRP300,,,,,,Router,,,,,,ISigMap-Probe,ESS,string,{P1-15} Probe
+CRP300,,,,,,Spindle,,,,,,ISigMap-Probe,ESS,string,{P1-15} Probe
+CRP300,,,,,,Plasma,,,,,,ISigMap-Probe,ESS,string,{P2-13} Ohmic Probe
+,,,,,,,,,,,,ISigMap-THCOn-Enable,ESS,string,1
+,,,,,,,,,,,,ISigMap-THCOn,ESS,string,{P3-10} THC On (Arc OK)
+CRP800,,,,,Spindle,,,,,,,ISigMap-Input10-Enable,ESS,string,1
+CRP800,,,,,Spindle_Plasma,,,,,,,ISigMap-Input10-Enable,ESS,string,1
+CRP800,,,,,,,,,,,,ISigMap-Input10-Enable,ESS,string,0
+CRP800-revA,,,,,Spindle,,,,,,,ISigMap-Input10-Enable,ESS,string,1
+CRP800-revA,,,,,Spindle_Plasma,,,,,,,ISigMap-Input10-Enable,ESS,string,1
+CRP800-revA,,,,,,,,,,,,ISigMap-Input10-Enable,ESS,string,0
+,,,,,,,,,,,,ISigMap-Input10-Enable,ESS,string,0
+CRP800,,,,,,,,,,,,ISigMap-Input10,ESS,string,{P2-13} PTC
+CRP800-revA,,,,,,,,,,,,ISigMap-Input10,ESS,string,{P2-10} PTC
+,,,,,,,,,,,,ISigMap-Input10,ESS,string,
+CRP800,,,,,,,,,,,,OSigMap-Motor0-Step-MappedPin0,ESS,string,{P1-2} X Step
+CRP800-revA,,,,,,,,,,,,OSigMap-Motor0-Step-MappedPin0,ESS,string,{P1-2} X Step
+CRP100,,,,,,,,,,,,OSigMap-Motor0-Step-MappedPin0,ESS,string,{P1-2} X Step
+CRP500,,,,,,,,,,,,OSigMap-Motor0-Step-MappedPin0,ESS,string,{P1-2} X Step
+CRP300,,,,,,,,,,,,OSigMap-Motor0-Step-MappedPin0,ESS,string,{P1-3} X Step
+,,,,,,,,,,,,OSigMap-Motor0-Step-Enable,ESS,string,1
+CRP800,,,,,,,,,,,,OSigMap-Motor0-Dir-MappedPin0,ESS,string,{P1-3} X Dir
+CRP800-revA,,,,,,,,,,,,OSigMap-Motor0-Dir-MappedPin0,ESS,string,{P1-3} X Dir
+CRP100,,,,,,,,,,,,OSigMap-Motor0-Dir-MappedPin0,ESS,string,{P1-3} X Dir
+CRP500,,,,,,,,,,,,OSigMap-Motor0-Dir-MappedPin0,ESS,string,{P1-3} X Dir
+CRP300,,,,,,,,,,,,OSigMap-Motor0-Dir-MappedPin0,ESS,string,{P1-2} X Dir
+,,,,,,,,,,,,OSigMap-Motor0-Dir-Enable,ESS,string,1
+CRP800,,,,,,,,,,,,OSigMap-Motor1-Step-MappedPin0,ESS,string,{P1-4} Y Step
+CRP800-revA,,,,,,,,,,,,OSigMap-Motor1-Step-MappedPin0,ESS,string,{P1-4} Y Step
+CRP100,,,,,,,,,,,,OSigMap-Motor1-Step-MappedPin0,ESS,string,{P1-4} Y Step
+CRP500,,,,,,,,,,,,OSigMap-Motor1-Step-MappedPin0,ESS,string,{P1-4} Y Step
+CRP300,,,,,,,,,,,,OSigMap-Motor1-Step-MappedPin0,ESS,string,{P1-5} Y Step
+,,,,,,,,,,,,OSigMap-Motor1-Step-Enable,ESS,string,1
+CRP800,,,,,,,,,,,,OSigMap-Motor1-Dir-MappedPin0,ESS,string,{P1-5} Y Dir
+CRP800-revA,,,,,,,,,,,,OSigMap-Motor1-Dir-MappedPin0,ESS,string,{P1-5} Y Dir
+CRP100,,,,,,,,,,,,OSigMap-Motor1-Dir-MappedPin0,ESS,string,{P1-5} Y Dir
+CRP500,,,,,,,,,,,,OSigMap-Motor1-Dir-MappedPin0,ESS,string,{P1-5} Y Dir
+CRP300,,,,,,,,,,,,OSigMap-Motor1-Dir-MappedPin0,ESS,string,{P1-4} Y Dir
+,,,,,,,,,,,,OSigMap-Motor1-Dir-Enable,ESS,string,1
+CRP800,,,,,Spindle_Plasma,Spindle,,,,,,OSigMap-Motor2-Step-MappedPin0,ESS,string,{P1-6} Z Step
+CRP800,,,,,Spindle_Plasma,Plasma,,,,,,OSigMap-Motor2-Step-MappedPin0,ESS,string,{P1-14} A Step
+CRP800,,,,,Router_Plasma,Router,,,,,,OSigMap-Motor2-Step-MappedPin0,ESS,string,{P1-6} Z Step
+CRP800,,,,,Router_Plasma,Plasma,,,,,,OSigMap-Motor2-Step-MappedPin0,ESS,string,{P1-14} A Step
+CRP800,,,,,,,,,,,,OSigMap-Motor2-Step-MappedPin0,ESS,string,{P1-6} Z Step
+CRP800-revA,,,,,Spindle_Plasma,Spindle,,,,,,OSigMap-Motor2-Step-MappedPin0,ESS,string,{P1-6} Z Step
+CRP800-revA,,,,,Spindle_Plasma,Plasma,,,,,,OSigMap-Motor2-Step-MappedPin0,ESS,string,{P1-14} A Step
+CRP800-revA,,,,,Router_Plasma,Router,,,,,,OSigMap-Motor2-Step-MappedPin0,ESS,string,{P1-6} Z Step
+CRP800-revA,,,,,Router_Plasma,Plasma,,,,,,OSigMap-Motor2-Step-MappedPin0,ESS,string,{P1-14} A Step
+CRP800-revA,,,,,,,,,,,,OSigMap-Motor2-Step-MappedPin0,ESS,string,{P1-6} Z Step
+CRP100,,,,,,,,,,,,OSigMap-Motor2-Step-MappedPin0,ESS,string,{P1-6} Z Step
+CRP500,,,,,,,,,,,,OSigMap-Motor2-Step-MappedPin0,ESS,string,{P1-6} Z Step
+CRP300,,,,,Spindle_Plasma,Spindle,,,,,,OSigMap-Motor2-Step-MappedPin0,ESS,string,{P1-7} Z Step
+CRP300,,,,,Spindle_Plasma,Plasma,,,,,,OSigMap-Motor2-Step-MappedPin0,ESS,string,{P2-1} A Step
+CRP300,,,,,Router_Plasma,Router,,,,,,OSigMap-Motor2-Step-MappedPin0,ESS,string,{P1-7} Z Step
+CRP300,,,,,Router_Plasma,Plasma,,,,,,OSigMap-Motor2-Step-MappedPin0,ESS,string,{P2-1} A Step
+CRP300,,,,,,,,,,,,OSigMap-Motor2-Step-MappedPin0,ESS,string,{P1-7} Z Step
+,,,,,,,,,,,,OSigMap-Motor2-Step-Enable,ESS,string,1
+CRP800,,,,,Spindle_Plasma,Spindle,,,,,,OSigMap-Motor2-Dir-MappedPin0,ESS,string,{P1-7} Z Dir
+CRP800,,,,,Spindle_Plasma,Plasma,,,,,,OSigMap-Motor2-Dir-MappedPin0,ESS,string,{P1-16} A Dir
+CRP800,,,,,Router_Plasma,Router,,,,,,OSigMap-Motor2-Dir-MappedPin0,ESS,string,{P1-7} Z Dir
+CRP800,,,,,Router_Plasma,Plasma,,,,,,OSigMap-Motor2-Dir-MappedPin0,ESS,string,{P1-16} A Dir
+CRP800,,,,,,,,,,,,OSigMap-Motor2-Dir-MappedPin0,ESS,string,{P1-7} Z Dir
+CRP800-revA,,,,,Spindle_Plasma,Spindle,,,,,,OSigMap-Motor2-Dir-MappedPin0,ESS,string,{P1-7} Z Dir
+CRP800-revA,,,,,Spindle_Plasma,Plasma,,,,,,OSigMap-Motor2-Dir-MappedPin0,ESS,string,{P1-16} A Dir
+CRP800-revA,,,,,Router_Plasma,Router,,,,,,OSigMap-Motor2-Dir-MappedPin0,ESS,string,{P1-7} Z Dir
+CRP800-revA,,,,,Router_Plasma,Plasma,,,,,,OSigMap-Motor2-Dir-MappedPin0,ESS,string,{P1-16} A Dir
+CRP800-revA,,,,,,,,,,,,OSigMap-Motor2-Dir-MappedPin0,ESS,string,{P1-7} Z Dir
+CRP100,,,,,,,,,,,,OSigMap-Motor2-Dir-MappedPin0,ESS,string,{P1-7} Z Dir
+CRP500,,,,,,,,,,,,OSigMap-Motor2-Dir-MappedPin0,ESS,string,{P1-7} Z Dir
+CRP300,,,,,Spindle_Plasma,Spindle,,,,,,OSigMap-Motor2-Dir-MappedPin0,ESS,string,{P1-6} Z Dir
+CRP300,,,,,Spindle_Plasma,Plasma,,,,,,OSigMap-Motor2-Dir-MappedPin0,ESS,string,{P2-14} A Dir
+CRP300,,,,,Router_Plasma,Router,,,,,,OSigMap-Motor2-Dir-MappedPin0,ESS,string,{P1-6} Z Dir
+CRP300,,,,,Router_Plasma,Plasma,,,,,,OSigMap-Motor2-Dir-MappedPin0,ESS,string,{P2-14} A Dir
+CRP300,,,,,,,,,,,,OSigMap-Motor2-Dir-MappedPin0,ESS,string,{P1-6} Z Dir
+,,,,,,,,,,,,OSigMap-Motor2-Dir-Enable,ESS,string,1
+CRP800,,,,,,,,,,,,OSigMap-Motor3-Step-MappedPin0,ESS,string,{P1-8} B Step
+CRP800-revA,,,,,,,,,,,,OSigMap-Motor3-Step-MappedPin0,ESS,string,{P1-8} B Step
+CRP100,,,,,,,,,,,,OSigMap-Motor3-Step-MappedPin0,ESS,string,{P1-8} B Step
+CRP500,,,,,,,,,,,,OSigMap-Motor3-Step-MappedPin0,ESS,string,{P1-8} B Step
+CRP300,,,,,,,,,,,,OSigMap-Motor3-Step-MappedPin0,ESS,string,{P1-9} B Step
+,,,,,,,,,,,,OSigMap-Motor3-Step-Enable,ESS,string,1
+CRP800,,,,,,,,,,,,OSigMap-Motor3-Dir-MappedPin0,ESS,string,{P1-9} B Dir
+CRP800-revA,,,,,,,,,,,,OSigMap-Motor3-Dir-MappedPin0,ESS,string,{P1-9} B Dir
+CRP100,,,,,,,,,,,,OSigMap-Motor3-Dir-MappedPin0,ESS,string,{P1-9} B Dir
+CRP500,,,,,,,,,,,,OSigMap-Motor3-Dir-MappedPin0,ESS,string,{P1-9} B Dir
+CRP300,,,,,,,,,,,,OSigMap-Motor3-Dir-MappedPin0,ESS,string,{P1-8} B Dir
+,,,,,,,,,,,,OSigMap-Motor3-Dir-Enable,ESS,string,1
+CRP800,,,,,Spindle_Plasma,Spindle,,,,,,OSigMap-Motor4-Step-MappedPin0,ESS,string,{P1-14} A Step
+CRP800,,,,,Spindle_Plasma,Plasma,,,,,,OSigMap-Motor4-Step-MappedPin0,ESS,string,{P1-6} Z Step
+CRP800,,,,,Router_Plasma,Router,,,,,,OSigMap-Motor4-Step-MappedPin0,ESS,string,{P1-14} A Step
+CRP800,,,,,Router_Plasma,Plasma,,,,,,OSigMap-Motor4-Step-MappedPin0,ESS,string,{P1-6} Z Step
+CRP800,,,,,,,,,,,,OSigMap-Motor4-Step-MappedPin0,ESS,string,{P1-14} A Step
+CRP800-revA,,,,,Spindle_Plasma,Spindle,,,,,,OSigMap-Motor4-Step-MappedPin0,ESS,string,{P1-14} A Step
+CRP800-revA,,,,,Spindle_Plasma,Plasma,,,,,,OSigMap-Motor4-Step-MappedPin0,ESS,string,{P1-6} Z Step
+CRP800-revA,,,,,Router_Plasma,Router,,,,,,OSigMap-Motor4-Step-MappedPin0,ESS,string,{P1-14} A Step
+CRP800-revA,,,,,Router_Plasma,Plasma,,,,,,OSigMap-Motor4-Step-MappedPin0,ESS,string,{P1-6} Z Step
+CRP800-revA,,,,,,,,,,,,OSigMap-Motor4-Step-MappedPin0,ESS,string,{P1-14} A Step
+CRP100,,,,,,,,,,,,OSigMap-Motor4-Step-MappedPin0,ESS,string,{P2-8} A Step
+CRP500,,,,,,,,,,,,OSigMap-Motor4-Step-MappedPin0,ESS,string,
+CRP300,,,,,Spindle_Plasma,Spindle,,,,,,OSigMap-Motor4-Step-MappedPin0,ESS,string,{P2-1} A Step
+CRP300,,,,,Spindle_Plasma,Plasma,,,,,,OSigMap-Motor4-Step-MappedPin0,ESS,string,{P1-7} Z Step
+CRP300,,,,,Router_Plasma,Router,,,,,,OSigMap-Motor4-Step-MappedPin0,ESS,string,{P2-1} A Step
+CRP300,,,,,Router_Plasma,Plasma,,,,,,OSigMap-Motor4-Step-MappedPin0,ESS,string,{P1-7} Z Step
+CRP300,,,,,,,,,,,,OSigMap-Motor4-Step-MappedPin0,ESS,string,{P2-1} A Step
+CRP800,,,,,,,,,,,,OSigMap-Motor4-Step-Enable,ESS,string,1
+CRP800-revA,,,,,,,,,,,,OSigMap-Motor4-Step-Enable,ESS,string,1
+CRP100,,,,,,,,,,,,OSigMap-Motor4-Step-Enable,ESS,string,1
+CRP500,,,,,,,,,,,,OSigMap-Motor4-Step-Enable,ESS,string,0
+CRP300,,,,,,,,,,,,OSigMap-Motor4-Step-Enable,ESS,string,1
+CRP800,,,,,Spindle_Plasma,Spindle,,,,,,OSigMap-Motor4-Dir-MappedPin0,ESS,string,{P1-16} A Dir
+CRP800,,,,,Spindle_Plasma,Plasma,,,,,,OSigMap-Motor4-Dir-MappedPin0,ESS,string,{P1-7} Z Dir
+CRP800,,,,,Router_Plasma,Router,,,,,,OSigMap-Motor4-Dir-MappedPin0,ESS,string,{P1-16} A Dir
+CRP800,,,,,Router_Plasma,Plasma,,,,,,OSigMap-Motor4-Dir-MappedPin0,ESS,string,{P1-7} Z Dir
+CRP800,,,,,,,,,,,,OSigMap-Motor4-Dir-MappedPin0,ESS,string,{P1-16} A Dir
+CRP800-revA,,,,,Spindle_Plasma,Spindle,,,,,,OSigMap-Motor4-Dir-MappedPin0,ESS,string,{P1-16} A Dir
+CRP800-revA,,,,,Spindle_Plasma,Plasma,,,,,,OSigMap-Motor4-Dir-MappedPin0,ESS,string,{P1-7} Z Dir
+CRP800-revA,,,,,Router_Plasma,Router,,,,,,OSigMap-Motor4-Dir-MappedPin0,ESS,string,{P1-16} A Dir
+CRP800-revA,,,,,Router_Plasma,Plasma,,,,,,OSigMap-Motor4-Dir-MappedPin0,ESS,string,{P1-7} Z Dir
+CRP800-revA,,,,,,,,,,,,OSigMap-Motor4-Dir-MappedPin0,ESS,string,{P1-16} A Dir
+CRP100,,,,,,,,,,,,OSigMap-Motor4-Dir-MappedPin0,ESS,string,{P2-9} A Dir
+CRP500,,,,,,,,,,,,OSigMap-Motor4-Dir-MappedPin0,ESS,string,
+CRP300,,,,,Spindle_Plasma,Spindle,,,,,,OSigMap-Motor4-Dir-MappedPin0,ESS,string,{P2-14} A Dir
+CRP300,,,,,Spindle_Plasma,Plasma,,,,,,OSigMap-Motor4-Dir-MappedPin0,ESS,string,{P1-6} Z Dir
+CRP300,,,,,Router_Plasma,Router,,,,,,OSigMap-Motor4-Dir-MappedPin0,ESS,string,{P2-14} A Dir
+CRP300,,,,,Router_Plasma,Plasma,,,,,,OSigMap-Motor4-Dir-MappedPin0,ESS,string,{P1-6} Z Dir
+CRP300,,,,,,,,,,,,OSigMap-Motor4-Dir-MappedPin0,ESS,string,{P2-14} A Dir
+CRP800,,,,,,,,,,,,OSigMap-Motor4-Dir-Enable,ESS,string,1
+CRP800-revA,,,,,,,,,,,,OSigMap-Motor4-Dir-Enable,ESS,string,1
+CRP100,,,,,,,,,,,,OSigMap-Motor4-Dir-Enable,ESS,string,1
+CRP500,,,,,,,,,,,,OSigMap-Motor4-Dir-Enable,ESS,string,0
+CRP300,,,,,,,,,,,,OSigMap-Motor4-Dir-Enable,ESS,string,1
+CRP800,,,,,,,,,,,,OSigMap-Motor5-Step-MappedPin0,ESS,string,{P1-1} C Step
+CRP800-revA,,,,,,,,,,,,OSigMap-Motor5-Step-MappedPin0,ESS,string,{P1-1} C Step
+CRP100,,,,,,,,,,,,OSigMap-Motor5-Step-MappedPin0,ESS,string,
+CRP500,,,,,,,,,,,,OSigMap-Motor5-Step-MappedPin0,ESS,string,
+CRP300,,,,,,,,,,,,OSigMap-Motor5-Step-MappedPin0,ESS,string,
+CRP800,,,,,,,,,,,,OSigMap-Motor5-Step-Enable,ESS,string,1
+CRP800-revA,,,,,,,,,,,,OSigMap-Motor5-Step-Enable,ESS,string,1
+CRP100,,,,,,,,,,,,OSigMap-Motor5-Step-Enable,ESS,string,0
+CRP500,,,,,,,,,,,,OSigMap-Motor5-Step-Enable,ESS,string,0
+CRP300,,,,,,,,,,,,OSigMap-Motor5-Step-Enable,ESS,string,0
+CRP800,,,,,,,,,,,,OSigMap-Motor5-Dir-MappedPin0,ESS,string,{P1-17} C Dir
+CRP800-revA,,,,,,,,,,,,OSigMap-Motor5-Dir-MappedPin0,ESS,string,{P1-17} C Dir
+CRP100,,,,,,,,,,,,OSigMap-Motor5-Dir-MappedPin0,ESS,string,
+CRP500,,,,,,,,,,,,OSigMap-Motor5-Dir-MappedPin0,ESS,string,
+CRP300,,,,,,,,,,,,OSigMap-Motor5-Dir-MappedPin0,ESS,string,
+CRP800,,,,,,,,,,,,OSigMap-Motor5-Dir-Enable,ESS,string,1
+CRP800-revA,,,,,,,,,,,,OSigMap-Motor5-Dir-Enable,ESS,string,1
+CRP100,,,,,,,,,,,,OSigMap-Motor5-Dir-Enable,ESS,string,0
+CRP500,,,,,,,,,,,,OSigMap-Motor5-Dir-Enable,ESS,string,0
+CRP300,,,,,,,,,,,,OSigMap-Motor5-Dir-Enable,ESS,string,0
+,,,,,,,,,,,,OSigMap-LaserPWMOrAOut1-MappedPin0,ESS,string,{P3-16} XY Velocity PWM
+,,,,,,,,,,,,OSigMap-LaserPWMOrAOut1-Enable,ESS,string,1
+CRP800,,,,,,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-MappedPin0,ESS,string,{P2-1} Spindle PWM
+CRP800-revA,,,,,,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-MappedPin0,ESS,string,{P2-1} Spindle PWM
+CRP100,,,,,,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-MappedPin0,ESS,string,{P1-14} Spindle PWM
+CRP500,,,,,Router,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-MappedPin0,ESS,string,
+CRP500,,,,,,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-MappedPin0,ESS,string,{P1-1} Spindle PWM
+CRP300,,,,,Router,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-MappedPin0,ESS,string,
+CRP300,,,,,,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-MappedPin0,ESS,string,{P1-16} Spindle PWM
+CRP800,,,,,Router,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-Enable,ESS,string,0
+CRP800,,,,,Router_Plasma,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-Enable,ESS,string,0
+CRP800,,,,,,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-Enable,ESS,string,1
+CRP800-revA,,,,,Router,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-Enable,ESS,string,0
+CRP800-revA,,,,,Router_Plasma,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-Enable,ESS,string,0
+CRP800-revA,,,,,,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-Enable,ESS,string,1
+CRP100,,,,,Router,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-Enable,ESS,string,0
+CRP100,,,,,,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-Enable,ESS,string,1
+CRP500,,,,,Router,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-Enable,ESS,string,0
+CRP500,,,,,,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-Enable,ESS,string,1
+CRP300,,,,,Router,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-Enable,ESS,string,0
+CRP300,,,,,,,,,,,,OSigMap-SpindleStepOrPWMOrAOut0-Enable,ESS,string,1
+CRP800,,,,,Router,,,,,,,OSigMap-SpindleOn-MappedPin0,ESS,string,{P2-17} Relay 1
+CRP800,,,,,Router_Laser,,,,,,,OSigMap-SpindleOn-MappedPin0,ESS,string,{P2-17} Relay 1
+CRP800,,,,,Router_Plasma,,,,,,,OSigMap-SpindleOn-MappedPin0,ESS,string,{P2-17} Relay 1
+CRP800,,,,,Router_Plasma_Laser,,,,,,,OSigMap-SpindleOn-MappedPin0,ESS,string,{P2-17} Relay 1
+CRP800,,,,,,,,,,,,OSigMap-SpindleOn-MappedPin0,ESS,string,{P2-14} Spindle Relay
+CRP800-revA,,,,,Router,,,,,,,OSigMap-SpindleOn-MappedPin0,ESS,string,{P2-16} Relay 1
+CRP800-revA,,,,,Router_Plasma,,,,,,,OSigMap-SpindleOn-MappedPin0,ESS,string,{P2-16} Relay 1
+CRP800-revA,,,,,,,,,,,,OSigMap-SpindleOn-MappedPin0,ESS,string,{P2-17} Spindle Relay
+CRP100,,,,,,,,,,,,OSigMap-SpindleOn-MappedPin0,ESS,string,{P1-17} Spindle Relay
+CRP500,,,,,,,,,,,,OSigMap-SpindleOn-MappedPin0,ESS,string,{P1-17} Spindle Relay
+CRP300,,,,,Router,,,,,,,OSigMap-SpindleOn-MappedPin0,ESS,string,{P1-1} Spindle Relay
+CRP300,,,,,,,,,,,,OSigMap-SpindleOn-MappedPin0,ESS,string,{P1-14} Spindle Relay
+,,,,,,,,,,,,OSigMap-SpindleOn-Enable,ESS,string,1
+CRP800,,,,,,,,,,,,OSigMap-ChargePump-MappedPin0,ESS,string,
+CRP800-revA,,,,,,,,,,,,OSigMap-ChargePump-MappedPin0,ESS,string,
+CRP100,,,,,,,,,,,,OSigMap-ChargePump-MappedPin0,ESS,string,{P1-16} Charge Pump
+CRP500,,,,,,,,,,,,OSigMap-ChargePump-MappedPin0,ESS,string,
+CRP300,,,,,,,,,,,,OSigMap-ChargePump-MappedPin0,ESS,string,{P1-17} Charge Pump
+CRP800,,,,,,,,,,,,OSigMap-ChargePump-Enable,ESS,string,0
+CRP800-revA,,,,,,,,,,,,OSigMap-ChargePump-Enable,ESS,string,0
+CRP100,,,,,,,,,,,,OSigMap-ChargePump-Enable,ESS,string,1
+CRP500,,,,,,,,,,,,OSigMap-ChargePump-Enable,ESS,string,0
+CRP300,,,,,,,,,,,,OSigMap-ChargePump-Enable,ESS,string,1
+CRP800,,,,,Router,,,,,,,OSigMap-CoolantOn-MappedPin0,ESS,string,{P2-16} Relay 2
+CRP800,,,,,Router_Laser,,,,,,,OSigMap-CoolantOn-MappedPin0,ESS,string,{P2-16} Relay 2
+CRP800,,,,,Router_Plasma,,,,,,,OSigMap-CoolantOn-MappedPin0,ESS,string,{P2-16} Relay 2
+CRP800,,,,,Router_Plasma_Laser,,,,,,,OSigMap-CoolantOn-MappedPin0,ESS,string,{P2-16} Relay 2
+CRP800,,,,,,,,,,,,OSigMap-CoolantOn-MappedPin0,ESS,string,{P2-17} Relay 1
+CRP800-revA,,,,,Router,,,,,,,OSigMap-CoolantOn-MappedPin0,ESS,string,{P2-14} Relay 2
+CRP800-revA,,,,,Router_Plasma,,,,,,,OSigMap-CoolantOn-MappedPin0,ESS,string,{P2-14} Relay 2
+CRP800-revA,,,,,,,,,,,,OSigMap-CoolantOn-MappedPin0,ESS,string,{P2-16} Relay 1
+CRP100,,,,,,,,,,,,OSigMap-CoolantOn-MappedPin0,ESS,string,{P1-1} CRP100 Output 2
+CRP500,,,,,,,,,,,,OSigMap-CoolantOn-MappedPin0,ESS,string,
+CRP300,,,,,Router,,,,,,,OSigMap-CoolantOn-MappedPin0,ESS,string,
+CRP300,,,,,,,,,,,,OSigMap-CoolantOn-MappedPin0,ESS,string,{P1-1} Relay 1
+CRP800,,,,,,,,,,,,OSigMap-CoolantOn-Enable,ESS,string,1
+CRP800-revA,,,,,,,,,,,,OSigMap-CoolantOn-Enable,ESS,string,1
+CRP100,,,,,,,,,,,,OSigMap-CoolantOn-Enable,ESS,string,1
+CRP500,,,,,,,,,,,,OSigMap-CoolantOn-Enable,ESS,string,0
+CRP300,,,,,Router,,,,,,,OSigMap-CoolantOn-Enable,ESS,string,0
+CRP300,,,,,,,,,,,,OSigMap-CoolantOn-Enable,ESS,string,1
+CRP800,,,,,Router,,,,,,,OSigMap-MistOn-MappedPin0,ESS,string,
+CRP800,,,,,Router_Laser,,,,,,,OSigMap-MistOn-MappedPin0,ESS,string,
+CRP800,,,,,Router_Plasma,,,,,,,OSigMap-MistOn-MappedPin0,ESS,string,
+CRP800,,,,,Router_Plasma_Laser,,,,,,,OSigMap-MistOn-MappedPin0,ESS,string,
+CRP800,,,,,,,,,,,,OSigMap-MistOn-MappedPin0,ESS,string,{P2-16} Relay 2
+CRP800-revA,,,,,Router,,,,,,,OSigMap-MistOn-MappedPin0,ESS,string,
+CRP800-revA,,,,,Router_Plasma,,,,,,,OSigMap-MistOn-MappedPin0,ESS,string,
+CRP800-revA,,,,,,,,,,,,OSigMap-MistOn-MappedPin0,ESS,string,{P2-14} Relay 2
+CRP100,,,,,,,,,,,,OSigMap-MistOn-MappedPin0,ESS,string,
+CRP500,,,,,,,,,,,,OSigMap-MistOn-MappedPin0,ESS,string,
+CRP300,,,,,,,,,,,,OSigMap-MistOn-MappedPin0,ESS,string,
+CRP800,,,,,Router,,,,,,,OSigMap-MistOn-Enable,ESS,string,0
+CRP800,,,,,Router_Laser,,,,,,,OSigMap-MistOn-Enable,ESS,string,0
+CRP800,,,,,Router_Plasma,,,,,,,OSigMap-MistOn-Enable,ESS,string,0
+CRP800,,,,,Router_Plasma_Laser,,,,,,,OSigMap-MistOn-Enable,ESS,string,0
+CRP800,,,,,,,,,,,,OSigMap-MistOn-Enable,ESS,string,1
+CRP800-revA,,,,,Router,,,,,,,OSigMap-MistOn-Enable,ESS,string,0
+CRP800-revA,,,,,Router_Plasma,,,,,,,OSigMap-MistOn-Enable,ESS,string,0
+CRP800-revA,,,,,,,,,,,,OSigMap-MistOn-Enable,ESS,string,1
+CRP100,,,,,,,,,,,,OSigMap-MistOn-Enable,ESS,string,0
+CRP500,,,,,,,,,,,,OSigMap-MistOn-Enable,ESS,string,0
+CRP300,,,,,,,,,,,,OSigMap-MistOn-Enable,ESS,string,0
+CRP800,,,,,Router,,,,,,,OSigMap-Output0-MappedPin0,ESS,string,{P2-14} Spindle Relay
+CRP800,,,,,Router_Laser,,,,,,,OSigMap-Output0-MappedPin0,ESS,string,{P2-14} Spindle Relay
+CRP800,,,,,Router_Plasma,,,,,,,OSigMap-Output0-MappedPin0,ESS,string,{P2-14} Spindle Relay
+CRP800,,,,,Router_Plasma_Laser,,,,,,,OSigMap-Output0-MappedPin0,ESS,string,{P2-14} Spindle Relay
+CRP800,,,,,,,,,,,,OSigMap-Output0-MappedPin0,ESS,string,
+CRP800-revA,,,,,Router,,,,,,,OSigMap-Output0-MappedPin0,ESS,string,{P2-17} Spindle Relay
+CRP800-revA,,,,,Router_Plasma,,,,,,,OSigMap-Output0-MappedPin0,ESS,string,{P2-17} Spindle Relay
+CRP800-revA,,,,,,,,,,,,OSigMap-Output0-MappedPin0,ESS,string,
+CRP100,,,,,,,,,,,,OSigMap-Output0-MappedPin0,ESS,string,
+CRP500,,,,,,,,,,,,OSigMap-Output0-MappedPin0,ESS,string,
+CRP300,,,,,,,,,,,,OSigMap-Output0-MappedPin0,ESS,string,
+CRP800,,,,,Router,,,,,,,OSigMap-Output0-Enable,ESS,string,1
+CRP800,,,,,Router_Laser,,,,,,,OSigMap-Output0-Enable,ESS,string,1
+CRP800,,,,,Router_Plasma,,,,,,,OSigMap-Output0-Enable,ESS,string,1
+CRP800,,,,,Router_Plasma_Laser,,,,,,,OSigMap-Output0-Enable,ESS,string,1
+CRP800,,,,,,,,,,,,OSigMap-Output0-Enable,ESS,string,0
+CRP800-revA,,,,,Router,,,,,,,OSigMap-Output0-Enable,ESS,string,1
+CRP800-revA,,,,,Router_Plasma,,,,,,,OSigMap-Output0-Enable,ESS,string,1
+CRP800-revA,,,,,,,,,,,,OSigMap-Output0-Enable,ESS,string,0
+CRP100,,,,,,,,,,,,OSigMap-Output0-Enable,ESS,string,0
+CRP500,,,,,,,,,,,,OSigMap-Output0-Enable,ESS,string,0
+CRP300,,,,,,,,,,,,OSigMap-Output0-Enable,ESS,string,0
+,,,,,,,,,,,,OSigMap-Output3-MappedPin0,ESS,string,{P3-17} Torch Relay TMC3in1
+,,,,,,,,,,,,OSigMap-Output3-Enable,ESS,string,1
+,,,,,,,,,,,,OSigMap-Output4-MappedPin0,ESS,string,{P3-14} Output 4
+,,,,,,,,,,,,OSigMap-Output4-Enable,ESS,string,1
+,,,,,,,,,,,,OSigMap-Output18-MappedPin0,ESS,string,{P3-1} Temp TMC3in1 Gate
+,,,,,,,,,,,,OSigMap-Output18-Enable,ESS,string,1
+CRP800,,,,,,,,,,,,SpindlePwmFrequency,ESS,string,100
+CRP800-revA,,,,,,,,,,,,SpindlePwmFrequency,ESS,string,100
+CRP100,,,,,,,,,,,,SpindlePwmFrequency,ESS,string,25
+CRP500,,,,,,,,,,,,SpindlePwmFrequency,ESS,string,25
+CRP300,,,,,,,,,,,,SpindlePwmFrequency,ESS,string,25
+CRP800,,,,,Router,,,,,,,Spindle-Mode,ESS,string,Relay
+CRP800,,,,,Router_Laser,,,,,,,Spindle-Mode,ESS,string,Relay
+CRP800,,,,,Router_Plasma,,,,,,,Spindle-Mode,ESS,string,Relay
+CRP800,,,,,Router_Plasma_Laser,,,,,,,Spindle-Mode,ESS,string,Relay
+CRP800,,,,,,,,,,,,Spindle-Mode,ESS,string,PWM
+CRP800-revA,,,,,Router,,,,,,,Spindle-Mode,ESS,string,Relay
+CRP800-revA,,,,,Router_Plasma,,,,,,,Spindle-Mode,ESS,string,Relay
+CRP800-revA,,,,,,,,,,,,Spindle-Mode,ESS,string,PWM
+CRP100,,,,,Router,,,,,,,Spindle-Mode,ESS,string,Relay
+CRP100,,,,,Router_Plasma,,,,,,,Spindle-Mode,ESS,string,Relay
+CRP100,,,,,,,,,,,,Spindle-Mode,ESS,string,PWM
+CRP500,,,,,Router,,,,,,,Spindle-Mode,ESS,string,Relay
+CRP500,,,,,,,,,,,,Spindle-Mode,ESS,string,PWM
+CRP300,,,,,Router,,,,,,,Spindle-Mode,ESS,string,Relay
+CRP300,,,,,,,,,,,,Spindle-Mode,ESS,string,PWM
+,,,,,,Plasma,,,,,,AccelTime,SpindleRange0,double,0
+,,,,,,,,,,,,AccelTime,SpindleRange0,double,5
+,,,,,,Plasma,,,,,,DecelTime,SpindleRange0,double,0
+,,,,,,Router,,,,,,DecelTime,SpindleRange0,double,5
+,,,,,,,1,,,,,DecelTime,SpindleRange0,double,10
+,,,,,,,2,,,,,DecelTime,SpindleRange0,double,10
+,,,,,,,,,,,,DecelTime,SpindleRange0,double,5
+,,,,,,,1,,,,,MinRPM,SpindleRange0,double,0
+,,,,,,,2,,,,,MinRPM,SpindleRange0,double,0
+,,,,,,,3,,,,,MinRPM,SpindleRange0,double,6000
+CRP300,,,,,,,,,,,,MinRPM,SpindleRange0,double,7980
+,,,,,,,,,,,,MinRPM,SpindleRange0,double,8000
+,,,,,,,,,,,,MaxRPM,SpindleRange0,double,24000
+,PRO CNC,,S500,,,,,,,,,CountsPerUnit,Motor0,double,2037.18
+,PRO CNC,,S375,,,,,,,,,CountsPerUnit,Motor0,double,1736.24
+,PRO CNC,,S250,,,,,,,,,CountsPerUnit,Motor0,double,1909.86
+,Standard CNC,,S500,,,,,,,,,CountsPerUnit,Motor0,double,1273.24
+,Standard CNC,,S375,,,,,,,,,CountsPerUnit,Motor0,double,1736.24
+,Standard CNC,,S250,,,,,,,,,CountsPerUnit,Motor0,double,1909.86
+,Benchtop PRO,,,,,,,,,,,CountsPerUnit,Motor0,double,5080
+,Benchtop Standard,,,,,,,,,,,CountsPerUnit,Motor0,double,4000
+,PRO CNC,,S500,,,,,,,,,CountsPerUnit,Motor1,double,2037.18
+,PRO CNC,,S375,,,,,,,,,CountsPerUnit,Motor1,double,1736.24
+,PRO CNC,,S250,,,,,,,,,CountsPerUnit,Motor1,double,1909.86
+,Standard CNC,,S500,,,,,,,,,CountsPerUnit,Motor1,double,1273.24
+,Standard CNC,,S375,,,,,,,,,CountsPerUnit,Motor1,double,1736.24
+,Standard CNC,,S250,,,,,,,,,CountsPerUnit,Motor1,double,1909.86
+,Benchtop PRO,,,,,,,,,,,CountsPerUnit,Motor1,double,5080
+,Benchtop Standard,,,,,,,,,,,CountsPerUnit,Motor1,double,4000
+,PRO CNC,14.1,,,,,,,,,,CountsPerUnit,Motor2,double,10160
+,PRO CNC,,,,,,,,,,,CountsPerUnit,Motor2,double,5080
+,Standard CNC,,,,,,,,,,,CountsPerUnit,Motor2,double,4000
+,Benchtop PRO,,,,,,,,,,,CountsPerUnit,Motor2,double,5080
+,Benchtop Standard,,,,,,,,,,,CountsPerUnit,Motor2,double,4000
+,PRO CNC,,S500,,,,,,,,,CountsPerUnit,Motor3,double,2037.18
+,PRO CNC,,S375,,,,,,,,,CountsPerUnit,Motor3,double,1736.24
+,PRO CNC,,S250,,,,,,,,,CountsPerUnit,Motor3,double,1909.86
+,Standard CNC,,S500,,,,,,,,,CountsPerUnit,Motor3,double,1273.24
+,Standard CNC,,S375,,,,,,,,,CountsPerUnit,Motor3,double,1736.24
+,Standard CNC,,S250,,,,,,,,,CountsPerUnit,Motor3,double,1909.86
+,Benchtop PRO,,,,,,,,,,,CountsPerUnit,Motor3,double,5080
+,Benchtop Standard,,,,,,,,,,,CountsPerUnit,Motor3,double,4000
+,PRO CNC,14.1,,,,,,,,,,CountsPerUnit,Motor4,double,10160
+,PRO CNC,,,,,,,,,,,CountsPerUnit,Motor4,double,5080
+,Standard CNC,,,,,,,,,,,CountsPerUnit,Motor4,double,4000
+,Benchtop PRO,,,,,,,,,,,CountsPerUnit,Motor4,double,5080
+,Benchtop Standard,,,,,,,,,,,CountsPerUnit,Motor4,double,4000
+,PRO CNC,,S500,,,,,,,,,MaxVelocity,Motor0,double,20371.83
+,PRO CNC,,S375,,,,,,,,,MaxVelocity,Motor0,double,11574.9
+,PRO CNC,,S250,,,,,,,,,MaxVelocity,Motor0,double,12732.4
+,Standard CNC,,S500,,,,,,,,,MaxVelocity,Motor0,double,10610.33
+,Standard CNC,,S375,,,,,,,,,MaxVelocity,Motor0,double,8681.18
+,Standard CNC,,S250,,,,,,,,,MaxVelocity,Motor0,double,9549.3
+,Benchtop PRO,,,,,,,,,,,MaxVelocity,Motor0,double,16933.33
+,Benchtop Standard,,,,,,,,,,,MaxVelocity,Motor0,double,13333.33
+,PRO CNC,,S500,,,,,,,,,MaxVelocity,Motor1,double,20371.83
+,PRO CNC,,S375,,,,,,,,,MaxVelocity,Motor1,double,11574.9
+,PRO CNC,,S250,,,,,,,,,MaxVelocity,Motor1,double,12732.4
+,Standard CNC,,S500,,,,,,,,,MaxVelocity,Motor1,double,10610.33
+,Standard CNC,,S375,,,,,,,,,MaxVelocity,Motor1,double,8681.18
+,Standard CNC,,S250,,,,,,,,,MaxVelocity,Motor1,double,9549.3
+,Benchtop PRO,,,,,,,,,,,MaxVelocity,Motor1,double,16933.33
+,Benchtop Standard,,,,,,,,,,,MaxVelocity,Motor1,double,13333.33
+,PRO CNC,14.1,,,,,,,,,,MaxVelocity,Motor2,double,25400
+,PRO CNC,,,,,,,,,,,MaxVelocity,Motor2,double,16933.33
+,Standard CNC,,,,,,,,,,,MaxVelocity,Motor2,double,6666.67
+,Benchtop PRO,,,,,,,,,,,MaxVelocity,Motor2,double,16933.33
+,Benchtop Standard,,,,,,,,,,,MaxVelocity,Motor2,double,6666.67
+,PRO CNC,,S500,,,,,,,,,MaxVelocity,Motor3,double,20371.83
+,PRO CNC,,S375,,,,,,,,,MaxVelocity,Motor3,double,11574.9
+,PRO CNC,,S250,,,,,,,,,MaxVelocity,Motor3,double,12732.4
+,Standard CNC,,S500,,,,,,,,,MaxVelocity,Motor3,double,10610.33
+,Standard CNC,,S375,,,,,,,,,MaxVelocity,Motor3,double,8681.18
+,Standard CNC,,S250,,,,,,,,,MaxVelocity,Motor3,double,9549.3
+,Benchtop PRO,,,,,,,,,,,MaxVelocity,Motor3,double,16933.33
+,Benchtop Standard,,,,,,,,,,,MaxVelocity,Motor3,double,13333.33
+,PRO CNC,14.1,,,,,,,,,,MaxVelocity,Motor4,double,25400
+,PRO CNC,,,,,,,,,,,MaxVelocity,Motor4,double,16933.33
+,Standard CNC,,,,,,,,,,,MaxVelocity,Motor4,double,6666.67
+,Benchtop PRO,,,,,,,,,,,MaxVelocity,Motor4,double,16933.33
+,Benchtop Standard,,,,,,,,,,,MaxVelocity,Motor4,double,6666.67
+,PRO CNC,,S500,,,,,,,,,MaxAccel,Motor0,double,101859.16
+,PRO CNC,,S375,,,,,,,,,MaxAccel,Motor0,double,52087.07
+,PRO CNC,,S250,,,,,,,,,MaxAccel,Motor0,double,57295.78
+,Standard CNC,,S500,,,,,,,,,MaxAccel,Motor0,double,50929.58
+,Standard CNC,,S375,,,,,,,,,MaxAccel,Motor0,double,52087.07
+,Standard CNC,,S250,,,,,,,,,MaxAccel,Motor0,double,57295.78
+,Benchtop PRO,,,,,,,,,,,MaxAccel,Motor0,double,101600
+,Benchtop Standard,,,,,,,,,,,MaxAccel,Motor0,double,80000
+,PRO CNC,,S500,,,,,,,,,MaxAccel,Motor1,double,101859.16
+,PRO CNC,,S375,,,,,,,,,MaxAccel,Motor1,double,52087.07
+,PRO CNC,,S250,,,,,,,,,MaxAccel,Motor1,double,57295.78
+,Standard CNC,,S500,,,,,,,,,MaxAccel,Motor1,double,50929.58
+,Standard CNC,,S375,,,,,,,,,MaxAccel,Motor1,double,52087.07
+,Standard CNC,,S250,,,,,,,,,MaxAccel,Motor1,double,57295.78
+,Benchtop PRO,,,,,,,,,,,MaxAccel,Motor1,double,101600
+,Benchtop Standard,,,,,,,,,,,MaxAccel,Motor1,double,80000
+,PRO CNC,14.1,S500,,,,,,,,,MaxAccel,Motor2,double,406400
+,PRO CNC,,S500,,,,,,,,,MaxAccel,Motor2,double,152400
+,PRO CNC,14.1,S375,,,,,,,,,MaxAccel,Motor2,double,203200
+,PRO CNC,,S375,,,,,,,,,MaxAccel,Motor2,double,101600
+,PRO CNC,14.1,S250,,,,,,,,,MaxAccel,Motor2,double,203200
+,PRO CNC,,S250,,,,,,,,,MaxAccel,Motor2,double,101600
+,Standard CNC,,,,,,,,,,,MaxAccel,Motor2,double,80000
+,Benchtop PRO,,,,,,,,,,,MaxAccel,Motor2,double,101600
+,Benchtop Standard,,,,,,,,,,,MaxAccel,Motor2,double,80000
+,PRO CNC,,S500,,,,,,,,,MaxAccel,Motor3,double,101859.16
+,PRO CNC,,S375,,,,,,,,,MaxAccel,Motor3,double,52087.07
+,PRO CNC,,S250,,,,,,,,,MaxAccel,Motor3,double,57295.78
+,Standard CNC,,S500,,,,,,,,,MaxAccel,Motor3,double,50929.58
+,Standard CNC,,S375,,,,,,,,,MaxAccel,Motor3,double,52087.07
+,Standard CNC,,S250,,,,,,,,,MaxAccel,Motor3,double,57295.78
+,Benchtop PRO,,,,,,,,,,,MaxAccel,Motor3,double,101600
+,Benchtop Standard,,,,,,,,,,,MaxAccel,Motor3,double,80000
+,PRO CNC,14.1,S500,,,,,,,,,MaxAccel,Motor4,double,406400
+,PRO CNC,,S500,,,,,,,,,MaxAccel,Motor4,double,152400
+,PRO CNC,14.1,S375,,,,,,,,,MaxAccel,Motor4,double,203200
+,PRO CNC,,S375,,,,,,,,,MaxAccel,Motor4,double,101600
+,PRO CNC,14.1,S250,,,,,,,,,MaxAccel,Motor4,double,203200
+,PRO CNC,,S250,,,,,,,,,MaxAccel,Motor4,double,101600
+,Standard CNC,,,,,,,,,,,MaxAccel,Motor4,double,80000
+,Benchtop PRO,,,,,,,,,,,MaxAccel,Motor4,double,101600
+,Benchtop Standard,,,,,,,,,,,MaxAccel,Motor4,double,80000
+,,,,,,,,,,0,,ChildMotor0,Axis0,string,Motor0
+,,,,,,,,,,1,,ChildMotor0,Axis0,string,Motor1
+,,,,,,,,,,0,,ChildMotor1,Axis0,string,
+,,,,,,,,,,1,,ChildMotor1,Axis0,string,Motor3
+,,,,,,,,,,0,,ChildMotor0,Axis1,string,Motor1
+,,,,,,,,,,1,,ChildMotor0,Axis1,string,Motor0
+,,,,,,,,,,0,,ChildMotor1,Axis1,string,Motor3
+,,,,,,,,,,1,,ChildMotor1,Axis1,string,
+,,,,,,,,,,,,ChildMotor0,Axis2,string,Motor2
+,,,,,,,,,,,,ChildMotor0,Axis3,string,Motor4
+CRP800,,,,,Router_Plasma,,,,,,,Enabled,Axis3,string,1
+CRP800,,,,,Spindle_Plasma,,,,,,,Enabled,Axis3,string,1
+CRP800,,,,,,,,,0,,,Enabled,Axis3,string,0
+CRP800,,,,,,,,,1,,,Enabled,Axis3,string,1
+CRP800-revA,,,,,Router_Plasma,,,,,,,Enabled,Axis3,string,1
+CRP800-revA,,,,,Spindle_Plasma,,,,,,,Enabled,Axis3,string,1
+CRP800-revA,,,,,,,,,0,,,Enabled,Axis3,string,0
+CRP800-revA,,,,,,,,,1,,,Enabled,Axis3,string,1
+CRP100,,,,,,,,,0,,,Enabled,Axis3,string,0
+CRP100,,,,,,,,,1,,,Enabled,Axis3,string,1
+CRP500,,,,,,,,,0,,,Enabled,Axis3,string,0
+CRP500,,,,,,,,,1,,,Enabled,Axis3,string,1
+CRP300,,,,,Router_Plasma,,,,,,,Enabled,Axis3,string,1
+CRP300,,,,,Spindle_Plasma,,,,,,,Enabled,Axis3,string,1
+CRP300,,,,,,,,,0,,,Enabled,Axis3,string,0
+CRP300,,,,,,,,,1,,,Enabled,Axis3,string,1
+,,,,,,,,,,,,END DATA,,,

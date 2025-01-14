@@ -1,0 +1,45 @@
+PmcEditor 1.0
+GENERATOR=LUA Code
+CYCLE=25
+OUTFILE=C:\src\Mach4\Pmc\example.lua
+
+IO LIST
+    Xc3 at Sim0/Input3
+    Xena0 at Signal/Enable #0
+    XsimIn0 at Sim0/Input1
+    Yena0 at Sim0/Enable0
+END
+
+PROGRAM
+RUNG
+    CONTACTS Xena0 0 Signal/1018
+    TON TenaOn0 2000
+    TOF Tena0Off 2000
+    COIL Yena0 0 0 0 Sim0/Enable0
+END
+RUNG
+    CONTACTS XsimIn0 0 Sim0/Input1
+    PARALLEL
+        SERIES
+            OSR
+            CORE_ACTION 55
+        END
+        SERIES
+            OSF
+            CORE_ACTION 57
+        END
+    END
+END
+RUNG
+    CONTACTS Xc3 0 Sim0/Input3
+    PARALLEL
+        SERIES
+            OSR
+            MOVE mpgAxis 1
+        END
+        SERIES
+            OSR
+            MPG_ACTION 1 0 mpgAxis
+        END
+    END
+END

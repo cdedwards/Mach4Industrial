@@ -1,0 +1,57 @@
+--[[
+This header can not be removed
+
+Copyright Newfangled Solutions (c) 2018 All Rights Reserved, www.machsupport.com  
+
+THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, 
+EITHER EXPRESSED OR IMPLIED , INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES 
+OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+
+Author - Newfangled Solutions
+Liscence - mit
+Date - 05/17/2018
+Modified - Brett Price 05/17/2018
+--]]
+
+--Button Script
+email('Hello from a Mach4 machine') --This calls the email function and passes it the message 'Hello from a Mach4 machine'.
+
+--Screen load script
+function email(message)
+    package.path = package.path .. ';./Modules/?.lua;'
+    package.cpath = package.cpath .. ';./Modules/?.dll;'
+
+    -- load the smtp support
+    local smtp = require('/socket.smtp')
+	from = '<fromname@hostname.net>' --email address of sender
+
+    rcpt = {
+        '<toname1@hostname.net>', --email address of recipient
+		'<toname2@hostname.net>', --email address of carbon copied recipient
+		'<toname3@hostname.net>' --email address of blind carbon copied recipient. They will be blind because we will not list them in the header
+    }
+
+    mesgt = {
+        headers = {
+            from = 'From Name <fromname@hostname.net>', --name and email address of sender. Example: 'John Doe <originaljdoe@anyhost.net>'
+            to = 'To Name <toname1@hostname.net>', --name and email address of recipient
+			cc = 'To Name <toname2@hostname.net>', --name and email address of someone being carbon copied
+			subject = 'Mail from a Mach4 machine' --email subject
+        },
+        body = tostring(message)
+    }
+
+    r, e = smtp.send{
+        from = from,
+        rcpt = rcpt, 
+        source = smtp.message(mesgt),
+        server = 'mail.myhost.net', --this is the address or IP of the mail server used to send this email. smtp.gmail.com is one example
+        password = 'MailServerPassword', --this is the password you use to access the mail server you are sending from
+        user = 'myname@myhost.net' --this is the user name you use to access the mail server you are sending from
+    }
+    if (r == 1) then --Message was sent successfully
+       wx.wxMessageBox('Message was sent successfully.')
+    else --There was an error
+        wx.wxMessageBox('!!!ERROR!!!\n\n' .. tostring(e))
+    end
+end

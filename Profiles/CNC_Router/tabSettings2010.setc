@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mach4ScreenInfo>
+  <mcNotebookPage>
+    <Property name="Name">tabSettings2010</Property>
+    <Property name="Enabled">1</Property>
+    <Property name="Hidden">0</Property>
+    <Property name="Shown">1</Property>
+    <Property name="Label">Settings</Property>
+    <Property name="Hide Tab">0</Property>
+    <Property name="Bg Color">#0F3AD2</Property>
+    <Property name="Background Color">#0F3AD2</Property>
+    <Property name="Bg Image"></Property>
+    <Property name="Scale Method">0</Property>
+    <Property name="Text Height">8</Property>
+    <Property name="Global Script"></Property>
+    <Event name="On Enter Script"></Event>
+    <Event name="On Exit Script"></Event>
+    <mcStaticText>
+      <Property name="Name">txtYPlate</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">136</Property>
+      <Property name="Left">112</Property>
+      <Property name="Height">25</Property>
+      <Property name="Width">25</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="Justify">0</Property>
+      <Property name="Border">0</Property>
+      <Property name="Label">Y</Property>
+      <Property name="Lines">1</Property>
+      <Property name="Font">1;13;-17;0;0;0;700;0;0;0;0;3;2;1;34;Arial</Property>
+      <Property name="Fg Color">#00FF40</Property>
+      <Property name="Bg Color"></Property>
+      <Property name="Label Code">-1</Property>
+      <Property name="Register"></Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Event name="On Update Script"></Event>
+    </mcStaticText>
+    <mcStaticText>
+      <Property name="Name">txtXPlate</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">97</Property>
+      <Property name="Left">111</Property>
+      <Property name="Height">25</Property>
+      <Property name="Width">25</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="Justify">0</Property>
+      <Property name="Border">0</Property>
+      <Property name="Label">X</Property>
+      <Property name="Lines">1</Property>
+      <Property name="Font">1;13;-17;0;0;0;700;0;0;0;0;3;2;1;34;Arial</Property>
+      <Property name="Fg Color">#00FF40</Property>
+      <Property name="Bg Color"></Property>
+      <Property name="Label Code">-1</Property>
+      <Property name="Register"></Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Event name="On Update Script"></Event>
+    </mcStaticText>
+    <mcDro>
+      <Property name="Name">droYPlate</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">176</Property>
+      <Property name="Left">152</Property>
+      <Property name="Height">35</Property>
+      <Property name="Width">191</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="DRO Code">0</Property>
+      <Property name="Register">iRegs0/2025/PlateThickness</Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Property name="Analog In"></Property>
+      <Property name="Analog Out"></Property>
+      <Property name="Value">0.125000</Property>
+      <Property name="Format">%4.4f</Property>
+      <Property name="Min"></Property>
+      <Property name="Max"></Property>
+      <Property name="Editor">0</Property>
+      <Property name="Justify">1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Font">1;23.25;-31;0;0;0;700;0;0;0;1;0;0;2;32;Arial</Property>
+      <Property name="UseFontScaling">0</Property>
+      <Property name="Fg Color">#00FF00</Property>
+      <Property name="Bg Color">#000000</Property>
+      <Property name="Editor Fg Color"></Property>
+      <Property name="Editor Bg Color"></Property>
+      <Property name="Show Units">1</Property>
+      <Property name="Units">0</Property>
+      <Property name="Inch Display">in</Property>
+      <Property name="Metric Display">mm</Property>
+      <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+      <Event name="On Modify Script"></Event>
+    </mcDro>
+    <mcDro>
+      <Property name="Name">droXPlate</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">131</Property>
+      <Property name="Left">151</Property>
+      <Property name="Height">35</Property>
+      <Property name="Width">191</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="DRO Code">0</Property>
+      <Property name="Register">iRegs0/2025/YPlate</Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Property name="Analog In"></Property>
+      <Property name="Analog Out"></Property>
+      <Property name="Value">7.000000</Property>
+      <Property name="Format">%4.4f</Property>
+      <Property name="Min"></Property>
+      <Property name="Max"></Property>
+      <Property name="Editor">1</Property>
+      <Property name="Justify">1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Font">1;23.25;-31;0;0;0;700;0;0;0;1;0;0;2;32;Arial</Property>
+      <Property name="UseFontScaling">0</Property>
+      <Property name="Fg Color">#00FF00</Property>
+      <Property name="Bg Color">#000000</Property>
+      <Property name="Editor Fg Color"></Property>
+      <Property name="Editor Bg Color"></Property>
+      <Property name="Show Units">1</Property>
+      <Property name="Units">0</Property>
+      <Property name="Inch Display">in</Property>
+      <Property name="Metric Display">mm</Property>
+      <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst,rc = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+      <Event name="On Modify Script"></Event>
+    </mcDro>
+    <mcStaticText>
+      <Property name="Name">txtMaterialOffset</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">286</Property>
+      <Property name="Left">150</Property>
+      <Property name="Height">25</Property>
+      <Property name="Width">165</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="Justify">-1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Label">Material Offset</Property>
+      <Property name="Lines">1</Property>
+      <Property name="Font">1;13;-17;0;0;0;700;0;0;0;0;3;2;1;34;Arial</Property>
+      <Property name="Fg Color">#00FF40</Property>
+      <Property name="Bg Color"></Property>
+      <Property name="Label Code">-1</Property>
+      <Property name="Register"></Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Event name="On Update Script"></Event>
+    </mcStaticText>
+    <mcStaticText>
+      <Property name="Name">txtParkLocation</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">67</Property>
+      <Property name="Left">572</Property>
+      <Property name="Height">22</Property>
+      <Property name="Width">185</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="Justify">-1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Label">Park Location</Property>
+      <Property name="Lines">1</Property>
+      <Property name="Font">1;13;-17;0;0;0;700;0;0;0;0;3;2;1;34;Arial</Property>
+      <Property name="Fg Color">#00FF40</Property>
+      <Property name="Bg Color"></Property>
+      <Property name="Label Code">-1</Property>
+      <Property name="Register"></Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Event name="On Update Script"></Event>
+    </mcStaticText>
+    <mcDro>
+      <Property name="Name">droParkLocZ</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">175</Property>
+      <Property name="Left">577</Property>
+      <Property name="Height">35</Property>
+      <Property name="Width">191</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="DRO Code">0</Property>
+      <Property name="Register">iRegs0/ParkLocationZ</Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Property name="Analog In"></Property>
+      <Property name="Analog Out"></Property>
+      <Property name="Value">1.000000</Property>
+      <Property name="Format">%4.4f</Property>
+      <Property name="Min"></Property>
+      <Property name="Max"></Property>
+      <Property name="Editor">1</Property>
+      <Property name="Justify">1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Font">1;23.25;-31;0;0;0;700;0;0;0;1;0;0;2;32;Arial</Property>
+      <Property name="UseFontScaling">0</Property>
+      <Property name="Fg Color">#00FF00</Property>
+      <Property name="Bg Color">#000000</Property>
+      <Property name="Editor Fg Color"></Property>
+      <Property name="Editor Bg Color"></Property>
+      <Property name="Show Units">1</Property>
+      <Property name="Units">0</Property>
+      <Property name="Inch Display">in</Property>
+      <Property name="Metric Display">mm</Property>
+      <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+      <Event name="On Modify Script"></Event>
+    </mcDro>
+    <mcDro>
+      <Property name="Name">droParkLocX</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">92</Property>
+      <Property name="Left">577</Property>
+      <Property name="Height">35</Property>
+      <Property name="Width">191</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="DRO Code">0</Property>
+      <Property name="Register">iRegs0/ParkLocationX</Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Property name="Analog In"></Property>
+      <Property name="Analog Out"></Property>
+      <Property name="Value">24.000000</Property>
+      <Property name="Format">%4.4f</Property>
+      <Property name="Min"></Property>
+      <Property name="Max"></Property>
+      <Property name="Editor">1</Property>
+      <Property name="Justify">1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Font">1;23.25;-31;0;0;0;700;0;0;0;1;0;0;2;32;Arial</Property>
+      <Property name="UseFontScaling">0</Property>
+      <Property name="Fg Color">#00FF00</Property>
+      <Property name="Bg Color">#000000</Property>
+      <Property name="Editor Fg Color"></Property>
+      <Property name="Editor Bg Color"></Property>
+      <Property name="Show Units">1</Property>
+      <Property name="Units">0</Property>
+      <Property name="Inch Display">in</Property>
+      <Property name="Metric Display">mm</Property>
+      <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+      <Event name="On Modify Script"></Event>
+    </mcDro>
+    <mcDro>
+      <Property name="Name">droParkLocY</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">133</Property>
+      <Property name="Left">577</Property>
+      <Property name="Height">35</Property>
+      <Property name="Width">191</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="DRO Code">0</Property>
+      <Property name="Register">iRegs0/ParkLocationY</Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Property name="Analog In"></Property>
+      <Property name="Analog Out"></Property>
+      <Property name="Value">47.000000</Property>
+      <Property name="Format">%4.4f</Property>
+      <Property name="Min"></Property>
+      <Property name="Max"></Property>
+      <Property name="Editor">1</Property>
+      <Property name="Justify">1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Font">1;23.25;-31;0;0;0;700;0;0;0;1;0;0;2;32;Arial</Property>
+      <Property name="UseFontScaling">0</Property>
+      <Property name="Fg Color">#00FF00</Property>
+      <Property name="Bg Color">#000000</Property>
+      <Property name="Editor Fg Color"></Property>
+      <Property name="Editor Bg Color"></Property>
+      <Property name="Show Units">1</Property>
+      <Property name="Units">0</Property>
+      <Property name="Inch Display">in</Property>
+      <Property name="Metric Display">mm</Property>
+      <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+      <Event name="On Modify Script"></Event>
+    </mcDro>
+    <mcStaticText>
+      <Property name="Name">txtPlateThickness</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">174</Property>
+      <Property name="Left">58</Property>
+      <Property name="Height">39</Property>
+      <Property name="Width">85</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="Justify">0</Property>
+      <Property name="Border">0</Property>
+      <Property name="Label">Plate\nThickness</Property>
+      <Property name="Lines">1</Property>
+      <Property name="Font">1;13;-17;0;0;0;700;0;0;0;0;3;2;1;34;Arial</Property>
+      <Property name="Fg Color">#00FF40</Property>
+      <Property name="Bg Color"></Property>
+      <Property name="Label Code">-1</Property>
+      <Property name="Register"></Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Event name="On Update Script"></Event>
+    </mcStaticText>
+    <mcDro>
+      <Property name="Name">droPlateThickness</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">246</Property>
+      <Property name="Left">153</Property>
+      <Property name="Height">35</Property>
+      <Property name="Width">191</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="DRO Code">0</Property>
+      <Property name="Register">iRegs0/2010/PlateThickness</Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Property name="Analog In"></Property>
+      <Property name="Analog Out"></Property>
+      <Property name="Value">0.125000</Property>
+      <Property name="Format">%4.4f</Property>
+      <Property name="Min"></Property>
+      <Property name="Max"></Property>
+      <Property name="Editor">0</Property>
+      <Property name="Justify">1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Font">1;23.25;-31;0;0;0;700;0;0;0;1;0;0;2;32;Arial</Property>
+      <Property name="UseFontScaling">0</Property>
+      <Property name="Fg Color">#00FF00</Property>
+      <Property name="Bg Color">#000000</Property>
+      <Property name="Editor Fg Color"></Property>
+      <Property name="Editor Bg Color"></Property>
+      <Property name="Show Units">1</Property>
+      <Property name="Units">0</Property>
+      <Property name="Inch Display">in</Property>
+      <Property name="Metric Display">mm</Property>
+      <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+      <Event name="On Modify Script"></Event>
+    </mcDro>
+    <mcDro>
+      <Property name="Name">droTCX</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">92</Property>
+      <Property name="Left">366</Property>
+      <Property name="Height">35</Property>
+      <Property name="Width">191</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="DRO Code">0</Property>
+      <Property name="Register">iRegs0/2025/TCX</Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Property name="Analog In"></Property>
+      <Property name="Analog Out"></Property>
+      <Property name="Value">24.000000</Property>
+      <Property name="Format">%4.4f</Property>
+      <Property name="Min"></Property>
+      <Property name="Max"></Property>
+      <Property name="Editor">1</Property>
+      <Property name="Justify">1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Font">1;23.25;-31;0;0;0;700;0;0;0;1;0;0;2;32;Arial</Property>
+      <Property name="UseFontScaling">0</Property>
+      <Property name="Fg Color">#00FF00</Property>
+      <Property name="Bg Color">#000000</Property>
+      <Property name="Editor Fg Color"></Property>
+      <Property name="Editor Bg Color"></Property>
+      <Property name="Show Units">1</Property>
+      <Property name="Units">0</Property>
+      <Property name="Inch Display">in</Property>
+      <Property name="Metric Display">mm</Property>
+      <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+      <Event name="On Modify Script"></Event>
+    </mcDro>
+    <mcDro>
+      <Property name="Name">droTCY</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">133</Property>
+      <Property name="Left">367</Property>
+      <Property name="Height">35</Property>
+      <Property name="Width">191</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="DRO Code">0</Property>
+      <Property name="Register">iRegs0/2025/TCY</Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Property name="Analog In"></Property>
+      <Property name="Analog Out"></Property>
+      <Property name="Value">6.000000</Property>
+      <Property name="Format">%4.4f</Property>
+      <Property name="Min"></Property>
+      <Property name="Max"></Property>
+      <Property name="Editor">1</Property>
+      <Property name="Justify">1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Font">1;23.25;-31;0;0;0;700;0;0;0;1;0;0;2;32;Arial</Property>
+      <Property name="UseFontScaling">0</Property>
+      <Property name="Fg Color">#00FF00</Property>
+      <Property name="Bg Color">#000000</Property>
+      <Property name="Editor Fg Color"></Property>
+      <Property name="Editor Bg Color"></Property>
+      <Property name="Show Units">1</Property>
+      <Property name="Units">0</Property>
+      <Property name="Inch Display">in</Property>
+      <Property name="Metric Display">mm</Property>
+      <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+      <Event name="On Modify Script"></Event>
+    </mcDro>
+    <mcDro>
+      <Property name="Name">droTCZ</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">175</Property>
+      <Property name="Left">367</Property>
+      <Property name="Height">35</Property>
+      <Property name="Width">191</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="DRO Code">0</Property>
+      <Property name="Register">iRegs0/2025/TCZ</Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Property name="Analog In"></Property>
+      <Property name="Analog Out"></Property>
+      <Property name="Value">1.500000</Property>
+      <Property name="Format">%4.4f</Property>
+      <Property name="Min"></Property>
+      <Property name="Max"></Property>
+      <Property name="Editor">1</Property>
+      <Property name="Justify">1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Font">1;23.25;-31;0;0;0;700;0;0;0;1;0;0;2;32;Arial</Property>
+      <Property name="UseFontScaling">0</Property>
+      <Property name="Fg Color">#00FF00</Property>
+      <Property name="Bg Color">#000000</Property>
+      <Property name="Editor Fg Color"></Property>
+      <Property name="Editor Bg Color"></Property>
+      <Property name="Show Units">1</Property>
+      <Property name="Units">0</Property>
+      <Property name="Inch Display">in</Property>
+      <Property name="Metric Display">mm</Property>
+      <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+      <Event name="On Modify Script"></Event>
+    </mcDro>
+    <mcStaticText>
+      <Property name="Name">txtPlateLocation</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">68</Property>
+      <Property name="Left">147</Property>
+      <Property name="Height">25</Property>
+      <Property name="Width">165</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="Justify">-1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Label">Fix Plate Location</Property>
+      <Property name="Lines">1</Property>
+      <Property name="Font">1;13;-17;0;0;0;700;0;0;0;0;3;2;1;34;Arial</Property>
+      <Property name="Fg Color">#00FF40</Property>
+      <Property name="Bg Color"></Property>
+      <Property name="Label Code">-1</Property>
+      <Property name="Register"></Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Event name="On Update Script"></Event>
+    </mcStaticText>
+    <mcDro>
+      <Property name="Name">droXLaserOffset</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">244</Property>
+      <Property name="Left">367</Property>
+      <Property name="Height">35</Property>
+      <Property name="Width">191</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="DRO Code">0</Property>
+      <Property name="Register">iRegs0/2025/LaserOffsetX</Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Property name="Analog In"></Property>
+      <Property name="Analog Out"></Property>
+      <Property name="Value">6.000000</Property>
+      <Property name="Format">%4.4f</Property>
+      <Property name="Min"></Property>
+      <Property name="Max"></Property>
+      <Property name="Editor">0</Property>
+      <Property name="Justify">1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Font">1;23.25;-31;0;0;0;700;0;0;0;1;0;0;2;32;Arial</Property>
+      <Property name="UseFontScaling">0</Property>
+      <Property name="Fg Color">#00FF00</Property>
+      <Property name="Bg Color">#000000</Property>
+      <Property name="Editor Fg Color"></Property>
+      <Property name="Editor Bg Color"></Property>
+      <Property name="Show Units">1</Property>
+      <Property name="Units">0</Property>
+      <Property name="Inch Display">in</Property>
+      <Property name="Metric Display">mm</Property>
+      <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+      <Event name="On Modify Script"></Event>
+    </mcDro>
+    <mcDro>
+      <Property name="Name">droYLaserOffset</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">284</Property>
+      <Property name="Left">367</Property>
+      <Property name="Height">35</Property>
+      <Property name="Width">191</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="DRO Code">0</Property>
+      <Property name="Register">iRegs0/2025/LaserOffsetY</Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Property name="Analog In"></Property>
+      <Property name="Analog Out"></Property>
+      <Property name="Value">5.000000</Property>
+      <Property name="Format">%4.4f</Property>
+      <Property name="Min"></Property>
+      <Property name="Max"></Property>
+      <Property name="Editor">0</Property>
+      <Property name="Justify">1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Font">1;23.25;-31;0;0;0;700;0;0;0;1;0;0;2;32;Arial</Property>
+      <Property name="UseFontScaling">0</Property>
+      <Property name="Fg Color">#00FF00</Property>
+      <Property name="Bg Color">#000000</Property>
+      <Property name="Editor Fg Color"></Property>
+      <Property name="Editor Bg Color"></Property>
+      <Property name="Show Units">1</Property>
+      <Property name="Units">0</Property>
+      <Property name="Inch Display">in</Property>
+      <Property name="Metric Display">mm</Property>
+      <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+      <Event name="On Modify Script"></Event>
+    </mcDro>
+    <mcDro>
+      <Property name="Name">droMaterialOffset</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">94</Property>
+      <Property name="Left">150</Property>
+      <Property name="Height">35</Property>
+      <Property name="Width">191</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="DRO Code">0</Property>
+      <Property name="Register">iRegs0/2025/XPlate</Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Property name="Analog In"></Property>
+      <Property name="Analog Out"></Property>
+      <Property name="Value">4.000000</Property>
+      <Property name="Format">%4.4f</Property>
+      <Property name="Min"></Property>
+      <Property name="Max"></Property>
+      <Property name="Editor">1</Property>
+      <Property name="Justify">1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Font">1;23.25;-31;0;0;0;700;0;0;0;1;0;0;2;32;Arial</Property>
+      <Property name="UseFontScaling">0</Property>
+      <Property name="Fg Color">#00FF00</Property>
+      <Property name="Bg Color">#000000</Property>
+      <Property name="Editor Fg Color"></Property>
+      <Property name="Editor Bg Color"></Property>
+      <Property name="Show Units">1</Property>
+      <Property name="Units">0</Property>
+      <Property name="Inch Display">in</Property>
+      <Property name="Metric Display">mm</Property>
+      <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+      <Event name="On Modify Script"></Event>
+    </mcDro>
+    <mcToggleButton2>
+      <Property name="Name">tbtnIgnoreM6</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">92</Property>
+      <Property name="Left">797</Property>
+      <Property name="Height">35</Property>
+      <Property name="Width">100</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="Text Up">Ignore M6</Property>
+      <Property name="Text Dn">do NOT Ignore M6</Property>
+      <Property name="Text Color Up">#00FF40</Property>
+      <Property name="Text Color Dn">#000000</Property>
+      <Property name="Button Color Up">#4B4B4B</Property>
+      <Property name="Button Color Dn">#00FF00</Property>
+      <Property name="Border Color"></Property>
+      <Property name="Border">2</Property>
+      <Property name="Corner Radius">10</Property>
+      <Property name="Blink Rate Up">0</Property>
+      <Property name="Blink Rate Dn">0</Property>
+      <Property name="Image Up"></Property>
+      <Property name="Image Dn"></Property>
+      <Property name="Scale Method">0</Property>
+      <Property name="Button State">1</Property>
+      <Property name="Input Signal">-1</Property>
+      <Property name="Output Signal">-1</Property>
+      <Property name="Font">1;8.25;-11;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+      <Event name="Down Action">0</Event>
+      <Event name="Up Action">0</Event>
+      <Event name="Click Action">0</Event>
+      <Event name="Down Script">local val = 1
+local inst
+local rc
+inst = mc.mcGetInstance()
+local hreg,rc = mc.mcRegGetHandle(inst, 'iRegs0/2010/IgnoreM6')
+rc = mc.mcRegSetValueLong(hreg, val)
+return val -- the script MUST return a value, otherwise, the control will not be updated.
+</Event>
+      <Event name="Up Script">local val = 0
+local inst
+inst = mc.mcGetInstance()
+local hreg = mc.mcRegGetHandle(inst, 'iRegs0/2010/IgnoreM6')
+rc = mc.mcRegSetValueLong(hreg, val)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+    </mcToggleButton2>
+    <mcDro>
+      <Property name="Name">droPrbToUse</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">379</Property>
+      <Property name="Left">756</Property>
+      <Property name="Height">30</Property>
+      <Property name="Width">75</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="DRO Code">-1</Property>
+      <Property name="Register"></Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Property name="Analog In"></Property>
+      <Property name="Analog Out"></Property>
+      <Property name="Value">31.000000</Property>
+      <Property name="Format">%.1f</Property>
+      <Property name="Min"></Property>
+      <Property name="Max"></Property>
+      <Property name="Editor">0</Property>
+      <Property name="Justify">0</Property>
+      <Property name="Border">0</Property>
+      <Property name="Font">1;19.5;-26;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+      <Property name="UseFontScaling">0</Property>
+      <Property name="Fg Color">#00FF00</Property>
+      <Property name="Bg Color">#000000</Property>
+      <Property name="Editor Fg Color"></Property>
+      <Property name="Editor Bg Color"></Property>
+      <Property name="Show Units">0</Property>
+      <Property name="Units">-1</Property>
+      <Property name="Inch Display"></Property>
+      <Property name="Metric Display"></Property>
+      <Event name="On Update Script"></Event>
+      <Event name="On Modify Script">local val = scr.GetProperty("droPrbGcode", "Value")
+mc.mcProfileWriteString(inst, "ProbingSettings", "GCode", tostring(val))
+mc.mcCntlSetLastError(inst, "Probe: G code updated " .. val)</Event>
+    </mcDro>
+    <mcStaticText>
+      <Property name="Name">lblPrbGcodeToUse</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">382</Property>
+      <Property name="Left">672</Property>
+      <Property name="Height">25</Property>
+      <Property name="Width">85</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="Justify">-1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Label">G code: G</Property>
+      <Property name="Lines">1</Property>
+      <Property name="Font">1;12.75;-17;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+      <Property name="Fg Color">#00FF40</Property>
+      <Property name="Bg Color"></Property>
+      <Property name="Label Code">-1</Property>
+      <Property name="Register"></Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Event name="On Update Script"></Event>
+    </mcStaticText>
+    <mcStaticText>
+      <Property name="Name">txtToolChangeLocation(1)</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">68</Property>
+      <Property name="Left">364</Property>
+      <Property name="Height">25</Property>
+      <Property name="Width">185</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="Justify">-1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Label">Tool Change Location</Property>
+      <Property name="Lines">1</Property>
+      <Property name="Font">1;13;-17;0;0;0;700;0;0;0;0;3;2;1;34;Arial</Property>
+      <Property name="Fg Color">#00FF40</Property>
+      <Property name="Bg Color"></Property>
+      <Property name="Label Code">-1</Property>
+      <Property name="Register"></Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Event name="On Update Script"></Event>
+    </mcStaticText>
+    <mcToggleButton2>
+      <Property name="Name">tbtnUseMachineCoord</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">133</Property>
+      <Property name="Left">797</Property>
+      <Property name="Height">35</Property>
+      <Property name="Width">100</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="Text Up">Use Machine Coord</Property>
+      <Property name="Text Dn">do NOT Use Machine Coord</Property>
+      <Property name="Text Color Up">#00FF40</Property>
+      <Property name="Text Color Dn">#000000</Property>
+      <Property name="Button Color Up">#4B4B4B</Property>
+      <Property name="Button Color Dn">#00FF00</Property>
+      <Property name="Border Color"></Property>
+      <Property name="Border">2</Property>
+      <Property name="Corner Radius">10</Property>
+      <Property name="Blink Rate Up">0</Property>
+      <Property name="Blink Rate Dn">0</Property>
+      <Property name="Image Up"></Property>
+      <Property name="Image Dn"></Property>
+      <Property name="Scale Method">0</Property>
+      <Property name="Button State">1</Property>
+      <Property name="Input Signal">-1</Property>
+      <Property name="Output Signal">-1</Property>
+      <Property name="Font">1;8.25;-11;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+      <Event name="Down Action">0</Event>
+      <Event name="Up Action">0</Event>
+      <Event name="Click Action">0</Event>
+      <Event name="Down Script">local val = 1
+local inst
+local rc
+inst = mc.mcGetInstance()
+local hreg,rc = mc.mcRegGetHandle(inst, 'iRegs0/2010/UseMachineCoord')
+rc = mc.mcRegSetValueLong(hreg, val)
+return val -- the script MUST return a value, otherwise, the control will not be updated.
+
+</Event>
+      <Event name="Up Script">local val = 0
+local inst
+local rc
+inst = mc.mcGetInstance()
+local hreg,rc = mc.mcRegGetHandle(inst, 'iRegs0/2010/UseMachineCoord')
+rc = mc.mcRegSetValueLong(hreg, val)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+    </mcToggleButton2>
+    <mcToggleButton2>
+      <Property name="Name">tbtnUseMaterrialOffset</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">214</Property>
+      <Property name="Left">800</Property>
+      <Property name="Height">35</Property>
+      <Property name="Width">100</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="Text Up">Use Material Offset</Property>
+      <Property name="Text Dn">do NOT use Material Offset</Property>
+      <Property name="Text Color Up">#00FF40</Property>
+      <Property name="Text Color Dn">#000000</Property>
+      <Property name="Button Color Up">#4B4B4B</Property>
+      <Property name="Button Color Dn">#00FF00</Property>
+      <Property name="Border Color"></Property>
+      <Property name="Border">2</Property>
+      <Property name="Corner Radius">10</Property>
+      <Property name="Blink Rate Up">0</Property>
+      <Property name="Blink Rate Dn">0</Property>
+      <Property name="Image Up"></Property>
+      <Property name="Image Dn"></Property>
+      <Property name="Scale Method">0</Property>
+      <Property name="Button State">0</Property>
+      <Property name="Input Signal">-1</Property>
+      <Property name="Output Signal">-1</Property>
+      <Property name="Font">1;8.25;-11;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+      <Event name="Down Action">0</Event>
+      <Event name="Up Action">0</Event>
+      <Event name="Click Action">0</Event>
+      <Event name="Down Script">local val = 1
+local inst
+local rc
+inst = mc.mcGetInstance()
+local hreg,rc = mc.mcRegGetHandle(inst, 'iRegs0/2010/UseMatOffset')
+rc = mc.mcRegSetValueLong(hreg, val)
+return val -- the script MUST return a value, otherwise, the control will not be updated.
+</Event>
+      <Event name="Up Script">local val = 0
+local inst
+local rc
+inst = mc.mcGetInstance()
+local hreg,rc = mc.mcRegGetHandle(inst, 'iRegs0/2010/UseMatOffset')
+rc = mc.mcRegSetValueLong(hreg, val)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+    </mcToggleButton2>
+    <mcDro>
+      <Property name="Name">droZPlane</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">318</Property>
+      <Property name="Left">148</Property>
+      <Property name="Height">35</Property>
+      <Property name="Width">191</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="DRO Code">0</Property>
+      <Property name="Register">iRegs0/2010/ZClearance</Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Property name="Analog In"></Property>
+      <Property name="Analog Out"></Property>
+      <Property name="Value">0.001000</Property>
+      <Property name="Format">%4.4f</Property>
+      <Property name="Min"></Property>
+      <Property name="Max"></Property>
+      <Property name="Editor">1</Property>
+      <Property name="Justify">1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Font">1;23.25;-31;0;0;0;700;0;0;0;1;0;0;2;32;Arial</Property>
+      <Property name="UseFontScaling">0</Property>
+      <Property name="Fg Color">#00FF00</Property>
+      <Property name="Bg Color">#000000</Property>
+      <Property name="Editor Fg Color"></Property>
+      <Property name="Editor Bg Color"></Property>
+      <Property name="Show Units">1</Property>
+      <Property name="Units">0</Property>
+      <Property name="Inch Display">in</Property>
+      <Property name="Metric Display">mm</Property>
+      <Event name="On Update Script">local val = select(1,...) -- Get the system value.
+local inst = mc.mcGetInstance()
+val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+DecToFrac(0)
+--local val = scr.GetProperty("droZPlane", "Value")
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+      <Event name="On Modify Script"></Event>
+    </mcDro>
+    <mcStaticText>
+      <Property name="Name">txtYLaserx</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">288</Property>
+      <Property name="Left">341</Property>
+      <Property name="Height">25</Property>
+      <Property name="Width">25</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="Justify">0</Property>
+      <Property name="Border">0</Property>
+      <Property name="Label"> Y</Property>
+      <Property name="Lines">1</Property>
+      <Property name="Font">1;13;-17;0;0;0;700;0;0;0;0;3;2;1;34;Arial</Property>
+      <Property name="Fg Color">#00FF40</Property>
+      <Property name="Bg Color"></Property>
+      <Property name="Label Code">-1</Property>
+      <Property name="Register"></Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Event name="On Update Script"></Event>
+    </mcStaticText>
+    <mcStaticText>
+      <Property name="Name">txtXLaser</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">251</Property>
+      <Property name="Left">343</Property>
+      <Property name="Height">25</Property>
+      <Property name="Width">25</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="Justify">0</Property>
+      <Property name="Border">0</Property>
+      <Property name="Label">X</Property>
+      <Property name="Lines">1</Property>
+      <Property name="Font">1;13;-17;0;0;0;700;0;0;0;0;3;2;1;34;Arial</Property>
+      <Property name="Fg Color">#00FF40</Property>
+      <Property name="Bg Color"></Property>
+      <Property name="Label Code">-1</Property>
+      <Property name="Register"></Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Event name="On Update Script"></Event>
+    </mcStaticText>
+    <mcStaticText>
+      <Property name="Name">txtLaserOffset</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">218</Property>
+      <Property name="Left">367</Property>
+      <Property name="Height">25</Property>
+      <Property name="Width">165</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="Justify">-1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Label">Laser Offset</Property>
+      <Property name="Lines">1</Property>
+      <Property name="Font">1;13;-17;0;0;0;700;0;0;0;0;3;2;1;34;Arial</Property>
+      <Property name="Fg Color">#00FF40</Property>
+      <Property name="Bg Color"></Property>
+      <Property name="Label Code">-1</Property>
+      <Property name="Register"></Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Event name="On Update Script"></Event>
+    </mcStaticText>
+    <mcStaticText>
+      <Property name="Name">txtZClearance(2)</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">218</Property>
+      <Property name="Left">147</Property>
+      <Property name="Height">25</Property>
+      <Property name="Width">165</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="Justify">-1</Property>
+      <Property name="Border">0</Property>
+      <Property name="Label">Z Clearance Plane</Property>
+      <Property name="Lines">1</Property>
+      <Property name="Font">1;13;-17;0;0;0;700;0;0;0;0;3;2;1;34;Arial</Property>
+      <Property name="Fg Color">#00FF40</Property>
+      <Property name="Bg Color"></Property>
+      <Property name="Label Code">-1</Property>
+      <Property name="Register"></Property>
+      <Property name="SysVar">0</Property>
+      <Property name="SysParam">0</Property>
+      <Event name="On Update Script"></Event>
+    </mcStaticText>
+    <mcToggleButton2>
+      <Property name="Name">tbtnUseSafeZ(1)</Property>
+      <Property name="Instance">0</Property>
+      <Property name="Top">175</Property>
+      <Property name="Left">797</Property>
+      <Property name="Height">35</Property>
+      <Property name="Width">100</Property>
+      <Property name="Enabled">1</Property>
+      <Property name="Hidden">0</Property>
+      <Property name="Shown">1</Property>
+      <Property name="Enable With Machine">0</Property>
+      <Property name="Enabled States">0</Property>
+      <Property name="Text Up">Use Safe Z</Property>
+      <Property name="Text Dn">do NOT Use Safe Z</Property>
+      <Property name="Text Color Up">#00FF40</Property>
+      <Property name="Text Color Dn">#000000</Property>
+      <Property name="Button Color Up">#4B4B4B</Property>
+      <Property name="Button Color Dn">#00FF00</Property>
+      <Property name="Border Color"></Property>
+      <Property name="Border">2</Property>
+      <Property name="Corner Radius">10</Property>
+      <Property name="Blink Rate Up">0</Property>
+      <Property name="Blink Rate Dn">0</Property>
+      <Property name="Image Up"></Property>
+      <Property name="Image Dn"></Property>
+      <Property name="Scale Method">0</Property>
+      <Property name="Button State">0</Property>
+      <Property name="Input Signal">-1</Property>
+      <Property name="Output Signal">-1</Property>
+      <Property name="Font">1;8.25;-11;0;0;0;400;0;0;0;1;0;0;2;32;Arial</Property>
+      <Event name="Down Action">0</Event>
+      <Event name="Up Action">0</Event>
+      <Event name="Click Action">0</Event>
+      <Event name="Down Script">local val = 1
+local inst
+local rc
+inst = mc.mcGetInstance()
+local hreg,rc = mc.mcRegGetHandle(inst, 'iRegs0/2010/UseSafeZ')
+rc = mc.mcRegSetValueLong(hreg, val)
+return val -- the script MUST return a value, otherwise, the control will not be updated.
+</Event>
+      <Event name="Up Script">local val = 0
+local inst
+local rc
+inst = mc.mcGetInstance()
+local hreg,rc = mc.mcRegGetHandle(inst, 'iRegs0/2010/UseSafeZ')
+rc = mc.mcRegSetValueLong(hreg, val)
+return val -- the script MUST return a value, otherwise, the control will not be updated.</Event>
+    </mcToggleButton2>
+  </mcNotebookPage>
+</Mach4ScreenInfo>

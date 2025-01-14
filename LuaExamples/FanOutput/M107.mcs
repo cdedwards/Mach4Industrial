@@ -1,0 +1,41 @@
+--[[
+This header can not be removed
+
+Copyright Newfangled Solutions (c) 2018 All Rights Reserved, www.machsupport.com  
+
+THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, 
+EITHER EXPRESSED OR IMPLIED , INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES 
+OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+
+Author - Newfangled Solutions
+Liscence - mit
+Date - 07/08/2015
+Modified - Brett Price 05/01/2018
+Summary - This code is used to turn on an output by an Mcode in Mach4 to drive a cooling fan. 
+--]]
+
+function m107()
+
+	----------Variables----------
+	local inst = mc.mcGetInstance() --Get the instance of Mach4
+	local fanOutput = mc.OSIG_OUTPUT6 --Set the output to control the Fan here
+	local state = true --Set the Fan to turn on or off here, " true " is on " false " is off
+	local hReg = 0 --The handle to the signal
+	local rc = 0 --The return call code
+	
+	hSig, rc = mc.mcSignalGetHandle(inst, fanOutput)
+	if (rc ~= 0) then --There was error	
+		mc.mcCntlSetLastError(inst, "There was an error")
+	else
+		rc = mc.mcSignalSetState(hSig, state) --Set the fan output state
+		if (rc ~= 0) then --There was error	
+			mc.mcCntlSetLastError(inst, "There was an error") 
+		end
+	end
+	
+end --End of m107 function
+
+--This function is used to allow the debugging to be done in the mcLua editor
+if (mc.mcInEditor() == 1) then
+	m107()
+end

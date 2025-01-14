@@ -1,0 +1,52 @@
+N0000 (Machine type - MachMotion Lathe Canned Cycles)
+N0005 (Filename: C:\Mach4Dev\Modules\AddOns\LatheCannedCycles\Examples\SimpleTurning.tap)
+N0010 (Generated on 1/20/2016 at 11:11:23 AM)
+
+N0015 %
+N0020 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0025 %
+
+N0030 (Starting Gcode for Turning Cycle: TurnCycle-0)
+N0035 ([Xi, Zi] = [3.1, 0]; [Xf, Zf] = [3, -6]; Z- Direction; OD)
+N0040 G50 S2750 (Spindle Speed Cap)
+N0045 (Roughing)
+
+N0050 %
+N0055 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0060 %
+
+N0065 T0101 (Tool Change)
+N0070 G99 (Feed per Revolution)
+N0075 G96 S900 (Constant Surface Speed)
+N0080 M03 (Spindle Forward)
+N0085 G00 X3.300 Z0.100  (Rapid move to Clearance Height)
+N0090 G01 X3.080 F0.019  (Cut in on X-Axis)
+N0095 G01 Z-5.960 F0.019  (Cut in on Z-Axis)
+N0100 G01 X3.100 Z-5.960 F0.019  (Spring Pass)
+N0105 G00 X3.300 Z-5.860  (Pull out to Retreat)
+N0110 G00 Z0.100  (Pull out to Clearance)
+N0115 (Finishing)
+
+N0120 %
+N0125 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0130 %
+
+N0135 T0101 (Tool Change)
+N0140 G99 (Feed per Revolution)
+N0145 G96 S900 (Constant Surface Speed)
+N0150 M03 (Spindle Forward)
+N0155 G00 X3.000
+N0160 G00 Z0.041
+N0165 G01 X3.000 Z0.000 F0.019
+N00170 G01 X3.000 Z-6.000 F0.019
+N000175 G01 X3.100 Z-6.000 F0.019
+N000180 G00 X3.300 Z-5.900
+N0185 G00 X3.300 Z0.100
+N0190 (End Gcode for Turning Cycle: TurnCycle-0)
+
+N0195 %
+N0200 M30
+N0205 %
+N0210 (End Gcode file)
+N0215 %
+

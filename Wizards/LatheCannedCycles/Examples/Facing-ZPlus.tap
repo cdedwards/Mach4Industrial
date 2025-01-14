@@ -1,0 +1,114 @@
+N0000 (Machine type - MachMotion Lathe Canned Cycles)
+N0005 (Filename: C:\Mach4Dev\Modules\AddOns\LatheCannedCycles\Examples\Facing-ZPlus.tap)
+N0010 (Generated on 1/20/2016 at 11:17:50 AM)
+
+N0015 %
+N0020 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0025 %
+
+N0030 (Starting Gcode for Facing Cycle: FaceCycle-0)
+N0035 ([Xi, Zi] = [3, -1]; [Xf, Zf] = [2, 0]; Z+ Direction; OD)
+N0040 G50 S2750 (Spindle Speed Cap)
+N0045 (Roughing)
+
+N0050 %
+N0055 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0060 %
+
+N0065 T0101 (Tool Change)
+N0070 G99 (Feed per Revolution)
+N0075 G96 S900 (Constant Surface Speed)
+N0080 M03 (Spindle Forward)
+N0085 G00 X3.200 Z-1.100  (Rapid move to Clearance Height)
+N0090 G01 Z-0.940 F0.019  (Cut in on Z-Axis)
+N0095 G01 X2.080 F0.019  (Cut in on X-Axis)
+N0100 G03 X2.040 Z-1.000 I0.940 K-0.940 F0.019  (Spring Pass Sweep)
+N0105 G00 X2.280 Z-1.100  (Pull out to Retreat)
+N0110 G00 X3.200  (Pull out to Clearance)
+N0115 G00 X3.200 Z-1.040  (Rapid move to Clearance Height)
+N0120 G01 Z-0.840 F0.019  (Cut in on Z-Axis)
+N0125 G01 X2.080 F0.019  (Cut in on X-Axis)
+N0130 G01 X2.080 Z-0.940 F0.019  (Spring Pass)
+N0135 G00 X2.280 Z-1.040  (Pull out to Retreat)
+N0140 G00 X3.200  (Pull out to Clearance)
+N0145 G00 X3.200 Z-0.940  (Rapid move to Clearance Height)
+N0150 G01 Z-0.740 F0.019  (Cut in on Z-Axis)
+N0155 G01 X2.080 F0.019  (Cut in on X-Axis)
+N0160 G01 X2.080 Z-0.840 F0.019  (Spring Pass)
+N0165 G00 X2.280 Z-0.940  (Pull out to Retreat)
+N0170 G00 X3.200  (Pull out to Clearance)
+N0175 G00 X3.200 Z-0.840  (Rapid move to Clearance Height)
+N0180 G01 Z-0.640 F0.019  (Cut in on Z-Axis)
+N0185 G01 X2.080 F0.019  (Cut in on X-Axis)
+N0190 G01 X2.080 Z-0.740 F0.019  (Spring Pass)
+N0195 G00 X2.280 Z-0.840  (Pull out to Retreat)
+N0200 G00 X3.200  (Pull out to Clearance)
+N0205 G00 X3.200 Z-0.740  (Rapid move to Clearance Height)
+N0210 G01 Z-0.540 F0.019  (Cut in on Z-Axis)
+N0215 G01 X2.080 F0.019  (Cut in on X-Axis)
+N0220 G01 X2.080 Z-0.640 F0.019  (Spring Pass)
+N0225 G00 X2.280 Z-0.740  (Pull out to Retreat)
+N0230 G00 X3.200  (Pull out to Clearance)
+N0235 G00 X3.200 Z-0.640  (Rapid move to Clearance Height)
+N0240 G01 Z-0.440 F0.019  (Cut in on Z-Axis)
+N0245 G01 X2.080 F0.019  (Cut in on X-Axis)
+N0250 G01 X2.080 Z-0.540 F0.019  (Spring Pass)
+N0255 G00 X2.280 Z-0.640  (Pull out to Retreat)
+N0260 G00 X3.200  (Pull out to Clearance)
+N0265 G00 X3.200 Z-0.540  (Rapid move to Clearance Height)
+N0270 G01 Z-0.340 F0.019  (Cut in on Z-Axis)
+N0275 G01 X2.080 F0.019  (Cut in on X-Axis)
+N0280 G01 X2.080 Z-0.440 F0.019  (Spring Pass)
+N0285 G00 X2.280 Z-0.540  (Pull out to Retreat)
+N0290 G00 X3.200  (Pull out to Clearance)
+N0295 G00 X3.200 Z-0.440  (Rapid move to Clearance Height)
+N0300 G01 Z-0.240 F0.019  (Cut in on Z-Axis)
+N0305 G01 X2.080 F0.019  (Cut in on X-Axis)
+N0310 G01 X2.080 Z-0.340 F0.019  (Spring Pass)
+N0315 G00 X2.280 Z-0.440  (Pull out to Retreat)
+N0320 G00 X3.200  (Pull out to Clearance)
+N0325 G00 X3.200 Z-0.340  (Rapid move to Clearance Height)
+N0330 G01 Z-0.140 F0.019  (Cut in on Z-Axis)
+N0335 G01 X2.080 F0.019  (Cut in on X-Axis)
+N0340 G01 X2.080 Z-0.240 F0.019  (Spring Pass)
+N0345 G00 X2.280 Z-0.340  (Pull out to Retreat)
+N0350 G00 X3.200  (Pull out to Clearance)
+N0355 G00 X3.200 Z-0.240  (Rapid move to Clearance Height)
+N0360 G01 Z-0.040 F0.019  (Cut in on Z-Axis)
+N0365 G01 X2.280 F0.019  (Cut in on X-Axis)
+N0370 G02 X2.080 Z-0.140 I1.140 K-0.140 F0.019  (Spring Pass Sweep)
+N0375 G00 X2.480 Z-0.240  (Pull out to Retreat)
+N0380 G00 X3.200  (Pull out to Clearance)
+N0385 G00 X3.200 Z-0.140  (Rapid move to Clearance Height)
+N0390 G01 Z0.031 F0.019  (Cut in on Z-Axis)
+N0395 G01 X2.999 F0.019  (Cut in on X-Axis)
+N0400 G01 X2.857 Z-0.040 F0.019  (Spring Pass)
+N0405 G00 X3.199 Z-0.140  (Pull out to Retreat)
+N0410 G00 X3.200  (Pull out to Clearance)
+N0415 (Finishing)
+
+N0420 %
+N0425 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0430 %
+
+N0435 T0101 (Tool Change)
+N0440 G99 (Feed per Revolution)
+N0445 G96 S900 (Constant Surface Speed)
+N0450 M03 (Spindle Forward)
+N0455 G01 G42 X3.282 Z0.072
+N0460 G01 X3.000 Z0.072 F0.019
+N0465 G01 X2.857 Z0.000 F0.019
+N0470 G01 X2.200 Z0.000 F0.019
+N0475 G02 X2.000 Z-0.100 I1.100 K-0.100 F0.019
+N00480 G01 X2.000 Z-0.900 F0.019
+N00485 G03 X1.800 Z-1.000 I0.900 K-0.900 F0.019
+N0490 G00 X2.000 Z-1.100
+N0495 G00 G40 X3.2 Z-1.1
+N0500 (End Gcode for Facing Cycle: FaceCycle-0)
+
+N0505 %
+N0510 M30
+N0515 %
+N0520 (End Gcode file)
+N0525 %
+

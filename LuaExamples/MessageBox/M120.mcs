@@ -1,0 +1,7 @@
+function m120()
+	--This example shows how to display a message box in Mach4
+	wx.wxMessageBox("This is how you display a message box!")
+end
+if (mc.mcInEditor() == 1) then
+    m120()
+end

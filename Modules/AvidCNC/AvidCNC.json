@@ -1,0 +1,217 @@
+{
+   "AvidCNC_Profile_Version": "2.5.12",
+   "ESS_Plugin_Version": "309",
+   "TMC3in1_Plugin_Version": "022",
+   "Mach_Build": "5382",
+   "Config_File": {
+      "DefaultSettings": {
+         "Hash": "aa8760358faba271ebafaac0d53db7cf",
+         "Size": "74950",
+         "Ext": "csv",
+         "Error_Level": "2"
+      },
+      "Sensors": {
+         "Hash": "4c24b851259b7abf0ad5813ec6579452",
+         "Size": "13533",
+         "Ext": "json",
+         "Error_Level": "1"
+      },
+      "Backup": {
+         "Hash": "11b18f5d5291dd6b79d83ee34f5877c7",
+         "Size": "3908",
+         "Ext": "json",
+         "Error_Level": "1"
+      },
+      "Spindle": {
+         "Hash": "3a9f8c2c89e587f1111b8702bf82fd51",
+         "Size": "1498",
+         "Ext": "json",
+         "Error_Level": "1"
+      },
+      "Laser": {
+         "Hash": "c16bf30153195b88feaf6ed1b41e814a",
+         "Size": "10322",
+         "Ext": "json",
+         "Error_Level": "1"
+      },
+      "Parser": {
+         "Hash": "b2fea311d434243617be2607d6ecf1ce",
+         "Size": "15908",
+         "Ext": "json",
+         "Error_Level": "1"
+      },
+      "Registers": {
+         "Hash": "0ef147890fb86da30f48000d229e463f",
+         "Size": "17499",
+         "Ext": "json",
+         "Error_Level": "1"
+      },
+      "THCConfig": {
+         "Hash": "0c90a07649b8da85bbe5181ac29226e6",
+         "Size": "8848",
+         "Ext": "json",
+         "Error_Level": "1"
+      }
+   },
+   "Force_Update": {
+      "Version": "2.0.0",
+      "Allow_Config_Disable": "Yes",
+      "Allow_Cutting_Method_Disable": "No"
+   },
+   "Profile_Package": {
+      "Mach4Hobby": {
+         "Modules": {
+            "AvidCNC": {
+               "Config": [
+                  "*"
+               ]
+            }
+         },
+         "Screens": [
+            "CurrentScreen"
+         ],
+         "Profiles": {
+            "CurrentProfile": [
+               "*"
+            ]
+         }
+      }
+   },
+   "Documentation": {
+      "Users_Guide": {
+         "Version": "2023Q3.1",
+         "PDF": "Docs\\AvidCNC\\Mach4_Users_Guide.pdf",
+         "Website": "https://www.avidcnc.com/support/instructions/software/mach4UsersGuide"
+      },
+      "Rotary_Table_Calibration": {
+         "Version": "2022Q2.1",
+         "PDF": "Docs\\AvidCNC\\Rotary_Axis_Table_Top_Installation_and_Calibration_Instructions.pdf",
+         "Website": "https://www.avidcnc.com/support/instructions/rotary/installTableTop/#13-calibration"
+      },
+      "Rotary_Recessed_Calibration": {
+         "Version": "2022Q2.1",
+         "PDF": "Docs\\AvidCNC\\Rotary_Axis_Recessed_Installation_and_Calibration_Instructions.pdf",
+         "Website": "https://www.avidcnc.com/support/instructions/rotary/installRecessed/#13-calibration"
+      },
+      "Configuration_Guide": {
+         "Version": "2023Q3.1",
+         "PDF": "Docs\\AvidCNC\\Mach4_Configuration_Guide.pdf",
+         "Website": "https://www.avidcnc.com/support/instructions/software/mach4Configuration"
+      },
+      "Laser_Guide": {
+         "Version": "2023Q3.2",
+         "PDF": "Docs\\AvidCNC\\Laser_Users_Guide.pdf",
+         "Website": "https://www.avidcnc.com/support/instructions/software/downloads/documentation"
+      },
+      "Plasma_Users_Guide": {
+         "Version": "2023Q1.1",
+         "PDF": "Docs\\AvidCNC\\Mach4_Plasma_Users_Guide.pdf",
+         "Website": "https://www.avidcnc.com/support/instructions/software/plasmaUsersGuide"
+      },
+      "Change_Log": {
+         "Version": "2024Q2.1",
+         "PDF": "Docs\\AvidCNC\\Avid_CNC_Mach4_Release_Notes.pdf",
+         "Website": "https://www.avidcnc.com/support/instructions/software/downloads/mach4/#releaseNotes"
+      },
+      "VFD_Parameter_Change": {
+         "Version": "2022Q1.1",
+         "PDF": "Docs\\AvidCNC\\VFD_Parameters_Advanced_Setup_Guide.pdf",
+         "Website": "https://www.avidcnc.com/support/instructions/accessories/spindles/setup/advanced/parameters/#vfd-parameters-for-spindle-changes",
+         "Title": "VFD Parameter Instructions"
+      }
+   },
+   "Welcome_Dialog": {
+      "Message": "Welcome to Mach4 that has been customized for use with your Avid CNC Machine. The next screen will allow you to select the options for your specific machine configuration. Additional information can be found in the documentation links below.",
+      "Whats_New": [
+         {
+            "2.5.12": [
+               "Bugfix: Addresses display issue with Toolpath Preview frame"
+            ]
+         },
+         {
+            "2.5.11": [
+               "Mach4 v4.2.0.5382"
+            ]
+         },
+         {
+            "2.5.10": [
+               "Mach4 v4.2.0.5308",
+               "ESS plugin v309",
+               "Avid SCU v2.5.0.9",
+               "Bugfix: Intermittent low laser power output",
+               "ESS plugin v309"
+            ]
+         },
+         {
+            "2.5.9": [
+               "Mach4 4.2.0.5308"
+            ]
+         },
+         {
+            "2.5.8": [
+               "Bugfix: Ignore tool change warning",
+               "Bugfix: M6 macro waiting for tool change in progress"
+            ]
+         },
+         {
+            "2.5.7": [
+               "Mach4 4.2.0.5284",
+               "ESS plugin v302",
+               "New: added support for Avid CNC Laser System",
+               "Update: touchplate cancels tool height before probing"
+            ]
+         },
+         {
+            "2.4.2": [
+               "ESS plugin v283",
+               "New: Improved plasma control panel and THC behavior",
+               "New: Configurable Feed Rate Override increments",
+               "Update: M3000 and M3001 macro updates to account for THC movement",
+               "Bugfix: Standard CNC X axis direction assignment"
+            ]
+         },
+         {
+            "2.3.3": [
+               "ESS plugin v277.1"
+            ]
+         },
+         {
+            "2.3.2": [
+               "TMC3in1 plugin v022"
+            ]
+         },
+         {
+            "2.3.1": [
+               "Updated default soft limit values."
+            ]
+         },
+         {
+            "2.3.0": [
+               "Mach4 v4.2.0.4612",
+               "Homing of machine required before running G-Code.",
+               "Program extents available in work coordinates."
+            ]
+         },
+         {
+            "2.2.2": [
+               "Support for 4HP Avid CNC Spindle."
+            ]
+         },
+         {
+            "2.1.1": [
+               "Updated spindle deceleration times."
+            ]
+         },
+         {
+            "2.1.0": [
+               "Soft limits enabled after homing of machine is complete.",
+               "X and Y axes home simultaneously.",
+               "Option to ignore tool changes. Use with caution.",
+               "Updated M6 macro for manual tool changes.",
+               "Completed cycle time persistent after program completion.",
+               "Support for 8.7HP Avid CNC Spindle"
+            ]
+         }
+      ]
+   }
+}

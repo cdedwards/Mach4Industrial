@@ -1,0 +1,31 @@
+PmcEditor 1.0
+GENERATOR=LUA Code
+CYCLE=10
+OUTFILE=C:\src\Mach4\Pmc\Barcode.lua
+LOADSCRIPT
+    _G.bcode = require("mcBarcode")
+    _G.bcode.SetPort("COM3")
+END
+
+IO LIST
+    FGcodeRunning at Signal/Gcode Running
+END
+
+PROGRAM
+RUNG
+    CONTACTS 0 FGcodeRunning 1 Signal/1114
+    RTO TUpdateTime 500
+    COIL 0 SRunScript 0 0 0
+    SCRIPT
+        local function SRunScript_func(inst, state)
+        	if(state == 1)then 
+        		-- We will make sure the machien is in Idle State
+        		if(mc.mcCntlGetState(inst) == mc.MC_STATE_IDLE) then 
+        			if(_G.bcode ~= nil)then
+        				_G.bcode.runScan(inst); --when The scan is run if anything is found a the file will be loaded 
+        			end 
+        		end 
+        	end 
+        end
+    END
+END

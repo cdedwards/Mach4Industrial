@@ -1,0 +1,66 @@
+function m6()
+  local inst = mc.mcGetInstance();
+  local offset = mc.mcRegGetHandle(inst,"iRegs0/Tool_Offset")
+  local selectedTool = mc.mcToolGetSelected(inst)
+  local currentTool  = mc.mcToolGetCurrent(inst)
+  local FixedPlateX = 16.212 -- machine coordinate of fixed plate
+  local FixedPlateY = 0.153  -- machine coordinate of fixed plate
+  local initialX = mc.mcAxisGetPos(inst,0)
+  local initialY = mc.mcAxisGetPos(inst,1)
+	
+  if selectedTool == currentTool then
+    mc.mcCntlSetLastError(inst, "Current tool == Selected tool")
+  else
+     mc.mcCntlSetLastError(inst, "ToolChange Activated ...")
+     mc.mcCntlGcodeExecute(inst, "G90 G53 G0 Z0.0 X".. FixedPlateX .. " Y".. FixedPlateY); -- Position for tool change and probing
+			
+     if mc.mcRegGetValue(offset) >= 99 then
+     wx.wxMessageBox("Initial tool. Press enter to probe for offset")
+     mc.mcRegSetValue(offset, probePlate()) -- Store offset
+     mc.mcCntlGcodeExecute(inst, "G90 G53 G0 Z0.0") -- move up for toolchange
+     end
+ 
+    mc.mcCntlSetLastError(inst, "Change to tool " .. tostring(selectedTool) .. " and press start to zero") --Message at beginning of tool change
+    mc.mcCntlToolChangeManual(inst, true) --This will pause the tool change here and wait for a press of cycle start to continue
+	
+    mc.mcAxisSetPos(inst, mc.Z_AXIS, probePlate()) -- Set new tool to fixed plate offset value
+    mc.mcCntlGcodeExecuteWait(inst,"G90 G53 G0 Z0.0")           -- goto machine Z Zero
+    mc.mcCntlGcodeExecuteWait(inst,"G90 G0 X".. initialX.." Y".. initialY .. "F40")  -- return to starting positions
+
+    mc.mcCntlSetLastError(inst, "Current tool == " .. tostring(selectedTool) .. "   Previous Tool == " .. tostring(currentTool)) --Message that shows after Cycle Start
+    mc.mcToolSetCurrent(inst, selectedTool)
+    mc.mcRegSetValue()
+		
+    end
+end
+
+if (mc.mcInEditor() == 1) then
+    m6()
+end
+
+function probePlate()
+  local inst = mc.mcGetInstance()
+  local SlowProbeRate = 0.7  -- IPM
+  local FastProbeRate = 5.0  -- IPM
+  local JogRate = 60
+  local Pos
+
+  -- Fast probe Z zero
+  mc.mcCntlGcodeExecuteWait(inst,"G90 G53 G0 Z-2.5") -- Pre-position
+  mc.mcCntlSetLastError(inst, "Probing for Z Zero . . .")
+  mc.mcCntlGcodeExecute(inst,"G91 G31 Z-3.0 F".. FastProbeRate)
+
+  -- Retract slightly  
+  mc.mcCntlSetLastError(inst, "Retract . . .")
+  mc.mcCntlGcodeExecute(inst,"G91     Z0.05  F".. JogRate)  
+ 
+  -- Slow probe Z zero
+  mc.mcCntlSetLastError(inst, "Slow Probing for Z Zero . . .")
+  mc.mcCntlGcodeExecute(inst,"G91 G31 Z-0.07 F".. SlowProbeRate)  
+  
+    -- Get touch position and jog to it in case of overshoot  
+  Pos = mc.mcAxisGetProbePos(inst, mc.Z_AXIS, 0)  -- Get Touch Position (work coordinates)
+  mc.mcCntlGcodeExecute(inst,"G90 Z".. Pos .. " F".. SlowProbeRate)
+  
+  return Pos  
+end

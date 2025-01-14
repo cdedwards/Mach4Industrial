@@ -1,0 +1,97 @@
+N0000 (Machine type - MachMotion Lathe Canned Cycles)
+N0005 (Filename: C:\Mach4Dev\Modules\AddOns\LatheCannedCycles\Examples\Positioning-Feeds.tap)
+N0010 (Generated on 1/20/2016 at 11:25:05 AM)
+
+N0015 %
+N0020 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0025 %
+
+N0030 (Starting Gcode for Positioning Cycle: PositionCycle-0)
+N0035 (Moving to: [1.000, 1.000], 7 Positions)
+N0040 (Position 1)
+
+N0045 %
+N0050 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0055 %
+
+N0060 T0101 (Tool Change)
+N0065 G99 (Feed per Revolution)
+N0070 G97 S900.000 (Constant Speed)
+N0075 M03 (Spindle Forward)
+N0080 G01 X1.000 Z1.000 F0.019
+N0085 (Position 2)
+
+N0090 %
+N0095 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0100 %
+
+N0105 T0101 (Tool Change)
+N0110 G99 (Feed per Revolution)
+N0115 G97 S900.000 (Constant Speed)
+N0120 M03 (Spindle Forward)
+N0125 G01 X2.000 Z2.000 F0.019
+N0130 (Position 3)
+
+N0135 %
+N0140 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0145 %
+
+N0150 T0101 (Tool Change)
+N0155 G99 (Feed per Revolution)
+N0160 G97 S900.000 (Constant Speed)
+N0165 M03 (Spindle Forward)
+N0170 G01 X1.000 Z1.000 F0.019
+N0175 (Position 4)
+
+N0180 %
+N0185 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0190 %
+
+N0195 T0101 (Tool Change)
+N0200 G99 (Feed per Revolution)
+N0205 G97 S900.000 (Constant Speed)
+N0210 M03 (Spindle Forward)
+N0215 G01 X2.000 F0.019
+N0220 G01 Z2.000 F0.019
+N0225 (Position 5)
+
+N0230 %
+N0235 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0240 %
+
+N0245 T0101 (Tool Change)
+N0250 G99 (Feed per Revolution)
+N0255 G97 S900.000 (Constant Speed)
+N0260 M03 (Spindle Forward)
+N0265 G01 X1.000 Z1.000 F0.019
+N0270 (Position 6)
+
+N0275 %
+N0280 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0285 %
+
+N0290 T0101 (Tool Change)
+N0295 G99 (Feed per Revolution)
+N0300 G97 S900.000 (Constant Speed)
+N0305 M03 (Spindle Forward)
+N0310 G01 Z2.000 F0.019
+N0315 G01 X2.000 F0.019
+N0320 (Position 7)
+
+N0325 %
+N0330 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0335 %
+
+N0340 T0101 (Tool Change)
+N0345 G99 (Feed per Revolution)
+N0350 G97 S900.000 (Constant Speed)
+N0355 M03 (Spindle Forward)
+N0360 G01 X1.000 Z1.000 F0.019
+N0365 (End Gcode for Positioning Cycle: PositionCycle-0)
+
+N0370 %
+N0375 M30
+N0380 %
+N0385 (End Gcode file)
+N0390 %
+

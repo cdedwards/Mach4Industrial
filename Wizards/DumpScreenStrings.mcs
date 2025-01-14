@@ -1,0 +1,11 @@
+local inst = mc.mcGetInstance("String Dump")
+--local scr = require("screenipc")
+--rc = scr.scIpcInit("127.0.0.1:48500")
+local rc = scr.ExportStrings()
+if (rc == scr.SERROR_NOERROR) then 
+	mc.mcCntlSetLastError(inst, 'Screen strings dumped successfully!')
+else 
+	mc.mcCntlSetLastError(inst, 'Screen strings dump failed!')
+end
+
+	

@@ -1,0 +1,24 @@
+N0000 (Machine type - MachMotion Lathe Canned Cycles)
+N0005 (Filename: C:\Mach4Dev\Wizards\LatheCannedCycles\Examples\CustomGCode.tap)
+N0010 (Generated on 6/6/2016 at 4:32:23 PM)
+
+N0015 %
+N0020 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0025 %
+
+N0030 (Starting Gcode for Custom GCode Cycle: GCodeCycle-0)
+N0035 G67 S700
+N0040 G00 X3 Z0
+N0045 G01 X2.8 F50
+N0050 G01 Z-1 F50
+N0055 G00 X3 Z-0.75
+N0060 (End Gcode for Custom GCode Cycle: GCodeCycle-0)
+
+N0065 %
+N0070 M09
+N0075 M05
+N0080 M30
+N0085 %
+N0090 (End Gcode file)
+N0095 %
+

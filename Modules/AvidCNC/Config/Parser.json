@@ -1,0 +1,371 @@
+{
+  "Version": "2.5.0",
+  "Debugging": {
+    "debug": true,
+    "debugOutputAfterAction": false,
+    "debugOutputFinal": false,
+    "debugFile": null,
+    "debugFileHandle": null,
+    "debugLevel": "AllUntilActionsOnlyThreshold",
+    "debugLevelTypes": [ "All", "ActionsOnly", "AllUntilActionsOnlyThreshold" ],
+    "debugActionsOnlyThreshold": 256000
+  },
+  "Prescan": [
+    {
+      "Name": "016",
+      "Conditions": [
+        { "Id": "0001", "If": "FileSize", "Value": "10000000" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "Stop", "Name": "Laser Gcode File Processing",
+          "Value": "Your file ({{CurrFileSizeHuman}}) exceeds the {{FileSize}} processing limit." }
+      ]
+    },{
+      "Name": "017",
+      "Conditions": [
+        { "Id": "0001", "If": "NotContains", "Name": "T", "Value": "{{LaserToolNumber}}" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "Stop", "Name": "Laser Gcode File Processing",
+          "Value": "Laser tool ((number {{LaserToolNumber}}) was not found." }
+      ]
+    },{
+      "Name": "018",
+      "Conditions": [
+        { "Id": "0001", "If": "NotContains", "Name": "M", "Value": "6" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "Stop", "Name": "Laser Gcode File Processing",
+          "Value": "No tool change (M6) commands were found." }
+      ]
+    },{
+      "Name": "003",
+      "Conditions": [
+        { "Id": "0001", "If": "NotContains", "Name": "S", "Expr": "[-]?0*%.?%d+" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "Stop", "Name": "Laser Gcode File Processing",
+          "Value": "No spindle speed (S) commands were found." }
+      ]
+    }
+  ],
+  "OnEachLine": [
+    {
+      "Name": "001",
+      "Conditions": [
+        { "Id": "0001", "If": "FileStart" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "InsertLines", "Values": [ "(Avid CNC Mach4 Laser Prep Version 2.5.0)" ] },
+        { "Id": "0002", "Op": "SetVariable", "Name": "laserTool", "Value": "0" },
+        { "Id": "0003", "Op": "SetVariable", "Name": "inLaserSection", "Value": "0" },
+        { "Id": "0004", "Op": "SetVariable", "Name": "currentPower", "Value": "0" },
+        { "Id": "0005", "Op": "SetVariable", "Name": "vectorPower", "Value": "0" },
+        { "Id": "0006", "Op": "SetVariable", "Name": "laserOKModal", "Value": "0" }
+      ]
+    },{
+      "Name": "002",
+      "Conditions": [
+        { "Id": "0001", "If": "Contains", "Name": "T", "Value": "{{LaserToolNumber}}" },
+        { "Id": "0002", "If": "NotContains", "Name": "M", "Value": "6" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "SetVariable", "Name": "laserTool", "Value": "1" }
+      ]
+    },{
+      "Name": "003",
+      "Conditions": [
+        { "Id": "0001", "If": "Contains", "Name": "T", "Value": "!{{LaserToolNumber}}" },
+        { "Id": "0002", "If": "NotContains", "Name": "M", "Value": "6" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "SetVariable", "Name": "laserTool", "Value": "0" }
+      ]
+    },{
+      "Name": "004",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "0" },
+        { "Id": "0002", "If": "VariableEquals", "Name": "laserTool", "Value": "1" },
+        { "Id": "0003", "If": "Contains", "Name": "M", "Value": "6" },
+        { "Id": "0004", "If": "NotContains", "Name": "T", "Value": "" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "SetVariable", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0002", "Op": "AppendLines",
+          "Values": [
+            "G49", 
+            "M2004 (Enable the Vector Laser)",
+            "M64 P8 (Turn on Air Assist)",
+            "M67 E1 Q0"
+          ]
+        },
+        { "Id": "0003", "Op": "SetVariable", "Name": "currentPower", "Value": "0" }
+      ]
+    },{
+      "Name": "005",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "0" },
+        { "Id": "0001", "If": "Contains", "Name": "T", "Value": "{{LaserToolNumber}}" },
+        { "Id": "0002", "If": "Contains", "Name": "M", "Value": "6" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "SetVariable", "Name": "laserTool", "Value": "1" },
+        { "Id": "0002", "Op": "SetVariable", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0003", "Op": "AppendLines",
+          "Values": [
+            "G49", 
+            "M2004 (Enable the Vector Laser)",
+            "M64 P8 (Turn on Air Assist)",
+            "M67 E1 Q0"
+          ]
+        },
+        { "Id": "0004", "Op": "SetVariable", "Name": "currentPower", "Value": "0" }
+      ]
+    },{
+      "Name": "006",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0002", "If": "Contains", "Name": "G", "Value": "0" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "InsertLines", "Values": [ "M67 E1 Q0" ] },
+        { "Id": "0002", "Op": "SetVariable", "Name": "currentPower", "Value": "0" },
+        { "Id": "0003", "Op": "SetVariable", "Name": "laserOKModal", "Value": "0" }
+      ]
+    },{
+      "Name": "007",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0002", "If": "ContainsOr",
+          "Values": [
+            { "Name": "M", "Value": "98" }, 
+            { "Name": "M", "Value": "99" } 
+          ]
+        }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "Stop", "Name": "Laser Gcode File Processing",
+          "Value": "Unable to finish processing file. Please remove subprogram calls (M98 and M99) from laser toolpaths" }
+      ]
+    },{
+      "Name": "008",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0002", "If": "ContainsOr",
+          "Values": [
+            { "Name": "M", "Value": "3" }, { "Name": "G", "Value": "43" }, 
+            { "Name": "M", "Value": "7" }, { "Name": "M", "Value": "8" } 
+          ]
+        }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "Remove", "Name": "M", "Value": "3" },
+        { "Id": "0003", "Op": "Remove", "Name": "G", "Value": "43" },
+        { "Id": "0004", "Op": "Remove", "Name": "M", "Value": "7" },
+        { "Id": "0005", "Op": "Remove", "Name": "M", "Value": "8" }
+      ]
+    },{
+      "Name": "009",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0002", "If": "Contains", "Name": "H", "Value": "" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "Remove", "Name": "H", "Value": "" }
+      ]
+    },{
+      "Name": "010",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0002", "If": "Contains", "Name": "S", "Value": "" },
+        { "Id": "0003", "If": "InRange", "Name": "S", "Value": "", "Min": "0", "Max": "100" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "SetVariable", "Name": "vectorPower", "Command": { "Name": "S" } },
+        { "Id": "0002", "Op": "Remove", "Name": "S", "Value": "{{vectorPower}}" }
+      ]
+    },{
+      "Name": "011",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0002", "If": "Contains", "Name": "S", "Value": "" },
+        { "Id": "0003", "If": "NotInRange", "Name": "S", "Value": "", "Min": "0", "Max": "100" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "Stop", "Name": "Laser Gcode File Processing",
+          "Value": "Unable to finish processing file. S command numbers must be 0-100 for laser toolpaths." }
+      ]
+    },{
+      "Name": "012",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0002", "If": "NotContains", "Name": "G", "Value": "0" }, 
+        { "Id": "0003", "If": "Contains", "Name": "Z", "Value": "" },
+        { "Id": "0004", "If": "NotContains", "Name": "X", "Value": "" },
+        { "Id": "0005", "If": "NotContains", "Name": "Y", "Value": "" },
+        { "Id": "0005", "If": "NotContains", "Name": "A", "Value": "" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "InsertLines", "Values": [ "M67 E1 Q0" ] },
+        { "Id": "0002", "Op": "SetVariable", "Name": "currentPower", "Value": "0" }
+      ]
+    },{
+      "Name": "013",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0002", "If": "VariableEquals", "Name": "laserOKModal", "Value": "0" },
+        { "Id": "0002", "If": "ContainsOr",
+          "Values": [
+            { "Name": "G", "Value": "1"  }, { "Name": "G", "Value": "2" },
+            { "Name": "G", "Value": "3"  }, { "Name": "G", "Value": "12" },
+            { "Name": "G", "Value": "13" } 
+          ]
+        }, 
+        { "Id": "0003", "If": "VariableNotEquals", "Name": "currentPower", "Value": "{{vectorPower}}" },
+        { "Id": "0002", "If": "ContainsOr",
+          "Values": [
+            { "Name": "Y", "Value": "" }, { "Name": "X", "Value": "" },
+            { "Name": "A", "Value": "" }
+          ]
+        }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "InsertLines", "Values": [ "M67 E1 Q{{vectorPower}} (<<<<<SET VECTOR LASER POWER>>>>>)" ] },
+        { "Id": "0002", "Op": "SetVariable", "Name": "currentPower", "Value": "{{vectorPower}}" }
+      ]
+    },{
+      "Name": "014",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0002", "If": "VariableEquals", "Name": "laserTool", "Value": "0" },
+        { "Id": "0003", "If": "Contains", "Name": "M", "Value": "6" },
+        { "Id": "0004", "If": "NotContains", "Name": "T", "Value": "{{LaserToolNumber}}" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "SetVariable", "Name": "inLaserSection", "Value": "0" },
+        { "Id": "0002", "Op": "InsertLines", "Values": [ "M67 E1 Q0", "M65 P8" ] },
+        { "Id": "0003", "Op": "SetVariable", "Name": "currentPower", "Value": "0" }
+      ]
+    },{
+      "Name": "015",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0002", "If": "Contains", "Name": "T", "Value": "!{{LaserToolNumber}}" },
+        { "Id": "0003", "If": "Contains", "Name": "M", "Value": "6" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "SetVariable", "Name": "laserTool", "Value": "0" },
+        { "Id": "0002", "Op": "SetVariable", "Name": "inLaserSection", "Value": "0" },
+        { "Id": "0003", "Op": "InsertLines", "Values": [ "M67 E1 Q0", "M65 P8" ] },
+        { "Id": "0004", "Op": "SetVariable", "Name": "currentPower", "Value": "0" }
+      ]
+    },{
+      "Name": "020",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0002", "If": "Contains", "Name": "M", "Value": "5" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "Remove", "Name": "M", "Value": "5" },
+        { "Id": "0002", "Op": "InsertLines", "Values": [ "M67 E1 Q0" ] }
+      ]
+    },{
+      "Name": "023",
+      "Conditions": [
+        { "Id": "0001", "If": "ProfileEquals", "Type": "int", "Name": "iConfigLaserUseExactStop", "Value": "1" },
+        { "Id": "0002", "If": "Contains", "Name": "T", "Value": "{{LaserToolNumber}}" },
+        { "Id": "0003", "If": "Contains", "Name": "M", "Value": "6" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "AppendLines", "Values": [ "G61" ] }
+      ]
+    },{
+      "Name": "024",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "0" },
+        { "Id": "0002", "If": "ProfileEquals", "Type": "int", "Name": "iConfigLaserUseExactStop", "Value": "1" },
+        { "Id": "0003", "If": "VariableEquals", "Name": "laserTool", "Value": "1" },
+        { "Id": "0004", "If": "Contains", "Name": "M", "Value": "6" },
+        { "Id": "0005", "If": "NotContains", "Name": "T", "Value": "" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "AppendLines", "Values": [ "G61" ] }
+      ]
+    },{
+      "Name": "025",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0002", "If": "ProfileEquals", "Type": "int", "Name": "iConfigLaserUseExactStop", "Value": "1" },
+        { "Id": "0003", "If": "Contains", "Name": "G", "Value": "64" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "Remove", "Name": "G", "Value": "64" }
+      ]
+    },{
+      "Name": "026",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0002", "If": "VariableEquals", "Name": "laserTool", "Value": "0" },
+        { "Id": "0003", "If": "Contains", "Name": "M", "Value": "6" },
+        { "Id": "0004", "If": "NotContains", "Name": "T", "Value": "{{LaserToolNumber}}" },
+        { "Id": "0005", "If": "ProfileEquals", "Type": "int", "Name": "iConfigLaserUseExactStop", "Value": "1" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "InsertLines", "Values": [ "G64" ] }
+      ]
+    },{
+      "Name": "027",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0002", "If": "Contains", "Name": "T", "Value": "!{{LaserToolNumber}}" },
+        { "Id": "0003", "If": "Contains", "Name": "M", "Value": "6" },
+        { "Id": "0004", "If": "ProfileEquals", "Type": "int", "Name": "iConfigLaserUseExactStop", "Value": "1" }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "InsertLines", "Values": [ "G64" ] }
+      ]
+    },{
+      "Name": "028",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0002", "If": "VariableEquals", "Name": "laserOKModal", "Value": "1" },
+        { "Id": "0003", "If": "VariableNotEquals", "Name": "currentPower", "Value": "{{vectorPower}}" },
+        { "Id": "0004", "If": "NotContains", "Name": "G", "Value": "0"},
+        { "Id": "0005", "If": "ContainsOr",
+          "Values": [
+            { "Name": "Y", "Value": "" }, { "Name": "X", "Value": "" },
+            { "Name": "A", "Value": "" }
+          ]
+        }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "InsertLines", "Values": [ "M67 E1 Q{{vectorPower}} (<<<<<SET VECTOR LASER POWER>>>>>)" ] },
+        { "Id": "0002", "Op": "SetVariable", "Name": "currentPower", "Value": "{{vectorPower}}" }
+      ]
+    },{
+      "Name": "029",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0002", "If": "ContainsOr",
+          "Values": [
+            { "Name": "G", "Value": "1"  }, { "Name": "G", "Value": "2" },
+            { "Name": "G", "Value": "3"  }, { "Name": "G", "Value": "12" },
+            { "Name": "G", "Value": "13" } 
+          ]
+        }
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "SetVariable", "Name": "laserOKModal", "Value": "1" }
+      ]
+    },{
+      "Name": "030",
+      "Conditions": [
+        { "Id": "0001", "If": "VariableEquals", "Name": "inLaserSection", "Value": "1" },
+        { "Id": "0002", "If": "Contains", "Name": "G", "Value": "0"}
+      ],
+      "Actions": [
+        { "Id": "0001", "Op": "SetVariable", "Name": "laserOKModal", "Value": "0" }
+      ]
+    }
+  ]
+}

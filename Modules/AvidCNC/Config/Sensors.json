@@ -1,0 +1,393 @@
+{
+    "Custom_Homing": {
+        "CRP800":{
+            "Swap_Axes":{
+                "0":{
+                    "Rotary_Axis":{
+                        "0":[
+                            "gantryAxis",
+                            "tableAxis",
+                            "warn",
+                            "warn"
+                        ],
+                        "1":[
+                            "gantryAxis",
+                            "tableAxis",
+                            "warn",
+                            "none"
+                        ]
+                    }
+                },
+                "1":{
+                    "Rotary_Axis":{
+                        "0":[
+                            "tableAxis",
+                            "gantryAxis",
+                            "warn",
+                            "warn"
+                        ],
+                        "1":[
+                            "tableAxis",
+                            "gantryAxis",
+                            "warn",
+                            "none"
+                        ]
+                    }
+                }
+            }
+        },
+        "CRP800-revA":{
+            "Swap_Axes":{
+                "0":{
+                    "Rotary_Axis":{
+                        "0":[
+                            "gantryAxis",
+                            "tableAxis",
+                            "warn",
+                            "warn"
+                        ],
+                        "1":[
+                            "gantryAxis",
+                            "tableAxis",
+                            "warn",
+                            "none"
+                        ]
+                    }
+                },
+                "1":{
+                    "Rotary_Axis":{
+                        "0":[
+                            "tableAxis",
+                            "gantryAxis",
+                            "warn",
+                            "warn"
+                        ],
+                        "1":[
+                            "tableAxis",
+                            "gantryAxis",
+                            "warn",
+                            "none"
+                        ]
+                    }
+                }
+            }
+        },
+        "CRP100":{
+            "Swap_Axes":{
+                "0":{
+                    "Rotary_Axis":{
+                        "0":[
+                            "none",
+                            "none",
+                            "warn",
+                            "warn"
+                        ],
+                        "1":[
+                            "none",
+                            "none",
+                            "warn",
+                            "none"
+                        ]
+                    }
+                },
+                "1":{
+                    "Rotary_Axis":{
+                        "0":[
+                            "none",
+                            "none",
+                            "warn",
+                            "warn"
+                        ],
+                        "1":[
+                            "none",
+                            "none",
+                            "warn",
+                            "none"
+                        ]
+                    }
+                }
+            }
+        },
+        "CRP500":{
+            "Swap_Axes":{
+                "0":{
+                    "Rotary_Axis":{
+                        "0":[
+                            "none",
+                            "none",
+                            "warn",
+                            "warn"
+                        ],
+                        "1":[
+                            "none",
+                            "none",
+                            "warn",
+                            "none"
+                        ]
+                    }
+                },
+                "1":{
+                    "Rotary_Axis":{
+                        "0":[
+                            "none",
+                            "none",
+                            "warn",
+                            "warn"
+                        ],
+                        "1":[
+                            "none",
+                            "none",
+                            "warn",
+                            "none"
+                        ]
+                    }
+                }
+            }
+        },
+        "CRP300":{
+            "Swap_Axes":{
+                "0":{
+                    "Rotary_Axis":{
+                        "0":[
+                            "none",
+                            "none",
+                            "warn",
+                            "warn"
+                        ],
+                        "1":[
+                            "none",
+                            "none",
+                            "warn",
+                            "none"
+                        ]
+                    }
+                },
+                "1":{
+                    "Rotary_Axis":{
+                        "0":[
+                            "none",
+                            "none",
+                            "warn",
+                            "warn"
+                        ],
+                        "1":[
+                            "none",
+                            "none",
+                            "warn",
+                            "none"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "Table_Axis": {
+        "Sensor_Config_1": {
+            "Swap_Axes_0": {
+                "CRP800": {
+                    "Pos": {
+                        "Motor1-Home": "Port2-Pin4",
+                        "Motor1-PosLimit": "Port2-Pin4",
+                        "Motor1-NegLimit": "",
+                        "Motor3-Home": "Port2-Pin5",
+                        "Motor3-PosLimit": "Port2-Pin5",
+                        "Motor3-NegLimit": "Port2-Pin7"
+                    },
+                    "Neg": {
+                        "Motor1-Home": "Port2-Pin4",
+                        "Motor1-PosLimit": "Port2-Pin5",
+                        "Motor1-NegLimit": "Port2-Pin4",
+                        "Motor3-Home": "Port2-Pin7",
+                        "Motor3-PosLimit": "",
+                        "Motor3-NegLimit": "Port2-Pin7"
+                    }
+                },
+                "CRP800-revA": {
+                    "Pos": {
+                        "Motor1-Home": "Port2-Pin3",
+                        "Motor1-PosLimit": "Port2-Pin3",
+                        "Motor1-NegLimit": "",
+                        "Motor3-Home": "Port2-Pin7",
+                        "Motor3-PosLimit": "Port2-Pin7",
+                        "Motor3-NegLimit": "Port2-Pin8"
+                    },
+                    "Neg": {
+                        "Motor1-Home": "Port2-Pin3",
+                        "Motor1-PosLimit": "",
+                        "Motor1-NegLimit": "Port2-Pin3",
+                        "Motor3-Home": "Port2-Pin8",
+                        "Motor3-PosLimit": "Port2-Pin7",
+                        "Motor3-NegLimit": "Port2-Pin8"
+                    }
+                }
+            },
+            "Swap_Axes_1": {
+                "CRP800": {
+                    "Pos": {
+                        "Motor1-Home": "Port2-Pin4",
+                        "Motor1-PosLimit": "Port2-Pin4",
+                        "Motor1-NegLimit": "",
+                        "Motor3-Home": "Port2-Pin7",
+                        "Motor3-PosLimit": "Port2-Pin7",
+                        "Motor3-NegLimit": "Port2-Pin5"
+                    },
+                    "Neg": {
+                        "Motor1-Home": "Port2-Pin4",
+                        "Motor1-PosLimit": "",
+                        "Motor1-NegLimit": "Port2-Pin4",
+                        "Motor3-Home": "Port2-Pin5",
+                        "Motor3-PosLimit": "Port2-Pin7",
+                        "Motor3-NegLimit": "Port2-Pin5"
+                    }
+                },
+                "CRP800-revA": {
+                    "Pos": {
+                        "Motor1-Home": "Port2-Pin3",
+                        "Motor1-PosLimit": "Port2-Pin3",
+                        "Motor1-NegLimit": "",
+                        "Motor3-Home": "Port2-Pin8",
+                        "Motor3-PosLimit": "Port2-Pin8",
+                        "Motor3-NegLimit": "Port2-Pin7"
+                    },
+                    "Neg": {
+                        "Motor1-Home": "Port2-Pin3",
+                        "Motor1-PosLimit": "",
+                        "Motor1-NegLimit": "Port2-Pin3",
+                        "Motor3-Home": "Port2-Pin7",
+                        "Motor3-PosLimit": "Port2-Pin8",
+                        "Motor3-NegLimit": "Port2-Pin7"
+                    }
+                }
+            }
+        },
+        "Sensor_Config_2": {
+            "Swap_Axes_0": {
+                "CRP800": {
+                    "Pos": {
+                        "Motor1-Home": "Port2-Pin5",
+                        "Motor1-PosLimit": "Port2-Pin5",
+                        "Motor1-NegLimit": "Port2-Pin4",
+                        "Motor3-Home": "Port2-Pin7",
+                        "Motor3-PosLimit": "Port2-Pin7",
+                        "Motor3-NegLimit": ""
+                    },
+                    "Neg": {
+                        "Motor1-Home": "Port2-Pin4",
+                        "Motor1-PosLimit": "Port2-Pin5",
+                        "Motor1-NegLimit": "Port2-Pin4",
+                        "Motor3-Home": "Port2-Pin7",
+                        "Motor3-PosLimit": "",
+                        "Motor3-NegLimit": "Port2-Pin7"
+                    }
+                },
+                "CRP800-revA": {
+                    "Pos": {
+                        "Motor1-Home": "Port2-Pin7",
+                        "Motor1-PosLimit": "Port2-Pin7",
+                        "Motor1-NegLimit": "Port2-Pin3",
+                        "Motor3-Home": "Port2-Pin8",
+                        "Motor3-PosLimit": "Port2-Pin8",
+                        "Motor3-NegLimit": ""
+                    },
+                    "Neg": {
+                        "Motor1-Home": "Port2-Pin3",
+                        "Motor1-PosLimit": "Port2-Pin7",
+                        "Motor1-NegLimit": "Port2-Pin3",
+                        "Motor3-Home": "Port2-Pin8",
+                        "Motor3-PosLimit": "",
+                        "Motor3-NegLimit": "Port2-Pin8"
+                    }
+                }
+            },
+            "Swap_Axes_1": {
+                "CRP800": {
+                    "Pos": {
+                        "Motor1-Home": "Port2-Pin4",
+                        "Motor1-PosLimit": "Port2-Pin4",
+                        "Motor1-NegLimit": "Port2-Pin5",
+                        "Motor3-Home": "Port2-Pin7",
+                        "Motor3-PosLimit": "Port2-Pin7",
+                        "Motor3-NegLimit": ""
+                    },
+                    "Neg": {
+                        "Motor1-Home": "Port2-Pin5",
+                        "Motor1-PosLimit": "Port2-Pin4",
+                        "Motor1-NegLimit": "Port2-Pin5",
+                        "Motor3-Home": "Port2-Pin7",
+                        "Motor3-PosLimit": "",
+                        "Motor3-NegLimit": "Port2-Pin7"
+                    }
+                },
+                "CRP800-revA": {
+                    "Pos": {
+                        "Motor1-Home": "Port2-Pin3",
+                        "Motor1-PosLimit": "Port2-Pin3",
+                        "Motor1-NegLimit": "Port2-Pin7",
+                        "Motor3-Home": "Port2-Pin8",
+                        "Motor3-PosLimit": "Port2-Pin8",
+                        "Motor3-NegLimit": ""
+                    },
+                    "Neg": {
+                        "Motor1-Home": "Port2-Pin7",
+                        "Motor1-PosLimit": "Port2-Pin3",
+                        "Motor1-NegLimit": "Port2-Pin7",
+                        "Motor3-Home": "Port2-Pin8",
+                        "Motor3-PosLimit": "",
+                        "Motor3-NegLimit": "Port2-Pin8"
+                    }
+                }
+            }
+        }
+    },
+    "Input_Signals": {
+        "ISigMap-Probe1": [
+            "Probe 1 (G31.1)",
+            "183"
+        ],
+        "ISigMap-Probe2": [
+            "Probe 2 (G31.2)",
+            "184"
+        ],
+        "ISigMap-Probe3": [
+            "Probe 3 (G31.3)",
+            "185"
+        ]
+    },
+    "Limit_Prop_Name": {
+        "Motor0--": [
+            "lblMotor0--",
+            "Motor0",
+            ""
+        ],
+        "Motor1--": [
+            "lblMotor1--",
+            "Motor1",
+            "--"
+        ],
+        "Motor1++": [
+            "lblMotor1++",
+            "Motor1",
+            "++"
+        ],
+        "Motor3--": [
+            "lblMotor3Limit",
+            "Motor3",
+            ""
+        ],
+        "Motor2++": [
+            "lblMotor2++",
+            "Motor2",
+            "++"
+        ],
+        "Motor4++": [
+            "lblMotor4++",
+            "Motor4",
+            ""
+        ]
+    },
+    "Motor3_LED": {
+        "Name": "ledMotor3--",
+        "Pos_Input": "100",
+        "Neg_Input": "132"
+    }
+}

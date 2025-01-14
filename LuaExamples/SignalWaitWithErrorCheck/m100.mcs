@@ -1,0 +1,25 @@
+function m100()
+
+	local inst, hSig, rc
+	inst = mc.mcGetInstance()
+	
+	hSig, rc = mc.mcSignalGetHandle(inst, mc.OSIG_OUTPUT1) -- Get handle for output 1
+	if (rc~= 0) then --Check our return call
+		mc.mcCntlSetLastError(inst, "There was an error")
+	end
+	
+	rc = mc.mcSignalSetState(hSig, 1) --turn on output 1
+	if (rc~= 0) then --Check our return call
+		mc.mcCntlSetLastError(inst, "There was an error")
+	end
+	
+	rc = mc.mcSignalWait(inst, mc.ISIG_INPUT21, 1, 5) --Wait 5 seconds for input 21 to become active
+	if (rc~= 0) then --Check our return call
+		mc.mcCntlSetLastError(inst, "There was an error")
+	end
+	
+end
+
+if (mc.mcInEditor() == 1) then
+    m100()
+end

@@ -1,0 +1,79 @@
+--[[
+This header can not be removed
+
+Copyright Newfangled Solutions (c) 2018 All Rights Reserved, www.machsupport.com  
+
+THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, 
+EITHER EXPRESSED OR IMPLIED , INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES 
+OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+
+Author - Newfangled Solutions
+Liscence - mit
+Date - 05/17/2018
+Modified - Brett Price 05/17/2018
+--]]
+
+--Button script
+local result = false
+local msg = ""
+local rc = 1
+local inst = mc.mcGetInstance('MyButtonName')
+
+result, msg, rc = pcall(CheckHomed, inst) --This will run the function in the defined instance and set the value of rc and msg to whatever the function returns so you can make a decision
+
+if result == true then
+	
+	if (rc == 1) then
+		--Do what you want to do if all enabled axis have been homed
+	elseif (rc == 0) then
+		--Do what you want to do if not all enabled axis have been homed
+	elseif (rc == -1) then
+		--Do what you want to do if one of our API calls returned an error.
+	end
+
+end
+
+wx.wxMessageBox(msg) --Pop up a message box showing the message the CheckHomed function returned
+
+
+--Screen load script
+function CheckHomed(pInst) --Check if all enabled axis have been homed
+	pInst = pInst or 0
+	local inst = mc.mcCntlGetInstanceHandle(pInst, "function CheckHomed")
+	local msgPrefix = "Our function CheckHomed says... "
+	local enabled = 0
+	local rc = 0
+	local homed = 1
+	local retval = 1
+	local msg = "All enabled axis have been homed"
+
+	for v = 1, 6 do
+		enabled, rc = mc.mcAxisIsEnabled(inst,(v - 1))
+		
+		if (rc ~= 0) then --The API call returned an error
+			break
+		elseif (enabled == 1) then --The axis is enabled
+			homed, rc = mc.mcAxisIsHomed(inst, (v - 1))
+			
+			if (rc ~= 0) then --The API call returned an error
+				break
+			elseif (homed == 0) then --The axis is not homed
+				break
+			end
+		
+		end
+	
+	end
+	
+	if (rc ~= 0) then --The API call returned an error
+		retval = -1
+		msg = "There was an error"
+	elseif (homed == 0) then --Not all enabled axis have been homed
+	    retval = 0
+		msg = "Not all enabled axis have been homed"
+	end
+	
+	mc.mcCntlSetLastError(inst, msgPrefix .. msg)
+	return msg, retval
+	
+end

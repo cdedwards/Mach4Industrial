@@ -1,0 +1,58 @@
+
+Analog description in the controller configuration
+
+  Numerator: The total voltage swing.  e.g. 0v to 10v is 10, -10v to 10v 
+             is 20.
+Denominator: The total width of the DAC/ADC.  e.g. 10 bit is 1024, 12 bit 
+             is 4096, 14 bit = 16384, 16 bit = 65536, etc...
+     Offset: Used for bidirectional DAC/ADC devices, e.g. -10v to 10v 
+             where 0 raw value is -10v and +10v = the width of the device.
+
+DAC Examples: (DAC is Digital to Analog which is an analog output)
+
+10 bit DAC 0v to 10v:  
+
+The total voltage swing is 10v, so the numerator is 10.  10 bits has a 
+max value of 1024, so the denominator is 1024.  The DAC is not 
+bidirectional so the offset is 0.  The clculation is as follows:
+
+(Desired Volt / (Num/Den)) + Off = DAC Value
+
+(10 / (10/1024)) + 0 = 1024.  So to get an analog voltage of 10v, the DAC will be loaded with 1024.  
+( 5 / (10/1024)) + 0 = 512.   So to get an analog voltage of 5v, the DAC will be loaded with 512.
+( 1 / (10/1024)) + 0 = 102.4. So to get an analog voltage of ~1v, the DAC will be loaded with 102.
+
+14 bit DAC -10v to +10v:
+
+The total voltage swing is 20v, so the numerator is 20.  14 bits has a 
+max value of 16384, so the denominator is 16384.  The DAC is 
+bidirectional so the offset will be half of the total width, so 8192.  
+The clculation is as follows:
+
+(10 / (20/16384)) + 8192 = 16384
+( 0 / (20/16384)) + 8192 = 8192
+(-10 / (20/16384)) + 8192 = 0
+
+It is not important to actually know how the value is calculated.  It 
+is more important to just put the correct values in for the numerator, 
+the denominator, and the offset.  But the formula may help you to 
+understand what is going on behind the scenes.
+
+
+ADC Examples: (ADC is Analog to Digital which is an analog input)
+
+How inputs are setup is really no different than how the outputs 
+are setup.  But the calculation is diffeent.  
+
+10 bit ADC 0v to 10v:  
+
+The total voltage swing is 10v, so the numerator is 10.  10 bits has a 
+max value of 1024, so the denominator is 1024.  The DAC is not 
+bidirectional so the offset is 0.  The clculation is as follows:
+
+(ADC Value - Offset) * (Num / Den) = Volts
+
+(1024 - 0) * (10 / 1024) = 10v
+(512 - 0) * (10 / 1024) = 5v
+(102 - 0) * (10 / 1024) = .99609375 (~1v)
+(0 - 0) * (10 / 1024) = 0v

@@ -1,0 +1,84 @@
+N0000 (Machine type - MachMotion Lathe Canned Cycles)
+N0005 (Filename: C:\Mach4Dev\Modules\AddOns\LatheCannedCycles\Examples\Turning-ZPlus.tap)
+N0010 (Generated on 1/20/2016 at 11:13:54 AM)
+
+N0015 %
+N0020 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0025 %
+
+N0030 (Starting Gcode for Turning Cycle: TurnCycle-0)
+N0035 ([Xi, Zi] = [3, -3]; [Xf, Zf] = [2, 0]; Z+ Direction; OD)
+N0040 G50 S2750 (Spindle Speed Cap)
+N0045 (Roughing)
+
+N0050 %
+N0055 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0060 %
+
+N0065 T0101 (Tool Change)
+N0070 G99 (Feed per Revolution)
+N0075 G96 S900 (Constant Surface Speed)
+N0080 M03 (Spindle Forward)
+N0085 G00 X3.200 Z-3.100  (Rapid move to Clearance Height)
+N0090 G01 X2.800 F0.019  (Cut in on X-Axis)
+N0095 G01 Z-0.040 F0.019  (Cut in on Z-Axis)
+N0100 G02 X3.000 Z0.060 I1.400 K0.160 F0.019  (Spring Pass Sweep)
+N0105 G00 X3.200 Z-0.140  (Pull out to Retreat)
+N0110 G00 Z-3.100  (Pull out to Clearance)
+N0115 G00 X3.000 Z-3.100  (Rapid move to Clearance Height)
+N0120 G01 X2.600 F0.019  (Cut in on X-Axis)
+N0125 G01 Z-0.040 F0.019  (Cut in on Z-Axis)
+N00130 G01 X2.800 F0.019  (Spring Pass on X-Axis)
+N0135 G01 X2.600 Z-0.040 F0.019  (Spring Pass Sweep)
+N0140 G00 X3.000 Z-0.140  (Pull out to Retreat)
+N0145 G00 Z-3.100  (Pull out to Clearance)
+N0150 G00 X2.800 Z-3.100  (Rapid move to Clearance Height)
+N0155 G01 X2.400 F0.019  (Cut in on X-Axis)
+N0160 G01 Z-0.040 F0.019  (Cut in on Z-Axis)
+N0165 G01 X2.600 Z-0.040 F0.019  (Spring Pass)
+N0170 G00 X2.800 Z-0.140  (Pull out to Retreat)
+N0175 G00 Z-3.100  (Pull out to Clearance)
+N0180 G00 X2.600 Z-3.100  (Rapid move to Clearance Height)
+N0185 G01 X2.280 F0.019  (Cut in on X-Axis)
+N0190 G01 Z-0.040 F0.019  (Cut in on Z-Axis)
+N0195 G01 X2.400 Z-0.040 F0.019  (Spring Pass)
+N0200 G00 X2.600 Z-0.140  (Pull out to Retreat)
+N0205 G00 Z-3.100  (Pull out to Clearance)
+N0210 G00 X2.480 Z-3.100  (Rapid move to Clearance Height)
+N0215 G01 X2.080 F0.019  (Cut in on X-Axis)
+N0220 G01 Z-0.140 F0.019  (Cut in on Z-Axis)
+N0225 G03 X2.280 Z-0.040 I1.140 K-0.240 F0.019  (Spring Pass Sweep)
+N0230 G00 X2.480 Z-0.240  (Pull out to Retreat)
+N0235 G00 Z-3.100  (Pull out to Clearance)
+N0240 G00 X2.280 Z-3.100  (Rapid move to Clearance Height)
+N0245 G01 X1.940 F0.019  (Cut in on X-Axis)
+N0250 G01 Z-3.000 F0.019  (Cut in on Z-Axis)
+N0255 G01 X2.080 Z-2.930 F0.019  (Spring Pass)
+N0260 G00 X2.280 Z-3.100  (Pull out to Retreat)
+N00265 (Finishing)
+
+N0270 %
+N0275 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0280 %
+
+N0285 T0101 (Tool Change)
+N0290 G99 (Feed per Revolution)
+N0295 G96 S900 (Constant Surface Speed)
+N0300 M03 (Spindle Forward)
+N0305 G01 G41 X1.86 Z-3.14
+N0310 G01 X1.860 Z-3.000 F0.019
+N0315 G01 X2.000 Z-2.930 F0.019
+N0320 G01 X2.000 Z-0.100 F0.019
+N0325 G03 X2.200 Z0.000 I1.100 K-0.100 F0.019
+N00330 G01 X2.800 Z0.000 F0.019
+N00335 G02 X3.000 Z0.100 I1.400 K0.100 F0.019
+N0340 G00 X3.200 Z0.000
+N0345 G00 G40 X3.2 Z-3.1
+N0350 (End Gcode for Turning Cycle: TurnCycle-0)
+
+N0355 %
+N0360 M30
+N0365 %
+N0370 (End Gcode file)
+N0375 %
+

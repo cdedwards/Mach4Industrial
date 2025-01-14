@@ -1,0 +1,37 @@
+function m162(hParam)
+	if (hParam ~= nil) then 
+		--mc.mcCntlSetLastError(inst, 'handle == ' .. tostring(hParam));
+		local inst = mc.mcGetInstance();
+		local pFlag = mc.mcCntlGetLocalVarFlag(inst, hParam, mc.SV_P)
+		if(pFlag == 1) then
+			local pVal = mc.mcCntlGetLocalVar(inst, hParam, mc.SV_P)
+			local hReg = nil;
+			if(tonumber(pVal) == 0) then
+				--P == 0 Output0 ON
+				hReg = mc.mcSignalGetHandle(inst, mc.OSIG_OUTPUT0);
+				mc.mcCntlSetLastError(inst, 'Output0 On');
+			elseif(tonumber(pVal) == 1) then
+				--P == 1 Output1 On
+				hReg = mc.mcSignalGetHandle(inst, mc.OSIG_OUTPUT1);
+				mc.mcCntlSetLastError(inst, 'Output1 On');
+			elseif(tonumber(pVal) == 2) then
+				--P == 2 Output2 On
+				hReg = mc.mcSignalGetHandle(inst, mc.OSIG_OUTPUT2);
+				mc.mcCntlSetLastError(inst, 'Output2 On');
+			end    
+			if( hReg ~= nil ) then
+				mc.mcSignalSetState(hReg, true)
+			end  
+		else
+			mc.mcCntlSetLastError(inst, 'ERROR: P Falue required with M162');
+			mc.mcCntlEStop(inst);
+		end
+	else
+		mc.mcCntlSetLastError(inst, 'ERROR: handle == nil');
+	end	
+
+end
+
+if (mc.mcInEditor() == 1) then
+    m162()
+end

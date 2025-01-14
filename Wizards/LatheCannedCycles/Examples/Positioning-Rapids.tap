@@ -1,0 +1,34 @@
+N0000 (Machine type - MachMotion Lathe Canned Cycles)
+N0005 (Filename: C:\Mach4Dev\Modules\AddOns\LatheCannedCycles\Examples\Positioning-Rapids.tap)
+N0010 (Generated on 1/20/2016 at 11:23:36 AM)
+
+N0015 %
+N0020 G00 G40 G18 G54 G64 G80 G90.1 G99 G20 (Safe Start Block)
+N0025 %
+
+N0030 (Starting Gcode for Positioning Cycle: PositionCycle-0)
+N0035 (Moving to: [0.000, 0.000], 7 Positions)
+N0040 (Position 1)
+N0045 G00 X0.000 Z0.000
+N0050 (Position 2)
+N0055 G00 X1.000 Z1.000
+N0060 (Position 3)
+N0065 G00 X0.000 Z0.000
+N0070 (Position 4)
+N0075 G00 X1.000
+N0080 G00 Z1.000
+N0085 (Position 5)
+N0090 G00 X0.000 Z0.000
+N0095 (Position 6)
+N0100 G00 Z1.000
+N0105 G00 X1.000
+N0110 (Position 7)
+N0115 G00 X0.000 Z0.000
+N0120 (End Gcode for Positioning Cycle: PositionCycle-0)
+
+N0125 %
+N0130 M30
+N0135 %
+N0140 (End Gcode file)
+N0145 %
+

@@ -1,0 +1,8 @@
+function m400()
+inst = mc.mcGetInstance();
+mc.mcCntlProbeFileOpen(inst, "ProbeFile.txt", "X%.4AXIS_X Y%.4AXIS_Y Z%.4AXIS_Z", 1);
+end
+
+if (mc.mcInEditor() == 1) then
+    m400()
+end

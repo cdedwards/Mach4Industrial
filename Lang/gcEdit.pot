@@ -1,0 +1,6352 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-12 02:53-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ..\Controller-good.cpp:910
+#, c-format
+msgid " %s:%d"
+msgstr ""
+
+#: about.cpp:155
+msgid " - G Code Editing Software"
+msgstr ""
+
+#: ..\Controller.cpp:6732 ..\Controller.cpp:6739
+msgid " does not exist."
+msgstr ""
+
+#: ..\Controller.cpp:6669
+msgid " does not exist.  Could not remove directory."
+msgstr ""
+
+#: ..\ToolPath.cpp:670 ..\ToolPath.cpp:674 ..\ToolPath.cpp:678
+#: ..\ToolPath.cpp:682
+msgid "\""
+msgstr ""
+
+#: ..\ToolPath.cpp:666
+msgid "\"\n"
+msgstr ""
+
+#: ..\Controller.cpp:6659
+msgid "\" please alter the RemDirRF() definition."
+msgstr ""
+
+#: Settings.cpp:454
+msgid "# Variable"
+msgstr ""
+
+#: gcEditorAui.cpp:1616
+msgid "# variable"
+msgstr ""
+
+#: profilesettings.cpp:665
+msgid "%"
+msgstr ""
+
+#: ..\IniProfile.cpp:206 ..\IniProfile.cpp:269 ..\IniProfile.cpp:334
+#, c-format
+msgid "%d"
+msgstr ""
+
+#: gcEditorAui.cpp:2138
+#, c-format
+msgid "%d replacements made."
+msgstr ""
+
+#: ..\IniProfile.cpp:147 ..\IniProfile.cpp:217 ..\IniProfile.cpp:282
+#: ..\IniProfile.cpp:344
+#, c-format
+msgid "%f"
+msgstr ""
+
+#: ..\Controller-good.cpp:1103 ..\Controller.cpp:1664
+#, c-format
+msgid "%s called AddStopReportRequest()"
+msgstr ""
+
+#: ..\Controller.cpp:1697
+#, c-format
+msgid "%s called MotorStillBroadcast()"
+msgstr ""
+
+#: ..\Controller-good.cpp:1140 ..\Controller.cpp:1704
+#, c-format
+msgid "%s called RequestMotorStopReport()"
+msgstr ""
+
+#: gcEditorAui.cpp:2275
+#, c-format
+msgid ""
+"%s has been modified on disk.\n"
+"Do you want to reload it?"
+msgstr ""
+
+#: gcEditorAui.cpp:2273
+#, c-format
+msgid "%s is no longer on the disk."
+msgstr ""
+
+#: gcEditorAui.cpp:506
+msgid "&About..."
+msgstr ""
+
+#: gcEditorAui.cpp:483
+msgid "&Always On Top"
+msgstr ""
+
+#: Settings.cpp:792
+msgid "&Apply"
+msgstr ""
+
+#: Settings.cpp:773
+msgid "&Black on White"
+msgstr ""
+
+#: boltholepattern.cpp:241 circularpocket.cpp:253 dncReceive.cpp:240
+#: dncSend.cpp:245 SelectProfile.cpp:141 Settings.cpp:789
+#: spiralmillbore.cpp:248
+msgid "&Cancel"
+msgstr ""
+
+#: gcEditorAui.cpp:366
+msgid "&Close\tCtrl-W"
+msgstr ""
+
+#: Settings.cpp:774
+msgid "&Color on White"
+msgstr ""
+
+#: gcEditorAui.cpp:429
+msgid "&Copy\tCtrl-C"
+msgstr ""
+
+#: gcEditorAui.cpp:441
+msgid "&Delete\tDel"
+msgstr ""
+
+#: gcEditorAui.cpp:460
+msgid "&Edit"
+msgstr ""
+
+#: gcEditorAui.cpp:407
+msgid "&File"
+msgstr ""
+
+#: gcEditorAui.cpp:463
+msgid "&Find\tCtrl-F"
+msgstr ""
+
+#: Settings.cpp:771
+msgid "&Full Color"
+msgstr ""
+
+#: dncReceive.cpp:233 dncSend.cpp:238 gcEditorAui.cpp:507
+msgid "&Help"
+msgstr ""
+
+#: Settings.cpp:772
+msgid "&Invert Light"
+msgstr ""
+
+#: gcEditorAui.cpp:355
+msgid "&New\tCtrl-N"
+msgstr ""
+
+#: boltholepattern.cpp:238 circularpocket.cpp:250 SelectProfile.cpp:138
+#: Settings.cpp:786 spiralmillbore.cpp:245
+msgid "&OK"
+msgstr ""
+
+#: gcEditorAui.cpp:361
+msgid "&Open\tCtrl-O"
+msgstr ""
+
+#: gcEditorAui.cpp:435
+msgid "&Paste\tCtrl-V"
+msgstr ""
+
+#: gcEditorAui.cpp:388
+msgid "&Print... \tCtrl-P"
+msgstr ""
+
+#: toolpathwindow.cpp:176
+msgid "&Quit"
+msgstr ""
+
+#: gcEditorAui.cpp:416
+msgid "&Redo\tCtrl-Y"
+msgstr ""
+
+#: gcEditorAui.cpp:471
+msgid "&Replace\tCtrl-H"
+msgstr ""
+
+#: gcEditorAui.cpp:369
+msgid "&Save\tCtrl-S"
+msgstr ""
+
+#: gcEditorAui.cpp:480
+msgid "&Search"
+msgstr ""
+
+#: dncSend.cpp:241
+msgid "&Send"
+msgstr ""
+
+#: gcEditorAui.cpp:458
+msgid "&Settings..."
+msgstr ""
+
+#: gcEditorAui.cpp:479
+msgid "&Sort"
+msgstr ""
+
+#: dncReceive.cpp:236
+msgid "&To Editor"
+msgstr ""
+
+#: gcEditorAui.cpp:482
+msgid "&Tool Path"
+msgstr ""
+
+#: gcEditorAui.cpp:504
+msgid "&Tools"
+msgstr ""
+
+#: gcEditorAui.cpp:410
+msgid "&Undo\tCtrl-Z"
+msgstr ""
+
+#: gcEditorAui.cpp:484
+msgid "&View"
+msgstr ""
+
+#: ..\MachAPI.cpp:5817 ..\MachAPI.cpp:5823
+msgid "'."
+msgstr ""
+
+#: Settings.cpp:342
+msgid "(Each keyword group is a space seperated list.)"
+msgstr ""
+
+#: Settings.cpp:245
+msgid "*.tap; *.nc"
+msgstr ""
+
+#: profilesettings.cpp:653 profilesettings.cpp:659 profilesettings.cpp:671
+#: profilesettings.cpp:677
+msgid "0"
+msgstr ""
+
+#: profilesettings.cpp:412
+msgid "1"
+msgstr ""
+
+#: gcEditorAui.cpp:1516
+#, c-format
+msgid "1 .. %d"
+msgstr ""
+
+#: profilesettings.cpp:413
+msgid "1.5"
+msgstr ""
+
+#: about.cpp:181
+msgid "1000"
+msgstr ""
+
+#: profilesettings.cpp:374
+msgid "1200"
+msgstr ""
+
+#: profilesettings.cpp:378
+msgid "14400"
+msgstr ""
+
+#: profilesettings.cpp:379
+msgid "19200"
+msgstr ""
+
+#: profilesettings.cpp:414
+msgid "2"
+msgstr ""
+
+#: profilesettings.cpp:375
+msgid "2400"
+msgstr ""
+
+#: profilesettings.cpp:372
+msgid "300"
+msgstr ""
+
+#: profilesettings.cpp:400
+msgid "4"
+msgstr ""
+
+#: about.cpp:166
+msgid "4.0.01"
+msgstr ""
+
+#: profilesettings.cpp:376
+msgid "4800"
+msgstr ""
+
+#: profilesettings.cpp:401
+msgid "5"
+msgstr ""
+
+#: profilesettings.cpp:457
+msgid "5000"
+msgstr ""
+
+#: profilesettings.cpp:380
+msgid "57600"
+msgstr ""
+
+#: profilesettings.cpp:402
+msgid "6"
+msgstr ""
+
+#: profilesettings.cpp:373
+msgid "600"
+msgstr ""
+
+#: profilesettings.cpp:403
+msgid "7"
+msgstr ""
+
+#: profilesettings.cpp:404
+msgid "8"
+msgstr ""
+
+#: profilesettings.cpp:377
+msgid "9600"
+msgstr ""
+
+#. 4
+#: ..\GCodeInterpreter.cpp:29
+msgid "A file is already open"
+msgstr ""
+
+#: ..\ToolPath.cpp:620
+msgid ""
+"A numeric argument is out of range.  The offending command is ignored, and "
+"has no other \n"
+"side effect than to set the error flag."
+msgstr ""
+
+#. read_operation_unary
+#. 203
+#: ..\GCodeInterpreter.cpp:228
+msgid "A or B missing for G68 command"
+msgstr ""
+
+#: ..\Controller.cpp:4075
+#, c-format
+msgid "A script in \"%s\" does not compile."
+msgstr ""
+
+#. convert_cycle_G76
+#. 252
+#: ..\GCodeInterpreter.cpp:277
+msgid "A word with U word not supported"
+msgstr ""
+
+#: aftoac.cpp:149 aftoac.cpp:152 aftoac.cpp:155
+msgid "AC Size"
+msgstr ""
+
+#: ..\StateInterface.cpp:1179
+msgid "ACION_start_homing"
+msgstr ""
+
+#: ..\StateInterface.cpp:1223
+msgid "ACION_start_interrupt"
+msgstr ""
+
+#: ..\StateInterface.cpp:1229
+msgid "ACION_stop_interrupt"
+msgstr ""
+
+#: ..\StateInterface.cpp:1152
+msgid "ACTION_start_config"
+msgstr ""
+
+#: ..\StateInterface.cpp:880
+msgid "ACTION_start_cycle"
+msgstr ""
+
+#: ..\StateInterface.cpp:1134
+msgid "ACTION_start_dryrun"
+msgstr ""
+
+#: ..\StateInterface.cpp:938
+msgid "ACTION_start_feed_hold"
+msgstr ""
+
+#: ..\StateInterface.cpp:1173
+msgid "ACTION_start_hold"
+msgstr ""
+
+#: ..\StateInterface.cpp:1048
+msgid "ACTION_start_jogging"
+msgstr ""
+
+#: ..\StateInterface.cpp:1060
+msgid "ACTION_start_macro_hold"
+msgstr ""
+
+#: ..\StateInterface.cpp:1195
+msgid "ACTION_start_mdi"
+msgstr ""
+
+#: ..\StateInterface.cpp:957
+msgid "ACTION_start_probe"
+msgstr ""
+
+#: ..\StateInterface.cpp:949
+msgid "ACTION_start_rewind_run"
+msgstr ""
+
+#: ..\StateInterface.cpp:1066
+msgid "ACTION_start_single_block"
+msgstr ""
+
+#: ..\StateInterface.cpp:1072
+msgid "ACTION_start_single_block_hold"
+msgstr ""
+
+#: ..\StateInterface.cpp:1019
+msgid "ACTION_start_tap"
+msgstr ""
+
+#: ..\StateInterface.cpp:1007
+msgid "ACTION_start_thread"
+msgstr ""
+
+#: ..\StateInterface.cpp:1164
+msgid "ACTION_stop"
+msgstr ""
+
+#: ..\StateInterface.cpp:1158
+msgid "ACTION_stop_config"
+msgstr ""
+
+#: ..\StateInterface.cpp:1144
+msgid "ACTION_stop_dryrun"
+msgstr ""
+
+#: ..\StateInterface.cpp:1185
+msgid "ACTION_stop_homing"
+msgstr ""
+
+#: ..\StateInterface.cpp:995
+msgid "ACTION_stop_probe"
+msgstr ""
+
+#: ..\StateInterface.cpp:1035
+msgid "ACTION_stop_tap"
+msgstr ""
+
+#: ..\StateInterface.cpp:1013
+msgid "ACTION_stop_thread"
+msgstr ""
+
+#: aftoac.cpp:173
+msgid "AF Size"
+msgstr ""
+
+#: aftoac.h:48
+msgid "AF to AC"
+msgstr ""
+
+#: gcEditorAui.cpp:499
+msgid "AF to AC..."
+msgstr ""
+
+#: ..\MachAPI.cpp:1987
+#, c-format
+msgid "API: mcAxisDeref(inst = %d, axis = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2004
+#, c-format
+msgid "API: mcAxisDerefAll(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2019
+#, c-format
+msgid "API: mcAxisDerefAllEx(inst = %d, mask = %ul) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2337
+#, c-format
+msgid "API: mcAxisEnable(inst = %d, axis = %d, enabled = %d) = %d (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2163
+msgid "API: mcAxisHome(): Not in a suitable machine state. Aborting!"
+msgstr ""
+
+#: ..\MachAPI.cpp:2169
+msgid "API: mcAxisHome(): The control is not enabled. Aborting!"
+msgstr ""
+
+#: ..\MachAPI.cpp:2157
+#, c-format
+msgid "API: mcAxisHome(inst = %d, axis = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2180
+#, c-format
+msgid "API: mcAxisHomeAll(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2192
+#, c-format
+msgid "API: mcAxisHomeAllEx(inst = %d, mask = %ul) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2204
+#, c-format
+msgid "API: mcAxisHomeComplete(inst = %d, axis = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2212
+#, c-format
+msgid ""
+"API: mcAxisHomeCompleteWithStatus(inst = %d, axis = %d, success = %s) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2274
+#, c-format
+msgid "API: mcAxisMapMotor(inst = %d, axis = %d, motor = %d) = %d (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2034
+#, c-format
+msgid "API: mcAxisRef(inst = %d, axis = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2047
+#, c-format
+msgid "API: mcAxisRefAll(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2062
+#, c-format
+msgid "API: mcAxisRefAllEx(inst = %d, mask = %ul) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2301
+#, c-format
+msgid "API: mcAxisUnmapMotor(inst = %d, axis = %d, motor = %d) = %d (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2322
+#, c-format
+msgid "API: mcAxisUnmapMotors(inst = %d, axis = %d) = %d (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:904
+#, c-format
+msgid "API: mcCntlCloseGCodeFile(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:3834
+#, c-format
+msgid "API: mcCntlConfigStart(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:3849
+#, c-format
+msgid "API: mcCntlConfigStop(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:3863
+#, c-format
+msgid "API: mcCntlConfigStopEx(inst = %d, reload = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:3013
+msgid ""
+"API: mcCntlCycleStart() Alarm condition active! Returned MERROR_NOT_NOW."
+msgstr ""
+
+#: ..\MachAPI.cpp:3023
+msgid "API: mcCntlCycleStart() Failed limit check! Returned MERROR_NOT_NOW."
+msgstr ""
+
+#: ..\MachAPI.cpp:3008
+msgid "API: mcCntlCycleStart() Not enabled! Returned MERROR_NOT_NOW."
+msgstr ""
+
+#: ..\MachAPI.cpp:3018
+msgid "API: mcCntlCycleStart() Part count reached! Returned MERROR_NOT_NOW."
+msgstr ""
+
+#: ..\MachAPI.cpp:3030
+msgid ""
+"API: mcCntlCycleStart() Secondary planner in effect! Returned MERROR_NOT_NOW."
+msgstr ""
+
+#: ..\MachAPI.cpp:3037
+msgid "API: mcCntlCycleStart() returned MERROR_NOT_COMPILED."
+msgstr ""
+
+#: ..\MachAPI.cpp:3004
+#, c-format
+msgid "API: mcCntlCycleStart(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:3053
+#, c-format
+msgid "API: mcCntlCycleStop(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:3756
+#, c-format
+msgid "API: mcCntlDroSetUseAuxPos(inst = %d, enable = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:3767
+#, c-format
+msgid "API: mcCntlDroSetUseAuxPosAxis(inst = %d, axis = %d, enable = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:3792
+#, c-format
+msgid "API: mcCntlDryRunToLine(inst = %d, line = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1794
+#, c-format
+msgid "API: mcCntlEStop(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1412
+#, c-format
+msgid "API: mcCntlEnable(inst = %d, FALSE) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1404
+#, c-format
+msgid "API: mcCntlEnable(inst = %d, TRUE) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1407
+msgid "API: mcCntlEnable(true) E-Stop is asserted!  Aborting."
+msgstr ""
+
+#: ..\MachAPI.cpp:2890
+msgid ""
+"API: mcCntlExecuteImmediate() Failed limit check! Returned MERROR_NOT_NOW."
+msgstr ""
+
+#: ..\MachAPI.cpp:2885
+msgid "API: mcCntlExecuteImmediate() Not enabled! Returned MERROR_NOT_NOW."
+msgstr ""
+
+#: ..\MachAPI.cpp:2882
+#, c-format
+msgid "API: mcCntlExecuteImmediate(inst = %d, commands = '%s') (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2750
+#, c-format
+msgid "API: mcCntlFeedHold(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2811
+msgid ""
+"API: mcCntlGcodeExecute() Alarm condition active! Returned MERROR_NOT_NOW."
+msgstr ""
+
+#: ..\MachAPI.cpp:2816
+msgid "API: mcCntlGcodeExecute() Failed limit check! Returned MERROR_NOT_NOW."
+msgstr ""
+
+#: ..\MachAPI.cpp:2806
+msgid "API: mcCntlGcodeExecute() Not enabled! Returned MERROR_NOT_NOW."
+msgstr ""
+
+#: ..\MachAPI.cpp:2803
+#, c-format
+msgid "API: mcCntlGcodeExecute(inst = %d, commands = '%s') (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2839
+msgid ""
+"API: mcCntlGcodeExecuteWait() Alarm condition active! Returned "
+"MERROR_NOT_NOW."
+msgstr ""
+
+#: ..\MachAPI.cpp:2844
+msgid ""
+"API: mcCntlGcodeExecuteWait() Failed limit check! Returned MERROR_NOT_NOW."
+msgstr ""
+
+#: ..\MachAPI.cpp:2834
+msgid "API: mcCntlGcodeExecuteWait() Not enabled! Returned MERROR_NOT_NOW."
+msgstr ""
+
+#: ..\MachAPI.cpp:2831
+#, c-format
+msgid "API: mcCntlGcodeExecuteWait(inst = %d, commands = '%s') (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2726
+#, c-format
+msgid "API: mcCntlGotoZero(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:927
+#, c-format
+msgid "API: mcCntlLoadGcodeFile(inst = %d, file = '%s') (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:941
+#, c-format
+msgid "API: mcCntlLoadGcodeString(inst = %d, gCode = '%s') (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:5235
+#, c-format
+msgid "API: mcCntlMachineStateClear(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:5226
+#, c-format
+msgid "API: mcCntlMachineStatePop(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:5217
+#, c-format
+msgid "API: mcCntlMachineStatePush(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:5244
+#, c-format
+msgid "API: mcCntlMacroAlarm(inst = %d, error = %d, msg = '%s') (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:5254
+#, c-format
+msgid "API: mcCntlMacroStop(inst = %d, error = %d, msg = '%s') (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2870
+msgid ""
+"API: mcCntlMdiExecute() Alarm condition active! Returned MERROR_NOT_NOW."
+msgstr ""
+
+#: ..\MachAPI.cpp:2865
+msgid "API: mcCntlMdiExecute() Failed limit check! Returned MERROR_NOT_NOW."
+msgstr ""
+
+#: ..\MachAPI.cpp:2860
+msgid "API: mcCntlMdiExecute() Not enabled! Returned MERROR_NOT_NOW."
+msgstr ""
+
+#: ..\MachAPI.cpp:2857
+#, c-format
+msgid "API: mcCntlMdiExecute(inst = %d, commands = '%s') (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:5484
+#, c-format
+msgid "API: mcCntlRequestPluginDataSave(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:4125
+#, c-format
+msgid "API: mcCntlReset(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:3176
+#, c-format
+msgid "API: mcCntlRewindFile(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:3188
+#, c-format
+msgid "API: mcCntlSaveSysvars(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:967
+#, c-format
+msgid "API: mcCntlSetLastError(inst = %d, msg = '%s') (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2788
+msgid "API: mcCntlSetOffsetIndex() Not enabled! Returned MERROR_NOT_NOW."
+msgstr ""
+
+#: ..\MachAPI.cpp:2792
+msgid "API: mcCntlSetOffsetIndex() index has to be greater than 0."
+msgstr ""
+
+#: ..\MachAPI.cpp:2785
+#, c-format
+msgid "API: mcCntlSetOffsetIndex(inst = %d, index = '%d') (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:4106
+#, c-format
+msgid "API: mcCntlSetResetCodes(inst = %d, codes = '%s') (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1323
+#, c-format
+msgid "API: mcCntlToolChangeManual(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1353
+#, c-format
+msgid "API: mcCntlWaitOnCycleStart(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:3512
+#, c-format
+msgid "API: mcFixtureGetCurrentIndex(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:3542
+#, c-format
+msgid "API: mcFixtureGetOffset(inst = %d, index = %d, axis = %d (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:3530
+#, c-format
+msgid "API: mcFixtureSetCurrentIndex(inst = %d, inex = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:3551
+#, c-format
+msgid ""
+"API: mcFixtureSetOffset(inst = %d, index = %d, axis = %d, value = %0.4f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2532
+#, c-format
+msgid "API: mcJogAbsStart(inst = %d, axis = %d, mpos = %0.04f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2545
+#, c-format
+msgid "API: mcJogAbsStop(inst = %d, axis = %d, inc = %0.04f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2560
+#, c-format
+msgid "API: mcJogIncStart(inst = %d, axis = %d, inc = %0.04f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2573
+#, c-format
+msgid "API: mcJogIncStop(inst = %d, axis = %d, inc = %0.04f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2623
+#, c-format
+msgid "API: mcJogSetAccel(inst = %d, axis = %d, percent = %0.04f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2601
+#, c-format
+msgid "API: mcJogSetFeedRate(inst = %d, axis = %d, unitsPerMin = %0.04f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2631
+#, c-format
+msgid "API: mcJogSetInc(inst = %d, axis = %d, inc = %0.04f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2615
+#, c-format
+msgid "API: mcJogSetRate(inst = %d, axis = %d, percent = %0.04f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2587
+#, c-format
+msgid "API: mcJogSetUnitsMode(inst = %d, axis = %d, unitsMode = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2507
+#, c-format
+msgid "API: mcJogVelocityStart(inst = %d, axis = %d, dir = %d) = %d (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:2518
+#, c-format
+msgid "API: mcJogVelocityStop(inst = %d, axis = %d) = %d (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1661
+#, c-format
+msgid "API: mcMotionClearPlanner(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1606
+#, c-format
+msgid "API: mcMotionConvertAxisToMotor(inst = %d, axis = %d, motor = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1650
+#, c-format
+msgid "API: mcMotionGetCVAngle(inst = %d, angle = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1593
+#, c-format
+msgid "API: mcMotionGetProbeParams(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1579
+#, c-format
+msgid "API: mcMotionGetRigidTapParams(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1560
+#, c-format
+msgid "API: mcMotionGetThreadParams(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1551
+#, c-format
+msgid "API: mcMotionGetThreadingRate(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1639
+#, c-format
+msgid "API: mcMotionSetCVAngle(inst = %d, angle = %d, feedrate = %.4f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1626
+#, c-format
+msgid "API: mcMotionSetCVAngleEnable(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1614
+#, c-format
+msgid "API: mcMotionSetCVAngleEnable(inst = %d, on = %s) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1503
+#, c-format
+msgid "API: mcMotionSetProbeComplete(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1515
+#, c-format
+msgid "API: mcMotionSetProbePos(inst = %d, motor = %d, position = %.4f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1785
+#, c-format
+msgid "API: mcMotionSetStill(inst = %d, motor = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1542
+#, c-format
+msgid "API: mcMotionSetThreadingRate(inst = %d, ratio = %.4f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1533
+#, c-format
+msgid "API: mcMotionSync(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:1569
+#, c-format
+msgid "API: mcMotionThreadComplete(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:6391
+#, c-format
+msgid "API: mcMotorSetAuxPosReg(inst = %d, motor = %d, hReg = %lu) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:6383
+#, c-format
+msgid "API: mcMotorSetHomePos(inst = %d, motor = %d, count = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:5721
+#, c-format
+msgid "API: mcMpgMoveCounts(inst = %d, mpg = %d, delta = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:5510
+#, c-format
+msgid "API: mcMpgSetAccel(inst = %d, mpg = %d, percent = %.4f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:5553
+#, c-format
+msgid "API: mcMpgSetAxis(inst = %d, mpg = %d, axis = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:5610
+#, c-format
+msgid "API: mcMpgSetCountsPerDetent(inst = %d, mpg = %d, counts = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:5659
+#, c-format
+msgid "API: mcMpgSetEnable(inst = %d, mpg = %d, enable = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:5634
+#, c-format
+msgid "API: mcMpgSetEncoderReg(inst = %d, mpg = %d, REG) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:5579
+#, c-format
+msgid "API: mcMpgSetInc(inst = %d, mpg = %d, counts = %.4f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:5537
+#, c-format
+msgid "API: mcMpgSetRate(inst = %d, mpg = %d, rate = %.4f) (%s)."
+msgstr ""
+
+#: ..\MachAPI.cpp:5686
+#, c-format
+msgid "API: mcMpgSetReversed(inst = %d, mpg = %d, reversed = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:4186
+#, c-format
+msgid "API: mcScriptExecute(inst = %d, filename = '%s', async = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:4176
+#, c-format
+msgid ""
+"API: mcScriptExecuteIfExists(inst = %d, filename = '%s', async = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:4196
+#, c-format
+msgid ""
+"API: mcScriptExecutePrivate(inst = %d, filename = '%s', async = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:528
+#, c-format
+msgid "API: mcSignalGetHandle(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:5915
+msgid "API: mcSignalHandleWait() Control is not enabled."
+msgstr ""
+
+#: ..\MachAPI.cpp:5905
+msgid "API: mcSignalHandleWait() Invalid wait mode."
+msgstr ""
+
+#: ..\MachAPI.cpp:5923
+msgid "API: mcSignalHandleWait() Timed out."
+msgstr ""
+
+#: ..\MachAPI.cpp:5910
+msgid "API: mcSignalHandleWait() Timeout less than zero."
+msgstr ""
+
+#: ..\MachAPI.cpp:5901
+#, c-format
+msgid "API: mcSignalHandleWait(hSigID = 0x%x, wiatmode = %d, timeout = %f)"
+msgstr ""
+
+#: ..\MachAPI.cpp:5878
+msgid "API: mcSignalWait() Control is not enabled."
+msgstr ""
+
+#: ..\MachAPI.cpp:5862
+msgid "API: mcSignalWait() Invalid wait mode."
+msgstr ""
+
+#: ..\MachAPI.cpp:5885
+msgid "API: mcSignalWait() Timed out."
+msgstr ""
+
+#: ..\MachAPI.cpp:5872
+msgid "API: mcSignalWait() Timeout less than zero."
+msgstr ""
+
+#: ..\MachAPI.cpp:5858
+#, c-format
+msgid ""
+"API: mcSignalWait(inst = %d, sigID = %d, wiatmode = %d, timeout = %f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:6862
+#, c-format
+msgid "API: mcSpindleGetSpeedCheckEnable(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:4810
+#, c-format
+msgid "API: mcSpindleSetCommandRPM(inst = %d, RPM = %.4f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:4859
+#, c-format
+msgid "API: mcSpindleSetDirection(inst = %d, dir = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:4873
+#, c-format
+msgid "API: mcSpindleSetDirectionWait(inst = %d, dir = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:4832
+#, c-format
+msgid ""
+"API: mcSpindleSetFeedbackRatio(inst = %d, range = %d, ratio = %.4f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:4841
+#, c-format
+msgid "API: mcSpindleSetMaxRPM(inst = %d, range = %d, RPM = %.4f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:4850
+#, c-format
+msgid "API: mcSpindleSetMinRPM(inst = %d, range = %d, RPM = %.4f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:4887
+#, c-format
+msgid "API: mcSpindleSetMotorAccel(inst = %d, range = %d, accel = %.4f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:5023
+#, c-format
+msgid "API: mcSpindleSetOverride(inst = %d, percent = %.2f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:5014
+#, c-format
+msgid "API: mcSpindleSetOverrideEnable(inst = %d, enable = %s) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:4823
+#, c-format
+msgid "API: mcSpindleSetRange(inst = %d, range = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:6871
+#, c-format
+msgid "API: mcSpindleSetSpeedCheckEnable(inst = %d) (BOOL = %i) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:6820
+#, c-format
+msgid "API: mcSpindleWaitForSpeed(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:6829
+#, c-format
+msgid "API: mcSpindleWaitForStop(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:3349
+#, c-format
+msgid "API: mcToolPathGenerate(inst = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:6769
+#, c-format
+msgid "API: mcToolPathSetUseAuxPos(inst = %d, enable = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:6753
+#, c-format
+msgid "API: mcToolPathSetUseAuxPosAxis(inst = %d, axis = %d, enable = %d) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:3414
+#, c-format
+msgid "API: mcToolSetData(inst = %d, type = %d, tool = %d, val = %.4f) (%s)"
+msgstr ""
+
+#: ..\MachAPI.cpp:3459
+#, c-format
+msgid "API: mcToolSetDesc(inst = %d, tool = %d, desc = '%s') (%s)"
+msgstr ""
+
+#: about.h:47
+msgid "About"
+msgstr ""
+
+#: gcEditorAui.cpp:506
+msgid "About gcEdit."
+msgstr ""
+
+#: ..\Axis.cpp:364 ..\Axis.cpp:389
+#, c-format
+msgid "AbsMove is NAN! (%f), AbsMove = %f"
+msgstr ""
+
+#: aftoac.cpp:140 aftoac.cpp:142
+msgid "Across flates to across corners dimensions."
+msgstr ""
+
+#: profilesettings.cpp:874 profilesettings.cpp:1079
+msgid "Action"
+msgstr ""
+
+#: Settings.cpp:747
+msgid "Add"
+msgstr ""
+
+#: gcEditorAui.cpp:456
+msgid "Advanced"
+msgstr ""
+
+#. convert_tool_select
+#. 277
+#: ..\GCodeInterpreter.cpp:302
+msgid "All axes missing with G28.1"
+msgstr ""
+
+#. rs274ngc_open
+#. 5
+#: ..\GCodeInterpreter.cpp:30
+msgid "All axes missing with G92"
+msgstr ""
+
+#. enhance_block
+#. 6
+#: ..\GCodeInterpreter.cpp:31
+msgid "All axes missing with motion code"
+msgstr ""
+
+#. If all motors are still, log it.
+#: ..\Controller-good.cpp:1066 ..\Controller.cpp:1528
+msgid "All motors marked as still."
+msgstr ""
+
+#: ..\Command.cpp:3375 ..\Command.cpp:3449
+msgid "Already in feed hold."
+msgstr ""
+
+#: ..\ToolPath.cpp:617
+msgid ""
+"An unacceptable value is specified for an enumerated argument.  The "
+"offending \n"
+"command is ignored, and\thas no other side effect than to set the error flag."
+msgstr ""
+
+#: boltholepattern.cpp:178 boltholepattern.cpp:180
+msgid "Angle to the first hole."
+msgstr ""
+
+#: Settings.cpp:713
+msgid "Arc Feed Move"
+msgstr ""
+
+#. enhance_block
+#. 7
+#: ..\GCodeInterpreter.cpp:32
+msgid "Arc radius too small to reach end point"
+msgstr ""
+
+#. arc_data_r
+#. 8
+#: ..\GCodeInterpreter.cpp:33
+msgid "Argument to acos out of range"
+msgstr ""
+
+#. execute_unary
+#. 9
+#: ..\GCodeInterpreter.cpp:34
+msgid "Argument to asin out of range"
+msgstr ""
+
+#. execute_unary
+#. 10
+#: ..\GCodeInterpreter.cpp:35
+msgid "Attempt to divide by zero"
+msgstr ""
+
+#. execute_binary1
+#. 11
+#: ..\GCodeInterpreter.cpp:36
+msgid "Attempt to raise negative to non integer power"
+msgstr ""
+
+#: ..\Controller-good.cpp:3752 ..\Controller.cpp:5044
+#, c-format
+msgid "Attempt transition from \"%s\" on event \"%s\""
+msgstr ""
+
+#: ..\Controller-good.cpp:3756
+#, c-format
+msgid "Attempt transition from \"%s\" on event \"%s\" %s:%d"
+msgstr ""
+
+#: ..\Axis.cpp:1623 ..\Controller-good.cpp:1117 ..\Controller.cpp:1676
+#, c-format
+msgid "Axis %d is Enabled but has no motor mappings!!!."
+msgstr ""
+
+#. Ending comp without a move to remove comp with
+#. 281
+#: ..\GCodeInterpreter.cpp:306
+msgid "Axis 0 commanded while disabled"
+msgstr ""
+
+#. check_disabled_motion
+#. 282
+#: ..\GCodeInterpreter.cpp:307
+msgid "Axis 1 commanded while disabled"
+msgstr ""
+
+#. check_disabled_motion
+#. 283
+#: ..\GCodeInterpreter.cpp:308
+msgid "Axis 2 commanded while disabled"
+msgstr ""
+
+#. check_disabled_motion
+#. 284
+#: ..\GCodeInterpreter.cpp:309
+msgid "Axis 3 commanded while disabled"
+msgstr ""
+
+#. check_disabled_motion
+#. 285
+#: ..\GCodeInterpreter.cpp:310
+msgid "Axis 4 commanded while disabled"
+msgstr ""
+
+#. check_disabled_motion
+#. 286
+#: ..\GCodeInterpreter.cpp:311
+msgid "Axis 5 commanded while disabled"
+msgstr ""
+
+#: ..\Command.cpp:1082
+#, c-format
+msgid "AxisHome(): Axis %d is already homing."
+msgstr ""
+
+#: ..\Command.cpp:1077
+#, c-format
+msgid "AxisHome(): Axis %d is not enabled."
+msgstr ""
+
+#: ..\Command.cpp:1072
+#, c-format
+msgid "AxisHome(): Axis %d is not found."
+msgstr ""
+
+#. convert_straight
+#. 253
+#: ..\GCodeInterpreter.cpp:278
+msgid "B word with V word not supported"
+msgstr ""
+
+#: Settings.cpp:560
+msgid "Background:"
+msgstr ""
+
+#. convert_m
+#. 296
+#: ..\GCodeInterpreter.cpp:321
+msgid "Bad Custom Macro Interrupt Invalid M code"
+msgstr ""
+
+#. read_operation_unary
+#. 295
+#: ..\GCodeInterpreter.cpp:320
+msgid "Bad Custom Macro Interrupt Valid M code"
+msgstr ""
+
+#. convert_coordinate_system
+#. 271
+#: ..\GCodeInterpreter.cpp:296
+msgid "Bad P word with G54.1"
+msgstr ""
+
+#. convert_coordinate_system
+#. 270
+#: ..\GCodeInterpreter.cpp:295
+msgid "Bad P word with G59"
+msgstr ""
+
+#: ..\GcodeFileEncrypted.cpp:425
+msgid "Bad decrypt."
+msgstr ""
+
+#. convert_setup
+#. 274
+#: ..\GCodeInterpreter.cpp:299
+msgid "Bad format for G10 L3"
+msgstr ""
+
+#. read_one_item
+#. 13
+#: ..\GCodeInterpreter.cpp:38
+msgid "Bad format unsigned integer"
+msgstr ""
+
+#. read_integer_unsigned
+#. 14
+#: ..\GCodeInterpreter.cpp:39
+msgid "Bad number format"
+msgstr ""
+
+#: profilesettings.cpp:368
+msgid "Baud:"
+msgstr ""
+
+#: Settings.cpp:554 Settings.cpp:645
+msgid "Blue:"
+msgstr ""
+
+#: Settings.cpp:660
+msgid "Bold"
+msgstr ""
+
+#: boltholepattern.h:51
+msgid "Bolt Hole Pattern"
+msgstr ""
+
+#: gcEditorAui.cpp:496
+msgid "Bolt Hole Pattern..."
+msgstr ""
+
+#: profilesettings.cpp:432
+msgid "Both"
+msgstr ""
+
+#: gcEditorAui.cpp:1625
+msgid "BraceMatch"
+msgstr ""
+
+#: gcEditorAui.cpp:1626
+msgid "BraceNoMatch"
+msgstr ""
+
+#: gcEditorAui.cpp:1602 Settings.cpp:441
+msgid "Buffer"
+msgstr ""
+
+#. read_real_number
+#. 15
+#: ..\GCodeInterpreter.cpp:40
+msgid "Bug bad G code modal group 0"
+msgstr ""
+
+#. check_g_codes
+#. 16
+#: ..\GCodeInterpreter.cpp:41
+msgid "Bug code not G0 or G1"
+msgstr ""
+
+#. convert_straight, convert_straight_comp1, convert_straight_comp2
+#. 17
+#: ..\GCodeInterpreter.cpp:42
+msgid "Bug code not G17 G18 or G19"
+msgstr ""
+
+#. convert_home
+#. 20
+#: ..\GCodeInterpreter.cpp:45
+msgid "Bug code not G2 or G3"
+msgstr ""
+
+#. convert_set_plane
+#. 18
+#: ..\GCodeInterpreter.cpp:43
+msgid "Bug code not G20 or G21"
+msgstr ""
+
+#. convert_length_units
+#. 19
+#: ..\GCodeInterpreter.cpp:44
+msgid "Bug code not G28 or G30"
+msgstr ""
+
+#. convert_tool_length_offset
+#. 23
+#: ..\GCodeInterpreter.cpp:48
+msgid "Bug code not G4 G10 G28 G30 G53 or G92 series"
+msgstr ""
+
+#. arc_data_comp_ijk, arc_data_ijk
+#. 21
+#: ..\GCodeInterpreter.cpp:46
+msgid "Bug code not G40 G41 or G42"
+msgstr ""
+
+#. convert_cutter_compensation
+#. 22
+#: ..\GCodeInterpreter.cpp:47
+msgid "Bug code not G43 or G49"
+msgstr ""
+
+#. convert_cycle_G76
+#. 266
+#: ..\GCodeInterpreter.cpp:291
+msgid "Bug code not G50 or G51"
+msgstr ""
+
+#. convert_scale
+#. 267
+#: ..\GCodeInterpreter.cpp:292
+msgid "Bug code not G50.1 or G51.1"
+msgstr ""
+
+#. convert_modal_0
+#. 24
+#: ..\GCodeInterpreter.cpp:49
+msgid "Bug code not G61 G61.1 or G64"
+msgstr ""
+
+#. Stupid thing people try to do I guess..
+#. 279
+#: ..\GCodeInterpreter.cpp:304
+msgid "Bug code not G68 or G69"
+msgstr ""
+
+#. convert_control_mode
+#. 25
+#: ..\GCodeInterpreter.cpp:50
+msgid "Bug code not G90 or G91"
+msgstr ""
+
+#. convert_distance_mode
+#. 26
+#: ..\GCodeInterpreter.cpp:51
+msgid "Bug code not G93 or G94"
+msgstr ""
+
+#. convert_feed_mode
+#. 27
+#: ..\GCodeInterpreter.cpp:52
+msgid "Bug code not G98 or G99"
+msgstr ""
+
+#. convert_coordinate_system
+#. 30
+#: ..\GCodeInterpreter.cpp:55
+msgid "Bug code not M0 M1 M2 M30 M60"
+msgstr ""
+
+#. convert_retract_mode
+#. 28
+#: ..\GCodeInterpreter.cpp:53
+msgid "Bug code not in G92 series"
+msgstr ""
+
+#. convert_axis_offsets
+#. 29
+#: ..\GCodeInterpreter.cpp:54
+msgid "Bug code not in range G54 to G59.3"
+msgstr ""
+
+#. convert_stop
+#. 31
+#: ..\GCodeInterpreter.cpp:56
+msgid "Bug distance mode not G90 or G91"
+msgstr ""
+
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 32
+#: ..\GCodeInterpreter.cpp:57
+msgid "Bug function should not have been called"
+msgstr ""
+
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx, read_a, read_b, read_c, read_comment, read_d, read_f, read_g, read_h, read_i, read_j, read_k, read_l, read_line_number, read_m, read_p, read_sysvar, read_sysvar_setting, read_q, read_r, read_real_expression, read_s, read_t, read_x, read_y, read_z
+#. 33
+#: ..\GCodeInterpreter.cpp:58
+msgid "Bug in tool radius comp"
+msgstr ""
+
+#. arc_data_comp_r
+#. 34
+#: ..\GCodeInterpreter.cpp:59
+msgid "Bug plane not XY YZ or XZ"
+msgstr ""
+
+#. convert_arc, convert_cycle
+#. 35
+#: ..\GCodeInterpreter.cpp:60
+msgid "Bug side not right or left"
+msgstr ""
+
+#. convert_straight_comp1, convert_straight_comp2
+#. 36
+#: ..\GCodeInterpreter.cpp:61
+msgid "Bug unknown motion code"
+msgstr ""
+
+#. convert_motion
+#. 37
+#: ..\GCodeInterpreter.cpp:62
+msgid "Bug unknown operation"
+msgstr ""
+
+#: about.cpp:177
+msgid "Build:"
+msgstr ""
+
+#. convert_straight
+#. 254
+#: ..\GCodeInterpreter.cpp:279
+msgid "C word with W word not supported"
+msgstr ""
+
+#: ..\Controller-good.cpp:1082 ..\Controller.cpp:1546 ..\Controller.cpp:2015
+msgid "CANNOT END JOG!!!"
+msgstr ""
+
+#: circularpocket.cpp:239 spiralmillbore.cpp:224
+msgid "CCW"
+msgstr ""
+
+#: dncReceive.cpp:176 dncSend.cpp:173
+msgid "CD"
+msgstr ""
+
+#: profilesettings.cpp:357
+msgid "COM1"
+msgstr ""
+
+#: profilesettings.cpp:358
+msgid "COM2"
+msgstr ""
+
+#: profilesettings.cpp:359
+msgid "COM3"
+msgstr ""
+
+#: profilesettings.cpp:360
+msgid "COM4"
+msgstr ""
+
+#: profilesettings.cpp:361
+msgid "COM5"
+msgstr ""
+
+#: profilesettings.cpp:362
+msgid "COM6"
+msgstr ""
+
+#: profilesettings.cpp:363
+msgid "COM7"
+msgstr ""
+
+#: profilesettings.cpp:364
+msgid "COM8"
+msgstr ""
+
+#: profilesettings.cpp:1247 profilesettings.cpp:1257
+msgid "CR"
+msgstr ""
+
+#: profilesettings.cpp:1245 profilesettings.cpp:1255
+msgid "CR/LF"
+msgstr ""
+
+#: dncReceive.cpp:179 dncSend.cpp:176
+msgid "CTS"
+msgstr ""
+
+#: circularpocket.cpp:235 spiralmillbore.cpp:220
+msgid "CW"
+msgstr ""
+
+#: ..\MachAPI.cpp:5817
+msgid "Can not read zip entry '"
+msgstr ""
+
+#: ..\mcFileConfig.cpp:937
+#, c-format
+msgid "Can't delete user configuration file '%s'"
+msgstr ""
+
+#: ..\Command.cpp:1897
+#, c-format
+msgid "Can't jog toward %c%c limit!"
+msgstr ""
+
+#: ..\Command.cpp:3096
+msgid "Can't load a file until the control is enabled."
+msgstr ""
+
+#: ..\loadLookahead.cpp:153 ..\loadLookahead.cpp:266 ..\loadLookahead.cpp:303
+#: ..\loadLookahead.cpp:360 ..\loadMidLookahead.cpp:153
+#: ..\loadMidLookahead.cpp:266 ..\loadMidLookahead.cpp:303
+#: ..\loadMidLookahead.cpp:360
+#, c-format
+msgid "Can't transition from %s RUNNING to STOP"
+msgstr ""
+
+#: ..\GcodeExec.cpp:999 ..\GcodeExec.cpp:1066
+msgid "Can't transition from MDI RUNNING to STOP"
+msgstr ""
+
+#: ..\GcodeExec.cpp:435 ..\GcodeExec.cpp:534
+msgid "Can't transition from RUNNING to STOP"
+msgstr ""
+
+#: ..\RunCanon.cpp:665 ..\RunCanon.cpp:666
+msgid "Can't transition from RUNNING to TAPPING"
+msgstr ""
+
+#: ..\RunCanon.cpp:677 ..\RunCanon.cpp:678
+msgid "Can't transition from TAPPING to RUNNING"
+msgstr ""
+
+#: toolpathprogress.cpp:145
+msgid "Cancel"
+msgstr ""
+
+#. execute_binary1, execute_binary2, execute_unary
+#. 38
+#: ..\GCodeInterpreter.cpp:63
+msgid "Cannot change axis offsets with cutter radius comp"
+msgstr ""
+
+#. convert_axis_offsets
+#. 39
+#: ..\GCodeInterpreter.cpp:64
+msgid "Cannot change units with cutter radius comp"
+msgstr ""
+
+#. convert_length_units
+#. 40
+#: ..\GCodeInterpreter.cpp:65
+msgid "Cannot create backup file"
+msgstr ""
+
+#: ..\MachAPI.cpp:5823
+msgid "Cannot create file '"
+msgstr ""
+
+#. rs274ngc_save_parameters
+#. 41
+#. convert_scale
+#. 268
+#: ..\GCodeInterpreter.cpp:66 ..\GCodeInterpreter.cpp:293
+msgid "Cannot do G1 with zero feed rate"
+msgstr ""
+
+#. convert_straight
+#. 42
+#: ..\GCodeInterpreter.cpp:67
+msgid "Cannot do zero repeats of cycle"
+msgstr ""
+
+#: ..\Command.cpp:1705 ..\Command.cpp:1754
+msgid "Cannot jog a disabled axis."
+msgstr ""
+
+#: ..\Command.cpp:1968
+msgid "Cannot jog an unknown axis."
+msgstr ""
+
+#: ..\Command.cpp:1729 ..\Command.cpp:1779
+msgid "Cannot jog an unknown axis.."
+msgstr ""
+
+#. convert_cycle
+#. 43
+#: ..\GCodeInterpreter.cpp:68
+msgid "Cannot make arc with zero feed rate"
+msgstr ""
+
+#. convert_arc
+#. 44
+#: ..\GCodeInterpreter.cpp:69
+msgid "Cannot move rotary axes during probing"
+msgstr ""
+
+#: ..\Controller.cpp:4039 ..\Controller.cpp:4069
+#, c-format
+msgid "Cannot open \"%s\" for reading."
+msgstr ""
+
+#. convert_probe
+#. 45
+#: ..\GCodeInterpreter.cpp:70
+msgid "Cannot open backup file"
+msgstr ""
+
+#. rs274ngc_save_parameters
+#. 46
+#: ..\GCodeInterpreter.cpp:71
+msgid "Cannot open variable file"
+msgstr ""
+
+#. rs274ngc_save_parameters
+#. 47
+#: ..\GCodeInterpreter.cpp:72
+msgid "Cannot probe in inverse time feed mode"
+msgstr ""
+
+#. convert_probe
+#. 48
+#: ..\GCodeInterpreter.cpp:73
+msgid "Cannot probe with cutter radius comp on"
+msgstr ""
+
+#. convert_probe
+#. 49
+#: ..\GCodeInterpreter.cpp:74
+msgid "Cannot probe with zero feed rate"
+msgstr ""
+
+#. convert_probe
+#. 50
+#: ..\GCodeInterpreter.cpp:75
+msgid "Cannot put A B in canned cycle"
+msgstr ""
+
+#. check_other_codes
+#. 51
+#: ..\GCodeInterpreter.cpp:76
+msgid "Cannot put A C in canned cycle"
+msgstr ""
+
+#. check_other_codes
+#. 52
+#: ..\GCodeInterpreter.cpp:77
+msgid "Cannot put an A in canned cycle"
+msgstr ""
+
+#. Don't allow switching modes!
+#: ..\Command.cpp:1711
+msgid "Cannot switch jog mode from velocity to absolute."
+msgstr ""
+
+#. Don't allow switching modes!
+#: ..\Command.cpp:1760
+msgid "Cannot switch jog mode from velocity to incremental."
+msgstr ""
+
+#. check_other_codes
+#. 53
+#: ..\GCodeInterpreter.cpp:78
+msgid "Cannot turn cutter radius comp on out of XY plane"
+msgstr ""
+
+#. convert_cutter_compensation_on
+#. 54
+#: ..\GCodeInterpreter.cpp:79
+msgid "Cannot turn cutter radius comp on when on"
+msgstr ""
+
+#. convert_cutter_compensation_on
+#. 55
+#: ..\GCodeInterpreter.cpp:80
+msgid "Cannot use A word"
+msgstr ""
+
+#. enhance_block
+#. 58
+#: ..\GCodeInterpreter.cpp:83
+msgid "Cannot use B word"
+msgstr ""
+
+#. read_b
+#. 59
+#: ..\GCodeInterpreter.cpp:84
+msgid "Cannot use C word"
+msgstr ""
+
+#. read_c
+#. 60
+#: ..\GCodeInterpreter.cpp:85
+msgid "Cannot use G28 or G30 with cutter radius comp"
+msgstr ""
+
+#. convert_home
+#. 61
+#: ..\GCodeInterpreter.cpp:86
+msgid "Cannot use G53 incremental"
+msgstr ""
+
+#. check_g_codes
+#. 62
+#: ..\GCodeInterpreter.cpp:87
+msgid "Cannot use G53 with cutter radius comp"
+msgstr ""
+
+#. enhance_block
+#. 64
+#: ..\GCodeInterpreter.cpp:89
+msgid "Cannot use XZ plane with cutter radius comp"
+msgstr ""
+
+#. convert_set_plane
+#. 65
+#: ..\GCodeInterpreter.cpp:90
+msgid "Cannot use YZ plane with cutter radius comp"
+msgstr ""
+
+#. read_a
+#. 56
+#: ..\GCodeInterpreter.cpp:81
+msgid "Cannot use axis values with G80"
+msgstr ""
+
+#. enhance_block
+#. 57
+#: ..\GCodeInterpreter.cpp:82
+msgid "Cannot use axis values without a G code that uses them"
+msgstr ""
+
+#. convert_straight
+#. 63
+#: ..\GCodeInterpreter.cpp:88
+msgid "Cannot use two G codes that both use axis values"
+msgstr ""
+
+#: ..\GCodeInterpreter.cpp:6685
+#, c-format
+msgid "Capping Z minimum to %.4f based on parameter 1801"
+msgstr ""
+
+#: circularpocket.cpp:158 circularpocket.cpp:160 spiralmillbore.cpp:161
+#: spiralmillbore.cpp:163
+msgid "Center position of hole in X axis."
+msgstr ""
+
+#: circularpocket.cpp:167 circularpocket.cpp:169 spiralmillbore.cpp:170
+#: spiralmillbore.cpp:172
+msgid "Center position of hole in Y axis."
+msgstr ""
+
+#: ..\RunCanon.cpp:1079
+msgid "Change tool and press Cycle Start."
+msgstr ""
+
+#: ..\mcFileConfig.cpp:302
+#, c-format
+msgid "Changes won't be saved to avoid overwriting the existing file \"%s\""
+msgstr ""
+
+#: profilesettings.cpp:872 profilesettings.cpp:1077
+msgid "Char"
+msgstr ""
+
+#: profilesettings.cpp:668
+msgid "Character Delay"
+msgstr ""
+
+#. read_if/read_goto, etc...
+#. 246
+#: ..\GCodeInterpreter.cpp:271
+msgid "Checking Spindle Speed"
+msgstr ""
+
+#: ..\mcToolTable-n.h:80 ..\mcToolTable.h:53
+msgid "Choice"
+msgstr ""
+
+#: circularpocket.h:53
+msgid "Circular Pocket"
+msgstr ""
+
+#: gcEditorAui.cpp:497
+msgid "Circular Pocket..."
+msgstr ""
+
+#: gcEditorAui.cpp:610
+msgid "Clear"
+msgstr ""
+
+#: ..\MachAPI.cpp:1408
+msgid "Clear E-Stop!"
+msgstr ""
+
+#: ..\MachAPI.cpp:2810 ..\MachAPI.cpp:2838 ..\MachAPI.cpp:2869
+#: ..\MachAPI.cpp:3012
+msgid "Clear alarm condition with Reset before Cycle Start."
+msgstr ""
+
+#: aftoac.cpp:185
+msgid "Close"
+msgstr ""
+
+#: gcEditorAui.cpp:366
+msgid "Close the current G code file."
+msgstr ""
+
+#: dncSend.cpp:228
+msgid "Close this window when finished"
+msgstr ""
+
+#: Settings.cpp:775
+msgid "Color"
+msgstr ""
+
+#: Settings.h:133
+msgid "Color Settings"
+msgstr ""
+
+#: dncReceive.cpp:169 dncSend.cpp:166
+msgid "Com Port State"
+msgstr ""
+
+#: gcEditorAui.cpp:1603 Settings.cpp:442
+msgid "Command"
+msgstr ""
+
+#. convert_set_plane
+#. 66
+#: ..\GCodeInterpreter.cpp:91
+msgid "Command too long"
+msgstr ""
+
+#: gcEditorAui.cpp:1605 Settings.cpp:444
+msgid "Comment"
+msgstr ""
+
+#: ..\GCodeInterpreter-nurbs.cpp:1642 ..\GCodeInterpreter.cpp:1647
+#, c-format
+msgid "Common var %d is marked as Read Only"
+msgstr ""
+
+#. read_operation_unary
+#. 206
+#: ..\GCodeInterpreter.cpp:231
+msgid "Comp Started with Arc infeed error"
+msgstr ""
+
+#. read_setvn
+#. 257
+#: ..\GCodeInterpreter.cpp:282
+msgid "Comp calc failed with current tool radius"
+msgstr ""
+
+#: gcEditorAui.cpp:500
+msgid "Compact the selected G code."
+msgstr ""
+
+#: gcEditorAui.cpp:500
+msgid "Compact/Reduce G code..."
+msgstr ""
+
+#. read_text, rs274ngc_open
+#. 67
+#: ..\GCodeInterpreter.cpp:92
+msgid "Concave corner with cutter radius comp"
+msgstr ""
+
+#: ..\Controller.cpp:5037 ..\MachAPI.cpp:3923
+msgid "Config"
+msgstr ""
+
+#: ..\mcFileConfig.cpp:748
+#, c-format
+msgid "Config entry name cannot start with '%c'."
+msgstr ""
+
+#: profilesettings.cpp:644
+msgid "Conversation End:"
+msgstr ""
+
+#: profilesettings.cpp:626
+msgid "Conversation Start:"
+msgstr ""
+
+#: gcEditorAui.cpp:451
+msgid "Convert To Inch\tCtrl-I"
+msgstr ""
+
+#: gcEditorAui.cpp:452
+msgid "Convert To Metric\tCtrl-Shift-I"
+msgstr ""
+
+#: gcEditorAui.cpp:499
+msgid "Convert across flats to across corners dimensions."
+msgstr ""
+
+#: gcEditorAui.cpp:451
+msgid "Convert the code to inch values"
+msgstr ""
+
+#: gcEditorAui.cpp:452
+msgid "Convert the code to metric values"
+msgstr ""
+
+#. convert_arc_comp2, convert_straight_comp2
+#. 68
+#: ..\GCodeInterpreter.cpp:93
+msgid "Coordinate system index parameter 5220 out of range"
+msgstr ""
+
+#: about.cpp:203
+msgid "Copy ID To Clipboard"
+msgstr ""
+
+#: gcEditorAui.cpp:429 gcEditorAui.cpp:534
+msgid "Copy the selected text to the clipboard"
+msgstr ""
+
+#: about.cpp:247
+msgid ""
+"Copyright 2001-2015\n"
+"Newfanged Solutions, LLC.\n"
+"All rights reserved."
+msgstr ""
+
+#: ..\GcodeFileEncrypted.cpp:135 ..\GcodeFileEncrypted.cpp:145
+msgid "Could not allocate encryption memory!"
+msgstr ""
+
+#: ..\Controller.cpp:6684 ..\Controller.cpp:6759
+msgid "Could not allocate new memory on the heap!"
+msgstr ""
+
+#. error if we couldn't
+#: ..\Controller.cpp:6810
+msgid "Could not copy file \""
+msgstr ""
+
+#: ..\Controller.cpp:6787
+msgid "Could not create directory \""
+msgstr ""
+
+#: ..\GcodeFileEncrypted.cpp:153
+msgid "Could not dcrypte g code file!"
+msgstr ""
+
+#: dncReceive.cpp:379 dncSend.cpp:313
+msgid "Could not open com port!"
+msgstr ""
+
+#: ..\GcodeFileEncrypted.cpp:126
+msgid "Could not processed encrypted password!"
+msgstr ""
+
+#. error if we couldn't
+#: ..\Controller.cpp:6717
+msgid "Could not remove directory "
+msgstr ""
+
+#. error if we couldn't
+#: ..\Controller.cpp:6704
+msgid "Could not remove file \""
+msgstr ""
+
+#: gcEditorAui.cpp:355 gcEditorAui.cpp:514
+msgid "Create a new G code file."
+msgstr ""
+
+#: gcEditorAui.cpp:423
+msgid "Cu&t\tCtrl-X"
+msgstr ""
+
+#. rs274ngc_init
+#. 69
+#: ..\GCodeInterpreter.cpp:94
+msgid "Current point same as end point of arc"
+msgstr ""
+
+#: gcEditorAui.cpp:1628
+msgid "Cursor"
+msgstr ""
+
+#: gcEditorAui.cpp:423 gcEditorAui.cpp:531
+msgid "Cut the selected text to the clipboard."
+msgstr ""
+
+#. convert_coordinate_rotation
+#. 280
+#: ..\GCodeInterpreter.cpp:305
+msgid "Cutter comp ended without doing a move to remove the comp amount"
+msgstr ""
+
+#. convert_arc
+#. 209
+#: ..\GCodeInterpreter.cpp:234
+msgid "Cutter comp not suported"
+msgstr ""
+
+#. arc_data_r
+#. 70
+#: ..\GCodeInterpreter.cpp:95
+msgid "Cutter gouging with cutter radius comp"
+msgstr ""
+
+#: ..\Controller.cpp:5021
+msgid "Cycle Start"
+msgstr ""
+
+#. convert_arc_comp1, convert_straight_comp1
+#. 71
+#: ..\GCodeInterpreter.cpp:96
+msgid "D word with no G41 or G42"
+msgstr ""
+
+#: gcEditorAui.cpp:493 gcEditorAui.cpp:685
+msgid "DNC"
+msgstr ""
+
+#: dncReceive.h:52
+msgid "DNC - Receive "
+msgstr ""
+
+#: dncSend.h:55
+msgid "DNC - Send"
+msgstr ""
+
+#: Settings.cpp:756 Settings.cpp:868
+msgid "DNC Profiles"
+msgstr ""
+
+#: profilesettings.cpp:1342
+msgid "DNC Properties - CRLF Options"
+msgstr ""
+
+#: profilesettings.cpp:1334
+msgid "DNC Properties - Communication Settings"
+msgstr ""
+
+#: profilesettings.cpp:1340
+msgid "DNC Properties - Receive Translations"
+msgstr ""
+
+#: profilesettings.cpp:1338
+msgid "DNC Properties - Send Translations"
+msgstr ""
+
+#: profilesettings.cpp:1336
+msgid "DNC Properties - Strings and Constants"
+msgstr ""
+
+#: dncReceive.cpp:182 dncSend.cpp:179
+msgid "DSR"
+msgstr ""
+
+#: dncReceive.cpp:185 dncSend.cpp:182 profilesettings.cpp:450
+msgid "DTR"
+msgstr ""
+
+#: profilesettings.cpp:396
+msgid "Data:"
+msgstr ""
+
+#. //@end WizardPage2 content construction
+#. //@end WizardPage3 content construction
+#: profilesettings.cpp:870 profilesettings.cpp:1075
+msgid "Decimal"
+msgstr ""
+
+#: gcEditorAui.cpp:1600 Settings.cpp:440 Settings.cpp:464
+#: wxTranslationHelper.cpp:143
+msgid "Default"
+msgstr ""
+
+#: Settings.cpp:251
+msgid "Default Directory (none will be last opened)"
+msgstr ""
+
+#: Settings.cpp:753
+msgid "Delete"
+msgstr ""
+
+#: gcEditorAui.cpp:446
+msgid "Delete Current Line\tCtrl-L"
+msgstr ""
+
+#: gcEditorAui.cpp:441 gcEditorAui.cpp:540
+msgid "Delete the selected text."
+msgstr ""
+
+#: circularpocket.cpp:199 spiralmillbore.cpp:202
+msgid "Depth of cut :"
+msgstr ""
+
+#: boltholepattern.cpp:168
+msgid "Dia Of Holes :"
+msgstr ""
+
+#: circularpocket.cpp:221 circularpocket.cpp:223 spiralmillbore.cpp:215
+#: spiralmillbore.cpp:217
+msgid "Diameter of the tool in use."
+msgstr ""
+
+#: circularpocket.cpp:185 circularpocket.cpp:187 spiralmillbore.cpp:188
+#: spiralmillbore.cpp:190
+msgid "Distance to bottom of hole from datum face."
+msgstr ""
+
+#: gcEditorAui.cpp:3398
+msgid "Done!\n"
+msgstr ""
+
+#: ..\Spindle.cpp:294 ..\Spindle.cpp:317 ..\Spindle.cpp:343 ..\Spindle.cpp:366
+msgid "Done."
+msgstr ""
+
+#: ..\MachAPI.cpp:3917
+msgid "Dry Run"
+msgstr ""
+
+#: ..\Controller.cpp:5033
+msgid "Dryrun"
+msgstr ""
+
+#. check_g_codes
+#. 73
+#: ..\GCodeInterpreter.cpp:98
+msgid "Dwell time P word missing with G82"
+msgstr ""
+
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 74
+#: ..\GCodeInterpreter.cpp:99
+msgid "Dwell time P word missing with G86"
+msgstr ""
+
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 75
+#: ..\GCodeInterpreter.cpp:100
+msgid "Dwell time P word missing with G88"
+msgstr ""
+
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 76
+#: ..\GCodeInterpreter.cpp:101
+msgid "Dwell time P word missing with G89"
+msgstr ""
+
+#. check_other_codes
+#. 72
+#: ..\GCodeInterpreter.cpp:97
+msgid "Dwell time missing with G4"
+msgstr ""
+
+#: gcEditorAui.cpp:402
+msgid "E&xit\tAlt-X"
+msgstr ""
+
+#: ..\Controller-good.cpp:2718 ..\Controller.cpp:3732
+msgid "E-Stop cleared!"
+msgstr ""
+
+#: ..\Controller.cpp:3729
+msgid "E-Stop condition!"
+msgstr ""
+
+#. read_end
+#. 236
+#: ..\GCodeInterpreter.cpp:261
+msgid "END without matching WHILE"
+msgstr ""
+
+#: Settings.cpp:750
+msgid "Edit"
+msgstr ""
+
+#: Settings.cpp:686
+msgid "Editor Colors"
+msgstr ""
+
+#: Settings.cpp:335
+msgid "Editor General"
+msgstr ""
+
+#: Settings.cpp:425
+msgid "Editor Keywords"
+msgstr ""
+
+#: gcEditorAui.cpp:1517
+msgid "Enter line number"
+msgstr ""
+
+#: Settings.cpp:289 Settings.cpp:297 Settings.cpp:305
+msgid "Enter the G code words that will be affected."
+msgstr ""
+
+#: aftoac.cpp:174 aftoac.cpp:176 aftoac.cpp:180 aftoac.cpp:182
+msgid "Enter the across flats size of the material."
+msgstr ""
+
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 77
+#: ..\GCodeInterpreter.cpp:102
+msgid "Equal sign missing in parameter setting"
+msgstr ""
+
+#: toolpathwindow.cpp:159
+msgid "Error / Status Messages"
+msgstr ""
+
+#: ..\MachAPI.cpp:7085
+msgid "Error description unknown"
+msgstr ""
+
+#: ..\GcodeFileEncrypted.cpp:378 ..\GcodeFileEncrypted.cpp:393
+#, c-format
+msgid "Error setting cipher %s\n"
+msgstr ""
+
+#: ..\GcodeFileEncrypted.cpp:414
+msgid "Error writing output."
+msgstr ""
+
+#: ..\Controller.cpp:5114 ..\Controller.cpp:5165 ..\Controller.cpp:5175
+#: ..\Controller.cpp:5204 ..\Controller.cpp:5236 ..\Controller.cpp:5247
+#: ..\Controller.cpp:5275 ..\Controller.cpp:5302 ..\Controller.cpp:5313
+#: ..\Controller.cpp:5342 ..\Controller.cpp:5359
+#, c-format
+msgid "Error, %s  axis commanded over SoftMax"
+msgstr ""
+
+#: ..\Controller.cpp:5117 ..\Controller.cpp:5186 ..\Controller.cpp:5197
+#: ..\Controller.cpp:5211 ..\Controller.cpp:5257 ..\Controller.cpp:5268
+#: ..\Controller.cpp:5282 ..\Controller.cpp:5324 ..\Controller.cpp:5335
+#: ..\Controller.cpp:5349 ..\Controller.cpp:5362
+#, c-format
+msgid "Error, %s  axis commanded over SoftMin"
+msgstr ""
+
+#: profilesettings.cpp:390
+msgid "Even"
+msgstr ""
+
+#: ..\GcodeExec.cpp:466 ..\GcodeExec.cpp:1032 ..\loadLookahead.cpp:191
+#: ..\loadMidLookahead.cpp:191
+msgid "Executing \""
+msgstr ""
+
+#: ..\Command.cpp:3183 ..\Command.cpp:3215
+#, c-format
+msgid "Executing the requested feed hold, wait = %s"
+msgstr ""
+
+#: ..\Command.cpp:3317
+msgid "Executing the requested single block."
+msgstr ""
+
+#: gcEditorAui.cpp:402
+msgid "Exit the G code editor."
+msgstr ""
+
+#. read_while
+#. 231
+#: ..\GCodeInterpreter.cpp:256
+msgid "Expected DO after WHILE"
+msgstr ""
+
+#. read_if
+#. 227
+#: ..\GCodeInterpreter.cpp:252
+msgid "Expected THEN or GOTO after IF"
+msgstr ""
+
+#. read_while
+#. 232
+#: ..\GCodeInterpreter.cpp:257
+msgid "Expected integer after DO"
+msgstr ""
+
+#. read_while
+#. 235
+#: ..\GCodeInterpreter.cpp:260
+msgid "Expected integer after END"
+msgstr ""
+
+#. arc_data_ijk
+#. 198
+#: ..\GCodeInterpreter.cpp:223
+msgid "F word missing in thread command"
+msgstr ""
+
+#. convert_arc
+#. 79
+#: ..\GCodeInterpreter.cpp:104
+msgid "F word missing with inverse time G1 move"
+msgstr ""
+
+#. read_sysvar_setting
+#. 78
+#: ..\GCodeInterpreter.cpp:103
+msgid "F word missing with inverse time arc move"
+msgstr ""
+
+#: ..\loadLookahead.cpp:148 ..\loadLookahead.cpp:262 ..\loadLookahead.cpp:299
+#: ..\loadLookahead.cpp:356 ..\loadMidLookahead.cpp:148
+#: ..\loadMidLookahead.cpp:262 ..\loadMidLookahead.cpp:299
+#: ..\loadMidLookahead.cpp:356
+msgid "FILE"
+msgstr ""
+
+#: gcEditorAui.cpp:2340
+msgid "Failed to create editor!!!"
+msgstr ""
+
+#: gcEditorAui.cpp:2337
+msgid "Failed to create notebook page!!!"
+msgstr ""
+
+#: ..\Axis.cpp:805
+msgid "Failed to transition to jog state!"
+msgstr ""
+
+#. convert_cycle_G76
+#. 245
+#: ..\GCodeInterpreter.cpp:270
+msgid "Feature not licensed"
+msgstr ""
+
+#. convert_cycle_yz
+#. 210
+#: ..\GCodeInterpreter.cpp:235
+msgid "Feature not supported"
+msgstr ""
+
+#: ..\Controller.cpp:5016
+msgid "Feed Hold"
+msgstr ""
+
+#: ..\Command.cpp:3365 ..\Command.cpp:3444
+msgid "Feed Hold deferred by DWELL"
+msgstr ""
+
+#: ..\Command.cpp:3360 ..\Command.cpp:3439
+msgid "Feed Hold disabled by CNTL2"
+msgstr ""
+
+#: ..\Command.cpp:3460
+msgid "Feed Hold not allowed. Deferring..."
+msgstr ""
+
+#. Do not defer the feed hold if in single block.
+#: ..\Command.cpp:3457
+msgid "Feed Hold not allowed. Waiting until the end of the block..."
+msgstr ""
+
+#: ..\MachAPI.cpp:3237
+msgid "Feed Rate Override disabled by CNTL2"
+msgstr ""
+
+#: ..\Controller.cpp:1531
+msgid "Feed hold has stopped movement."
+msgstr ""
+
+#: ..\Controller.cpp:2199 ..\Controller.cpp:2266
+msgid "Feed hold requesting stop report."
+msgstr ""
+
+#: ..\Command.cpp:3370
+msgid "Feed not allowed at this time. Deferring."
+msgstr ""
+
+#: ..\GCodeInterpreter.cpp:1014
+#, c-format
+msgid "File \"%s\", Line %d: "
+msgstr ""
+
+#: Settings.cpp:242
+msgid "File Extensions"
+msgstr ""
+
+#. convert_straight
+#. 80
+#: ..\GCodeInterpreter.cpp:105
+msgid "File ended with no percent sign"
+msgstr ""
+
+#. read_text, rs274ngc_open
+#. 81
+#: ..\GCodeInterpreter.cpp:106
+msgid "File ended with no percent sign or program end"
+msgstr ""
+
+#: ..\Controller.cpp:6795
+msgid "File exists!"
+msgstr ""
+
+#. read_text
+#. 82
+#: ..\GCodeInterpreter.cpp:107
+msgid "File name too long"
+msgstr ""
+
+#. rs274ngc_open
+#. 83
+#: ..\GCodeInterpreter.cpp:108
+msgid "File not open"
+msgstr ""
+
+#: ..\MachAPI.cpp:3926
+msgid "File:Run"
+msgstr ""
+
+#: ..\MachAPI.cpp:3968
+msgid "File:Run:Ending"
+msgstr ""
+
+#: ..\MachAPI.cpp:3929
+msgid "File:Run:Feed Hold"
+msgstr ""
+
+#: ..\MachAPI.cpp:3944
+msgid "File:Run:Feed Hold:Jog"
+msgstr ""
+
+#: ..\MachAPI.cpp:3962
+msgid "File:Run:Homing"
+msgstr ""
+
+#: ..\MachAPI.cpp:3965
+msgid "File:Run:Interrupt"
+msgstr ""
+
+#: ..\MachAPI.cpp:3950
+msgid "File:Run:Macro Hold"
+msgstr ""
+
+#: ..\MachAPI.cpp:3953
+msgid "File:Run:Macro Hold:Jog"
+msgstr ""
+
+#: ..\MachAPI.cpp:3932
+msgid "File:Run:Probe"
+msgstr ""
+
+#: ..\MachAPI.cpp:3935
+msgid "File:Run:Probe:Feed Hold"
+msgstr ""
+
+#: ..\MachAPI.cpp:3956
+msgid "File:Run:Single Block"
+msgstr ""
+
+#: ..\MachAPI.cpp:3959
+msgid "File:Run:Single Block Hold"
+msgstr ""
+
+#: ..\MachAPI.cpp:3947
+msgid "File:Run:Tapping"
+msgstr ""
+
+#: ..\MachAPI.cpp:3938
+msgid "File:Run:Threading"
+msgstr ""
+
+#: ..\MachAPI.cpp:3941
+msgid "File:Run:Threading:Feed Hold"
+msgstr ""
+
+#: ..\MachAPI.cpp:3908
+msgid "File:Subroutine"
+msgstr ""
+
+#: gcEditorAui.cpp:551 gcEditorAui.cpp:1413
+msgid "Find"
+msgstr ""
+
+#: gcEditorAui.cpp:468
+msgid "Find &Next\tF3"
+msgstr ""
+
+#: gcEditorAui.cpp:469
+msgid "Find &Previous\tShift-F3"
+msgstr ""
+
+#: gcEditorAui.cpp:468
+msgid "Find Next."
+msgstr ""
+
+#: gcEditorAui.cpp:554 gcEditorAui.cpp:1489
+msgid "Find and Replace"
+msgstr ""
+
+#: gcEditorAui.cpp:471
+msgid "Find and Replace."
+msgstr ""
+
+#: gcEditorAui.cpp:463
+msgid "Find."
+msgstr ""
+
+#: gcEditorAui.cpp:469
+msgid "Fine Pevious."
+msgstr ""
+
+#: ..\mcToolTable-n.h:81 ..\mcToolTable.h:54
+msgid "Float"
+msgstr ""
+
+#: profilesettings.cpp:425
+msgid "Flow:"
+msgstr ""
+
+#: about.cpp:223
+msgid "For more information, please visit our webpage:"
+msgstr ""
+
+#: about.cpp:185
+msgid "For support with this version, please contact:"
+msgstr ""
+
+#: Settings.cpp:469
+msgid "Foreground:"
+msgstr ""
+
+#: wxTextPrintout.cpp:93
+msgid "Formatting printout"
+msgstr ""
+
+#: Settings.cpp:276
+msgid "G Code Init"
+msgstr ""
+
+#: gcEditorAui.cpp:586
+msgid "G Code Messages"
+msgstr ""
+
+#: gcEditorAui.cpp:1609 Settings.cpp:447
+msgid "G code"
+msgstr ""
+
+#: boltholepattern.cpp:223 boltholepattern.cpp:225
+msgid "G code after the pattern."
+msgstr ""
+
+#: boltholepattern.cpp:214 boltholepattern.cpp:216
+msgid "G code before the pattern."
+msgstr ""
+
+#: gcEditorAui.cpp:2858
+#, c-format
+msgid ""
+"G code files (%s; O*)|%s; O*|Text files (*.txt)|*.txt|All files (*.*)|*.*"
+msgstr ""
+
+#. rs274ngc_read
+#. 84
+#: ..\GCodeInterpreter.cpp:109
+msgid "G code out of range"
+msgstr ""
+
+#. read_operation_unary
+#. 204
+#: ..\GCodeInterpreter.cpp:229
+msgid "G43 not supported in Turn"
+msgstr ""
+
+#. convert_spline
+#. 286
+#: ..\GCodeInterpreter-nurbs.cpp:299
+msgid "G5 must specify both I and J, or neither"
+msgstr ""
+
+#. convert_spline
+#. 287
+#: ..\GCodeInterpreter-nurbs.cpp:300
+msgid "G5 must specify both P and Q"
+msgstr ""
+
+#. 0
+#. 1
+#. 2
+#. 3
+#. 4
+#. rs274ngc_open
+#. 5
+#. enhance_block
+#. 6
+#. enhance_block
+#. 7
+#. arc_data_r
+#. 8
+#. execute_unary
+#. 9
+#. execute_unary
+#. 10
+#. execute_binary1
+#. 11
+#. execute_binary1
+#. 12
+#. read_one_item
+#. 13
+#. read_integer_unsigned
+#. 14
+#. read_real_number
+#. 15
+#. check_g_codes
+#. 16
+#. convert_straight, convert_straight_comp1, convert_straight_comp2
+#. 17
+#. convert_set_plane
+#. 18
+#. convert_length_units
+#. 19
+#. convert_home
+#. 20
+#. arc_data_comp_ijk, arc_data_ijk
+#. 21
+#. convert_cutter_compensation
+#. 22
+#. convert_tool_length_offset
+#. 23
+#. convert_modal_0
+#. 24
+#. convert_control_mode
+#. 25
+#. convert_distance_mode
+#. 26
+#. convert_feed_mode
+#. 27
+#. convert_retract_mode
+#. 28
+#. convert_axis_offsets
+#. 29
+#. convert_coordinate_system
+#. 30
+#. convert_stop
+#. 31
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 32
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx, read_a, read_b, read_c, read_comment, read_d, read_f, read_g, read_h, read_i, read_j, read_k, read_l, read_line_number, read_m, read_p, read_parameter, read_parameter_setting, read_q, read_r, read_real_expression, read_s, read_t, read_x, read_y, read_z
+#. 33
+#. arc_data_comp_r
+#. 34
+#. convert_arc, convert_cycle
+#. 35
+#. convert_straight_comp1, convert_straight_comp2
+#. 36
+#. convert_motion
+#. 37
+#. execute_binary1, execute_binary2, execute_unary
+#. 38
+#. convert_axis_offsets
+#. 39
+#. convert_length_units
+#. 40
+#. rs274ngc_save_parameters
+#. 41
+#. convert_straight
+#. 42
+#. convert_cycle
+#. 43
+#. convert_arc
+#. 44
+#. convert_probe
+#. 45
+#. rs274ngc_save_parameters
+#. 46
+#. rs274ngc_save_parameters
+#. 47
+#. convert_probe
+#. 48
+#. convert_probe
+#. 49
+#. convert_probe
+#. 50
+#. check_other_codes
+#. 51
+#. check_other_codes
+#. 52
+#. check_other_codes
+#. 53
+#. convert_cutter_compensation_on
+#. 54
+#. convert_cutter_compensation_on
+#. 55
+#. read_a
+#. 56
+#. enhance_block
+#. 57
+#. enhance_block
+#. 58
+#. read_b
+#. 59
+#. read_c
+#. 60
+#. convert_home
+#. 61
+#. check_g_codes
+#. 62
+#. convert_straight
+#. 63
+#. enhance_block
+#. 64
+#. convert_set_plane
+#. 65
+#. convert_set_plane
+#. 66
+#. read_text, rs274ngc_open
+#. 67
+#. convert_arc_comp2, convert_straight_comp2
+#. 68
+#. rs274ngc_init
+#. 69
+#. arc_data_r
+#. 70
+#. convert_arc_comp1, convert_straight_comp1
+#. 71
+#. check_other_codes
+#. 72
+#. check_g_codes
+#. 73
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 74
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 75
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 76
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 77
+#. read_parameter_setting
+#. 78
+#. convert_arc
+#. 79
+#. convert_straight
+#. 80
+#. read_text, rs274ngc_open
+#. 81
+#. read_text
+#. 82
+#. rs274ngc_open
+#. 83
+#. rs274ngc_read
+#. 84
+#. read_g
+#. 85
+#. check_other_codes
+#. 86
+#. convert_arc
+#. 87
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 88
+#. check_other_codes
+#. 89
+#. convert_arc
+#. 90
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 91
+#. check_other_codes
+#. 92
+#. convert_arc
+#. 93
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 94
+#. check_other_codes
+#. 95
+#. check_other_codes
+#. 96
+#. read_atan
+#. 97
+#. read_unary
+#. 98
+#. read_line_number
+#. 99
+#. check_g_codes
+#. 100
+#. read_m
+#. 101
+#. convert_arc
+#. 102
+#. read_a
+#. 103
+#. read_b
+#. 104
+#. read_c
+#. 105
+#. read_d
+#. 106
+#. read_f
+#. 107
+#. read_h
+#. 108
+#. read_i
+#. 109
+#. read_j
+#. 110
+#. read_k
+#. 111
+#. read_l
+#. 112
+#. read_p
+#. 113
+#. read_q
+#. 114
+#. read_r
+#. 115
+#. read_s
+#. 116
+#. read_t
+#. 117
+#. read_x
+#. 118
+#. read_y
+#. 119
+#. read_z
+#. 120
+#. check_g_codes
+#. 121
+#. execute_unary
+#. 122
+#. read_d
+#. 123
+#. read_f
+#. 124
+#. read_g
+#. 125
+#. read_h
+#. 126
+#. read_l
+#. 127
+#. read_m
+#. 128
+#. read_q
+#. 129
+#. read_p
+#. 130
+#. read_s
+#. 131
+#. read_t
+#. 132
+#. close_and_downcase
+#. 133
+#. read_real_value
+#. 134
+#. read_real_number
+#. 135
+#. read_integer_value
+#. 136
+#. close_and_downcase
+#. 137
+#. convert_tool_length_offset
+#. 138
+#. check_g_codes
+#. 139
+#. check_g_codes
+#. 140
+#. check_other_codes
+#. 141
+#. rs274ngc_restore_parameters, rs274ngc_save_parameters
+#. 142
+#. read_parameter, read_parameter_setting, rs274ngc_restore_parameters, rs274ngc_save_parameters
+#. 143
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 144
+#. check_other_codes
+#. 145
+#. rs274ngc_read
+#. 146
+#. convert_cycle
+#. 147
+#. convert_arc
+#. 148
+#. convert_cycle_yz
+#. 149
+#. convert_cycle_zx
+#. 150
+#. convert_cycle_xy
+#. 151
+#. check_other_codes
+#. 152
+#. arc_data_comp_ijk, arc_data_ijk
+#. 153
+#. arc_data_comp_r
+#. 154
+#. rs274ngc_restore_parameters
+#. 155
+#. convert_tool_select
+#. 156
+#. read_atan
+#. 157
+#. convert_cycle_g84
+#. 158
+#. convert_cycle_g86
+#. 159
+#. convert_cycle_g87
+#. 160
+#. convert_cycle_g88
+#. 161
+#. read_integer_unsigned, read_real_number
+#. 162
+#. convert_probe
+#. 163
+#. check_m_codes
+#. 164
+#. read_h
+#. 165
+#. rs274ngc_load_tool_table
+#. 166
+#. read_d
+#. 167
+#. arc_data_comp_r, convert_arc_comp2
+#. 168
+#. read_g
+#. 169
+#. read_m
+#. 170
+#. convert_stop, rs274ngc_open, rs274ngc_restore_parameters
+#. 171
+#. close_and_downcase
+#. 172
+#. read_operation
+#. 173
+#. read_g
+#. 174
+#. read_m
+#. 175
+#. read_operation
+#. 176
+#. read_operation
+#. 177
+#. read_operation
+#. 178
+#. read_operation
+#. 179
+#. read_operation
+#. 180
+#. read_operation_unary
+#. 181
+#. read_operation_unary
+#. 182
+#. read_operation_unary
+#. 183
+#. read_operation_unary
+#. 184
+#. read_operation_unary
+#. 185
+#. read_operation_unary
+#. 186
+#. read_operation_unary
+#. 187
+#. read_operation_unary
+#. 188
+#. read_operation_unary
+#. 189
+#. convert_arc
+#. 190
+#. convert_arc
+#. 191
+#. convert_cycle_yz
+#. 192
+#. convert_probe
+#. 193
+#. convert_arc
+#. 194
+#. convert_cycle_zx
+#. 195
+#. convert_cycle_xy
+#. 196
+#. execute_unary
+#. 197
+#. arc_data_ijk
+#. 198
+#. Threading
+#. 199
+#. read_operation_unary
+#. 200
+#. read_operation_unary
+#. 201
+#. read_operation_unary
+#. 202
+#. read_operation_unary
+#. 203
+#. read_operation_unary
+#. 204
+#. read_operation_unary
+#. 205
+#. read_operation_unary
+#. 206
+#. read_operation_unary
+#. 207
+#. convert_arc
+#. 208
+#. convert_arc
+#. 209
+#. convert_cycle_yz
+#. 210
+#. convert_probe
+#. 211
+#. convert_cycle_g74
+#. 212
+#. convert_cycle_g842
+#. 213
+#. convert_cycle_g843
+#. 214
+#. macro
+#. 215
+#.
+#. 216
+#. Macro to Run
+#. 217
+#. 218
+#. 219
+#. 220
+#. 221
+#. read_operation_unary
+#. 222
+#. read_operation
+#. 223
+#. read_operation
+#. 224
+#. read_operation
+#. 225
+#. read_operation
+#. 226
+#. read_if
+#. 227
+#. read_if
+#. 228
+#. read_if
+#. 229
+#. read_if
+#. 230
+#. read_while
+#. 231
+#. read_while
+#. 232
+#. read_while
+#. 233
+#. read_while
+#. 234
+#. read_while
+#. 235
+#. read_end
+#. 236
+#. read_end
+#. 237
+#. check_g_codes
+#. 238
+#. check_g_codes
+#. 239
+#. convert_stop
+#. 240
+#. convert_cycle_G92
+#. 241
+#. convert_cycle_G92
+#. 242
+#. convert_cycle_G76
+#. 243
+#. convert_cycle_G76
+#. 244
+#. convert_cycle_G76
+#. 245
+#. read_if/read_goto, etc...
+#. 246
+#. convert_straight
+#. 247
+#. convert_m
+#. 248
+#. convert_m
+#. 249
+#. convert_m
+#. 250
+#. convert_m
+#. 251
+#. convert_cycle_G76
+#. 252
+#. convert_straight
+#. 253
+#. convert_straight
+#. 254
+#. convert_straight
+#. 255
+#. read_setvn
+#. 256
+#. read_setvn
+#. 257
+#. 258
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 259
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 260
+#. convert_cycle_G76
+#. 261
+#. convert_cycle_G76
+#. 262
+#. convert_cycle_G76
+#. 263
+#. convert_cycle_G76
+#. 264
+#. convert_cycle_G76
+#. 265
+#. convert_cycle_G76
+#. 266
+#. convert_scale
+#. 267
+#. convert_scale
+#. 268
+#. convert_cycle_G92
+#. 269
+#. convert_coordinate_system
+#. 270
+#. convert_coordinate_system
+#. 271
+#. convert_coordinate_system
+#. 272
+#. convert_setup
+#. 273
+#. convert_setup
+#. 274
+#. convert_setup
+#. 275
+#. convert_tool_select
+#. 276
+#. convert_tool_select
+#. 277
+#. convert_nurbs, convert_spline
+#. 278
+#. convert_nurbs
+#. 279
+#. convert_nurbs
+#. 280
+#. convert_nurbs
+#. 281
+#. convert_nurbs
+#. 282
+#. convert_nurbs
+#. 283
+#. convert_spline
+#. 284
+#. convert_spline
+#. 285
+#: ..\GCodeInterpreter-nurbs.cpp:298
+msgid "G5.1 must specify both I and J"
+msgstr ""
+
+#. convert_home
+#. 278
+#: ..\GCodeInterpreter.cpp:303
+msgid "G53 Move can not be preformed with G68 rotation active"
+msgstr ""
+
+#: ..\ToolPath.cpp:1116 ..\ToolPath.cpp:1170
+msgid "GL Array Error"
+msgstr ""
+
+#: ..\ToolPath.cpp:666
+msgid "General mem map file exception: \""
+msgstr ""
+
+#: gcEditorAui.cpp:496
+msgid "Generate a bolt hole pattern."
+msgstr ""
+
+#: gcEditorAui.cpp:497
+msgid "Generate a circular pocket."
+msgstr ""
+
+#: gcEditorAui.cpp:498
+msgid "Generate a spiral mill bore."
+msgstr ""
+
+#: gcEditorAui.cpp:3392
+msgid "Generating toolpath...  "
+msgstr ""
+
+#: gcEditorAui.cpp:1519
+msgid "Goto Line"
+msgstr ""
+
+#: gcEditorAui.cpp:477
+msgid "Goto Line...\tCtrl-G"
+msgstr ""
+
+#: gcEditorAui.cpp:477
+msgid "Goto a given line."
+msgstr ""
+
+#. read_if
+#. 229
+#: ..\GCodeInterpreter.cpp:254
+msgid "Goto line"
+msgstr ""
+
+#: Settings.cpp:548 Settings.cpp:639
+msgid "Green:"
+msgstr ""
+
+#. read_g
+#. 85
+#: ..\GCodeInterpreter.cpp:110
+msgid "H word with no G43"
+msgstr ""
+
+#: ..\Signal.cpp:198 ..\Signal.cpp:219 ..\Signal.cpp:238 ..\Signal.cpp:258
+#: ..\Signal.cpp:334 ..\Signal.cpp:363
+msgid "HIGH"
+msgstr ""
+
+#: profilesettings.cpp:430
+msgid "Hardware"
+msgstr ""
+
+#: profilesettings.cpp:871 profilesettings.cpp:1076
+msgid "Hex"
+msgstr ""
+
+#: gcEditorAui.cpp:613
+msgid "Highlight"
+msgstr ""
+
+#: gcEditorAui.cpp:3369
+msgid "Highlight File OFF...\n"
+msgstr ""
+
+#: gcEditorAui.cpp:3366
+msgid "Highlight File ON...\n"
+msgstr ""
+
+#: Settings.cpp:725
+msgid "Highlight Move"
+msgstr ""
+
+#: toolpathwindow.cpp:171
+msgid "Highlight Toolpath"
+msgstr ""
+
+#: ..\Controller.cpp:5019 ..\MachAPI.cpp:3905
+msgid "Hold"
+msgstr ""
+
+#: circularpocket.cpp:181 spiralmillbore.cpp:184
+msgid "Hole depth :"
+msgstr ""
+
+#: circularpocket.cpp:190 spiralmillbore.cpp:193
+msgid "Hole diameter :"
+msgstr ""
+
+#: ..\Controller.cpp:5022
+msgid "Home"
+msgstr ""
+
+#: ..\Controller.cpp:3975
+#, c-format
+msgid "Home switch %s tripped!"
+msgstr ""
+
+#: ..\MachAPI.cpp:3920
+msgid "Homing"
+msgstr ""
+
+#. check_other_codes
+#. 86
+#: ..\GCodeInterpreter.cpp:111
+msgid "I word given for arc in YZ plane"
+msgstr ""
+
+#. convert_arc
+#. 87
+#: ..\GCodeInterpreter.cpp:112
+msgid "I word missing with G87"
+msgstr ""
+
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 88
+#: ..\GCodeInterpreter.cpp:113
+msgid "I word with no G2 or G3 or G87 to use it"
+msgstr ""
+
+#. 258
+#: ..\GCodeInterpreter.cpp:283
+msgid "I, J, or Q word missing with G76"
+msgstr ""
+
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 259
+#: ..\GCodeInterpreter.cpp:284
+msgid "I, J, or Q word missing with G87"
+msgstr ""
+
+#: gcEditorAui.cpp:2204
+msgid "INS"
+msgstr ""
+
+#: ..\Enigma.cpp:1693
+msgid "IPC initialization failure!"
+msgstr ""
+
+#: gcEditorAui.cpp:1608 Settings.cpp:446
+msgid "Identifier"
+msgstr ""
+
+#: ..\MachAPI.cpp:3902
+msgid "Idle"
+msgstr ""
+
+#: profilesettings.cpp:1244 profilesettings.cpp:1254
+msgid "Ignore"
+msgstr ""
+
+#: Settings.cpp:321
+msgid "Increment:"
+msgstr ""
+
+#: gcEditorAui.cpp:3809
+msgid "Information"
+msgstr ""
+
+#: ..\UserInterrupt.cpp:87
+msgid "Initiating secondary planner."
+msgstr ""
+
+#: gcEditorAui.cpp:454
+msgid "Insert Spaces\tCtrl-Shift-R"
+msgstr ""
+
+#: gcEditorAui.cpp:502
+msgid "Insert a Z ramp down move."
+msgstr ""
+
+#: Settings.cpp:329
+msgid "Insert only after blank line"
+msgstr ""
+
+#: gcEditorAui.cpp:454
+msgid "Insert spaces"
+msgstr ""
+
+#: Settings.cpp:308
+msgid "Insert/Renumber N Numbers"
+msgstr ""
+
+#: spiralmillbore.cpp:228
+msgid "Inside"
+msgstr ""
+
+#: ..\mcToolTable-n.h:82 ..\mcToolTable.h:55
+msgid "Integer"
+msgstr ""
+
+#: ..\Controller.cpp:5040
+msgid "Interrupt"
+msgstr ""
+
+#: ..\Controller.cpp:2609
+msgid "Invalid state for MDI start."
+msgstr ""
+
+#: ..\RunCanon.cpp:947
+#, c-format
+msgid "Invalid sub program number %d, sequence %d. Can't continue."
+msgstr ""
+
+#: ..\RunCanon.cpp:949
+#, c-format
+msgid "Invalid sub program number %d. Can't continue."
+msgstr ""
+
+#: ..\RunCanon.cpp:951
+msgid "Invalid sub program number.  Can't continue."
+msgstr ""
+
+#. convert_coordinate_system
+#. 272
+#: ..\GCodeInterpreter.cpp:297
+msgid "Invalid word with G10 L3"
+msgstr ""
+
+#. convert_setup
+#. 273
+#: ..\GCodeInterpreter.cpp:298
+msgid "Invalid word with G10 L3 sequence"
+msgstr ""
+
+#. convert_tool_select
+#. 276
+#: ..\GCodeInterpreter.cpp:301
+msgid "Invalide tool returned from TLM"
+msgstr ""
+
+#: ..\StateInterface.cpp:1238
+msgid "IsFileReadyToRun(): Gcode file is not loaded."
+msgstr ""
+
+#: ..\StateInterface.cpp:1242
+msgid "IsFileReadyToRun(): The control is still jogging."
+msgstr ""
+
+#: Settings.cpp:664
+msgid "Italic"
+msgstr ""
+
+#. check_other_codes
+#. 89
+#: ..\GCodeInterpreter.cpp:114
+msgid "J word given for arc in XZ plane"
+msgstr ""
+
+#. convert_arc
+#. 90
+#: ..\GCodeInterpreter.cpp:115
+msgid "J word missing with G87"
+msgstr ""
+
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 91
+#: ..\GCodeInterpreter.cpp:116
+msgid "J word with no G2 or G3 or G87 to use it"
+msgstr ""
+
+#: ..\Controller.cpp:5023
+msgid "Jog"
+msgstr ""
+
+#: ..\Axis.cpp:778
+msgid "Jog Rate too slow!"
+msgstr ""
+
+#: ..\MachAPI.cpp:3914
+msgid "Jogging"
+msgstr ""
+
+#: ..\Command.cpp:1691 ..\Command.cpp:1740 ..\Command.cpp:1914
+msgid "Jogging in cycle or feed hold is prohibited."
+msgstr ""
+
+#: ..\Command.cpp:1696 ..\Command.cpp:1745 ..\Command.cpp:1919
+msgid "Jogging is inhibited."
+msgstr ""
+
+#. We tried to jog while on the soft limits.
+#: ..\Axis.cpp:785 ..\Command.cpp:1724 ..\Command.cpp:1773 ..\Command.cpp:1962
+msgid "Jogging will violate the limits."
+msgstr ""
+
+#. check_other_codes
+#. 92
+#: ..\GCodeInterpreter.cpp:117
+msgid "K word given for arc in XY plane"
+msgstr ""
+
+#. convert_arc
+#. 93
+#: ..\GCodeInterpreter.cpp:118
+msgid "K word missing with G87"
+msgstr ""
+
+#. convert_cycle_G76
+#. 265
+#: ..\GCodeInterpreter.cpp:290
+msgid "K word out of range with G76 (valid: 1 to 4)"
+msgstr ""
+
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 94
+#: ..\GCodeInterpreter.cpp:119
+msgid "K word with no G2 or G3 or G87 to use it"
+msgstr ""
+
+#: gcEditorAui.cpp:1617 Settings.cpp:455
+msgid "Keyword 1"
+msgstr ""
+
+#: gcEditorAui.cpp:1618 Settings.cpp:456
+msgid "Keyword 2"
+msgstr ""
+
+#: gcEditorAui.cpp:1619 Settings.cpp:457
+msgid "Keyword 3"
+msgstr ""
+
+#: gcEditorAui.cpp:1620 Settings.cpp:458
+msgid "Keyword 4"
+msgstr ""
+
+#: gcEditorAui.cpp:1621 Settings.cpp:459
+msgid "Keyword 5"
+msgstr ""
+
+#: gcEditorAui.cpp:1622 Settings.cpp:460
+msgid "Keyword 6"
+msgstr ""
+
+#: gcEditorAui.cpp:1623 Settings.cpp:461
+msgid "Keyword 7"
+msgstr ""
+
+#: gcEditorAui.cpp:1624 Settings.cpp:462
+msgid "Keyword 8"
+msgstr ""
+
+#: Settings.cpp:352
+msgid "Keywords 1"
+msgstr ""
+
+#: Settings.cpp:347
+msgid "Keywords 1:"
+msgstr ""
+
+#: Settings.cpp:362
+msgid "Keywords 2"
+msgstr ""
+
+#: Settings.cpp:357
+msgid "Keywords 2:"
+msgstr ""
+
+#: Settings.cpp:372
+msgid "Keywords 3"
+msgstr ""
+
+#: Settings.cpp:367
+msgid "Keywords 3:"
+msgstr ""
+
+#: Settings.cpp:382
+msgid "Keywords 4"
+msgstr ""
+
+#: Settings.cpp:377
+msgid "Keywords 4:"
+msgstr ""
+
+#: Settings.cpp:392
+msgid "Keywords 5"
+msgstr ""
+
+#: Settings.cpp:387
+msgid "Keywords 5:"
+msgstr ""
+
+#: Settings.cpp:402
+msgid "Keywords 6"
+msgstr ""
+
+#: Settings.cpp:397
+msgid "Keywords 6:"
+msgstr ""
+
+#: Settings.cpp:412
+msgid "Keywords 7"
+msgstr ""
+
+#: Settings.cpp:407
+msgid "Keywords 7:"
+msgstr ""
+
+#: Settings.cpp:422
+msgid "Keywords 8"
+msgstr ""
+
+#: Settings.cpp:417
+msgid "Keywords 8:"
+msgstr ""
+
+#. convert_m
+#. 248
+#: ..\GCodeInterpreter.cpp:273
+msgid "L word out of range with M66"
+msgstr ""
+
+#. check_disabled_motion
+#. 287
+#: ..\GCodeInterpreter.cpp:312
+msgid "L word required with G10"
+msgstr ""
+
+#. check_other_codes
+#. 95
+#: ..\GCodeInterpreter.cpp:120
+msgid "L word with no canned cycle or G10"
+msgstr ""
+
+#: profilesettings.cpp:1246 profilesettings.cpp:1256
+msgid "LF"
+msgstr ""
+
+#: ..\Signal.cpp:199 ..\Signal.cpp:220 ..\Signal.cpp:239 ..\Signal.cpp:259
+#: ..\Signal.cpp:335 ..\Signal.cpp:364
+msgid "LOW"
+msgstr ""
+
+#: wxTranslationHelper.cpp:182
+msgid "Language"
+msgstr ""
+
+#: ..\Controller-good.cpp:1428 ..\Controller.cpp:2109
+#, c-format
+msgid "Leaving CyclePlannerEx(), rc == %d"
+msgstr ""
+
+#. check_other_codes
+#. 96
+#: ..\GCodeInterpreter.cpp:121
+msgid "Left bracket missing after slash with atan"
+msgstr ""
+
+#. read_atan
+#. 97
+#: ..\GCodeInterpreter.cpp:122
+msgid "Left bracket missing after unary operation name"
+msgstr ""
+
+#. WildCard for file type
+#. Style
+#. Position
+#. Size
+#: about.cpp:290
+msgid "License File Dialog"
+msgstr ""
+
+#. Message at the top of the dialog
+#. Default Directory
+#. default File
+#: about.cpp:286
+msgid "License Files (*.txt;*.dat)|*.txt;*.dat|All files (*)|*"
+msgstr ""
+
+#: about.cpp:518
+msgid "License by OEM from Artsoft @ "
+msgstr ""
+
+#: about.cpp:332
+msgid "License file installation failed!!!"
+msgstr ""
+
+#: about.cpp:334
+msgid ""
+"License file installed successfully.  Please restart for the changes to take "
+"effect."
+msgstr ""
+
+#: about.cpp:170 about.cpp:403 about.cpp:524
+msgid "Licensed"
+msgstr ""
+
+#: ..\Controller.cpp:3958
+#, c-format
+msgid "Limit switch %s tripped!"
+msgstr ""
+
+#: ..\GCodeInterpreter.cpp:1016
+#, c-format
+msgid "Line %d: "
+msgstr ""
+
+#: gcEditorAui.cpp:1606
+msgid "Line Comment"
+msgstr ""
+
+#: profilesettings.cpp:674
+msgid "Line Delay:"
+msgstr ""
+
+#: profilesettings.cpp:638
+msgid "Line End:"
+msgstr ""
+
+#: profilesettings.cpp:632
+msgid "Line Start:"
+msgstr ""
+
+#. read_unary
+#. 98
+#: ..\GCodeInterpreter.cpp:123
+msgid "Line number greater than 99999"
+msgstr ""
+
+#. read_line_number
+#. 99
+#: ..\GCodeInterpreter.cpp:124
+msgid "Line with G10 has unknown L word"
+msgstr ""
+
+#: Settings.cpp:707
+msgid "Linear Feed Move"
+msgstr ""
+
+#: gcEditorAui.cpp:2206
+#, c-format
+msgid "Ln %d Col %d"
+msgstr ""
+
+#: about.cpp:207
+msgid "Load License File"
+msgstr ""
+
+#: gcEditorAui.cpp:3388
+msgid "Loading File...\n"
+msgstr ""
+
+#: ..\Controller-new.h:1292 ..\Controller.h:1438
+msgid "Logging Enabled."
+msgstr ""
+
+#: gcEditorAui.cpp:1610 Settings.cpp:448
+msgid "M code"
+msgstr ""
+
+#. check_g_codes
+#. 100
+#: ..\GCodeInterpreter.cpp:125
+msgid "M code greater than 99"
+msgstr ""
+
+#: ..\StateInterface.cpp:1110
+msgid "MACH_STATE_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:1116
+msgid "MACH_STATE_on_exit"
+msgstr ""
+
+#: ..\Controller.cpp:5831
+#, c-format
+msgid "MACRO STOP: %d"
+msgstr ""
+
+#: ..\ProfileTool.cpp:155
+msgid "MAPI Error!"
+msgstr ""
+
+#: ..\ProfileTool.cpp:155
+msgid ""
+"MAPI is not installed.\n"
+"The profile is located at:\n"
+"\""
+msgstr ""
+
+#: ..\loadLookahead.cpp:150 ..\loadLookahead.cpp:264 ..\loadLookahead.cpp:301
+#: ..\loadLookahead.cpp:358 ..\loadMidLookahead.cpp:150
+#: ..\loadMidLookahead.cpp:264 ..\loadMidLookahead.cpp:301
+#: ..\loadMidLookahead.cpp:358
+msgid "MDI"
+msgstr ""
+
+#: ..\Controller.cpp:5024
+msgid "MDI Start"
+msgstr ""
+
+#: ..\MachAPI.cpp:3971
+msgid "MDI:Run"
+msgstr ""
+
+#: ..\MachAPI.cpp:3974
+msgid "MDI:Run:Feed Hold"
+msgstr ""
+
+#: ..\MachAPI.cpp:3998
+msgid "MDI:Run:Interrupt"
+msgstr ""
+
+#: ..\MachAPI.cpp:3992
+msgid "MDI:Run:Macro Hold"
+msgstr ""
+
+#: ..\MachAPI.cpp:3995
+msgid "MDI:Run:Macro Hold:Jog"
+msgstr ""
+
+#: ..\MachAPI.cpp:3977
+msgid "MDI:Run:Probe"
+msgstr ""
+
+#: ..\MachAPI.cpp:3980
+msgid "MDI:Run:Probe:Feed Hold"
+msgstr ""
+
+#: ..\MachAPI.cpp:3989
+msgid "MDI:Run:Tapping"
+msgstr ""
+
+#: ..\MachAPI.cpp:3983
+msgid "MDI:Run:Threading"
+msgstr ""
+
+#: ..\MachAPI.cpp:3986
+msgid "MDI:Run:Threading:Feed Hold"
+msgstr ""
+
+#: ..\MachAPI.cpp:3911
+msgid "MDI:Subroutine"
+msgstr ""
+
+#: ..\Controller.cpp:3961
+msgid "Mach 4 Core Limit Handler"
+msgstr ""
+
+#: about.cpp:151
+msgid "Mach4 Hobby"
+msgstr ""
+
+#: Settings.cpp:738
+msgid "Machine Profiles"
+msgstr ""
+
+#.
+#. 216
+#: ..\GCodeInterpreter.cpp:241
+msgid "Macro"
+msgstr ""
+
+#: ..\Controller.cpp:5035
+msgid "Macro Hold"
+msgstr ""
+
+#: ..\Controller.cpp:1543
+msgid "Main planner updated from last mcMotionSetPos()."
+msgstr ""
+
+#: profilesettings.cpp:391
+msgid "Mark"
+msgstr ""
+
+#: circularpocket.cpp:203 circularpocket.cpp:205 spiralmillbore.cpp:206
+#: spiralmillbore.cpp:208
+msgid "Maximum depth of each cut."
+msgstr ""
+
+#: ..\ToolPath.cpp:670
+msgid "Mem map file empty exception: \""
+msgstr ""
+
+#: ..\ToolPath.cpp:678
+msgid "Mem map file invalid exception: \""
+msgstr ""
+
+#: ..\ToolPath.cpp:674
+msgid "Mem map file sharing exception: \""
+msgstr ""
+
+#: ..\ToolPath.cpp:682
+msgid "Mem map file size exception: \""
+msgstr ""
+
+#: ..\ToolPath.cpp:666 ..\ToolPath.cpp:670 ..\ToolPath.cpp:674
+#: ..\ToolPath.cpp:678 ..\ToolPath.cpp:682
+msgid "Memory Mapped File Error"
+msgstr ""
+
+#: gcEditorAui.cpp:1604 Settings.cpp:443
+msgid "Message"
+msgstr ""
+
+#: tpAuiPanel.cpp:135
+msgid "Messages"
+msgstr ""
+
+#. read_m
+#. 101
+#: ..\GCodeInterpreter.cpp:126
+msgid "Mixed radius IJK format for arc"
+msgstr ""
+
+#: ..\MachAPI.cpp:3022
+msgid "Move off limit switches before Cycle Start."
+msgstr ""
+
+#: ..\MachAPI.cpp:2815 ..\MachAPI.cpp:2843 ..\MachAPI.cpp:2889
+msgid "Move off limit switches before executing G code."
+msgstr ""
+
+#: ..\MachAPI.cpp:2864
+msgid "Move off limit switches before executing MDI."
+msgstr ""
+
+#. read_if
+#. 230
+#: ..\GCodeInterpreter.cpp:255
+msgid "Multipl WHILEs on one line"
+msgstr ""
+
+#. convert_arc
+#. 102
+#: ..\GCodeInterpreter.cpp:127
+msgid "Multiple A words on one line"
+msgstr ""
+
+#. read_a
+#. 103
+#: ..\GCodeInterpreter.cpp:128
+msgid "Multiple B words on one line"
+msgstr ""
+
+#. read_b
+#. 104
+#: ..\GCodeInterpreter.cpp:129
+msgid "Multiple C words on one line"
+msgstr ""
+
+#. read_c
+#. 105
+#: ..\GCodeInterpreter.cpp:130
+msgid "Multiple D words on one line"
+msgstr ""
+
+#. read_operation_unary
+#. 205
+#: ..\GCodeInterpreter.cpp:230
+msgid "Multiple E words in block"
+msgstr ""
+
+#. read_d
+#. 106
+#: ..\GCodeInterpreter.cpp:131
+msgid "Multiple F words on one line"
+msgstr ""
+
+#. read_f
+#. 107
+#: ..\GCodeInterpreter.cpp:132
+msgid "Multiple H words on one line"
+msgstr ""
+
+#. read_h
+#. 108
+#: ..\GCodeInterpreter.cpp:133
+msgid "Multiple I words on one line"
+msgstr ""
+
+#. read_operation
+#. 226
+#: ..\GCodeInterpreter.cpp:251
+msgid "Multiple IFs on one line"
+msgstr ""
+
+#. read_i
+#. 109
+#: ..\GCodeInterpreter.cpp:134
+msgid "Multiple J words on one line"
+msgstr ""
+
+#. read_j
+#. 110
+#: ..\GCodeInterpreter.cpp:135
+msgid "Multiple K words on one line"
+msgstr ""
+
+#. read_k
+#. 111
+#: ..\GCodeInterpreter.cpp:136
+msgid "Multiple L words on one line"
+msgstr ""
+
+#. read_l
+#. 112
+#: ..\GCodeInterpreter.cpp:137
+msgid "Multiple P words on one line"
+msgstr ""
+
+#. read_p
+#. 113
+#: ..\GCodeInterpreter.cpp:138
+msgid "Multiple Q words on one line"
+msgstr ""
+
+#. read_q
+#. 114
+#: ..\GCodeInterpreter.cpp:139
+msgid "Multiple R words on one line"
+msgstr ""
+
+#. read_r
+#. 115
+#: ..\GCodeInterpreter.cpp:140
+msgid "Multiple S words on one line"
+msgstr ""
+
+#. read_s
+#. 116
+#: ..\GCodeInterpreter.cpp:141
+msgid "Multiple T words on one line"
+msgstr ""
+
+#. read_t
+#. 117
+#: ..\GCodeInterpreter.cpp:142
+msgid "Multiple X words on one line"
+msgstr ""
+
+#. read_x
+#. 118
+#: ..\GCodeInterpreter.cpp:143
+msgid "Multiple Y words on one line"
+msgstr ""
+
+#. read_y
+#. 119
+#: ..\GCodeInterpreter.cpp:144
+msgid "Multiple Z words on one line"
+msgstr ""
+
+#. read_z
+#. 120
+#: ..\GCodeInterpreter.cpp:145
+msgid "Must use G0 or G1 with G53"
+msgstr ""
+
+#: gcEditorAui.cpp:1612 Settings.cpp:450
+msgid "N code"
+msgstr ""
+
+#. read_if
+#. 228
+#: ..\GCodeInterpreter.cpp:253
+msgid "N value not defined"
+msgstr ""
+
+#. read_real_expression
+#. 291
+#: ..\GCodeInterpreter.cpp:316
+msgid "N word required with G10 L50"
+msgstr ""
+
+#: profilesettings.cpp:873 profilesettings.cpp:1078
+msgid "Name"
+msgstr ""
+
+#. execute_unary
+#. 122
+#: ..\GCodeInterpreter.cpp:147
+msgid "Negative D word tool radius index used"
+msgstr ""
+
+#. read_d
+#. 123
+#: ..\GCodeInterpreter.cpp:148
+msgid "Negative F word used"
+msgstr ""
+
+#. read_f
+#. 124
+#: ..\GCodeInterpreter.cpp:149
+msgid "Negative G code used"
+msgstr ""
+
+#. read_g
+#. 125
+#: ..\GCodeInterpreter.cpp:150
+msgid "Negative H word tool length offset index used"
+msgstr ""
+
+#. read_h
+#. 126
+#: ..\GCodeInterpreter.cpp:151
+msgid "Negative L word used"
+msgstr ""
+
+#. read_l
+#. 127
+#: ..\GCodeInterpreter.cpp:152
+msgid "Negative M code used"
+msgstr ""
+
+#. read_q
+#. 129
+#: ..\GCodeInterpreter.cpp:154
+msgid "Negative P word used"
+msgstr ""
+
+#. check_g_codes
+#. 121
+#: ..\GCodeInterpreter.cpp:146
+msgid "Negative argument to sqrt"
+msgstr ""
+
+#. read_m
+#. 128
+#: ..\GCodeInterpreter.cpp:153
+msgid "Negative or zero Q value used"
+msgstr ""
+
+#. read_p
+#. 130
+#: ..\GCodeInterpreter.cpp:155
+msgid "Negative spindle speed used"
+msgstr ""
+
+#. read_s
+#. 131
+#: ..\GCodeInterpreter.cpp:156
+msgid "Negative tool id used"
+msgstr ""
+
+#. read_t
+#. 132
+#: ..\GCodeInterpreter.cpp:157
+msgid "Nested comment found"
+msgstr ""
+
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 260
+#: ..\GCodeInterpreter.cpp:285
+msgid "No A, thread angle in G76 Cycle"
+msgstr ""
+
+#. convert_cycle_G76
+#. 261
+#: ..\GCodeInterpreter.cpp:286
+msgid "No D, first pass depth in G76 Cycle"
+msgstr ""
+
+#. read_operation_unary
+#. 207
+#. convert_arc
+#. 208
+#. convert_cycle_g843
+#. 214
+#: ..\GCodeInterpreter.cpp:232 ..\GCodeInterpreter.cpp:233
+#: ..\GCodeInterpreter.cpp:239
+msgid "No Error"
+msgstr ""
+
+#: boltholepattern.cpp:158
+msgid "No Holes :"
+msgstr ""
+
+#. convert_cycle_G76
+#. 262
+#: ..\GCodeInterpreter.cpp:287
+msgid "No K, thread height in G76 Cycle"
+msgstr ""
+
+#. convert_cycle_G92
+#. 269
+#: ..\GCodeInterpreter.cpp:294
+msgid "No P word with G54.1"
+msgstr ""
+
+#. convert_straight
+#. 247
+#: ..\GCodeInterpreter.cpp:272
+msgid "No P word with M66"
+msgstr ""
+
+#. convert_cycle_G76
+#. 263
+#: ..\GCodeInterpreter.cpp:288
+msgid "No P, infeed type in G76 Cycle"
+msgstr ""
+
+#. convert_cycle_G76
+#. 244
+#: ..\GCodeInterpreter.cpp:269
+msgid "No P, thread height in G76 Cycle"
+msgstr ""
+
+#. convert_cycle_G76
+#. 243
+#: ..\GCodeInterpreter.cpp:268
+msgid "No Q, first pass depth in G76 Cycle"
+msgstr ""
+
+#. Macro to Run
+#. 217
+#: ..\GCodeInterpreter.cpp:242
+msgid "No Spindle Speed in G95 Mode"
+msgstr ""
+
+#. convert_cycle_G92
+#. 242
+#: ..\GCodeInterpreter.cpp:267
+msgid "No X or Z move in G76 cycle"
+msgstr ""
+
+#. convert_cycle_G92
+#. 241
+#: ..\GCodeInterpreter.cpp:266
+msgid "No X position in G92 cycle"
+msgstr ""
+
+#. convert_stop
+#. 240
+#: ..\GCodeInterpreter.cpp:265
+msgid "No Z position in G92 cycle"
+msgstr ""
+
+#. close_and_downcase
+#. 133
+#: ..\GCodeInterpreter.cpp:158
+msgid "No characters found in reading real value"
+msgstr ""
+
+#: ..\PlugIn.cpp:198
+msgid "No compile script function!!"
+msgstr ""
+
+#: ..\PlugIn.cpp:185
+msgid "No debug script function!!"
+msgstr ""
+
+#. read_n
+#. 293
+#: ..\GCodeInterpreter.cpp:318
+msgid "No digits found where binary number should be"
+msgstr ""
+
+#. read_real_value
+#. 134
+#: ..\GCodeInterpreter.cpp:159
+msgid "No digits found where real number should be"
+msgstr ""
+
+#. 0
+#. 1
+#. 2
+#. 3
+#: ..\GCodeInterpreter.cpp:25 ..\GCodeInterpreter.cpp:26
+#: ..\GCodeInterpreter.cpp:27 ..\GCodeInterpreter.cpp:28
+msgid "No error"
+msgstr ""
+
+#: ..\PlugIn.cpp:156
+msgid "No execute private script function!!"
+msgstr ""
+
+#: ..\PlugIn.cpp:129
+msgid "No execute script function!!"
+msgstr ""
+
+#: ..\Controller.cpp:4017 ..\Controller.cpp:4204 ..\Controller.cpp:4248
+#, c-format
+msgid "No script engine found for %s"
+msgstr ""
+
+#. macro
+#. 215
+#: ..\GCodeInterpreter.cpp:240
+msgid "No spindle speed set in G95 mode"
+msgstr ""
+
+#. Threading
+#. 199
+#: ..\GCodeInterpreter.cpp:224
+msgid "No sub set"
+msgstr ""
+
+#. read_real_number
+#. 135
+#: ..\GCodeInterpreter.cpp:160
+msgid "Non integer value for integer"
+msgstr ""
+
+#: profilesettings.cpp:388 profilesettings.cpp:429 profilesettings.cpp:887
+#: profilesettings.cpp:1093 gcDncAction.h:17
+msgid "None"
+msgstr ""
+
+#: Settings.cpp:656
+msgid "Normal"
+msgstr ""
+
+#. read_integer_value
+#. 136
+#: ..\GCodeInterpreter.cpp:161
+msgid "Null missing after newline"
+msgstr ""
+
+#: gcEditorAui.cpp:1607 Settings.cpp:445
+msgid "Number"
+msgstr ""
+
+#: boltholepattern.cpp:163 boltholepattern.cpp:165
+msgid "Number of holes required."
+msgstr ""
+
+#: about.cpp:253
+msgid "OK"
+msgstr ""
+
+#: gcEditorAui.cpp:636 gcEditorAui.cpp:2204
+msgid "OVR"
+msgstr ""
+
+#: profilesettings.cpp:389
+msgid "Odd"
+msgstr ""
+
+#. close_and_downcase
+#. 137
+#: ..\GCodeInterpreter.cpp:162
+msgid "Offset index missing"
+msgstr ""
+
+#: gcEditorAui.cpp:361 gcEditorAui.cpp:517
+msgid "Open a G code file."
+msgstr ""
+
+#: gcEditorAui.cpp:1205
+msgid "Open file"
+msgstr ""
+
+#: gcEditorAui.cpp:1615 Settings.cpp:453
+msgid "Operator"
+msgstr ""
+
+#. read_operation_unary
+#. 290
+#: ..\GCodeInterpreter.cpp:315
+msgid "Operator precedence stack overflow"
+msgstr ""
+
+#: Settings.cpp:271 Settings.cpp:273
+msgid "Options for the removal of zeros."
+msgstr ""
+
+#: ..\ToolPath.cpp:1169
+#, c-format
+msgid ""
+"Out of bounds write of the Arc GL array.\n"
+"PathSegments = %lu"
+msgstr ""
+
+#: ..\ToolPath.cpp:1115
+#, c-format
+msgid ""
+"Out of bounds write of the Line GL array.\n"
+"PathSegments = %lu, expected =%lu"
+msgstr ""
+
+#: spiralmillbore.cpp:233
+msgid "Outside"
+msgstr ""
+
+#: ..\Controller.cpp:6794
+#, c-format
+msgid ""
+"Overwrite \"%s\"?\n"
+"If yes, then the original file will be backed up with a .bak extension."
+msgstr ""
+
+#. convert_tool_length_offset
+#. 138
+#: ..\GCodeInterpreter.cpp:163
+msgid "P value not an integer with G10"
+msgstr ""
+
+#. check_g_codes
+#. 139
+#: ..\GCodeInterpreter.cpp:164
+msgid "P value out of range with G10"
+msgstr ""
+
+#. read_end
+#. 237
+#: ..\GCodeInterpreter.cpp:262
+msgid "P word missing with G65 or M98"
+msgstr ""
+
+#. convert_cycle_G76
+#. 264
+#: ..\GCodeInterpreter.cpp:289
+msgid "P word out of range with G76 (valid: 1 to 4)"
+msgstr ""
+
+#. convert_m
+#. 249
+#: ..\GCodeInterpreter.cpp:274
+msgid "P word out of range with M66"
+msgstr ""
+
+#. check_g_codes
+#. 288
+#: ..\GCodeInterpreter.cpp:313
+msgid "P word required with G10"
+msgstr ""
+
+#. check_g_codes
+#. 140
+#: ..\GCodeInterpreter.cpp:165
+msgid "P word with no G4 G10 G82 G86 G88 G89"
+msgstr ""
+
+#: boltholepattern.cpp:183
+msgid "P.C.D :"
+msgstr ""
+
+#: about.cpp:194
+msgid "PC ID:"
+msgstr ""
+
+#: wxTextPrintout.cpp:113
+#, c-format
+msgid "Page %d"
+msgstr ""
+
+#: wxTextPrintout.cpp:105
+#, c-format
+msgid "Page %d of %d"
+msgstr ""
+
+#: wxTextPrintout.cpp:93
+msgid "Page 1 of ? "
+msgstr ""
+
+#: gcEditorAui.cpp:399
+msgid "Page S&etup..."
+msgstr ""
+
+#: gcEditorAui.cpp:1613 Settings.cpp:451
+msgid "Parameter"
+msgstr ""
+
+#. check_other_codes
+#. 141
+#: ..\GCodeInterpreter.cpp:166
+msgid "Parameter file out of order"
+msgstr ""
+
+#. rs274ngc_restore_parameters, rs274ngc_save_parameters
+#. 142
+#: ..\GCodeInterpreter.cpp:167
+msgid "Parameter number out of range"
+msgstr ""
+
+#: profilesettings.cpp:384
+msgid "Parity:"
+msgstr ""
+
+#: gcEditorAui.cpp:435 gcEditorAui.cpp:537
+msgid "Paste the text from the clipboard to the cursor location."
+msgstr ""
+
+#: ..\Controller.cpp:4034 ..\Controller.cpp:4064
+#, c-format
+msgid "Path \"%s\" is not valid."
+msgstr ""
+
+#: Settings.cpp:763
+msgid "Pint Options"
+msgstr ""
+
+#. no divsion by zero!!!!
+#: ..\SpindleExample.cpp:25
+#, c-format
+msgid "Please correct max speed in spindle range %d!"
+msgstr ""
+
+#: gcEditorAui.cpp:3809
+msgid "Please restart for the changes to take effect."
+msgstr ""
+
+#: profilesettings.cpp:353
+msgid "Port:"
+msgstr ""
+
+#: SerialPort.cpp:94
+msgid "PortName"
+msgstr ""
+
+#: SerialPort.cpp:65
+msgid "Ports"
+msgstr ""
+
+#. execute_binary1
+#. 12
+#: ..\GCodeInterpreter.cpp:37
+#, c-format
+msgid "Pos %d: Bad character '%s' used"
+msgstr ""
+
+#: boltholepattern.cpp:196 boltholepattern.cpp:198
+msgid "Position of the centre of the hole pattern in the X axis."
+msgstr ""
+
+#: boltholepattern.cpp:205 boltholepattern.cpp:207
+msgid "Position of the centre of the hole pattern in the Y axis."
+msgstr ""
+
+#: boltholepattern.cpp:219
+msgid "Post Move :"
+msgstr ""
+
+#: boltholepattern.cpp:210
+msgid "Pre Move :"
+msgstr ""
+
+#: profilesettings.cpp:620
+msgid "Prefix Count:"
+msgstr ""
+
+#: profilesettings.cpp:614
+msgid "Prefix:"
+msgstr ""
+
+#: ..\LatheInterpreter.cpp:4462 ..\MillInterpreter-nurbs.cpp:4197
+#: ..\MillInterpreter.cpp:4248 ..\rpInterpreter.cpp:4167
+#: ..\TangentalInterpreter.cpp:4164
+msgid "Press Cycle Start to resume."
+msgstr ""
+
+#: Settings.cpp:766
+msgid "Print Line Numbers"
+msgstr ""
+
+#: gcEditorAui.cpp:394
+msgid "Print P&review... \tShift-Ctrl-P"
+msgstr ""
+
+#: gcEditorAui.cpp:3879
+msgid "Print Preview"
+msgstr ""
+
+#: Settings.cpp:779
+msgid "Printing"
+msgstr ""
+
+#: ..\Controller.cpp:5025
+msgid "Probe"
+msgstr ""
+
+#: ..\Controller.cpp:5017
+msgid "Probe Complete"
+msgstr ""
+
+#: ..\RunCanon.cpp:596
+msgid "Probe signal active while trying to start probe cycle!"
+msgstr ""
+
+#: ..\StateInterface.cpp:973 ..\StateInterface.cpp:974
+msgid "Probe signal active. Aborting!"
+msgstr ""
+
+#: ..\StateInterface.cpp:985
+msgid "Probing not supported by motion plugin."
+msgstr ""
+
+#: profilesettings.cpp:334
+msgid "Profile Name:"
+msgstr ""
+
+#: profilesettings.cpp:89
+msgid "Profile Settings"
+msgstr ""
+
+#. read_sysvar, read_sysvar_setting, rs274ngc_restore_parameters, rs274ngc_save_parameters
+#. 143
+#: ..\GCodeInterpreter.cpp:168
+msgid "Q word missing with G73/G83"
+msgstr ""
+
+#. convert_m
+#. 250
+#: ..\GCodeInterpreter.cpp:275
+msgid "Q word out of range with M66"
+msgstr ""
+
+#. convert_cycle_xy, convert_cycle_yz, convert_cycle_zx
+#. 144
+#: ..\GCodeInterpreter.cpp:169
+msgid "Q word with no G73/G83"
+msgstr ""
+
+#. check_other_codes
+#. 145
+#: ..\GCodeInterpreter.cpp:170
+msgid "Queue is not empty after probing"
+msgstr ""
+
+#: ..\Controller.cpp:5018
+msgid "Quit"
+msgstr ""
+
+#. convert_cycle
+#. 147
+#: ..\GCodeInterpreter.cpp:172
+msgid "R I J K words all missing for arc"
+msgstr ""
+
+#. rs274ngc_read
+#. 146
+#: ..\GCodeInterpreter.cpp:171
+msgid "R clearance plane unspecified in cycle"
+msgstr ""
+
+#. convert_cycle_zx
+#. 150
+#: ..\GCodeInterpreter.cpp:175
+msgid "R less than X in cycle in XY plane"
+msgstr ""
+
+#. convert_arc
+#. 148
+#: ..\GCodeInterpreter.cpp:173
+msgid "R less than X in cycle in YZ plane"
+msgstr ""
+
+#. convert_cycle_yz
+#. 149
+#: ..\GCodeInterpreter.cpp:174
+msgid "R less than Y in cycle in XZ plane"
+msgstr ""
+
+#. read_operation_unary
+#. 202
+#: ..\GCodeInterpreter.cpp:227
+msgid "R word missing for G68 command"
+msgstr ""
+
+#. convert_cycle_xy
+#. 151
+#: ..\GCodeInterpreter.cpp:176
+msgid "R word with no g code that uses it"
+msgstr ""
+
+#: gcEditorAui.cpp:2205
+msgid "R/O"
+msgstr ""
+
+#: gcEditorAui.cpp:2205
+msgid "R/W"
+msgstr ""
+
+#: dncReceive.cpp:188 dncSend.cpp:185 profilesettings.cpp:444
+msgid "RTS"
+msgstr ""
+
+#: dncReceive.cpp:191 dncSend.cpp:188
+msgid "RXD"
+msgstr ""
+
+#. check_other_codes
+#. 152
+#: ..\GCodeInterpreter.cpp:177
+msgid "Radius to end of arc differs from radius to start"
+msgstr ""
+
+#. arc_data_comp_ijk, arc_data_ijk
+#. 153
+#: ..\GCodeInterpreter.cpp:178
+msgid "Radius too small to reach end point"
+msgstr ""
+
+#: circularpocket.cpp:226
+msgid "Ramp Angle :"
+msgstr ""
+
+#: gcEditorAui.cpp:502
+msgid "Ramp Z Plunge..."
+msgstr ""
+
+#: Settings.cpp:719
+msgid "Rapid Move"
+msgstr ""
+
+#: profilesettings.cpp:1259
+msgid "Receive"
+msgstr ""
+
+#: gcEditorAui.cpp:491
+msgid "Receive from CNC..."
+msgstr ""
+
+#: gcEditorAui.cpp:491
+msgid "Receive the program from the CNC control."
+msgstr ""
+
+#: gcEditorAui.cpp:1249
+msgid "Recent Files"
+msgstr ""
+
+#. We had a probe strike and the move didn't complete.
+#: ..\Command.cpp:4722
+msgid "Recording latched probe positions."
+msgstr ""
+
+#: Settings.cpp:542 Settings.cpp:633
+msgid "Red:"
+msgstr ""
+
+#: gcEditorAui.cpp:416 gcEditorAui.cpp:547
+msgid "Redo the last undone action."
+msgstr ""
+
+#: profilesettings.cpp:888 profilesettings.cpp:1094 profilesettings.cpp:1248
+#: profilesettings.cpp:1258 gcDncAction.h:18
+msgid "Remove"
+msgstr ""
+
+#: Settings.cpp:268
+msgid "Remove &both"
+msgstr ""
+
+#: Settings.cpp:266
+msgid "Remove &leading"
+msgstr ""
+
+#: Settings.cpp:267
+msgid "Remove &trailing"
+msgstr ""
+
+#: gcEditorAui.cpp:453
+msgid "Remove Spaces\tCtrl-R"
+msgstr ""
+
+#: gcEditorAui.cpp:455
+msgid "Remove Zeros"
+msgstr ""
+
+#: Settings.cpp:269
+msgid "Remove Zeros Function"
+msgstr ""
+
+#: gcEditorAui.cpp:453
+msgid "Remove spaces"
+msgstr ""
+
+#: gcEditorAui.cpp:455
+msgid "Remove zeros"
+msgstr ""
+
+#: profilesettings.cpp:889 profilesettings.cpp:1095 gcDncAction.h:19
+msgid "Replace"
+msgstr ""
+
+#: ..\Controller-good.cpp:1134
+msgid "Request not needed."
+msgstr ""
+
+#: ..\Axis.cpp:1635 ..\Controller-good.cpp:1112 ..\Controller.cpp:1671
+#, c-format
+msgid "Requesting a stopped report for axis %d motors."
+msgstr ""
+
+#: ..\Axis.cpp:1633
+#, c-format
+msgid "Requesting a stopped report for axis %d motors. %s:%d"
+msgstr ""
+
+#: ..\Axis.cpp:1641 ..\Controller-good.cpp:1121 ..\Controller.cpp:1680
+#, c-format
+msgid "Requesting a stopped report for motor %d."
+msgstr ""
+
+#: circularpocket.cpp:194 circularpocket.cpp:196 spiralmillbore.cpp:197
+#: spiralmillbore.cpp:199
+msgid "Required diameter of the hole."
+msgstr ""
+
+#. arc_data_comp_r
+#. 154
+#: ..\GCodeInterpreter.cpp:179
+msgid "Required parameter missing"
+msgstr ""
+
+#: ..\MachAPI.cpp:3017
+msgid "Reset part count with Reset before Cycle Start."
+msgstr ""
+
+#: gcEditorAui.cpp:3385
+msgid "Reseting interpreter...\n"
+msgstr ""
+
+#: profilesettings.cpp:662
+msgid "Restart:"
+msgstr ""
+
+#. We were in feed hold, resume the stored planner.
+#: ..\Controller.cpp:2374
+msgid "Resuming main planner."
+msgstr ""
+
+#. Feed hold is not enabled.
+#: ..\UserInterrupt.cpp:62
+msgid "Retract aborted because feed hold is not possible."
+msgstr ""
+
+#: ..\Controller.cpp:2359 ..\UserInterrupt.cpp:129
+msgid "Retract done."
+msgstr ""
+
+#: ..\Controller.cpp:5020
+msgid "Rewind & Run"
+msgstr ""
+
+#. read_operation_unary
+#. 200
+#: ..\GCodeInterpreter.cpp:225
+msgid "S word missing for G96"
+msgstr ""
+
+#. read_operation_unary
+#. 201
+#: ..\GCodeInterpreter.cpp:226
+msgid "S word missing for G97"
+msgstr ""
+
+#. read_setvn
+#. 256
+#: ..\GCodeInterpreter.cpp:281
+msgid "SETVN index out of range"
+msgstr ""
+
+#. convert_straight
+#. 255
+#: ..\GCodeInterpreter.cpp:280
+msgid "SETVN malformed"
+msgstr ""
+
+#: ..\StateInterface.cpp:258
+msgid "S_CONFIG_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:268
+msgid "S_CONFIG_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:274
+msgid "S_CONFIG_on_exit: Reloading config from profile."
+msgstr ""
+
+#: ..\StateInterface.cpp:286
+msgid "S_DRYRUN_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:297
+msgid "S_DRYRUN_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:490
+msgid "S_FILE_HOLD_JOGGING_on_entry"
+msgstr ""
+
+#. exit running->enter feed hold->exit feed hold->enter jog->exit jog->enter feed hold
+#. don't call jog exit.  control->JogExit(false /* Don't clear planners!*/);
+#. We were in feed hold, so make sure we stay that way.
+#. control->m_tc->m_TrajPlanner->tpPause();
+#: ..\StateInterface.cpp:504
+msgid "S_FILE_HOLD_JOGGING_on_exit"
+msgstr ""
+
+#. force
+#: ..\StateInterface.cpp:322
+msgid "S_FILE_HOLD_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:337
+msgid "S_FILE_HOLD_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:595
+msgid "S_FILE_HOMING_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:601
+msgid "S_FILE_HOMING_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:580
+msgid "S_FILE_INTERRUPT_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:587
+msgid "S_FILE_INTERRUPT_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:514
+msgid "S_FILE_MACRO_HOLD_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:522
+msgid "S_FILE_MACRO_HOLD_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:529
+msgid "S_FILE_MACRO_JOGGING_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:536
+msgid "S_FILE_MACRO_JOGGING_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:344
+msgid "S_FILE_PROBE_HOLD_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:363
+msgid "S_FILE_PROBE_HOLD_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:383
+msgid "S_FILE_PROBING_on_entry"
+msgstr ""
+
+#. control->SetProbeComplete(true);
+#: ..\StateInterface.cpp:395 ..\StateInterface.cpp:684
+msgid "S_FILE_PROBING_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:162
+msgid "S_FILE_RUNNING2_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:188
+msgid "S_FILE_RUNNING2_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:833
+msgid "S_FILE_RUNNING_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:863
+msgid "S_FILE_RUNNING_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:1054
+msgid "S_FILE_RUNNING_stop_jogging"
+msgstr ""
+
+#: ..\StateInterface.cpp:566
+msgid "S_FILE_SINGLE_BLOCK_HOLD_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:573
+msgid "S_FILE_SINGLE_BLOCK_HOLD_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:551
+msgid "S_FILE_SINGLE_BLOCK_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:559
+msgid "S_FILE_SINGLE_BLOCK_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:438
+msgid "S_FILE_TAPPING_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:447
+msgid "S_FILE_TAPPING_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:414
+msgid "S_FILE_THREADING_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:422
+msgid "S_FILE_THREADING_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:454
+msgid "S_FILE_THREAD_HOLD_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:472
+msgid "S_FILE_THREAD_HOLD_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:148
+msgid "S_HOLDING_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:155
+msgid "S_HOLDING_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:243
+msgid "S_HOMING_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:251
+msgid "S_HOMING_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:112
+msgid "S_IDLE_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:140
+msgid "S_IDLE_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:306
+msgid "S_JOGGING_on_entry"
+msgstr ""
+
+#. control->JogExit();
+#: ..\StateInterface.cpp:314
+msgid "S_JOGGING_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:609
+msgid "S_MDI_HOLD_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:628
+msgid "S_MDI_HOLD_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:819
+msgid "S_MDI_HOMING_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:825
+msgid "S_MDI_HOMING_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:804
+msgid "S_MDI_INTERRUPT_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:811
+msgid "S_MDI_INTERRUPT_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:766
+msgid "S_MDI_MACRO_HOLD_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:774
+msgid "S_MDI_MACRO_HOLD_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:782
+msgid "S_MDI_MACRO_JOGGING_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:790
+msgid "S_MDI_MACRO_JOGGING_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:635
+msgid "S_MDI_PROBE_HOLD_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:653
+msgid "S_MDI_PROBE_HOLD_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:673
+msgid "S_MDI_PROBING_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:209
+msgid "S_MDI_RUNNING2_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:233
+msgid "S_MDI_RUNNING2_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:1079
+msgid "S_MDI_RUNNING_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:1093
+msgid "S_MDI_RUNNING_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:1028
+msgid "S_MDI_RUNNING_stop_tap"
+msgstr ""
+
+#: ..\StateInterface.cpp:723
+msgid "S_MDI_TAPPING_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:732
+msgid "S_MDI_TAPPING_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:707
+msgid "S_MDI_THREADING_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:715
+msgid "S_MDI_THREADING_on_exit"
+msgstr ""
+
+#: ..\StateInterface.cpp:739
+msgid "S_MDI_THREAD_HOLD_on_entry"
+msgstr ""
+
+#: ..\StateInterface.cpp:756
+msgid "S_MDI_THREAD_HOLD_on_exit"
+msgstr ""
+
+#: gcEditorAui.cpp:381
+msgid "Sa&ve All\tCtrl-Shift-S"
+msgstr ""
+
+#: Settings.cpp:682
+msgid "Sample Text"
+msgstr ""
+
+#: gcEditorAui.cpp:375
+msgid "Save &As..."
+msgstr ""
+
+#: gcEditorAui.cpp:2562
+msgid "Save Changes?"
+msgstr ""
+
+#: gcEditorAui.cpp:381 gcEditorAui.cpp:523
+msgid "Save all modified files."
+msgstr ""
+
+#: gcEditorAui.cpp:2556
+#, c-format
+msgid "Save changes to '%s' before exiting?"
+msgstr ""
+
+#: gcEditorAui.cpp:2660
+msgid "Save file as"
+msgstr ""
+
+#: gcEditorAui.cpp:375
+msgid "Save the current G code file as another name."
+msgstr ""
+
+#: gcEditorAui.cpp:369
+msgid "Save the current G code file."
+msgstr ""
+
+#: gcEditorAui.cpp:520
+msgid "Save the current file."
+msgstr ""
+
+#. 218
+#: ..\GCodeInterpreter.cpp:243
+msgid "Scale active during G28 / G30"
+msgstr ""
+
+#. 219
+#: ..\GCodeInterpreter.cpp:244
+msgid "Scale active during G92 / G52"
+msgstr ""
+
+#. 220
+#: ..\GCodeInterpreter.cpp:245
+msgid "Scale active during parameter Setting"
+msgstr ""
+
+#: Settings.cpp:436
+msgid "Screen Element:"
+msgstr ""
+
+#. We are done with our return moves.
+#: ..\Controller.cpp:2355 ..\UserInterrupt.cpp:110
+msgid "Secondary planner done."
+msgstr ""
+
+#: gcEditorAui.cpp:459
+msgid "Select &Language..."
+msgstr ""
+
+#: gcEditorAui.cpp:448
+msgid "Select A&ll\tCtrl-A"
+msgstr ""
+
+#. pointer to parent
+#: about.cpp:283
+msgid "Select License File"
+msgstr ""
+
+#: SelectProfile.h:38
+msgid "Select Profile"
+msgstr ""
+
+#: gcEditorAui.cpp:448
+msgid "Select all text in the editor"
+msgstr ""
+
+#: wxTranslationHelper.cpp:181
+msgid "Select the language"
+msgstr ""
+
+#: gcEditorAui.cpp:1627
+msgid "Selected Text"
+msgstr ""
+
+#. rs274ngc_restore_parameters
+#. 155
+#: ..\GCodeInterpreter.cpp:180
+msgid "Selected tool slot number too large"
+msgstr ""
+
+#: Settings.cpp:246 Settings.cpp:248
+msgid "Semi-colon separated list of valid file extensions."
+msgstr ""
+
+#: profilesettings.cpp:1249
+msgid "Send"
+msgstr ""
+
+#: gcEditorAui.cpp:488
+msgid "Send the gurrent program to the CNC control."
+msgstr ""
+
+#: gcEditorAui.cpp:488
+msgid "Send to CNC..."
+msgstr ""
+
+#: ..\Signal.cpp:366
+#, c-format
+msgid "Signal id %d, (%s), %s waiting."
+msgstr ""
+
+#: ..\Signal.cpp:200 ..\Signal.cpp:260
+#, c-format
+msgid "Signal id %d, (%s), changed from %s to %s."
+msgstr ""
+
+#: ..\Signal.cpp:336
+#, c-format
+msgid "Signal id %d, (%s), finished waiting."
+msgstr ""
+
+#: ..\Signal.cpp:221 ..\Signal.cpp:240
+#, c-format
+msgid "Signal id %d, (%s), forced to %s."
+msgstr ""
+
+#: ..\Controller.cpp:5039
+msgid "Single Block"
+msgstr ""
+
+#: ..\Command.cpp:3054
+msgid "Single Block disabled by CNTL1"
+msgstr ""
+
+#. convert_m
+#. 251
+#: ..\GCodeInterpreter.cpp:276
+msgid "Single line G76 not supported"
+msgstr ""
+
+#. convert_tool_select
+#. 156
+#: ..\GCodeInterpreter.cpp:181
+msgid "Slash missing after first atan argument"
+msgstr ""
+
+#: profilesettings.cpp:431
+msgid "Software"
+msgstr ""
+
+#: gcEditorAui.cpp:479
+msgid "Sort the file."
+msgstr ""
+
+#: profilesettings.cpp:392
+msgid "Space"
+msgstr ""
+
+#: ..\Command.cpp:3289
+msgid "Spindle Override disabled."
+msgstr ""
+
+#: ..\Spindle.cpp:296
+msgid "Spindle is already at speed."
+msgstr ""
+
+#: ..\Spindle.cpp:345
+msgid "Spindle is already stopped."
+msgstr ""
+
+#. read_atan
+#. 157
+#: ..\GCodeInterpreter.cpp:182
+msgid "Spindle not turning clockwise in G84"
+msgstr ""
+
+#. convert_cycle_g74
+#. 212
+#: ..\GCodeInterpreter.cpp:237
+msgid "Spindle not turning clockwise in G84.2"
+msgstr ""
+
+#. convert_probe
+#. 211
+#: ..\GCodeInterpreter.cpp:236
+msgid "Spindle not turning counterclockwise in G74"
+msgstr ""
+
+#. convert_cycle_g842
+#. 213
+#: ..\GCodeInterpreter.cpp:238
+msgid "Spindle not turning counterclockwise in G84.3"
+msgstr ""
+
+#. convert_cycle_g84
+#. 158
+#: ..\GCodeInterpreter.cpp:183
+msgid "Spindle not turning in G86"
+msgstr ""
+
+#. convert_cycle_g86
+#. 159
+#: ..\GCodeInterpreter.cpp:184
+msgid "Spindle not turning in G87"
+msgstr ""
+
+#. convert_cycle_g87
+#. 160
+#: ..\GCodeInterpreter.cpp:185
+msgid "Spindle not turning in G88"
+msgstr ""
+
+#: ..\Spindle.cpp:88
+msgid "Spindle speed capped by current range!"
+msgstr ""
+
+#: ..\Spindle.cpp:289 ..\Spindle.cpp:290 ..\Spindle.cpp:338 ..\Spindle.cpp:339
+msgid "Spindle wait timed out."
+msgstr ""
+
+#: spiralmillbore.h:53
+msgid "Spiral Mill Bore"
+msgstr ""
+
+#: gcEditorAui.cpp:498
+msgid "Spiral Mill Bore..."
+msgstr ""
+
+#. convert_cycle_g88
+#. 161
+#: ..\GCodeInterpreter.cpp:186
+msgid "Sscanf failed"
+msgstr ""
+
+#: boltholepattern.cpp:174
+msgid "Start Angle :"
+msgstr ""
+
+#: Settings.cpp:313
+msgid "Start Number:"
+msgstr ""
+
+#: Settings.cpp:332
+msgid "Start inserting N codes only after the first blank line."
+msgstr ""
+
+#: circularpocket.cpp:176 circularpocket.cpp:178 spiralmillbore.cpp:179
+#: spiralmillbore.cpp:181
+msgid "Start point above hole."
+msgstr ""
+
+#. read_integer_unsigned, read_real_number
+#. 162
+#: ..\GCodeInterpreter.cpp:187
+msgid "Start point too close to probe point"
+msgstr ""
+
+#: profilesettings.cpp:346 profilesettings.cpp:418
+msgid "Static"
+msgstr ""
+
+#: ..\Controller-good.cpp:1397 ..\Controller.cpp:2050
+#, c-format
+msgid "Step&Dir Spindle Direction: %i RPM: %.3f "
+msgstr ""
+
+#: ..\Controller.cpp:5026
+msgid "Stop"
+msgstr ""
+
+#: ..\Controller.cpp:5038
+msgid "Stop Config"
+msgstr ""
+
+#: ..\Controller.cpp:5034
+msgid "Stop Dryrun"
+msgstr ""
+
+#: ..\Controller.cpp:5027
+msgid "Stop Home"
+msgstr ""
+
+#: ..\Controller.cpp:5028
+msgid "Stop Jog"
+msgstr ""
+
+#: ..\Controller.cpp:5036
+msgid "Stop Macro Hold"
+msgstr ""
+
+#: ..\Controller.cpp:5032
+msgid "Stop Tap"
+msgstr ""
+
+#: ..\Controller.cpp:5030
+msgid "Stop Thread"
+msgstr ""
+
+#. Keep Andrew from stopping a jog that was never started.  :)
+#: ..\Command.cpp:1929
+msgid "Stop is not possible if the axis in not jogging."
+msgstr ""
+
+#: profilesettings.cpp:408
+msgid "Stop:"
+msgstr ""
+
+#: ..\mcToolTable-n.h:83 ..\mcToolTable.h:56
+msgid "String"
+msgstr ""
+
+#: gcEditorAui.cpp:2807
+msgid "String not found!"
+msgstr ""
+
+#: gcEditorAui.cpp:1614 Settings.cpp:452
+msgid "Strings"
+msgstr ""
+
+#: profilesettings.cpp:680
+msgid "Strip comments on send"
+msgstr ""
+
+#: Settings.cpp:651
+msgid "Style"
+msgstr ""
+
+#. check_g_codes
+#. 239
+#: ..\GCodeInterpreter.cpp:264
+msgid "Subroutine file not found"
+msgstr ""
+
+#: profilesettings.cpp:656
+msgid "Suffix Count:"
+msgstr ""
+
+#: profilesettings.cpp:650
+msgid "Suffix:"
+msgstr ""
+
+#: about.cpp:232
+msgid "Support email address:"
+msgstr ""
+
+#: gcEditorAui.cpp:1611 Settings.cpp:449
+msgid "T code"
+msgstr ""
+
+#. convert_setup
+#. 275
+#: ..\GCodeInterpreter.cpp:300
+msgid "TLM: A tool group has expired"
+msgstr ""
+
+#: ..\canon-nurbs.cpp:692 ..\canon-nurbs.cpp:731 ..\canon-nurbs.cpp:1188
+#: ..\canon.cpp:769 ..\canon.cpp:796 ..\canon.cpp:1160
+msgid "TLM: A tool or group has has expired."
+msgstr ""
+
+#: dncReceive.cpp:194 dncSend.cpp:191
+msgid "TXD"
+msgstr ""
+
+#: gcEditorAui.cpp:579
+msgid "Tab"
+msgstr ""
+
+#: ..\Controller.cpp:5031
+msgid "Tap"
+msgstr ""
+
+#: Settings.cpp:326
+msgid "The N code Increment."
+msgstr ""
+
+#: Settings.cpp:318
+msgid "The N code starting number."
+msgstr ""
+
+#: ..\Axis.cpp:683 ..\Axis.cpp:690
+msgid "The absolute jog would violate soft limits."
+msgstr ""
+
+#: ..\Axis.cpp:756 ..\Command.cpp:1937
+msgid "The axis is not enabled"
+msgstr ""
+
+#: ..\Axis.cpp:472 ..\Axis.cpp:558 ..\Axis.cpp:641 ..\Axis.cpp:760
+msgid "The axis is not in a joggable state!"
+msgstr ""
+
+#. If the axis was jogging and the jog planner has drained, we can't jog until
+#. all of the associated motors have been reported as being stopped by
+#. the motion plugin.
+#: ..\Axis.cpp:487 ..\Axis.cpp:572 ..\Axis.cpp:656 ..\Axis.cpp:792
+msgid "The axis is reporting it cannot jog at this time!"
+msgstr ""
+
+#: ..\Command.cpp:1910
+msgid "The control is not enabled"
+msgstr ""
+
+#: Settings.cpp:255 Settings.cpp:257
+msgid ""
+"The default G code file folder.\n"
+"If blank, gcEdit will look in the last opened file location."
+msgstr ""
+
+#: circularpocket.cpp:230 circularpocket.cpp:232
+msgid "The entry angle of the tool, 0 is straight plunge."
+msgstr ""
+
+#: ..\Axis.cpp:528 ..\Axis.cpp:612
+msgid "The incremental jog would violate soft limits."
+msgstr ""
+
+#: Settings.cpp:281
+msgid "The initialization G code (if required)."
+msgstr ""
+
+#: boltholepattern.cpp:187 boltholepattern.cpp:189
+msgid "The pitch circle of the hole pattern."
+msgstr ""
+
+#: ..\Enigma.cpp:1776
+#, c-format
+msgid "The plugin %s is marked as invalid!"
+msgstr ""
+
+#: ..\ToolPath.cpp:623
+msgid ""
+"The specified operation is not allowed in the current state.  The offending "
+"command is \n"
+"ignored, and has no other side effect than to set the error flag."
+msgstr ""
+
+#: ..\ToolPath.cpp:395
+msgid "The tool path window has no context!"
+msgstr ""
+
+#: ..\ToolPath.cpp:632
+msgid ""
+"There is not enough memory left to execute the command.  The state of the GL "
+"is \n"
+"undefined, except for the state of the error flags, after this error is "
+"recorded."
+msgstr ""
+
+#: about.cpp:216
+#, c-format
+msgid "This OEM version of Mach 4 is licensed and supported by %s."
+msgstr ""
+
+#: ..\ToolPath.cpp:626
+msgid ""
+"This command would cause a stack overflow.  The offending command is "
+"ignored, and has no \n"
+"other side effect than to set the error flag."
+msgstr ""
+
+#: ..\ToolPath.cpp:629
+msgid ""
+"This command would cause a stack underflow.  The offending command is "
+"ignored, \n"
+"and has no other side effect than to set the error flag."
+msgstr ""
+
+#: ..\Controller.cpp:5029
+msgid "Thread"
+msgstr ""
+
+#: profilesettings.cpp:454
+msgid "Timeout:"
+msgstr ""
+
+#: gcEditorAui.cpp:483 gcEditorAui.cpp:558
+msgid "Toggle Always On Top"
+msgstr ""
+
+#: gcEditorAui.cpp:562
+msgid "Toggle the tool path display"
+msgstr ""
+
+#: gcEditorAui.cpp:482
+msgid "Toggle the tool path display."
+msgstr ""
+
+#. convert_probe
+#. 163
+#: ..\GCodeInterpreter.cpp:188
+msgid "Too many M codes on line"
+msgstr ""
+
+#. convert_g10_l50
+#. 292
+#: ..\GCodeInterpreter.cpp:317
+msgid "Too many N codes on line"
+msgstr ""
+
+#: gcEditorAui.cpp:599
+msgid "Tool Path"
+msgstr ""
+
+#: Settings.cpp:731 Settings.cpp:862
+msgid "Tool Path Colors"
+msgstr ""
+
+#: toolpathprogress.cpp:138
+msgid "Tool Path Progress"
+msgstr ""
+
+#: circularpocket.cpp:217 spiralmillbore.cpp:211
+msgid "Tool diameter :"
+msgstr ""
+
+#. check_m_codes
+#. 164
+#: ..\GCodeInterpreter.cpp:189
+msgid "Tool length offset index too big"
+msgstr ""
+
+#. read_h
+#. 165
+#: ..\GCodeInterpreter.cpp:190
+msgid "Tool max too large"
+msgstr ""
+
+#: tpAuiPanel.cpp:129
+msgid "Tool path display."
+msgstr ""
+
+#. rs274ngc_load_tool_table
+#. 166
+#: ..\GCodeInterpreter.cpp:191
+msgid "Tool radius index too big"
+msgstr ""
+
+#. read_d
+#. 167
+#: ..\GCodeInterpreter.cpp:192
+msgid "Tool radius not less than arc radius with comp"
+msgstr ""
+
+#: toolpathwindow.h:41
+msgid "ToolPathWindow"
+msgstr ""
+
+#: Settings.cpp:701
+msgid "Toolpath Background Bottom"
+msgstr ""
+
+#: Settings.cpp:695
+msgid "Toolpath Background Top"
+msgstr ""
+
+#: toolpathprogress.h:38
+msgid "ToolpathProgress"
+msgstr ""
+
+#: gcEditorAui.cpp:677
+msgid "Tools"
+msgstr ""
+
+#. arc_data_comp_r, convert_arc_comp2
+#. 168
+#: ..\GCodeInterpreter.cpp:193
+msgid "Two G codes used from same modal group"
+msgstr ""
+
+#. read_g
+#. 169
+#: ..\GCodeInterpreter.cpp:194
+msgid "Two M codes used from same modal group"
+msgstr ""
+
+#: gcEditorAui.cpp:1219 gcEditorAui.cpp:1277
+#, c-format
+msgid "Unable to load file '%s'."
+msgstr ""
+
+#. read_m
+#. 170
+#: ..\GCodeInterpreter.cpp:195
+msgid "Unable to open file"
+msgstr ""
+
+#: gcEditorAui.cpp:2640
+#, c-format
+msgid "Unable to save file '%s'."
+msgstr ""
+
+#. convert_stop, rs274ngc_open, rs274ngc_restore_parameters
+#. 171
+#: ..\GCodeInterpreter.cpp:196
+msgid "Unclosed comment found"
+msgstr ""
+
+#. close_and_downcase
+#. 172
+#: ..\GCodeInterpreter.cpp:197
+msgid "Unclosed expression"
+msgstr ""
+
+#: Settings.cpp:668
+msgid "Underline"
+msgstr ""
+
+#: gcEditorAui.cpp:410 gcEditorAui.cpp:544
+msgid "Undo the last action."
+msgstr ""
+
+#. check_g_codes
+#. 238
+#: ..\GCodeInterpreter.cpp:263
+msgid "Unidirectional Approch In G2 G3 Error"
+msgstr ""
+
+#: ..\Controller.cpp:5041
+msgid "Unknown"
+msgstr ""
+
+#. read_operation
+#. 173
+#: ..\GCodeInterpreter.cpp:198
+msgid "Unknown G code used"
+msgstr ""
+
+#. read_g
+#. 174
+#: ..\GCodeInterpreter.cpp:199
+msgid "Unknown M code used"
+msgstr ""
+
+#: gcEditorAui.cpp:2146
+msgid "Unknown find dialog event!"
+msgstr ""
+
+#. read_m
+#. 175
+#: ..\GCodeInterpreter.cpp:200
+msgid "Unknown operation"
+msgstr ""
+
+#. read_operation
+#. 176
+#: ..\GCodeInterpreter.cpp:201
+msgid "Unknown operation name starting with A"
+msgstr ""
+
+#. read_operation
+#. 177
+#: ..\GCodeInterpreter.cpp:202
+msgid "Unknown operation name starting with M"
+msgstr ""
+
+#. read_operation
+#. 178
+#: ..\GCodeInterpreter.cpp:203
+msgid "Unknown operation name starting with O"
+msgstr ""
+
+#. read_operation
+#. 179
+#: ..\GCodeInterpreter.cpp:204
+msgid "Unknown operation name starting with X"
+msgstr ""
+
+#. read_operation_unary
+#. 222
+#: ..\GCodeInterpreter.cpp:247
+msgid "Unknown operation name starting with e"
+msgstr ""
+
+#. read_operation
+#. 224
+#: ..\GCodeInterpreter.cpp:249
+msgid "Unknown operation name starting with g"
+msgstr ""
+
+#. read_operation
+#. 225
+#: ..\GCodeInterpreter.cpp:250
+msgid "Unknown operation name starting with l"
+msgstr ""
+
+#. read_operation
+#. 223
+#: ..\GCodeInterpreter.cpp:248
+msgid "Unknown operation name starting with n"
+msgstr ""
+
+#. read_operation
+#. 180
+#: ..\GCodeInterpreter.cpp:205
+msgid "Unknown word starting with A"
+msgstr ""
+
+#. read_binary_value
+#. 294
+#: ..\GCodeInterpreter.cpp:319
+msgid "Unknown word starting with B"
+msgstr ""
+
+#. read_operation_unary
+#. 181
+#: ..\GCodeInterpreter.cpp:206
+msgid "Unknown word starting with C"
+msgstr ""
+
+#. read_operation_unary
+#. 182
+#: ..\GCodeInterpreter.cpp:207
+msgid "Unknown word starting with E"
+msgstr ""
+
+#. read_operation_unary
+#. 183
+#: ..\GCodeInterpreter.cpp:208
+msgid "Unknown word starting with F"
+msgstr ""
+
+#. read_operation_unary
+#. 184
+#: ..\GCodeInterpreter.cpp:209
+msgid "Unknown word starting with L"
+msgstr ""
+
+#. check_g_codes
+#. 289
+#: ..\GCodeInterpreter.cpp:314
+msgid "Unknown word starting with P"
+msgstr ""
+
+#. read_operation_unary
+#. 185
+#: ..\GCodeInterpreter.cpp:210
+msgid "Unknown word starting with R"
+msgstr ""
+
+#. read_operation_unary
+#. 186
+#: ..\GCodeInterpreter.cpp:211
+msgid "Unknown word starting with S"
+msgstr ""
+
+#. read_operation_unary
+#. 187
+#: ..\GCodeInterpreter.cpp:212
+msgid "Unknown word starting with T"
+msgstr ""
+
+#. 221
+#: ..\GCodeInterpreter.cpp:246
+msgid "Unknown word starting with g"
+msgstr ""
+
+#. read_operation_unary
+#. 188
+#: ..\GCodeInterpreter.cpp:213
+msgid "Unknown word where unary operation could be"
+msgstr ""
+
+#: about.cpp:405 about.cpp:526
+msgid "Unlicensed"
+msgstr ""
+
+#: about.cpp:325
+msgid "Unrecognized license file!"
+msgstr ""
+
+#: gcEditorAui.cpp:607 toolpathwindow.cpp:168
+msgid "Update"
+msgstr ""
+
+#: about.cpp:162
+msgid "Version:"
+msgstr ""
+
+#: gcEditorAui.cpp:669
+msgid "View"
+msgstr ""
+
+#: gcEditorAui.cpp:616
+msgid "View Messages"
+msgstr ""
+
+#: ..\RunCanon.cpp:95
+#, c-format
+msgid "WAITONMOTION from: %s"
+msgstr ""
+
+#. read_while
+#. 233
+#: ..\GCodeInterpreter.cpp:258
+msgid "WHILE nested too deep"
+msgstr ""
+
+#. read_while
+#. 234
+#: ..\GCodeInterpreter.cpp:259
+msgid "WHILE without matching END"
+msgstr ""
+
+#: profilesettings.cpp:438
+msgid "Wait for CNC"
+msgstr ""
+
+#: ..\GcodeExec.cpp:273
+#, c-format
+msgid "WaitOnMacro() thisTc = %lu, isDone = %d"
+msgstr ""
+
+#: ..\Spindle.cpp:311
+#, c-format
+msgid "Waiting %f seconds for spindle at speed..."
+msgstr ""
+
+#: ..\Spindle.cpp:360
+#, c-format
+msgid "Waiting %f seconds for spindle to stop..."
+msgstr ""
+
+#. If using SetTrueRPM() and spindle stabilize.
+#: ..\Spindle.cpp:278
+msgid "Waiting for spindle at speed and stable..."
+msgstr ""
+
+#: ..\Spindle.cpp:285
+msgid "Waiting for spindle at speed..."
+msgstr ""
+
+#: ..\Spindle.cpp:281
+msgid "Waiting for spindle stable done."
+msgstr ""
+
+#: ..\Spindle.cpp:279
+msgid "Waiting for spindle stable timed out!"
+msgstr ""
+
+#: ..\Spindle.cpp:330
+msgid "Waiting for spindle stop done."
+msgstr ""
+
+#: ..\Spindle.cpp:328
+msgid "Waiting for spindle stop timed out!"
+msgstr ""
+
+#. If using SetTrueRPM() and spindle stabilize.
+#: ..\Spindle.cpp:327
+msgid "Waiting for spindle stopped within 99%..."
+msgstr ""
+
+#. If the zero speed signal is mapped and enabled, then use it.
+#: ..\Spindle.cpp:335
+msgid "Waiting for spindle to stop..."
+msgstr ""
+
+#: ..\canon.cpp:1142 ..\RunCanon.cpp:105
+msgid "Waiting on SetStill is Done!"
+msgstr ""
+
+#: ..\canon.cpp:1136 ..\RunCanon.cpp:101
+msgid "Waiting on SetStill..."
+msgstr ""
+
+#: ..\canon.cpp:584 ..\RunCanon.cpp:118
+msgid "Waiting on ThreadComplete is Done!"
+msgstr ""
+
+#: ..\canon.cpp:582 ..\RunCanon.cpp:116
+msgid "Waiting on ThreadComplete..."
+msgstr ""
+
+#. if (GetHoming() > 0) {
+#: ..\RunCanon.cpp:906
+msgid "Waiting on home operation(s)."
+msgstr ""
+
+#: ..\canon.cpp:1131 ..\RunCanon.cpp:97
+msgid "Waiting on planner to drain before waiting on SetStill..."
+msgstr ""
+
+#: ..\RunCanon.cpp:889
+msgid "Waiting on spindle speed check is done!"
+msgstr ""
+
+#: ..\RunCanon.cpp:887
+msgid "Waiting on spindle speed check timed out!"
+msgstr ""
+
+#: ..\RunCanon.cpp:885
+#, c-format
+msgid "Waiting on spindle speed check, target RPM = %d..."
+msgstr ""
+
+#: gcEditorAui.cpp:643
+msgid "Welcome to gcEdit"
+msgstr ""
+
+#: circularpocket.cpp:208
+msgid "Width of cut :"
+msgstr ""
+
+#: circularpocket.cpp:212 circularpocket.cpp:214
+msgid "Width of cut, e.g. stepover amount."
+msgstr ""
+
+#: Settings.cpp:300
+msgid "Words Affected By Inserting Spaces"
+msgstr ""
+
+#: Settings.cpp:284
+msgid "Words Affected By Remove Zeros Function"
+msgstr ""
+
+#: Settings.cpp:292
+msgid "Words Affected By Unit Conversions"
+msgstr ""
+
+#: boltholepattern.cpp:192 circularpocket.cpp:154 spiralmillbore.cpp:157
+msgid "X Position :"
+msgstr ""
+
+#. read_operation_unary
+#. 189
+#: ..\GCodeInterpreter.cpp:214
+msgid "X and Y words missing for arc in XY plane"
+msgstr ""
+
+#. convert_arc
+#. 190
+#: ..\GCodeInterpreter.cpp:215
+msgid "X and Z words missing for arc in XZ plane"
+msgstr ""
+
+#. convert_arc
+#. 191
+#: ..\GCodeInterpreter.cpp:216
+msgid "X value unspecified in YZ plane canned cycle"
+msgstr ""
+
+#. convert_cycle_yz
+#. 192
+#: ..\GCodeInterpreter.cpp:217
+msgid "X, Y and Z words all missing with G31"
+msgstr ""
+
+#: boltholepattern.cpp:201 circularpocket.cpp:163 spiralmillbore.cpp:166
+msgid "Y Position :"
+msgstr ""
+
+#. convert_probe
+#. 193
+#: ..\GCodeInterpreter.cpp:218
+msgid "Y and Z words missing for arc in YZplane"
+msgstr ""
+
+#. convert_arc
+#. 194
+#: ..\GCodeInterpreter.cpp:219
+msgid "Y value unspecified in XZ plane canned cycle"
+msgstr ""
+
+#: ..\Controller.cpp:6657
+msgid ""
+"You asked RemDirRF() to delete a possible root directory.\t\t\t\t   This is "
+"disabled by default.  If you really need to delete \""
+msgstr ""
+
+#: circularpocket.cpp:172 spiralmillbore.cpp:175
+msgid "Z Start :"
+msgstr ""
+
+#. convert_cycle_zx
+#. 195
+#: ..\GCodeInterpreter.cpp:220
+msgid "Z value unspecified in XY plane canned cycle"
+msgstr ""
+
+#. convert_cycle_xy
+#. 196
+#: ..\GCodeInterpreter.cpp:221
+msgid "Zero or negative argument to ln"
+msgstr ""
+
+#. execute_unary
+#. 197
+#: ..\GCodeInterpreter.cpp:222
+msgid "Zero radius arc"
+msgstr ""
+
+#: ..\mcFileConfig.cpp:279
+#, c-format
+msgid "can't create global configuration file '%s'."
+msgstr ""
+
+#: ..\mcFileConfig.cpp:298
+#, c-format
+msgid "can't create user configuration file '%s'."
+msgstr ""
+
+#: ..\Command.cpp:3183 ..\Command.cpp:3215
+msgid "false"
+msgstr ""
+
+#: ..\Signal.cpp:366
+msgid "finished"
+msgstr ""
+
+#: gcEditorAui.cpp:1220 gcEditorAui.cpp:1278
+msgid "gcEdit Error"
+msgstr ""
+
+#: gcEditorAui.cpp:2641
+msgid "gcEdit Error Saving"
+msgstr ""
+
+#: gcEditorAui.cpp:2273 gcEditorAui.cpp:2275
+msgid "gcEdit Message"
+msgstr ""
+
+#: gcEditorAui.h:154
+msgid "gcEditorAUI"
+msgstr ""
+
+#: about.cpp:226
+msgid "http://www.machsupport.com"
+msgstr ""
+
+#: about.cpp:235
+msgid "support@machsupport.com"
+msgstr ""
+
+#: ..\Signal.cpp:366
+msgid "timed out"
+msgstr ""
+
+#: ..\mcFileConfig.cpp:120
+#, c-format
+msgid "trailing backslash ignored in '%s'"
+msgstr ""
+
+#: ..\Command.cpp:3183 ..\Command.cpp:3215
+msgid "true"
+msgstr ""
+
+#: ..\mcFileConfig.cpp:150
+#, c-format
+msgid "unexpected \" at position %d in '%s'."
+msgstr ""
+
+#: ..\Controller.cpp:6077
+msgid "unknown caller"
+msgstr ""
+
+#: gcEditorAui.cpp:2171 gcEditorAui.cpp:2514 gcEditorAui.cpp:2587
+msgid "untitled.tap"
+msgstr ""
+
+#: profilesettings.cpp:875 profilesettings.cpp:1080
+msgid "value"
+msgstr ""

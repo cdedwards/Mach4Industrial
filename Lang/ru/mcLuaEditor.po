@@ -1,0 +1,1308 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mcLuaEditor\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-12 01:37-0600\n"
+"PO-Revision-Date: 2020-05-13 15:12-0500\n"
+"Last-Translator: Exiton Analytic Ltd. <info@exiton-analytic.ru>\n"
+"Language-Team: Mach <support@machsupport.com>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: ../..\n"
+
+#: mcLuaEditor.cpp:917
+msgid ""
+"\n"
+"Debuggee client stopped.\n"
+msgstr ""
+
+#: Settings.cpp:198
+msgid "# Variable"
+msgstr "# Переменная"
+
+#: mcLuaEditor.cpp:1924
+#, c-format
+msgid "%d replacements made."
+msgstr ""
+
+#: mcLuaEditor.cpp:3020
+#, c-format
+msgid ""
+"%s has been modified on disk.\n"
+"Do you want to reload it?"
+msgstr ""
+"%s был изменен на диске.\n"
+"Вы хотите перезагрузить его?"
+
+#: mcLuaEditor.cpp:3018
+#, c-format
+msgid "%s is no longer on the disk."
+msgstr "%s больше нет на диске."
+
+#: mcLuaEditor.cpp:548
+msgid "&About"
+msgstr ""
+
+# Is it really add clock or smth else?
+#: mcLuaWatchWin.cpp:61 mcLuaWatchWin.cpp:62
+msgid "&Add Watch"
+msgstr "&Добавить часы"
+
+#: Settings.cpp:451
+msgid "&Apply"
+msgstr "&Применить"
+
+#. m_debugContinue =
+#. m_debugMenu->Append(ID_CONTINUE,         _("Co&ntinue\tF5"),             _("Run the program at full speed"));
+#: mcLuaEditor.cpp:498
+msgid "&Break\tF12"
+msgstr "&Разрыв\tF12"
+
+#: Settings.cpp:448
+msgid "&Cancel"
+msgstr "&Отменить"
+
+#: mcLuaEditor.cpp:372
+msgid "&Close\tCtrl+W"
+msgstr "&Закрыть\tCtrl+W"
+
+#: mcLuaEditor.cpp:486
+msgid "&Compile\tF7"
+msgstr "&Скомпилировать\tF7"
+
+#: mcLuaEditor.cpp:406
+msgid "&Copy\tCtrl-C"
+msgstr "&Копировать\tCtrl-C"
+
+#: mcLuaEditor.cpp:557
+msgid "&Debug"
+msgstr "&Отладка"
+
+#: mcLuaEditor.cpp:2042
+msgid "&Down"
+msgstr "&Вниз"
+
+#: mcLuaEditor.cpp:555
+msgid "&Edit"
+msgstr "&Редактировать"
+
+#: mcLuaWatchWin.cpp:63
+msgid "&Edit Watch\tF2"
+msgstr "&Изменить часы\tF2"
+
+#: mcLuaEditor.cpp:554
+msgid "&File"
+msgstr "&Файл"
+
+#: mcLuaEditor.cpp:453
+msgid "&Find\tCtrl-F"
+msgstr "&Найти\tCtrl-F"
+
+#. Create right hand buttons and sizer
+#: mcLuaEditor.cpp:1986
+msgid "&Find Next"
+msgstr "&Найти далее"
+
+#: mcLuaEditor.cpp:420
+msgid "&Fold/Unfold all"
+msgstr "&Свернуть / Развернуть все"
+
+#: mcLuaEditor.cpp:458
+msgid "&Goto line\tCtrl-G"
+msgstr "&Перейти к строке\tCtrl-G"
+
+#: mcLuaEditor.cpp:558
+msgid "&Help"
+msgstr "&Помошь"
+
+#: mcLuaEditor.cpp:370
+msgid "&New\tCtrl-N"
+msgstr "&Новый\tCtrl-N"
+
+#: Settings.cpp:445
+msgid "&OK"
+msgstr "&OK"
+
+#: mcLuaEditor.cpp:371
+msgid "&Open...\tCtrl-O"
+msgstr "&Открыть...\tCtrl-O"
+
+#: mcLuaEditor.cpp:407
+msgid "&Paste\tCtrl-V"
+msgstr "&Вставить\tCtrl-V"
+
+#: mcLuaEditor.cpp:378
+msgid "&Print...\tCtrl-P"
+msgstr "&Печать...\tCtrl-P"
+
+#: mcLuaEditor.cpp:411
+msgid "&Redo\tCtrl-Y"
+msgstr "&Повторить ввод\tCtrl-Y"
+
+#: mcLuaWatchWin.cpp:64
+msgid "&Remove Watch"
+msgstr "&Удалить часы"
+
+#: mcLuaEditor.cpp:1988
+msgid "&Replace"
+msgstr "&Заменить"
+
+#: mcLuaEditor.cpp:456
+msgid "&Replace\tCtrl-H"
+msgstr "&Заменить\tCtrl-H"
+
+#: mcLuaEditor.cpp:487
+msgid "&Run\tCtrl-F5"
+msgstr "&Пуск\tCtrl-F5"
+
+#: mcLuaEditor.cpp:374
+msgid "&Save\tCtrl-S"
+msgstr "&Сохранить\tCtrl-S"
+
+#: mcLuaEditor.cpp:556
+msgid "&Search"
+msgstr "&Поиск"
+
+#: mcLuaEditor.cpp:423
+msgid "&Settings..."
+msgstr "&Свойства..."
+
+#: mcLuaEditor.cpp:460
+msgid "&Sort"
+msgstr "&Сортировать"
+
+#: mcLuaEditor.cpp:490 mcLuaEditor.cpp:927 mcLuaEditor.cpp:2261
+msgid "&Start Debugging\tF5"
+msgstr "&Начать отладку\tF5"
+
+#: mcLuaEditor.cpp:410
+msgid "&Undo\tCtrl-Z"
+msgstr "&Отменить\tCtrl-Z"
+
+#: mcLuaEditor.cpp:2041
+msgid "&Up"
+msgstr "&Вверх"
+
+#: mcLuaWatchWin.cpp:68
+msgid "&Watches"
+msgstr "&Часы"
+
+#: mcLuaEditor.cpp:1739
+#, c-format
+msgid "1 .. %d"
+msgstr "1 .. %d"
+
+#: mcLuaEditor.cpp:549
+msgid "API Help &Contents"
+msgstr ""
+
+#: mcLuaEditor.cpp:549
+msgid "API Help Contents"
+msgstr ""
+
+#: mcLuaEditor.cpp:548 mcLuaEditor.cpp:770
+msgid "About mcLua IDE"
+msgstr "Об mcLua IDE"
+
+#: mcLuaEditor.cpp:1273
+#, c-format
+msgid "At Breakpoint line: %d file: %s\n"
+msgstr "На линии останова: %d файл: %s\n"
+
+#: mcLuaEditor.cpp:415
+msgid "Auto complete Identifiers"
+msgstr "Автозаполнение идентификаторов"
+
+#: mcLuaEditor.cpp:415
+msgid "Auto complete while typing"
+msgstr "Автозаполнение при наборе"
+
+#: Settings.cpp:331
+msgid "Background:"
+msgstr "Фон:"
+
+#. SCE_LUA_COMMENTLINE
+#: mcLuaEditor.cpp:233
+msgid "Block Comment"
+msgstr "Блок комментариев"
+
+#: Settings.cpp:325 Settings.cpp:419
+msgid "Blue:"
+msgstr "Синий:"
+
+#: Settings.cpp:222
+msgid "Bold"
+msgstr "Жирный"
+
+#: mcLuaEditor.cpp:252
+msgid "Brace Highlight"
+msgstr "Подсветить скобку"
+
+#: mcLuaEditor.cpp:253
+msgid "Brace Incomplete"
+msgstr "Скобка неполная"
+
+#: Settings.cpp:185
+msgid "Buffer"
+msgstr "Буфер"
+
+#: mcLuaEditorApp.cpp:203
+msgid "Byte code file name."
+msgstr "Имя файла байт-кода."
+
+#: mcLuaEditor.cpp:505
+msgid "C&lear Output Window\tShift-F2"
+msgstr "Очистить окно вывода\tShift-F2"
+
+#: mcLuaEditor.cpp:418
+msgid "C&omment/Uncomment\tCtrl-Q"
+msgstr "Комментарий / раскомментировать\tCtrl-Q"
+
+#: mcLuaEditor.cpp:1993
+msgid "Cancel"
+msgstr "Отмена"
+
+#. SCE_LUA_STRING
+#: mcLuaEditor.cpp:236
+msgid "Character"
+msgstr "Символ"
+
+#: mcLuaEditor.cpp:505
+msgid "Clear the output window before compiling or debugging"
+msgstr "Очистить окно вывода до компиляции или отладки"
+
+#: mcLuaEditor.cpp:1216
+msgid "Client connected ok.\n"
+msgstr "Клиент подключен нормально.\n"
+
+#: mcLuaEditor.cpp:372
+msgid "Close the current editor window"
+msgstr "Закрыть текущее окно редактора"
+
+#: mcLuaEditor.cpp:1217 mcLuaEditor.cpp:2264
+msgid "Co&ntinue\tF5"
+msgstr "Продолжить\tF5"
+
+#: Settings.h:83
+msgid "Color Settings"
+msgstr ""
+
+#: Settings.cpp:186
+msgid "Command"
+msgstr "Комманда"
+
+#: mcLuaEditor.cpp:231 Settings.cpp:188
+msgid "Comment"
+msgstr "Коммент"
+
+#: mcLuaEditor.cpp:418
+msgid "Comment or uncomment current or selected lines"
+msgstr "Комментировать или раскомментировать текущие или выбранные строки"
+
+#: mcLuaEditor.cpp:1641
+#, c-format
+msgid ""
+"Compilation error on line number: %d\n"
+"%s\n"
+"\n"
+msgstr ""
+"Ошибка компиляции в строке номер: %d\n"
+"%s\n"
+"\n"
+
+#: mcLuaEditor.cpp:1650
+msgid "Compilation successful!\n"
+msgstr "Компиляция успешна!\n"
+
+#: mcLuaEditorApp.cpp:200
+msgid "Compile file(s) to byte code."
+msgstr "Скомпилируйте файл (ы) в байтовый код."
+
+#: mcLuaEditor.cpp:414
+msgid "Complete &Identifier\tCtrl+K"
+msgstr "Завершить &Идентифицировать\tCtrl+K"
+
+#: mcLuaEditor.cpp:414
+msgid "Complete the current identifier"
+msgstr "Завершить текущий идентификатор"
+
+#: mcLuaEditor.cpp:339
+msgid "Copy"
+msgstr "Копировать"
+
+#: mcLuaEditor.cpp:406
+msgid "Copy selected text to the clipboard"
+msgstr "Скопировать выделенный текст в буфер обмена"
+
+#: mcLuaEditor.cpp:339
+msgid "Copy the selection"
+msgstr "Скопировать выделенное"
+
+#: mcLuaEditor.cpp:333 mcLuaEditor.cpp:370
+msgid "Create an empty document"
+msgstr "Создать пустой документ"
+
+#: mcLuaEditor.cpp:405
+msgid "Cu&t\tCtrl-X"
+msgstr "Вырезать\tCtrl-X"
+
+#: mcLuaEditor.cpp:255
+msgid "Cursor"
+msgstr "Курсор"
+
+#: mcLuaEditor.cpp:338
+msgid "Cut"
+msgstr "Вырезать"
+
+#: mcLuaEditor.cpp:405
+msgid "Cut selected text to clipboard"
+msgstr "Вырезать выделенный текст в буфер обмена"
+
+#: mcLuaEditor.cpp:338
+msgid "Cut the selection"
+msgstr "Вырезать выделенное"
+
+#: mcLuaEditor.cpp:1233
+msgid "Debug server disconnected.\n"
+msgstr "Сервер отладки отключен.\n"
+
+#: mcLuaEditor.cpp:1045
+msgid "Debug session finished.\n"
+msgstr "Сессия отладки завершена.\n"
+
+#: mcLuaEditor.cpp:1081
+msgid "Debugger server socket already created"
+msgstr "Сокет сервера отладчика уже создан"
+
+#: mcLuaEditor.cpp:1091
+msgid "Debugger server thread already created"
+msgstr "Поток сервера отладчика уже создан"
+
+#: mcLuaEditor.cpp:230 Settings.cpp:184 Settings.cpp:208
+#: wxTranslationHelper.cpp:155
+msgid "Default"
+msgstr "По умолчанию"
+
+#: mcLuaEditorApp.cpp:170
+msgid "Do NOT print output to command line stdout."
+msgstr "НЕ печатать вывод в командную строку stdout."
+
+#: mcLuaEditorApp.cpp:179
+msgid "Do not exit even if there are no top-level windows open."
+msgstr "Не выходить, даже если не открыты окна верхнего уровня."
+
+#: mcLuaEditor.cpp:382
+msgid "E&xit\tAlt-X"
+msgstr "Выход\tAlt-X"
+
+#. \tF12
+#: mcLuaEditor.cpp:423
+msgid "Editor settings"
+msgstr "Настройки редактора"
+
+#: mcLuaEditor.cpp:1740
+msgid "Enter line number"
+msgstr "Введите номер строки"
+
+#: mcLuaEditor.cpp:1224 mcLuaEditor.cpp:1338 mcLuaEditor.cpp:1348
+#: mcLuaEditor.cpp:1358 mcLuaEditor.cpp:1382 mcLuaEditor.cpp:1461
+msgid "Error"
+msgstr "Ошибка"
+
+#: mcLuaEditor.cpp:1221
+msgid "Error connecting to client.\n"
+msgstr "Ошибка подключения к клиенту.\n"
+
+#: mcLuaEditor.cpp:1493
+msgid "Error starting the debug server.\n"
+msgstr "Ошибка запуска отладочного сервера.\n"
+
+#: mcLuaWatchWin.cpp:65
+msgid "Evaluate &Watches"
+msgstr "Оценить &Часы"
+
+#: mcLuaEditorApp.cpp:182
+msgid "Execute a Lua string 'stat'."
+msgstr "Выполнить строку Lua'stat'."
+
+#: mcLuaEditor.cpp:487
+msgid "Execute the current file"
+msgstr "Выполнить текущий файл"
+
+#: mcLuaEditor.cpp:382
+msgid "Exit Program"
+msgstr "Выйти из программы"
+
+#: mcLuaWatchWin.cpp:104 mcLuaWatchWin.cpp:105
+msgid "Expr"
+msgstr "Expr"
+
+#: mcLuaWatchWin.cpp:77
+msgid "Expression"
+msgstr "Выражение"
+
+#: mcLuaEditor.cpp:3351
+msgid "Failed to create editor!!!"
+msgstr "Не удалось создать редактор !!!"
+
+#: mcLuaEditor.cpp:3348
+msgid "Failed to create notebook page!!!"
+msgstr "Не удалось создать страницу записной книжки !!!"
+
+#: mcLuaEditorApp.cpp:191
+msgid "File for debuggee. (for internal use)"
+msgstr "Файл для отладчика. (для внутреннего использования)"
+
+#: mcLuaEditor.cpp:345 mcLuaEditor.cpp:476 mcLuaEditor.cpp:1815
+msgid "Find"
+msgstr "Найти"
+
+#: mcLuaEditor.cpp:454
+msgid "Find &Next\tF3"
+msgstr "Найти &далее\tF3"
+
+#: mcLuaEditor.cpp:455
+msgid "Find &Previous\tShift-F3"
+msgstr "Найти &предыдущий\tShift-F3"
+
+#: mcLuaEditor.cpp:1800
+msgid "Find and Replace"
+msgstr ""
+
+#: mcLuaEditor.cpp:346
+msgid "Find and replace text"
+msgstr "Найти и заменить текст"
+
+#: mcLuaEditor.cpp:345
+msgid "Find text"
+msgstr "Найти текст"
+
+#: mcLuaEditor.cpp:2207
+msgid "Find text not found."
+msgstr "Текст не найден."
+
+#: mcLuaEditor.cpp:454
+msgid "Find the next occurrence of the specified text"
+msgstr "Найти следующее вхождение указанного текста"
+
+#: mcLuaEditor.cpp:453
+msgid "Find the specified text"
+msgstr "Найти указанный текст"
+
+#. Create find/replace text entry sizer
+#: mcLuaEditor.cpp:2004
+msgid "Find: "
+msgstr "Найти: "
+
+#. \tF12
+#: mcLuaEditor.cpp:420
+msgid "Fold or unfold all code folds"
+msgstr "Сложить или развернуть все сгибы кода"
+
+#: Settings.cpp:237
+msgid "Foreground:"
+msgstr "Передний план:"
+
+#: wxTextPrintout.cpp:104
+msgid "Formatting printout"
+msgstr "Форматирование печати"
+
+#: Settings.cpp:191
+msgid "G code"
+msgstr "G code"
+
+#: mcLuaEditor.cpp:458
+msgid "Go to a selected line"
+msgstr "Перейти к выбранной строке"
+
+#: mcLuaEditor.cpp:1742
+msgid "Goto Line"
+msgstr "Перейти к строке"
+
+#: Settings.cpp:319 Settings.cpp:413
+msgid "Green:"
+msgstr "Зеленый:"
+
+#: mcLuaEditorApp.cpp:164
+msgid "Help on command line switches."
+msgstr "Помощь по переключателям командной строки."
+
+#: mcLuaEditor.cpp:2958
+msgid "INS"
+msgstr "INS"
+
+#: mcLuaEditorApp.cpp:391
+msgid "IPC Error"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:390
+#, c-format
+msgid ""
+"IPC initialization failed for host %s!\n"
+"\n"
+"%s"
+msgstr ""
+
+#: Settings.cpp:190
+msgid "Identifier"
+msgstr "Идентификатор"
+
+#. SCE_LUA_OPERATOR
+#: mcLuaEditor.cpp:240
+msgid "Identifiers"
+msgstr "Идентификаторы"
+
+#: mcLuaEditor.cpp:254
+msgid "Indent Guides"
+msgstr "Направляющие"
+
+#: mcLuaEditor.cpp:2473
+msgid "Information"
+msgstr "Информация"
+
+#: mcLuaEditor.cpp:407
+msgid "Insert clipboard text at cursor"
+msgstr "Вставить текст буфера обмена в курсор"
+
+#: Settings.cpp:226
+msgid "Italic"
+msgstr "Курсив"
+
+#. SCE_LUA_STRINGEOL
+#: mcLuaEditor.cpp:242 Settings.cpp:199
+msgid "Keyword 1"
+msgstr "Ключевое слово 1"
+
+#. SCE_LUA_WORD
+#: mcLuaEditor.cpp:243 Settings.cpp:200
+msgid "Keyword 2"
+msgstr "Ключевое слово 2"
+
+#. SCE_LUA_WORD2
+#: mcLuaEditor.cpp:244 Settings.cpp:201
+msgid "Keyword 3"
+msgstr "Ключевое слово 3"
+
+#. SCE_LUA_WORD3
+#: mcLuaEditor.cpp:245 Settings.cpp:202
+msgid "Keyword 4"
+msgstr "Ключевое слово 4"
+
+#. SCE_LUA_WORD4
+#: mcLuaEditor.cpp:246 Settings.cpp:203
+msgid "Keyword 5"
+msgstr "Ключевое слово 5"
+
+#. SCE_LUA_WORD5
+#: mcLuaEditor.cpp:247 Settings.cpp:204
+msgid "Keyword 6"
+msgstr "Ключевое слово 6"
+
+#. SCE_LUA_WORD6
+#: mcLuaEditor.cpp:248 Settings.cpp:205
+msgid "Keyword 7"
+msgstr "Ключевое слово 7"
+
+#. SCE_LUA_WORD7
+#: mcLuaEditor.cpp:249 Settings.cpp:206
+msgid "Keyword 8"
+msgstr "Ключевое слово 8"
+
+# what is "debugee" is it debuger or just command/process name?
+#: mcLuaEditor.cpp:1039
+#, c-format
+msgid "Killed debuggee process %d.\n"
+msgstr "Убить процесс отладки %d.\n"
+
+#. SCE_LUA_WORD8
+#: mcLuaEditor.cpp:250
+msgid "Label"
+msgstr ""
+
+#: wxTranslationHelper.cpp:194
+msgid "Language"
+msgstr "Язык"
+
+#. SCE_LUA_COMMENT
+#: mcLuaEditor.cpp:232
+msgid "Line Comment"
+msgstr "Строка комментария"
+
+#. SCE_LUA_WORD8
+#: mcLuaEditor.cpp:251
+msgid "Line Numbers"
+msgstr "Номера строк"
+
+#. SCE_LUA_CHARACTER
+#: mcLuaEditor.cpp:237
+msgid "Literal String"
+msgstr "Литеральная строка"
+
+#: mcLuaEditor.cpp:2960
+#, c-format
+msgid "Ln %d Col %d"
+msgstr "Ln %d Col %d"
+
+#: Settings.cpp:192
+msgid "M code"
+msgstr "M код"
+
+#: mcLuaEditor.cpp:1309
+msgid ""
+"Mach script files (*.mcs; *.lua; *.wllua; *.pst)|*.mcs;*.lua;*.wxlua;*.pst|"
+"Text files (*.txt)|*.txt|All files (*)|*"
+msgstr ""
+
+#: mcLuaEditor.cpp:2633 mcLuaEditor.cpp:2721
+msgid ""
+"Mach script files (*.mcs; *.lua; *.wxlua; *.pst)|*.mcs;*.lua;*.wxlua;*.pst|"
+"Text files (*.txt)|*.txt|All files (*)|*"
+msgstr ""
+
+#: mcLuaEditor.cpp:2027
+msgid "Match &case"
+msgstr "Учитывать &регистр"
+
+#. Create find/replace option checkboxes
+#: mcLuaEditor.cpp:2026
+msgid "Match &whole word"
+msgstr "Совпадение &всего слова"
+
+#: Settings.cpp:187
+msgid "Message"
+msgstr "Сообщение"
+
+#: Settings.cpp:194
+msgid "N code"
+msgstr "N код"
+
+#: mcLuaEditor.cpp:333
+msgid "New"
+msgstr "Новый"
+
+#: Settings.cpp:218
+msgid "Normal"
+msgstr "Нормальный"
+
+#. SCE_LUA_COMMENTDOC
+#: mcLuaEditor.cpp:234 Settings.cpp:189
+msgid "Number"
+msgstr "Номер"
+
+#: mcLuaEditor.cpp:776
+msgid "OK"
+msgstr "OK"
+
+#: mcLuaEditor.cpp:2958
+msgid "OVR"
+msgstr "OVR"
+
+#: mcLuaEditor.cpp:316
+msgid "OVRW"
+msgstr "OVRW"
+
+# once more here is debugee - next debuger is it misstype?
+#: mcLuaEditor.cpp:1224
+msgid "OnDebugeeConnect() No mcLua reference!"
+msgstr "При отладке подключения () Нет ссылки на mcLua!"
+
+#: mcLuaEditor.cpp:1338
+msgid "OnDebugerBreak() No mcLua reference!"
+msgstr "При отладке разрыва () Нет ссылки на mcLua!"
+
+#: mcLuaEditor.cpp:1358
+msgid "OnDebugerError() No mcLua reference!"
+msgstr "При отладке ошибки () Нет ссылки на mcLua!"
+
+#: mcLuaEditor.cpp:1461
+msgid "OnDebugerEvaluate() No mcLua reference!"
+msgstr "При отладке оценки () Нет ссылки на mcLua!"
+
+#: mcLuaEditor.cpp:1382
+msgid "OnDebugerExit() No mcLua reference!"
+msgstr "При отладке выхода () Нет ссылки на mcLua!"
+
+#: mcLuaEditor.cpp:1348
+msgid "OnDebugerPrint() No mcLua reference!"
+msgstr "При отладке печати () Нет ссылки на mcLua!"
+
+#: mcLuaEditor.cpp:334
+msgid "Open"
+msgstr "Открыть"
+
+#: mcLuaEditor.cpp:334 mcLuaEditor.cpp:371
+msgid "Open an existing document"
+msgstr "Открыть существующий документ"
+
+#: mcLuaEditor.cpp:2630
+msgid "Open file"
+msgstr "Открыть файл"
+
+#: mcLuaEditorApp.cpp:197
+msgid "Open file(s) to edit."
+msgstr "Открыть файл (ы) для редактирования."
+
+#: Settings.cpp:197
+msgid "Operator"
+msgstr "Оператор"
+
+#. SCE_LUA_PREPROCESSOR
+#: mcLuaEditor.cpp:239
+msgid "Operators"
+msgstr "Операторы"
+
+#: mcLuaEditor.cpp:2036
+msgid "Options"
+msgstr "Опции"
+
+#: mcLuaEditor.cpp:1652
+#, c-format
+msgid "Output: \"%s\"\n"
+msgstr "Вывод: \"%s\"\n"
+
+#: wxTextPrintout.cpp:124
+#, c-format
+msgid "Page %d"
+msgstr "Страница %d"
+
+#: wxTextPrintout.cpp:116
+#, c-format
+msgid "Page %d of %d"
+msgstr "Страница %d изf %d"
+
+#: wxTextPrintout.cpp:104
+msgid "Page 1 of ? "
+msgstr "Страница 1 из ? "
+
+#: mcLuaEditor.cpp:380
+msgid "Page S&etup..."
+msgstr "Настройки страницы..."
+
+#: Settings.cpp:195
+msgid "Parameter"
+msgstr "Параметр"
+
+#: mcLuaEditor.cpp:340
+msgid "Paste"
+msgstr "Вставить"
+
+#: mcLuaEditor.cpp:340
+msgid "Paste text from the clipboard"
+msgstr "Вставить текст из буфера обмена"
+
+#: mcLuaEditor.cpp:2473
+msgid "Please restart for the changes to take effect."
+msgstr "Пожалуйста, перезапустите, чтобы изменения вступили в силу."
+
+#. SCE_LUA_LITERALSTRING
+#: mcLuaEditor.cpp:238
+msgid "Preprocessor"
+msgstr "Препроцессор"
+
+#: mcLuaEditor.cpp:379
+msgid "Preview the the current document"
+msgstr "Предварительный просмотр текущего документа"
+
+#: mcLuaEditor.cpp:379
+msgid "Print P&review...\tShift-Ctrl-P"
+msgstr "Предварительный просмотр печати...\tShift-Ctrl-P"
+
+#: mcLuaEditor.cpp:3545
+msgid "Print Preview"
+msgstr "Предварительный просмотр печати"
+
+#: mcLuaEditorApp.cpp:173
+msgid "Print output to a message dialog."
+msgstr "Вывод печати в диалоговое сообщение."
+
+#: mcLuaEditorApp.cpp:176
+msgid "Print output to a persistent message console."
+msgstr "Вывод печати на постоянную консоль сообщений."
+
+#: mcLuaEditor.cpp:378
+msgid "Print the current document"
+msgstr "Распечатать текущий документ"
+
+#: mcLuaEditor.cpp:2959
+msgid "R/O"
+msgstr "R/O"
+
+#: mcLuaEditor.cpp:2959
+msgid "R/W"
+msgstr "R/W"
+
+#: Settings.cpp:313 Settings.cpp:407
+msgid "Red:"
+msgstr "Красный:"
+
+#: mcLuaEditor.cpp:343
+msgid "Redo"
+msgstr "Повторить"
+
+#: mcLuaEditor.cpp:343
+msgid "Redo last undo"
+msgstr "Повторить последнюю отмену"
+
+#: mcLuaEditor.cpp:411
+msgid "Redo the last action undone"
+msgstr "Повторить последнее отменённое действие"
+
+#: mcLuaEditor.cpp:2029
+msgid "Regular &expression"
+msgstr "Регулярное выражение"
+
+#: mcLuaEditorApp.cpp:194
+msgid "Remote Mach machine. (defaults to 127.0.0.1)"
+msgstr ""
+
+#: mcLuaEditor.cpp:455
+msgid "Repeat the search backwards in the file"
+msgstr "Повторить поиск в обратном направлении в файле"
+
+#: mcLuaEditor.cpp:346 mcLuaEditor.cpp:477
+msgid "Replace"
+msgstr "Заменить"
+
+#: mcLuaEditor.cpp:1991
+msgid "Replace &All"
+msgstr "Заменить Все"
+
+#: mcLuaEditor.cpp:2011
+msgid "Replace: "
+msgstr "Заменить: "
+
+#: mcLuaEditor.cpp:456
+msgid "Replaces the specified text with different text"
+msgstr "Заменить указанный текст другим текстом"
+
+#: mcLuaEditorApp.cpp:206 mcLuaEditorApp.cpp:209
+msgid "Run a Lua program with command line args."
+msgstr "Запустите программу Lua с аргументами командной строки."
+
+#: mcLuaEditorApp.cpp:188
+msgid "Run as debuggee. -d[host]:[port] (for internal use)"
+msgstr ""
+"Запустить как отладчик. -d[host]:[port] (для внутреннего использования)"
+
+#: mcLuaEditor.cpp:1218 mcLuaEditor.cpp:2265
+msgid "Run the program at full speed"
+msgstr "Запустить программу на полной скорости"
+
+#: mcLuaEditor.cpp:492
+msgid "S&top Debugging\tShift-F5"
+msgstr "Прекратить отладку\tShift-F5"
+
+#: Settings.cpp:438
+msgid "Sample Text"
+msgstr "Пример текста"
+
+#: mcLuaEditor.cpp:335
+msgid "Save"
+msgstr "Сохранить"
+
+#: mcLuaEditor.cpp:375
+msgid "Save &As...\tAlt-S"
+msgstr "Сохранить Как...\tAlt-S"
+
+#: mcLuaEditor.cpp:376
+msgid "Save A&ll...\tCtrl-Shift-S"
+msgstr "Сохранить Все...\tCtrl-Shift-S"
+
+#: mcLuaEditor.cpp:336
+msgid "Save All"
+msgstr "Сохранить Все"
+
+#: mcLuaEditor.cpp:2581
+msgid "Save Changes?"
+msgstr "Сохранить изменения?"
+
+#: mcLuaEditor.cpp:336
+msgid "Save all documents"
+msgstr "Сохранить все документы"
+
+#: mcLuaEditor.cpp:376
+msgid "Save all open documents"
+msgstr "Сохранить все открытые документы"
+
+#: mcLuaEditor.cpp:2575
+#, c-format
+msgid "Save changes to '%s' before exiting?"
+msgstr "Сохранить изменения в '%s' перед выходом?"
+
+#. want absolute path for dialog
+#: mcLuaEditor.cpp:2718
+msgid "Save file as"
+msgstr "Сохранить файл как"
+
+#: mcLuaEditor.cpp:1516
+msgid "Save file?"
+msgstr "Сохранить файл?"
+
+#: mcLuaEditor.cpp:335 mcLuaEditor.cpp:374
+msgid "Save the current document"
+msgstr "Сохранить текущий документ"
+
+#: mcLuaEditor.cpp:375
+msgid "Save the current document to a file with a new name"
+msgstr "Сохранить текущий документ в файл с новым именем"
+
+#: mcLuaEditor.cpp:2043
+msgid "Scope"
+msgstr "Масштаб"
+
+#: Settings.cpp:180
+msgid "Screen Element:"
+msgstr "Элемент экрана:"
+
+#: mcLuaEditor.cpp:424
+msgid "Select &Language..."
+msgstr "Выбрать язык..."
+
+#: mcLuaEditor.cpp:408
+msgid "Select A&ll\tCtrl-A"
+msgstr "Выбрать все\tCtrl-A"
+
+#. \tF12
+#: mcLuaEditor.cpp:424
+msgid "Select Language"
+msgstr "Выбрать язык"
+
+#: mcLuaEditor.cpp:408
+msgid "Select all text in the editor"
+msgstr "Выделить весь текст в редакторе"
+
+#: mcLuaEditor.cpp:1306
+msgid "Select file for debugging"
+msgstr "Выберать файл для отладки"
+
+#: wxTranslationHelper.cpp:193
+msgid "Select the language"
+msgstr "Выбрать язык"
+
+#: mcLuaEditorApp.cpp:185
+msgid "Set framename for window size and position save/restore."
+msgstr ""
+
+#: mcLuaEditor.cpp:380
+msgid "Set printing options"
+msgstr "Установить параметры печати"
+
+#. SCE_LUA_NUMBER
+#: mcLuaEditor.cpp:235
+msgid "Single Quote String"
+msgstr "Строка в одинарных кавычках"
+
+#: mcLuaEditor.cpp:460
+msgid "Sort selected lines"
+msgstr "Сортировка выбранных строк"
+
+#: mcLuaEditor.cpp:493
+msgid "St&ep Into\tF11"
+msgstr "Шаг в\tF11"
+
+#: mcLuaEditor.cpp:490 mcLuaEditor.cpp:928 mcLuaEditor.cpp:2262
+msgid "Start a debugging session"
+msgstr "Начать сеанс отладки"
+
+#: mcLuaEditor.cpp:494
+msgid "Step &Over\tF10"
+msgstr "Переступить\tF10"
+
+#: mcLuaEditor.cpp:495
+msgid "Step O&ut\tShift-F11"
+msgstr "Выйти\tShift-F11"
+
+#: mcLuaEditor.cpp:493
+msgid "Step into the next line"
+msgstr "Шаг в следующую строку"
+
+#: mcLuaEditor.cpp:495
+msgid "Step out of the current function"
+msgstr "Выйти из текущей функции"
+
+#: mcLuaEditor.cpp:494
+msgid "Step over the next line"
+msgstr "Перешагнуть следующую строку"
+
+#: mcLuaEditor.cpp:492
+msgid "Stop and end the debugging session"
+msgstr "Остановить и завершить сеанс отладки"
+
+#: mcLuaEditor.cpp:498
+msgid "Stop execution of the program at the next executed line of code"
+msgstr "Остановить выполнение программы на следующей строке кода"
+
+#: mcLuaEditor.cpp:1842
+msgid "String not found!"
+msgstr ""
+
+#: Settings.cpp:196
+msgid "Strings"
+msgstr "Строки"
+
+#: Settings.cpp:211
+msgid "Style"
+msgstr "Стиль"
+
+#: Settings.cpp:193
+msgid "T code"
+msgstr "T код"
+
+#: mcLuaEditor.cpp:486
+msgid "Test compile the Lua program"
+msgstr "Тест компиляции программы Lua"
+
+#: mcLuaEditorApp.cpp:167
+msgid "The desired Mach instance to attach to.  Defaults to 0."
+msgstr "Требуемый экземпляр Mach для присоединения.  По умолчанию 0."
+
+#: mcLuaEditorApp.cpp:460
+msgid "The wxLua debug target cannot start.\n"
+msgstr "Не удается запустить цель отладки wxLua.\n"
+
+#: mcLuaEditorApp.cpp:426
+msgid "The wxLua debugger server host name is empty : wxLua -d[host]:[port]\n"
+msgstr "Имя хоста сервера отладчика wxLua пусто: wxLua -d[host]:[port]\n"
+
+#: mcLuaEditorApp.cpp:462
+msgid ""
+"The wxLua debugger server port is not a number : wxLua -d[host]:[port]\n"
+msgstr ""
+"Порт сервера отладчика wxLua не является числом : wxLua -d[host]:[port]\n"
+
+#: mcLuaEditor.cpp:484
+msgid "Toggle &Breakpoint\tF9"
+msgstr "Точка останова\tF9"
+
+#: mcLuaEditor.cpp:484
+msgid "Toggle Breakpoint"
+msgstr "Точка останова"
+
+#: mcLuaEditor.cpp:1611
+msgid "Unable to create debugger server.\n"
+msgstr "Невозможно создать сервер отладчика.\n"
+
+#: mcLuaEditor.cpp:914 mcLuaEditor.cpp:1036
+#, c-format
+msgid "Unable to kill debuggee process %d, code %d.\n"
+msgstr "Невозможно убить процесс отладки %d, code %d.\n"
+
+#: mcLuaEditor.cpp:2637
+#, c-format
+msgid "Unable to load file '%s'."
+msgstr "Невозможно загрузить файл'%s'."
+
+#: mcLuaEditor.cpp:2669
+#, c-format
+msgid "Unable to save file '%s'."
+msgstr "Невозможно сохранить файл '%s'."
+
+#: mcLuaEditor.cpp:976
+msgid "Unable to start debuggee process.\n"
+msgstr "Невозможно запустить процесс отладки.\n"
+
+#: Settings.cpp:230
+msgid "Underline"
+msgstr "Подчеркивание"
+
+#: mcLuaEditor.cpp:342
+msgid "Undo"
+msgstr "Отменить"
+
+#: mcLuaEditor.cpp:342
+msgid "Undo last edit"
+msgstr "Отменить последнее редактирование"
+
+#: mcLuaEditor.cpp:410
+msgid "Undo the last action"
+msgstr "Отменить последнее действие"
+
+#: mcLuaEditor.cpp:1932
+msgid "Unknown find dialog event!"
+msgstr ""
+
+#. SCE_LUA_IDENTIFIER
+#: mcLuaEditor.cpp:241
+msgid "Unterminate String"
+msgstr "Неопределенная строка"
+
+#: mcLuaEditor.cpp:503
+msgid "Use console when running"
+msgstr "Использовать консоль при запуске"
+
+#: mcLuaEditor.cpp:500
+msgid "V&iew Call Stack"
+msgstr "Просмотр стека вызовов"
+
+#: mcLuaWatchWin.cpp:81 mcLuaWatchWin.cpp:106
+msgid "Value"
+msgstr "Значение"
+
+#: mcLuaEditor.cpp:504
+msgid "View &Output Window\tF2"
+msgstr "Просмотр окна вывода\tF2"
+
+#: mcLuaEditor.cpp:501
+msgid "View &Watches"
+msgstr "Посмотреть & Часы"
+
+#: mcLuaEditor.cpp:503
+msgid "View Console"
+msgstr "Просмотр консоли"
+
+#: mcLuaEditor.cpp:504
+msgid "View or Hide the output window"
+msgstr "Просмотреть или скрыть окно вывода"
+
+#: mcLuaEditor.cpp:500
+msgid "View the LUA call stack"
+msgstr "Просмотр стека вызовов LUA"
+
+#: mcLuaEditor.cpp:501
+msgid "View the Watch window"
+msgstr "Посмотреть окно просмотра"
+
+#: mcLuaEditor.cpp:1608
+#, c-format
+msgid "Waiting for client connect. Start client with mcLuaEditor -d%s:%d\n"
+msgstr "Ожидание подключения клиента. Начать клиент с mcLuaEditor -d%s:%d\n"
+
+#. SetAllEditorsReadOnly(true);
+#: mcLuaEditor.cpp:973
+msgid "Waiting for client connection...\n"
+msgstr "Ожидание соединения с клиентом...\n"
+
+#: mcLuaEditor.cpp:323
+msgid "Welcome to mcLua"
+msgstr "Добро пожаловать в mcLua"
+
+#: mcLuaEditor.cpp:2028
+msgid "Wrap ar&ound"
+msgstr "Обернуть вокруг"
+
+#: mcLuaEditor.cpp:1515
+msgid ""
+"You must save the program before running it.\n"
+"Press cancel to abort running."
+msgstr ""
+"Вы должны сохранить программу перед запуском.\n"
+"Нажмите Отмена, чтобы прервать работу."
+
+#: mcLuaEditorApp.cpp:200
+msgid "compile"
+msgstr "компилировать"
+
+#: mcLuaEditorApp.cpp:176
+msgid "console"
+msgstr "консоль"
+
+#: mcLuaEditorApp.cpp:191
+msgid "debug-file"
+msgstr "файл отладки"
+
+#: mcLuaEditorApp.cpp:188
+msgid "debuggee"
+msgstr "отладчик"
+
+#: mcLuaEditorApp.cpp:185
+msgid "framename"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:164
+msgid "help"
+msgstr "помошь"
+
+#: mcLuaEditorApp.cpp:167
+msgid "instance"
+msgstr "пример"
+
+#: mcLuaEditor.h:94 mcLuaEditor.h:96
+msgid "mcLua"
+msgstr "mcLua"
+
+#: mcLuaEditor.cpp:1356
+msgid "mcLua ERROR: "
+msgstr "mcLua ERROR: "
+
+#: mcLuaEditor.cpp:2638
+msgid "mcLua Error"
+msgstr "mcLua Ошибка"
+
+#: mcLuaEditor.cpp:2670
+msgid "mcLua Error Saving"
+msgstr "mcLua ошибка сохранения"
+
+#: mcLuaEditor.cpp:3018 mcLuaEditor.cpp:3020
+msgid "mcLua Message"
+msgstr "mcLua Сообщение"
+
+#: mcLuaEditor.cpp:2789
+msgid "mcLua Watch Window"
+msgstr "mcLua Окно просмотра"
+
+#: mcLuaEditorApp.cpp:173
+msgid "msgdlg"
+msgstr "msgdlg"
+
+#: mcLuaEditorApp.cpp:197
+msgid "open"
+msgstr "открыть"
+
+#: mcLuaEditorApp.cpp:203
+msgid "output"
+msgstr "вывод"
+
+#: mcLuaEditorApp.cpp:179
+msgid "quit"
+msgstr "выход"
+
+#: mcLuaEditorApp.cpp:194
+msgid "remothost"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:206
+msgid "run"
+msgstr "пуск"
+
+#: mcLuaEditorApp.cpp:182
+msgid "stat"
+msgstr "стат"
+
+#: mcLuaEditorApp.cpp:170
+msgid "stdout"
+msgstr "стандартный вывод"
+
+#: mcLuaEditor.cpp:1088
+#, c-format
+msgid "wxLuaDebuggerCServer::m_serverSocket (%ld)"
+msgstr "wxLuaDebuggerCServer::m_serverSocket (%ld)"
+
+#~ msgid ""
+#~ "\n"
+#~ "Debuggee client stopped.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Клиент отладки остановлен.\n"
+#~ "\n"
+
+#~ msgid "&About\tF1"
+#~ msgstr "&Об\tF1"
+
+#~ msgid ""
+#~ "Mach script files (*.mcs; *.lua)|*.mcs;*.lua|Text files (*.txt)|*.txt|All "
+#~ "files (*)|*"
+#~ msgstr ""
+#~ "Mach файлы скриптов (*.mcs; *.lua)|*.mcs;*.lua|Text files (*.txt)|*.txt|"
+#~ "All files (*)|*"
+
+#~ msgid "Settings"
+#~ msgstr "Настройки"

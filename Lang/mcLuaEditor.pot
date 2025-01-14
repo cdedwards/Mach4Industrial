@@ -1,0 +1,1272 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-11 23:43-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: mcLuaEditor.cpp:923
+msgid ""
+"\n"
+"Debuggee client stopped.\n"
+msgstr ""
+
+#: Settings.cpp:198
+msgid "# Variable"
+msgstr ""
+
+#: mcLuaEditor.cpp:1930
+#, c-format
+msgid "%d replacements made."
+msgstr ""
+
+#: mcLuaEditor.cpp:3030
+#, c-format
+msgid ""
+"%s has been modified on disk.\n"
+"Do you want to reload it?"
+msgstr ""
+
+#: mcLuaEditor.cpp:3028
+#, c-format
+msgid "%s is no longer on the disk."
+msgstr ""
+
+#: mcLuaEditor.cpp:554
+msgid "&About"
+msgstr ""
+
+#: mcLuaWatchWin.cpp:61 mcLuaWatchWin.cpp:62
+msgid "&Add Watch"
+msgstr ""
+
+#: Settings.cpp:451
+msgid "&Apply"
+msgstr ""
+
+#. m_debugContinue =
+#. m_debugMenu->Append(ID_CONTINUE,         _("Co&ntinue\tF5"),             _("Run the program at full speed"));
+#: mcLuaEditor.cpp:504
+msgid "&Break\tF12"
+msgstr ""
+
+#: Settings.cpp:448
+msgid "&Cancel"
+msgstr ""
+
+#: mcLuaEditor.cpp:378
+msgid "&Close\tCtrl+W"
+msgstr ""
+
+#: mcLuaEditor.cpp:492
+msgid "&Compile\tF7"
+msgstr ""
+
+#: mcLuaEditor.cpp:412
+msgid "&Copy\tCtrl-C"
+msgstr ""
+
+#: mcLuaEditor.cpp:563
+msgid "&Debug"
+msgstr ""
+
+#: mcLuaEditor.cpp:2048
+msgid "&Down"
+msgstr ""
+
+#: mcLuaEditor.cpp:561
+msgid "&Edit"
+msgstr ""
+
+#: mcLuaWatchWin.cpp:63
+msgid "&Edit Watch\tF2"
+msgstr ""
+
+#: mcLuaEditor.cpp:560
+msgid "&File"
+msgstr ""
+
+#: mcLuaEditor.cpp:459
+msgid "&Find\tCtrl-F"
+msgstr ""
+
+#. Create right hand buttons and sizer
+#: mcLuaEditor.cpp:1992
+msgid "&Find Next"
+msgstr ""
+
+#: mcLuaEditor.cpp:426
+msgid "&Fold/Unfold all"
+msgstr ""
+
+#: mcLuaEditor.cpp:464
+msgid "&Goto line\tCtrl-G"
+msgstr ""
+
+#: mcLuaEditor.cpp:564
+msgid "&Help"
+msgstr ""
+
+#: mcLuaEditor.cpp:376
+msgid "&New\tCtrl-N"
+msgstr ""
+
+#: Settings.cpp:445
+msgid "&OK"
+msgstr ""
+
+#: mcLuaEditor.cpp:377
+msgid "&Open...\tCtrl-O"
+msgstr ""
+
+#: mcLuaEditor.cpp:413
+msgid "&Paste\tCtrl-V"
+msgstr ""
+
+#: mcLuaEditor.cpp:384
+msgid "&Print...\tCtrl-P"
+msgstr ""
+
+#: mcLuaEditor.cpp:417
+msgid "&Redo\tCtrl-Y"
+msgstr ""
+
+#: mcLuaWatchWin.cpp:64
+msgid "&Remove Watch"
+msgstr ""
+
+#: mcLuaEditor.cpp:1994
+msgid "&Replace"
+msgstr ""
+
+#: mcLuaEditor.cpp:462
+msgid "&Replace\tCtrl-H"
+msgstr ""
+
+#: mcLuaEditor.cpp:493
+msgid "&Run\tCtrl-F5"
+msgstr ""
+
+#: mcLuaEditor.cpp:380
+msgid "&Save\tCtrl-S"
+msgstr ""
+
+#: mcLuaEditor.cpp:562
+msgid "&Search"
+msgstr ""
+
+#: mcLuaEditor.cpp:429
+msgid "&Settings..."
+msgstr ""
+
+#: mcLuaEditor.cpp:466
+msgid "&Sort"
+msgstr ""
+
+#: mcLuaEditor.cpp:496 mcLuaEditor.cpp:933 mcLuaEditor.cpp:2267
+msgid "&Start Debugging\tF5"
+msgstr ""
+
+#: mcLuaEditor.cpp:416
+msgid "&Undo\tCtrl-Z"
+msgstr ""
+
+#: mcLuaEditor.cpp:2047
+msgid "&Up"
+msgstr ""
+
+#: mcLuaWatchWin.cpp:68
+msgid "&Watches"
+msgstr ""
+
+#: mcLuaEditor.cpp:1745
+#, c-format
+msgid "1 .. %d"
+msgstr ""
+
+#: mcLuaEditor.cpp:555
+msgid "API Help &Contents"
+msgstr ""
+
+#: mcLuaEditor.cpp:555
+msgid "API Help Contents"
+msgstr ""
+
+#: mcLuaEditor.cpp:554 mcLuaEditor.cpp:776
+msgid "About mcLua IDE"
+msgstr ""
+
+#: mcLuaEditor.cpp:1279
+#, c-format
+msgid "At Breakpoint line: %d file: %s\n"
+msgstr ""
+
+#: mcLuaEditor.cpp:421
+msgid "Auto complete Identifiers"
+msgstr ""
+
+#: mcLuaEditor.cpp:421
+msgid "Auto complete while typing"
+msgstr ""
+
+#: Settings.cpp:331
+msgid "Background:"
+msgstr ""
+
+#. SCE_LUA_COMMENTLINE
+#: mcLuaEditor.cpp:233
+msgid "Block Comment"
+msgstr ""
+
+#: Settings.cpp:325 Settings.cpp:419
+msgid "Blue:"
+msgstr ""
+
+#: Settings.cpp:222
+msgid "Bold"
+msgstr ""
+
+#: mcLuaEditor.cpp:252
+msgid "Brace Highlight"
+msgstr ""
+
+#: mcLuaEditor.cpp:253
+msgid "Brace Incomplete"
+msgstr ""
+
+#: Settings.cpp:185
+msgid "Buffer"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:203
+msgid "Byte code file name."
+msgstr ""
+
+#: mcLuaEditor.cpp:511
+msgid "C&lear Output Window\tShift-F2"
+msgstr ""
+
+#: mcLuaEditor.cpp:424
+msgid "C&omment/Uncomment\tCtrl-Q"
+msgstr ""
+
+#: mcLuaEditor.cpp:1999
+msgid "Cancel"
+msgstr ""
+
+#. SCE_LUA_STRING
+#: mcLuaEditor.cpp:236
+msgid "Character"
+msgstr ""
+
+#: mcLuaEditor.cpp:511
+msgid "Clear the output window before compiling or debugging"
+msgstr ""
+
+#: mcLuaEditor.cpp:1222
+msgid "Client connected ok.\n"
+msgstr ""
+
+#: mcLuaEditor.cpp:378
+msgid "Close the current editor window"
+msgstr ""
+
+#: mcLuaEditor.cpp:1223 mcLuaEditor.cpp:2270
+msgid "Co&ntinue\tF5"
+msgstr ""
+
+#: Settings.h:83
+msgid "Color Settings"
+msgstr ""
+
+#: Settings.cpp:186
+msgid "Command"
+msgstr ""
+
+#: mcLuaEditor.cpp:231 Settings.cpp:188
+msgid "Comment"
+msgstr ""
+
+#: mcLuaEditor.cpp:424
+msgid "Comment or uncomment current or selected lines"
+msgstr ""
+
+#: mcLuaEditor.cpp:1647
+#, c-format
+msgid ""
+"Compilation error on line number: %d\n"
+"%s\n"
+"\n"
+msgstr ""
+
+#: mcLuaEditor.cpp:1656
+msgid "Compilation successful!\n"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:200
+msgid "Compile file(s) to byte code."
+msgstr ""
+
+#: mcLuaEditor.cpp:420
+msgid "Complete &Identifier\tCtrl+K"
+msgstr ""
+
+#: mcLuaEditor.cpp:420
+msgid "Complete the current identifier"
+msgstr ""
+
+#: mcLuaEditor.cpp:345
+msgid "Copy"
+msgstr ""
+
+#: mcLuaEditor.cpp:412
+msgid "Copy selected text to the clipboard"
+msgstr ""
+
+#: mcLuaEditor.cpp:345
+msgid "Copy the selection"
+msgstr ""
+
+#: mcLuaEditor.cpp:339 mcLuaEditor.cpp:376
+msgid "Create an empty document"
+msgstr ""
+
+#: mcLuaEditor.cpp:411
+msgid "Cu&t\tCtrl-X"
+msgstr ""
+
+#: mcLuaEditor.cpp:255
+msgid "Cursor"
+msgstr ""
+
+#: mcLuaEditor.cpp:344
+msgid "Cut"
+msgstr ""
+
+#: mcLuaEditor.cpp:411
+msgid "Cut selected text to clipboard"
+msgstr ""
+
+#: mcLuaEditor.cpp:344
+msgid "Cut the selection"
+msgstr ""
+
+#: mcLuaEditor.cpp:1239
+msgid "Debug server disconnected.\n"
+msgstr ""
+
+#: mcLuaEditor.cpp:1051
+msgid "Debug session finished.\n"
+msgstr ""
+
+#: mcLuaEditor.cpp:1087
+msgid "Debugger server socket already created"
+msgstr ""
+
+#: mcLuaEditor.cpp:1097
+msgid "Debugger server thread already created"
+msgstr ""
+
+#: mcLuaEditor.cpp:230 Settings.cpp:184 Settings.cpp:208
+#: wxTranslationHelper.cpp:155
+msgid "Default"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:170
+msgid "Do NOT print output to command line stdout."
+msgstr ""
+
+#: mcLuaEditorApp.cpp:179
+msgid "Do not exit even if there are no top-level windows open."
+msgstr ""
+
+#: mcLuaEditor.cpp:388
+msgid "E&xit\tAlt-X"
+msgstr ""
+
+#. \tF12
+#: mcLuaEditor.cpp:429
+msgid "Editor settings"
+msgstr ""
+
+#: mcLuaEditor.cpp:1746
+msgid "Enter line number"
+msgstr ""
+
+#: mcLuaEditor.cpp:1230 mcLuaEditor.cpp:1344 mcLuaEditor.cpp:1354
+#: mcLuaEditor.cpp:1364 mcLuaEditor.cpp:1388 mcLuaEditor.cpp:1467
+msgid "Error"
+msgstr ""
+
+#: mcLuaEditor.cpp:1227
+msgid "Error connecting to client.\n"
+msgstr ""
+
+#: mcLuaEditor.cpp:1499
+msgid "Error starting the debug server.\n"
+msgstr ""
+
+#: mcLuaWatchWin.cpp:65
+msgid "Evaluate &Watches"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:182
+msgid "Execute a Lua string 'stat'."
+msgstr ""
+
+#: mcLuaEditor.cpp:493
+msgid "Execute the current file"
+msgstr ""
+
+#: mcLuaEditor.cpp:388
+msgid "Exit Program"
+msgstr ""
+
+#: mcLuaWatchWin.cpp:104 mcLuaWatchWin.cpp:105
+msgid "Expr"
+msgstr ""
+
+#: mcLuaWatchWin.cpp:77
+msgid "Expression"
+msgstr ""
+
+#: mcLuaEditor.cpp:3361
+msgid "Failed to create editor!!!"
+msgstr ""
+
+#: mcLuaEditor.cpp:3358
+msgid "Failed to create notebook page!!!"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:191
+msgid "File for debuggee. (for internal use)"
+msgstr ""
+
+#: mcLuaEditor.cpp:351 mcLuaEditor.cpp:482 mcLuaEditor.cpp:1821
+msgid "Find"
+msgstr ""
+
+#: mcLuaEditor.cpp:460
+msgid "Find &Next\tF3"
+msgstr ""
+
+#: mcLuaEditor.cpp:461
+msgid "Find &Previous\tShift-F3"
+msgstr ""
+
+#: mcLuaEditor.cpp:1806
+msgid "Find and Replace"
+msgstr ""
+
+#: mcLuaEditor.cpp:352
+msgid "Find and replace text"
+msgstr ""
+
+#: mcLuaEditor.cpp:351
+msgid "Find text"
+msgstr ""
+
+#: mcLuaEditor.cpp:2213
+msgid "Find text not found."
+msgstr ""
+
+#: mcLuaEditor.cpp:460
+msgid "Find the next occurrence of the specified text"
+msgstr ""
+
+#: mcLuaEditor.cpp:459
+msgid "Find the specified text"
+msgstr ""
+
+#. Create find/replace text entry sizer
+#: mcLuaEditor.cpp:2010
+msgid "Find: "
+msgstr ""
+
+#. \tF12
+#: mcLuaEditor.cpp:426
+msgid "Fold or unfold all code folds"
+msgstr ""
+
+#: Settings.cpp:237
+msgid "Foreground:"
+msgstr ""
+
+#: wxTextPrintout.cpp:104
+msgid "Formatting printout"
+msgstr ""
+
+#: Settings.cpp:191
+msgid "G code"
+msgstr ""
+
+#: mcLuaEditor.cpp:464
+msgid "Go to a selected line"
+msgstr ""
+
+#: mcLuaEditor.cpp:1748
+msgid "Goto Line"
+msgstr ""
+
+#: Settings.cpp:319 Settings.cpp:413
+msgid "Green:"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:164
+msgid "Help on command line switches."
+msgstr ""
+
+#: mcLuaEditor.cpp:2968
+msgid "INS"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:391
+msgid "IPC Error"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:390
+#, c-format
+msgid ""
+"IPC initialization failed for host %s!\n"
+"\n"
+"%s"
+msgstr ""
+
+#: Settings.cpp:190
+msgid "Identifier"
+msgstr ""
+
+#. SCE_LUA_OPERATOR
+#: mcLuaEditor.cpp:240
+msgid "Identifiers"
+msgstr ""
+
+#: mcLuaEditor.cpp:254
+msgid "Indent Guides"
+msgstr ""
+
+#: mcLuaEditor.cpp:2479
+msgid "Information"
+msgstr ""
+
+#: mcLuaEditor.cpp:413
+msgid "Insert clipboard text at cursor"
+msgstr ""
+
+#: Settings.cpp:226
+msgid "Italic"
+msgstr ""
+
+#. SCE_LUA_STRINGEOL
+#: mcLuaEditor.cpp:242 Settings.cpp:199
+msgid "Keyword 1"
+msgstr ""
+
+#. SCE_LUA_WORD
+#: mcLuaEditor.cpp:243 Settings.cpp:200
+msgid "Keyword 2"
+msgstr ""
+
+#. SCE_LUA_WORD2
+#: mcLuaEditor.cpp:244 Settings.cpp:201
+msgid "Keyword 3"
+msgstr ""
+
+#. SCE_LUA_WORD3
+#: mcLuaEditor.cpp:245 Settings.cpp:202
+msgid "Keyword 4"
+msgstr ""
+
+#. SCE_LUA_WORD4
+#: mcLuaEditor.cpp:246 Settings.cpp:203
+msgid "Keyword 5"
+msgstr ""
+
+#. SCE_LUA_WORD5
+#: mcLuaEditor.cpp:247 Settings.cpp:204
+msgid "Keyword 6"
+msgstr ""
+
+#. SCE_LUA_WORD6
+#: mcLuaEditor.cpp:248 Settings.cpp:205
+msgid "Keyword 7"
+msgstr ""
+
+#. SCE_LUA_WORD7
+#: mcLuaEditor.cpp:249 Settings.cpp:206
+msgid "Keyword 8"
+msgstr ""
+
+#: mcLuaEditor.cpp:1045
+#, c-format
+msgid "Killed debuggee process %d.\n"
+msgstr ""
+
+#. SCE_LUA_WORD8
+#: mcLuaEditor.cpp:250
+msgid "Label"
+msgstr ""
+
+#: wxTranslationHelper.cpp:194
+msgid "Language"
+msgstr ""
+
+#. SCE_LUA_COMMENT
+#: mcLuaEditor.cpp:232
+msgid "Line Comment"
+msgstr ""
+
+#. SCE_LUA_WORD8
+#: mcLuaEditor.cpp:251
+msgid "Line Numbers"
+msgstr ""
+
+#. SCE_LUA_CHARACTER
+#: mcLuaEditor.cpp:237
+msgid "Literal String"
+msgstr ""
+
+#: mcLuaEditor.cpp:2970
+#, c-format
+msgid "Ln %d Col %d"
+msgstr ""
+
+#: Settings.cpp:192
+msgid "M code"
+msgstr ""
+
+#: mcLuaEditor.cpp:1315
+msgid ""
+"Mach script files (*.mcs; *.lua; *.wllua; *.pst)|*.mcs;*.lua;*.wxlua;*.pst|"
+"Text files (*.txt)|*.txt|All files (*)|*"
+msgstr ""
+
+#: mcLuaEditor.cpp:2639 mcLuaEditor.cpp:2731
+msgid ""
+"Mach script files (*.mcs; *.lua; *.wxlua; *.pst)|*.mcs;*.lua;*.wxlua;*.pst|"
+"Text files (*.txt)|*.txt|All files (*)|*"
+msgstr ""
+
+#: mcLuaEditor.cpp:2033
+msgid "Match &case"
+msgstr ""
+
+#. Create find/replace option checkboxes
+#: mcLuaEditor.cpp:2032
+msgid "Match &whole word"
+msgstr ""
+
+#: Settings.cpp:187
+msgid "Message"
+msgstr ""
+
+#: Settings.cpp:194
+msgid "N code"
+msgstr ""
+
+#: mcLuaEditor.cpp:339
+msgid "New"
+msgstr ""
+
+#: Settings.cpp:218
+msgid "Normal"
+msgstr ""
+
+#. SCE_LUA_COMMENTDOC
+#: mcLuaEditor.cpp:234 Settings.cpp:189
+msgid "Number"
+msgstr ""
+
+#: mcLuaEditor.cpp:782
+msgid "OK"
+msgstr ""
+
+#: mcLuaEditor.cpp:2968
+msgid "OVR"
+msgstr ""
+
+#: mcLuaEditor.cpp:316
+msgid "OVRW"
+msgstr ""
+
+#: mcLuaEditor.cpp:1230
+msgid "OnDebugeeConnect() No mcLua reference!"
+msgstr ""
+
+#: mcLuaEditor.cpp:1344
+msgid "OnDebugerBreak() No mcLua reference!"
+msgstr ""
+
+#: mcLuaEditor.cpp:1364
+msgid "OnDebugerError() No mcLua reference!"
+msgstr ""
+
+#: mcLuaEditor.cpp:1467
+msgid "OnDebugerEvaluate() No mcLua reference!"
+msgstr ""
+
+#: mcLuaEditor.cpp:1388
+msgid "OnDebugerExit() No mcLua reference!"
+msgstr ""
+
+#: mcLuaEditor.cpp:1354
+msgid "OnDebugerPrint() No mcLua reference!"
+msgstr ""
+
+#: mcLuaEditor.cpp:340
+msgid "Open"
+msgstr ""
+
+#: mcLuaEditor.cpp:340 mcLuaEditor.cpp:377
+msgid "Open an existing document"
+msgstr ""
+
+#: mcLuaEditor.cpp:2636
+msgid "Open file"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:197
+msgid "Open file(s) to edit."
+msgstr ""
+
+#: Settings.cpp:197
+msgid "Operator"
+msgstr ""
+
+#. SCE_LUA_PREPROCESSOR
+#: mcLuaEditor.cpp:239
+msgid "Operators"
+msgstr ""
+
+#: mcLuaEditor.cpp:2042
+msgid "Options"
+msgstr ""
+
+#: mcLuaEditor.cpp:1658
+#, c-format
+msgid "Output: \"%s\"\n"
+msgstr ""
+
+#: wxTextPrintout.cpp:124
+#, c-format
+msgid "Page %d"
+msgstr ""
+
+#: wxTextPrintout.cpp:116
+#, c-format
+msgid "Page %d of %d"
+msgstr ""
+
+#: wxTextPrintout.cpp:104
+msgid "Page 1 of ? "
+msgstr ""
+
+#: mcLuaEditor.cpp:386
+msgid "Page S&etup..."
+msgstr ""
+
+#: Settings.cpp:195
+msgid "Parameter"
+msgstr ""
+
+#: mcLuaEditor.cpp:346
+msgid "Paste"
+msgstr ""
+
+#: mcLuaEditor.cpp:346
+msgid "Paste text from the clipboard"
+msgstr ""
+
+#: mcLuaEditor.cpp:2479
+msgid "Please restart for the changes to take effect."
+msgstr ""
+
+#. SCE_LUA_LITERALSTRING
+#: mcLuaEditor.cpp:238
+msgid "Preprocessor"
+msgstr ""
+
+#: mcLuaEditor.cpp:385
+msgid "Preview the the current document"
+msgstr ""
+
+#: mcLuaEditor.cpp:385
+msgid "Print P&review...\tShift-Ctrl-P"
+msgstr ""
+
+#: mcLuaEditor.cpp:3555
+msgid "Print Preview"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:173
+msgid "Print output to a message dialog."
+msgstr ""
+
+#: mcLuaEditorApp.cpp:176
+msgid "Print output to a persistent message console."
+msgstr ""
+
+#: mcLuaEditor.cpp:384
+msgid "Print the current document"
+msgstr ""
+
+#: mcLuaEditor.cpp:2969
+msgid "R/O"
+msgstr ""
+
+#: mcLuaEditor.cpp:2969
+msgid "R/W"
+msgstr ""
+
+#: Settings.cpp:313 Settings.cpp:407
+msgid "Red:"
+msgstr ""
+
+#: mcLuaEditor.cpp:349
+msgid "Redo"
+msgstr ""
+
+#: mcLuaEditor.cpp:349
+msgid "Redo last undo"
+msgstr ""
+
+#: mcLuaEditor.cpp:417
+msgid "Redo the last action undone"
+msgstr ""
+
+#: mcLuaEditor.cpp:2035
+msgid "Regular &expression"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:194
+msgid "Remote Mach machine. (defaults to 127.0.0.1)"
+msgstr ""
+
+#: mcLuaEditor.cpp:461
+msgid "Repeat the search backwards in the file"
+msgstr ""
+
+#: mcLuaEditor.cpp:352 mcLuaEditor.cpp:483
+msgid "Replace"
+msgstr ""
+
+#: mcLuaEditor.cpp:1997
+msgid "Replace &All"
+msgstr ""
+
+#: mcLuaEditor.cpp:2017
+msgid "Replace: "
+msgstr ""
+
+#: mcLuaEditor.cpp:462
+msgid "Replaces the specified text with different text"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:206 mcLuaEditorApp.cpp:209
+msgid "Run a Lua program with command line args."
+msgstr ""
+
+#: mcLuaEditorApp.cpp:188
+msgid "Run as debuggee. -d[host]:[port] (for internal use)"
+msgstr ""
+
+#: mcLuaEditor.cpp:1224 mcLuaEditor.cpp:2271
+msgid "Run the program at full speed"
+msgstr ""
+
+#: mcLuaEditor.cpp:498
+msgid "S&top Debugging\tShift-F5"
+msgstr ""
+
+#: Settings.cpp:438
+msgid "Sample Text"
+msgstr ""
+
+#: mcLuaEditor.cpp:341
+msgid "Save"
+msgstr ""
+
+#: mcLuaEditor.cpp:381
+msgid "Save &As...\tAlt-S"
+msgstr ""
+
+#: mcLuaEditor.cpp:382
+msgid "Save A&ll...\tCtrl-Shift-S"
+msgstr ""
+
+#: mcLuaEditor.cpp:342
+msgid "Save All"
+msgstr ""
+
+#: mcLuaEditor.cpp:2587
+msgid "Save Changes?"
+msgstr ""
+
+#: mcLuaEditor.cpp:342
+msgid "Save all documents"
+msgstr ""
+
+#: mcLuaEditor.cpp:382
+msgid "Save all open documents"
+msgstr ""
+
+#: mcLuaEditor.cpp:2581
+#, c-format
+msgid "Save changes to '%s' before exiting?"
+msgstr ""
+
+#: mcLuaEditor.cpp:2728
+msgid "Save file as"
+msgstr ""
+
+#: mcLuaEditor.cpp:1522
+msgid "Save file?"
+msgstr ""
+
+#: mcLuaEditor.cpp:341 mcLuaEditor.cpp:380
+msgid "Save the current document"
+msgstr ""
+
+#: mcLuaEditor.cpp:381
+msgid "Save the current document to a file with a new name"
+msgstr ""
+
+#: mcLuaEditor.cpp:2049
+msgid "Scope"
+msgstr ""
+
+#: Settings.cpp:180
+msgid "Screen Element:"
+msgstr ""
+
+#: mcLuaEditor.cpp:430
+msgid "Select &Language..."
+msgstr ""
+
+#: mcLuaEditor.cpp:414
+msgid "Select A&ll\tCtrl-A"
+msgstr ""
+
+#. \tF12
+#: mcLuaEditor.cpp:430
+msgid "Select Language"
+msgstr ""
+
+#: mcLuaEditor.cpp:414
+msgid "Select all text in the editor"
+msgstr ""
+
+#: mcLuaEditor.cpp:1312
+msgid "Select file for debugging"
+msgstr ""
+
+#: wxTranslationHelper.cpp:193
+msgid "Select the language"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:185
+msgid "Set framename for window size and position save/restore."
+msgstr ""
+
+#: mcLuaEditor.cpp:386
+msgid "Set printing options"
+msgstr ""
+
+#. SCE_LUA_NUMBER
+#: mcLuaEditor.cpp:235
+msgid "Single Quote String"
+msgstr ""
+
+#: mcLuaEditor.cpp:466
+msgid "Sort selected lines"
+msgstr ""
+
+#: mcLuaEditor.cpp:499
+msgid "St&ep Into\tF11"
+msgstr ""
+
+#: mcLuaEditor.cpp:496 mcLuaEditor.cpp:934 mcLuaEditor.cpp:2268
+msgid "Start a debugging session"
+msgstr ""
+
+#: mcLuaEditor.cpp:500
+msgid "Step &Over\tF10"
+msgstr ""
+
+#: mcLuaEditor.cpp:501
+msgid "Step O&ut\tShift-F11"
+msgstr ""
+
+#: mcLuaEditor.cpp:499
+msgid "Step into the next line"
+msgstr ""
+
+#: mcLuaEditor.cpp:501
+msgid "Step out of the current function"
+msgstr ""
+
+#: mcLuaEditor.cpp:500
+msgid "Step over the next line"
+msgstr ""
+
+#: mcLuaEditor.cpp:498
+msgid "Stop and end the debugging session"
+msgstr ""
+
+#: mcLuaEditor.cpp:504
+msgid "Stop execution of the program at the next executed line of code"
+msgstr ""
+
+#: mcLuaEditor.cpp:1848
+msgid "String not found!"
+msgstr ""
+
+#: Settings.cpp:196
+msgid "Strings"
+msgstr ""
+
+#: Settings.cpp:211
+msgid "Style"
+msgstr ""
+
+#: Settings.cpp:193
+msgid "T code"
+msgstr ""
+
+#: mcLuaEditor.cpp:492
+msgid "Test compile the Lua program"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:167
+msgid "The desired Mach instance to attach to.  Defaults to 0."
+msgstr ""
+
+#: mcLuaEditorApp.cpp:460
+msgid "The wxLua debug target cannot start.\n"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:426
+msgid "The wxLua debugger server host name is empty : wxLua -d[host]:[port]\n"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:462
+msgid ""
+"The wxLua debugger server port is not a number : wxLua -d[host]:[port]\n"
+msgstr ""
+
+#: mcLuaEditor.cpp:490
+msgid "Toggle &Breakpoint\tF9"
+msgstr ""
+
+#: mcLuaEditor.cpp:490
+msgid "Toggle Breakpoint"
+msgstr ""
+
+#: mcLuaEditor.cpp:1617
+msgid "Unable to create debugger server.\n"
+msgstr ""
+
+#: mcLuaEditor.cpp:920 mcLuaEditor.cpp:1042
+#, c-format
+msgid "Unable to kill debuggee process %d, code %d.\n"
+msgstr ""
+
+#: mcLuaEditor.cpp:2643
+#, c-format
+msgid "Unable to load file '%s'."
+msgstr ""
+
+#: mcLuaEditor.cpp:2675
+#, c-format
+msgid "Unable to save file '%s'."
+msgstr ""
+
+#: mcLuaEditor.cpp:982
+msgid "Unable to start debuggee process.\n"
+msgstr ""
+
+#: Settings.cpp:230
+msgid "Underline"
+msgstr ""
+
+#: mcLuaEditor.cpp:348
+msgid "Undo"
+msgstr ""
+
+#: mcLuaEditor.cpp:348
+msgid "Undo last edit"
+msgstr ""
+
+#: mcLuaEditor.cpp:416
+msgid "Undo the last action"
+msgstr ""
+
+#: mcLuaEditor.cpp:1938
+msgid "Unknown find dialog event!"
+msgstr ""
+
+#. SCE_LUA_IDENTIFIER
+#: mcLuaEditor.cpp:241
+msgid "Unterminate String"
+msgstr ""
+
+#: mcLuaEditor.cpp:509
+msgid "Use console when running"
+msgstr ""
+
+#: mcLuaEditor.cpp:506
+msgid "V&iew Call Stack"
+msgstr ""
+
+#: mcLuaWatchWin.cpp:81 mcLuaWatchWin.cpp:106
+msgid "Value"
+msgstr ""
+
+#: mcLuaEditor.cpp:510
+msgid "View &Output Window\tF2"
+msgstr ""
+
+#: mcLuaEditor.cpp:507
+msgid "View &Watches"
+msgstr ""
+
+#: mcLuaEditor.cpp:509
+msgid "View Console"
+msgstr ""
+
+#: mcLuaEditor.cpp:510
+msgid "View or Hide the output window"
+msgstr ""
+
+#: mcLuaEditor.cpp:506
+msgid "View the LUA call stack"
+msgstr ""
+
+#: mcLuaEditor.cpp:507
+msgid "View the Watch window"
+msgstr ""
+
+#: mcLuaEditor.cpp:1614
+#, c-format
+msgid "Waiting for client connect. Start client with mcLuaEditor -d%s:%d\n"
+msgstr ""
+
+#. SetAllEditorsReadOnly(true);
+#: mcLuaEditor.cpp:979
+msgid "Waiting for client connection...\n"
+msgstr ""
+
+#: mcLuaEditor.cpp:323
+msgid "Welcome to mcLua"
+msgstr ""
+
+#: mcLuaEditor.cpp:2034
+msgid "Wrap ar&ound"
+msgstr ""
+
+#: mcLuaEditor.cpp:1521
+msgid ""
+"You must save the program before running it.\n"
+"Press cancel to abort running."
+msgstr ""
+
+#: mcLuaEditorApp.cpp:200
+msgid "compile"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:176
+msgid "console"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:191
+msgid "debug-file"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:188
+msgid "debuggee"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:185
+msgid "framename"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:164
+msgid "help"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:167
+msgid "instance"
+msgstr ""
+
+#: mcLuaEditor.h:94 mcLuaEditor.h:96
+msgid "mcLua"
+msgstr ""
+
+#: mcLuaEditor.cpp:1362
+msgid "mcLua ERROR: "
+msgstr ""
+
+#: mcLuaEditor.cpp:2644
+msgid "mcLua Error"
+msgstr ""
+
+#: mcLuaEditor.cpp:2676
+msgid "mcLua Error Saving"
+msgstr ""
+
+#: mcLuaEditor.cpp:3028 mcLuaEditor.cpp:3030
+msgid "mcLua Message"
+msgstr ""
+
+#: mcLuaEditor.cpp:2799
+msgid "mcLua Watch Window"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:173
+msgid "msgdlg"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:197
+msgid "open"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:203
+msgid "output"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:179
+msgid "quit"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:194
+msgid "remothost"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:206
+msgid "run"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:182
+msgid "stat"
+msgstr ""
+
+#: mcLuaEditorApp.cpp:170
+msgid "stdout"
+msgstr ""
+
+#: mcLuaEditor.cpp:1094
+#, c-format
+msgid "wxLuaDebuggerCServer::m_serverSocket (%ld)"
+msgstr ""

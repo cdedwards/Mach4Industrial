@@ -1,0 +1,90 @@
+Thickness::1
+	Start=.35
+	End=.05
+	Incs=0
+	AuxGas=0
+	Dwell=.005
+	FocusStart=-1.0
+	FocusEnd=.04
+	Power=80
+;
+Thickness::2
+	Start=.35
+	End=.05
+	Incs=0
+	AuxGas=0
+	Dwell=.005
+	FocusStart=-1.0
+	FocusEnd=.04
+	Power=80
+;
+Thickness::3
+	Start=.35
+	End=.05
+	Incs=0
+	AuxGas=0
+	Dwell=.005
+	FocusStart=-1.0
+	FocusEnd=.04
+	Power=80
+;
+Thickness::4
+	Start=.35
+	End=.05
+	Incs=0
+	AuxGas=0
+	Dwell=.005
+	FocusStart=-1.0
+	FocusEnd=.04
+	Power=80
+;
+Thickness::5
+	Start=.35
+	End=.05
+	Incs=0
+	AuxGas=0
+	Dwell=.005
+	FocusStart=-1.0
+	FocusEnd=.04
+	Power=80
+;
+Thickness::6
+	Start=.35
+	End=.05
+	Incs=0
+	AuxGas=0
+	Dwell=.005
+	FocusStart=-1.0
+	FocusEnd=.04
+	Power=80
+;
+Thickness::8
+	Start=.35
+	End=.05
+	Incs=0
+	AuxGas=0
+	Dwell=.005
+	FocusStart=-1.0
+	FocusEnd=.04
+	Power=80
+;
+Thickness::10
+	Start=.35
+	End=.05
+	Incs=0
+	AuxGas=0
+	Dwell=.005
+	FocusStart=-1.0
+	FocusEnd=.04
+	Power=80
+;
+Thickness::12
+	Start=.35
+	End=.05
+	Incs=0
+	AuxGas=0
+	Dwell=.005
+	FocusStart=-1.0
+	FocusEnd=.04
+	Power=80
+;
