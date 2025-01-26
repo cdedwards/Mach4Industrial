@@ -2,7 +2,7 @@
 Profile=CNC_Router
 Screen=mcIndRouter.set
 JogInc=1.000000
-JogRate=50.000000
+JogRate=79.000000
 AutoCalc=0
 JogTrace=0
 OpLock=0
@@ -35,7 +35,7 @@ EnableStepDirRtap=0
 EnableSpindleStabilizeWait=0
 SpindleStabilizeWaitPercent=71
 LastOpenDir=C:\\Users\\Colten Edwards\\Downloads
-CustomColor0=#373737
+CustomColor0=#0000FF
 CustomColor1=#FFFFFF
 CustomColor2=#FFFFFF
 CustomColor3=#FFFFFF
@@ -65,7 +65,7 @@ BackupProfiles=20
 MaxTools=99
 SpindleOverrideDelay=25
 PasswdReq=0
-MRU1=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard End drill.nc
+MRU1=C:\\Users\\Colten Edwards\\Downloads\\Top Spoilboard Test.nc
 AllowRotaryAxisProbing=1
 ShutdownDialog=0
 EnlargeShutdownDialog=1
@@ -73,16 +73,16 @@ NoAutoRegenLineThreshold=0
 RegenAfterFixturechange=0
 MotionDevice=ESS
 MaxFeedOverRidePercent=300
-MRU2=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard Last row drill.nc
-MRU3=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard Middle row drill.nc
+MRU2=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard End drill.nc
+MRU3=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard Last row drill.nc
 LastWizard=C:\\Mach4Industrial\\Wizards\\mcConfigSoftLimits.mcc
-MRU4=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard Second row pocket.nc
-MRU5=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard First row.nc
-MRU6=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard Bottom Plate.nc
-MRU7=C:\\Users\\Colten Edwards\\Downloads\\aztec calender.nc
-MRU8=C:\\Users\\Colten Edwards\\Downloads\\New.nc
-MRU9=C:\\Users\\Colten Edwards\\Downloads\\Profile 1.txt
-MRU10=C:\\Mach4Industrial\\GcodeFiles\\roadrunner.tap
+MRU4=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard Middle row drill.nc
+MRU5=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard Second row pocket.nc
+MRU6=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard First row.nc
+MRU7=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard Bottom Plate.nc
+MRU8=C:\\Users\\Colten Edwards\\Downloads\\aztec calender.nc
+MRU9=C:\\Users\\Colten Edwards\\Downloads\\New.nc
+MRU10=C:\\Users\\Colten Edwards\\Downloads\\Profile 1.txt
 [Toolpath]
 BackgroundTopColor=8404992
 BackgroundBottomColor=8404992
@@ -236,17 +236,17 @@ MaxRPM=0.000000
 MinRPM=0.000000
 Reversed=0
 [Stats]
-TotalHours=274.728851
-SpindleHours=20.116322
-DistanceX=5519.984472
-DistanceY=3720.318172
-DistanceZ=2485.967907
+TotalHours=352.319704
+SpindleHours=20.204728
+DistanceX=8319.022394
+DistanceY=4584.435090
+DistanceZ=3437.138028
 DistanceA=0.000000
 DistanceB=0.000000
 DistanceC=0.000000
-M3=52
+M3=54
 M4=0
-M6=143
+M6=235
 [ARotoryAxisPosition]
 XAxis=0.000000
 YAxis=0.000000
@@ -522,7 +522,7 @@ CountsPerUnit=25536.261500
 MaxVelocity=117041.198542
 MaxAccel=199948.927545
 BacklashAmount=0.000000
-SoftMaxLimit=1225740.000000
+SoftMaxLimit=1123595.000000
 SoftMinLimit=0.000000
 EnableDelay=0
 CountsPerUnitAux=10000.000000
@@ -3806,8 +3806,8 @@ w=640
 h=480
 [RegFileDiag]
 aot=1
-x=2515
-y=263
+x=2598
+y=265
 w=400
 h=516
 PoundVarlbound=0
@@ -6746,12 +6746,12 @@ Value=0
 Name=2025/XPlate
 InitialValue=0
 Persistent=1
-Value=4
+Value=1.7
 [iReg35]
 Name=2025/YPlate
 InitialValue=0
 Persistent=1
-Value=7
+Value=0.23
 [iReg36]
 Name=2025/TCX
 InitialValue=0
@@ -6771,7 +6771,7 @@ Value=1.5
 Name=2025/PlateThickness
 InitialValue=0
 Persistent=1
-Value=0.125
+Value=0.2
 [iReg40]
 Name=2025/LaserOffsetX
 Persistent=1
@@ -6795,15 +6795,15 @@ Value=1
 [iReg45]
 Name=2025/ZHeightSurface
 Persistent=1
-Value=0.125
+Value=0.2
 [iReg46]
 Name=2025/FixedPlateTouchZ
 Persistent=1
-Value=-0.10393323728735
+Value=-0.59356442368181
 [iReg47]
 Name=2025/LastFixedPlateTouchZ
 Persistent=1
-Value=-1.2772603015359
+Value=-0.59356442368181
 [iReg48]
 Name=2025/FirstTouchSpeed
 Persistent=1
@@ -6826,6 +6826,7 @@ Persistent=1
 Value=7
 [iReg53]
 Name=2025/IgnoreM6
+InitialValue=0
 Persistent=1
 Value=0
 [iReg54]
@@ -6839,5 +6840,23 @@ Value=0
 [iReg56]
 Name=2025/UseMatOffset
 Persistent=1
+Value=31.0
+[iReg57]
+Name=2025/ZClearance
+Persistent=1
+Value=0.5
+[iReg58]
+Name=2025/MaterialOffset
+Persistent=1
 Value=0
+[iReg59]
+Name=2025/FixedPlateProbe
+InitialValue=31.1
+Persistent=1
+Value=31.1
+[iReg60]
+Name=2025/MovablePlateProbe
+InitialValue=31.0
+Persistent=1
+Value=31.0
 

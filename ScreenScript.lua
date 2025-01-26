@@ -1342,11 +1342,12 @@ function ProbingSetup1_1__Clicked_Script(...)
     probingSearchDistance = GetRegister("2025/ProbingSearchDistance") -- how much to move up before touching slower
     --switch the distance input for probing to a negative to move in the correct direction
     probingSearchDistance = -probingSearchDistance
+    prbmoving = GetRegister("2025/MovablePlateProbe")
+    prbfixed = GetRegister("2025/FixedPlateProbe")
     
-    --[[ 
-    This function will be called to turn off and on soft limits 
-    of the Z axis during the probing routine. Otherwise, it will 
-    error or you ahve to manually click on soft limits button]]
+    valX = mc.mcAxisGetMachinePos(inst, mc.X_AXIS) --Get the position of the X axis in Machine Position
+    valY = mc.mcAxisGetMachinePos(inst, mc.Y_AXIS) --Get the position of the Y axis in Machine Position
+    valZ = mc.mcAxisGetPos(inst, mc.Z_AXIS) --Get the position of the Z axis in offset, not machine
     
     local function GetSoftLimitForAxis(axis)
     	local inst = mc.mcGetInstance()
@@ -1370,11 +1371,11 @@ function ProbingSetup1_1__Clicked_Script(...)
     ----------------------------------------------------------------------------------------------------------------------------------
     --Before we start probing anything, let's check and make sure we are homed
     ----------------------------------------------------------------------------------------------------------------------------------
-    if (rc ~= mc.MERROR_NOERROR) then
-    	mc.mcCntlLog(inst, "Failed to determine if machine is homed, rc = "..rc, "", -1)
-    	wx.wxMessageBox("Homing check failed, cannot set up M6 settings without homing first.", "Manual Tool Change")
-    	return
-    end
+    --if (rc ~= mc.MERROR_NOERROR) then
+    --	mc.mcCntlLog(inst, "Failed to determine if machine is homed, rc = "..rc, "", -1)
+    --	wx.wxMessageBox("Homing check failed, cannot set up M6 settings without homing first.", "Manual Tool Change")
+    --	return
+    --end
     if isHomed then
        local OldSoftLimitZ = GetSoftLimitForAxis(mc.Z_AXIS)
        SetSoftLimit(mc.Z_AXIS, mc.MC_OFF) -- turn off z axis soft limit for probing. Have to do this because you can input a large number in the probing distance input box. 
@@ -1386,7 +1387,7 @@ function ProbingSetup1_1__Clicked_Script(...)
     -- First move tool over the moveable plate and zero out to the surface. This will become the current offset z0 and give us a number to work with when finding the fixed plate height difference
     -- Start the probing for Z first move
     ----------------------------------------------------------------------------------------------------------------------------------
-       mc.mcCntlGcodeExecuteWait(inst,'G91 G31 Z'..probingSearchDistance .. 'F' .. firstTouchSpeed)
+       mc.mcCntlGcodeExecuteWait(inst,'G90 G' .. prbmoving .. ' Z'..probingSearchDistance .. 'F' .. firstTouchSpeed)
        if mc.mcRegGetValue(hreg) == -1 then
     	wx.wxMessageBox('No probe strike. Aborting the rest of the routine')
     	return
@@ -1395,13 +1396,13 @@ function ProbingSetup1_1__Clicked_Script(...)
     ----------------------------------------------------------------------------------------------------------------------------------   
     -- Second probing with slower speed   
     ----------------------------------------------------------------------------------------------------------------------------------
-       mc.mcCntlGcodeExecuteWait(inst,'G91 G31 Z'..probingSearchDistance .. 'F' .. secondTouchSpeed)
+       mc.mcCntlGcodeExecuteWait(inst,'G90 G' .. prbmoving .. ' Z'..probingSearchDistance .. 'F' .. secondTouchSpeed)
        
        if mc.mcRegGetValue(hreg) == -1 then
     	wx.wxMessageBox('No probe strike. Aborting the rest of the routine')
     	return
        end
-       mc.mcCntlSetLastError(inst, "First probe complete")
+       --mc.mcCntlSetLastError(inst, "First probe complete")
     
       SetAxisPosition(mc.Z_AXIS, 0)  
     
@@ -1430,14 +1431,14 @@ function ProbingSetup1_1__Clicked_Script(...)
     ----------------------------------------------------------------------------------------------------------------------------------
     -- probing 2 times. 1 fast and 2 is slow
     ----------------------------------------------------------------------------------------------------------------------------------
-       mc.mcCntlGcodeExecuteWait(inst,'G91 G31 Z'..probingSearchDistance .. 'F' .. firstTouchSpeed) -- probing distance and first touch speed on m6 setup screen is the input for this number.
+       mc.mcCntlGcodeExecuteWait(inst,'G91 G' .. prbfixed .. ' Z'..probingSearchDistance .. 'F' .. firstTouchSpeed) -- probing distance and first touch speed on m6 setup screen is the input for this number.
        if mc.mcRegGetValue(hreg) == -1 then -- look for error input from ess to confirm touch happened and exit if not
     	wx.wxMessageBox('No probe strike. Aborting the rest of the routine')
     	return
        end
        mc.mcCntlGcodeExecuteWait(inst, 'G91 Z'.. touchRetractHeight) -- retract and probe slower
     -- Second probing with slower speed   
-       mc.mcCntlGcodeExecuteWait(inst,'G91 G31 Z'..probingSearchDistance .. 'F' .. secondTouchSpeed) -- probe again and use the second touch speed input on m6 screen
+       mc.mcCntlGcodeExecuteWait(inst,'G91 G' .. prbfixed .. ' Z'..probingSearchDistance .. 'F' .. secondTouchSpeed) -- probe again and use the second touch speed input on m6 screen
        if mc.mcRegGetValue(hreg) == -1 then --look for error input from ess to confirm touch happened and exit if not
     	wx.wxMessageBox('No probe strike. Aborting the rest of the routine')
     	return
@@ -1462,13 +1463,14 @@ function ProbingSetup1_1__Clicked_Script(...)
     	mc.mcCntlGcodeExecuteWait(inst, "G90 G53 G0 Z0.0"); -- Move the Z axis all the way up before XY moves
       elseif (ProbeChoice == 8) then
     	mc.mcCntlGcodeExecuteWait(inst, "G91 G0 Z" .. touchRetractHeight)  
-    	mc.mcCntlSetLastError(inst, "M6 Setup Complete")
+    	mc.mcCntlSetLastError(inst, "AutoZero Setup Complete")
       end
+      mc.mcCntlGcodeExecute(inst, "G90 G53 G0 X" .. tonumber(valX) .. "Y" .. tonumber(valY)) --Move back to X & Y initial location
       mc.mcCntlSetPoundVar(inst, mc.SV_MOD_GROUP_3, posmode)
       mc.mcCntlSetPoundVar(inst, 2134, feedRate)  
       SetSoftLimit(mc.Z_AXIS, OldSoftLimitZ)
     else
-      wx.wxMessageBox("Your machine must be homed\nbefore we can set up M6.", "Manual Tool Change") -- if not yet homed, exit with this message to home before trying again
+      wx.wxMessageBox("Your machine must be homed\nbefore we can set up AutoZero.", "Manual Tool Change") -- if not yet homed, exit with this message to home before trying again
     end
     
     
@@ -1534,7 +1536,7 @@ function txt_24__On_Update_Script(...)
     DecToFrac(0)
     return val -- the script MUST return a value, otherwise, the control will not be updated.
 end
-function txt_11__On_Update_Script(...)
+function MObileProbe_On_Update_Script(...)
     local val = select(1,...) -- Get the system value.
     local inst = mc.mcGetInstance()
     val = tonumber(val) -- The value may be a number or a string. Convert as needed.
@@ -1548,6 +1550,25 @@ function txt_8__On_Update_Script(...)
     DecToFrac(0)
     return val -- the script MUST return a value, otherwise, the control will not be updated.
 end
+function txt_9__On_Update_Script(...)
+    local val = select(1,...) -- Get the system value.
+    local inst = mc.mcGetInstance()
+    val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+    DecToFrac(0)
+    return val -- the script MUST return a value, otherwise, the control will not be updated.
+end
+function FixedPlateProbe_1__On_Update_Script(...)
+    local val = select(1,...) -- Get the system value.
+    local inst = mc.mcGetInstance()
+    val = tonumber(val) -- The value may be a number or a string. Convert as needed.
+    DecToFrac(0)
+    return val -- the script MUST return a value, otherwise, the control will not be updated.
+end
+function FixedPlatePrb_On_Modify_Script(...)
+    local val = scr.GetProperty("droPrbGcode", "Value")
+    mc.mcProfileWriteString(inst, "ProbingSettings", "GCode", tostring(val))
+    mc.mcCntlSetLastError(inst, "Probe: G code updated " .. val)
+end
 -- ProbingSettings-GlobalScript
 function txt_15__On_Update_Script(...)
     local val = select(1,...) -- Get the system value.
@@ -1556,7 +1577,7 @@ function txt_15__On_Update_Script(...)
     DecToFrac(0)
     return val -- the script MUST return a value, otherwise, the control will not be updated.
 end
-function txt_10__On_Update_Script(...)
+function txt_12__On_Update_Script(...)
     local val = select(1,...) -- Get the system value.
     local inst = mc.mcGetInstance()
     val = tonumber(val) -- The value may be a number or a string. Convert as needed.
@@ -1584,7 +1605,7 @@ function txt_15__On_Update_Script(...)
     DecToFrac(0)
     return val -- the script MUST return a value, otherwise, the control will not be updated.
 end
-function txt_14__On_Update_Script(...)
+function txt_16__On_Update_Script(...)
     local val = select(1,...) -- Get the system value.
     local inst = mc.mcGetInstance()
     val = tonumber(val) -- The value may be a number or a string. Convert as needed.
@@ -3398,11 +3419,6 @@ function tbtnIgnoreM6_Up_Script(...)
     local hreg = mc.mcRegGetHandle(inst, 'iRegs0/2025/IgnoreM6')
     rc = mc.mcRegSetValueLong(hreg, val)
     return val -- the script MUST return a value, otherwise, the control will not be updated.
-end
-function droPrbToUse_On_Modify_Script(...)
-    local val = scr.GetProperty("droPrbGcode", "Value")
-    mc.mcProfileWriteString(inst, "ProbingSettings", "GCode", tostring(val))
-    mc.mcCntlSetLastError(inst, "Probe: G code updated " .. val)
 end
 function tbtnUseMachineCoord_Down_Script(...)
     local val = 1

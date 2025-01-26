@@ -41,6 +41,9 @@ local SecondTouchSpeed = GetRegister("2025/SecondTouchSpeed") -- slower speed to
 local TouchRetractHeight = GetRegister("2025/TouchRetractHeight") -- how much to move up before touching slower
 local moveToPlateDistance = GetRegister("2025/MoveToPlateDistance") -- how much to move up before touching slower
 local ZClearance = GetRegister("2025/ZClearance")
+
+--local prbmvplate = GetRegister("2025/MovablePlateProbe")
+local prbfxplate = GetRegister("2025/FixedPlateProbe")
 --switch the distance input for moving the z to a negative to move in the correct direction
 moveToPlateDistance = - tonumber(moveToPlateDistance)
 local probingSearchDistance = GetRegister("2025/ProbingSearchDistance") -- how much to move up before touching slower
@@ -65,7 +68,8 @@ end
 
 local function GoToPermPlate()
     mc.mcCntlSetLastError(inst, "Moving to the Fixed Plate Location")
-	mc.mcCntlGcodeExecuteWait(inst, 'G90 G53 X'.. FixedPlate_X .. 'Y' .. FixedPlate_Y .. 'f300')
+--	mc.mcCntlSetLastError(inst, 'G90 G53 X'.. FixedPlate_X .. ' Y' .. FixedPlate_Y .. ' F250')
+	rc = mc.mcCntlGcodeExecuteWait(inst, "G90 G53 X".. FixedPlate_X .. " Y" .. FixedPlate_Y .. " F250")
 end
 
 local function SetAxisPosition(axis, AxisPos)
@@ -102,10 +106,9 @@ end
  
   currentTool = mc.mcToolGetCurrent(inst)
   selectedTool = mc.mcToolGetSelected(inst)
-   mc.mcCntlSetLastError(inst, "Starting M6")
   local posmode = mc.mcCntlGetPoundVar(inst, mc.SV_MOD_GROUP_3) --get the current mode so we can return to it when macro ends
   local feedRate = mc.mcCntlGetPoundVar(inst, 2134)
-   mc.mcCntlSetLastError(inst, "Starting M6 -2")
+
 ----------------------------------------------------------------------------------------------------------------- 
   --Get positions before moving to do tool change
 -----------------------------------------------------------------------------------------------------------------  
@@ -141,34 +144,42 @@ end
   MTCZHeight = math.abs(MTCZHeight)
   mc.mcCntlGcodeExecuteWait(inst, "G90 G53 G0 Z-" .. MTCZHeight);--Move the Z axis to change height  
   
-  mc.mcCntlSetLastError(inst, "Change to tool " .. tostring(selectedTool) .. " and press start to continue") --Message at beginning of tool change
+  --mc.mcCntlSetLastError(inst, "Change to tool " .. tostring(selectedTool) .. " and press start to continue") --Message at beginning of tool change
   mc.mcCntlToolChangeManual(inst, true) --This will pause the tool change here and wait for a press of cycle start to continue
-  mc.mcCntlGcodeExecuteWait(inst, "G90 G0 Z0.0");--Move the Z axis all the way up  
+  mc.mcCntlGcodeExecuteWait(inst, "G90 G53 G0 Z0.0");--Move the Z axis all the way up  
   
   
   GoToPermPlate() 
   moveToPlateDistance = math.abs(moveToPlateDistance)
-  mc.mcCntlSetLastError(inst, "G53 G0 Z-" .. moveToPlateDistance)
+  --mc.mcCntlSetLastError(inst, "G53 G0 Z-" .. moveToPlateDistance)
   mc.mcCntlGcodeExecute(inst, "G53 G0 Z-" .. moveToPlateDistance)--Moves the z axis down input distance
 
+
+ 
  -----------------------------------------------------------------------------------------------------------------
 -- Start the probing for Z first move
 -----------------------------------------------------------------------------------------------------------------
-   mc.mcCntlSetLastError(inst,'G90 G31 Z'..probingSearchDistance .. 'F' .. FirstTouchSpeed)
-   mc.mcCntlGcodeExecuteWait(inst,'G90 G31 Z'..probingSearchDistance .. 'F' .. FirstTouchSpeed)
+   --mc.mcCntlSetLastError(inst,'G90 G' ..  prbfxplate .. ' Z'..probingSearchDistance .. 'F' .. FirstTouchSpeed)
+   mc.mcCntlGcodeExecuteWait(inst,'G90 G' .. prbfxplate .. ' Z'..probingSearchDistance .. 'F' .. FirstTouchSpeed)
    if mc.mcRegGetValue(hreg) == -1 then
 	wx.wxMessageBox('No probe strike. Aborting the rest of the routine')
 	return
    end
    
-   
+
+
+
    -- Removed G91 as it's an error with G53
-   mc.mcCntlSetLastError(inst, 'G90 G53 Z'.. GetAxisPosition(mc.Z_AXIS) + TouchRetractHeight) -- retract and probe slower
-   mc.mcCntlGcodeExecuteWait(inst, 'G90 G53 Z'.. GetAxisPosition(mc.Z_AXIS) + TouchRetractHeight) -- retract and probe slower
+   --mc.mcCntlSetLastError(inst, 'G90 G53 Z'.. GetAxisPosition(mc.Z_AXIS) + TouchRetractHeight) -- retract and probe slower
+   
+local ZPos = GetAxisPosition(mc.Z_AXIS) + tonumber(TouchRetractHeight)   
+   --mc.mcCntlSetLastError(inst, 'G91 '.. ZPos .. "TouchRetractHeight =  " .. TouchRetractHeight)
+   rc = mc.mcCntlGcodeExecuteWait(inst, 'G91 G0Z'.. math.abs(TouchRetractHeight)) -- retract and probe slower
+
 -----------------------------------------------------------------------------------------------------------------   
 -- Second probing with slower speed   
 -----------------------------------------------------------------------------------------------------------------
-   mc.mcCntlGcodeExecuteWait(inst,'G90 G31 Z'..probingSearchDistance .. 'F' .. SecondTouchSpeed)
+   mc.mcCntlGcodeExecuteWait(inst,'G90 G' .. prbfxplate .. ' Z'..probingSearchDistance .. 'F' .. SecondTouchSpeed)
    if mc.mcRegGetValue(hreg) == -1 then
 	wx.wxMessageBox('No probe strike. Aborting the rest of the routine')
 	return
@@ -178,45 +189,45 @@ end
 -----------------------------------------------------------------------------------------------------------------   
    
    plateTouchedPos = mc.mcAxisGetPos(inst, mc.Z_AXIS)   -- store the z measurement of current probe touch
-   mc.mcCntlSetLastError(inst, 'last tool position was ' .. FixedPlateTouchZ .. " the new position is " .. plateTouchedPos)
+   --mc.mcCntlSetLastError(inst, 'last tool position was ' .. FixedPlateTouchZ .. " the new position is " .. plateTouchedPos)
 -----------------------------------------------------------------------------------------------------------------      
 -- set current z pos as the replacement of the first tool 
 -----------------------------------------------------------------------------------------------------------------   
    local convertFixedz = tonumber(FixedPlateTouchZ)
    ZAxisPos = convertFixedz
+   --wx.wxMessageBox("Setting Z Axis Pos","Click OK to continue", 16)  -- brings up a dialog box and waits for a selection to proceed
    SetAxisPosition(mc.Z_AXIS, ZAxisPos)
+   --mc.mcCntlSetLastError(inst, 'ZAxisPos = ' .. ZAxisPos .. ' ZClearance = ' .. ZClearance .. 'ZAxisPos + ZClearance = ' .. ZAxisPos + ZClearance)
+   --wx.wxMessageBox("Moving Z Axis to ZAxisPos+ZClearance","Click OK to continue", 16)  -- brings up a dialog box and waits for a selection to proceed
    
-  mc.mcCntlGcodeExecuteWait(inst, 'G91 Z" .. ZClearance .. " F25') -- move away from probe surface using incremental mode.   
+   mc.mcCntlGcodeExecuteWait(inst, 'G91  G0Z' .. ZAxisPos + ZClearance .. ' F25') -- move away from probe surface using incremental mode.   
    
 -----------------------------------------------------------------------------------------------------------------   
 -- store
 -----------------------------------------------------------------------------------------------------------------   
-  WriteRegister("2025/LastFixedPlateTouchZ", plateTouchedPos) -- before it is overwritten, write last pos to this var
-  WriteRegister("2025/FixedPlateTouchZ", plateTouchedPos)    -- store new pos aND OVERWRITE LAST. USED IN LATER M6 CALLS
+   WriteRegister("2025/LastFixedPlateTouchZ", plateTouchedPos) -- before it is overwritten, write last pos to this var
+   WriteRegister("2025/FixedPlateTouchZ", plateTouchedPos)    -- store new pos aND OVERWRITE LAST. USED IN LATER M6 CALLS
 -----------------------------------------------------------------------------------------------------------------   
 
 -----------------------------------------------------------------------------------------------------------------   
-  mc.mcCntlSetLastError(inst, "Move to Z0 Machine Coordinates")
-  mc.mcCntlGcodeExecute(inst, "G90 G53 G1 Z0 F80") --Retract back to Z home
+--  mc.mcCntlSetLastError(inst, "Move to Z0 Machine Coordinates")
+--  mc.mcCntlGcodeExecute(inst, "G90 G53 G1 Z0 F80") --Retract back to Z home
   
 -----------------------------------------------------------------------------------------------------------------   
 -----------------------------------------------------------------------------------------------------------------   
 
-  local MyChoice = wx.wxMessageBox("Remove Probe Clip","Click OK to continue", 16)  -- brings up a dialog box and waits for a selection to proceed
+   local MyChoice = wx.wxMessageBox("Remove Probe Clip","Click OK to continue", 16)  -- brings up a dialog box and waits for a selection to proceed
   
-  if (MyChoice == 16) then  --16 is cancel
-		rc = mc.mcCntlSetLastError(inst, 'probing.')  
-  elseif (MyChoice == 4) then
-
-	
-    
-	SetSoftLimits(mc.Z_AXIS, OldSoftLimitZ) -- restore soft limits
-	mc.mcCntlGcodeExecute(inst, "G90 G53 G0 X" .. tonumber(valX) .. "Y" .. tonumber(valY)) --Move back to X & Y initial location
-	mc.mcCntlGcodeExecute(inst, "G90 G0 Z" .. tonumber(valZ)) --Move back to Z initial location. might be a problem for starting tool. double check.
-	mc.mcToolSetCurrent(inst, selectedTool)
-  end
- mc.mcCntlSetPoundVar(inst, mc.SV_MOD_GROUP_3, posmode)
- mc.mcCntlGetPoundVar(inst, 2134, feedRate);
+   if (MyChoice == 16) then  --16 is cancel
+	 	rc = mc.mcCntlSetLastError(inst, 'probing.')  
+   elseif (MyChoice == 4) then
+	  SetSoftLimits(mc.Z_AXIS, OldSoftLimitZ) -- restore soft limits
+	  mc.mcCntlGcodeExecute(inst, "G90 G0 Z" .. tonumber(valZ)) --Move back to Z initial location. might be a problem for starting tool. double check.
+	  mc.mcCntlGcodeExecute(inst, "G90 G53 G0 X" .. tonumber(valX) .. "Y" .. tonumber(valY)) --Move back to X & Y initial location
+	  mc.mcToolSetCurrent(inst, selectedTool)
+   end
+   mc.mcCntlSetPoundVar(inst, mc.SV_MOD_GROUP_3, posmode)
+   mc.mcCntlGetPoundVar(inst, 2134, feedRate);
  end -- end of check if new tool is the same as the old
 
 

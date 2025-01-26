@@ -2,7 +2,7 @@
 Profile=CNC_Router
 Screen=mcIndRouter.set
 JogInc=1.000000
-JogRate=50.000000
+JogRate=79.000000
 AutoCalc=0
 JogTrace=0
 OpLock=0
@@ -35,7 +35,7 @@ EnableStepDirRtap=0
 EnableSpindleStabilizeWait=0
 SpindleStabilizeWaitPercent=71
 LastOpenDir=C:\\Users\\Colten Edwards\\Downloads
-CustomColor0=#373737
+CustomColor0=#0000FF
 CustomColor1=#FFFFFF
 CustomColor2=#FFFFFF
 CustomColor3=#FFFFFF
@@ -65,7 +65,7 @@ BackupProfiles=20
 MaxTools=99
 SpindleOverrideDelay=25
 PasswdReq=0
-MRU1=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard End drill.nc
+MRU1=C:\\Users\\Colten Edwards\\Downloads\\Top Spoilboard Test.nc
 AllowRotaryAxisProbing=1
 ShutdownDialog=0
 EnlargeShutdownDialog=1
@@ -73,16 +73,17 @@ NoAutoRegenLineThreshold=0
 RegenAfterFixturechange=0
 MotionDevice=ESS
 MaxFeedOverRidePercent=300
-MRU2=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard Last row drill.nc
-MRU3=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard Middle row drill.nc
+MRU2=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard End drill.nc
+MRU3=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard Last row drill.nc
 LastWizard=C:\\Mach4Industrial\\Wizards\\mcConfigSoftLimits.mcc
-MRU4=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard Second row pocket.nc
-MRU5=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard First row.nc
-MRU6=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard Bottom Plate.nc
-MRU7=C:\\Users\\Colten Edwards\\Downloads\\aztec calender.nc
-MRU8=C:\\Users\\Colten Edwards\\Downloads\\New.nc
-MRU9=C:\\Users\\Colten Edwards\\Downloads\\Profile 1.txt
-MRU10=C:\\Mach4Industrial\\GcodeFiles\\roadrunner.tap
+MRU4=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard Middle row drill.nc
+MRU5=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard Second row pocket.nc
+MRU6=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard First row.nc
+MRU7=C:\\Users\\Colten Edwards\\Downloads\\Spoilboard Bottom Plate.nc
+MRU8=C:\\Users\\Colten Edwards\\Downloads\\aztec calender.nc
+MRU9=C:\\Users\\Colten Edwards\\Downloads\\New.nc
+MRU10=C:\\Users\\Colten Edwards\\Downloads\\Profile 1.txt
+LogCategories=-2147402001
 [Toolpath]
 BackgroundTopColor=8404992
 BackgroundBottomColor=8404992
@@ -236,17 +237,17 @@ MaxRPM=0.000000
 MinRPM=0.000000
 Reversed=0
 [Stats]
-TotalHours=273.199723
-SpindleHours=20.116322
-DistanceX=4975.876197
-DistanceY=3608.696188
-DistanceZ=2387.792137
+TotalHours=543.437931
+SpindleHours=20.346051
+DistanceX=8373.338884
+DistanceY=4630.551572
+DistanceZ=3467.148090
 DistanceA=0.000000
 DistanceB=0.000000
 DistanceC=0.000000
-M3=52
+M3=54
 M4=0
-M6=134
+M6=235
 [ARotoryAxisPosition]
 XAxis=0.000000
 YAxis=0.000000
@@ -522,7 +523,7 @@ CountsPerUnit=25536.261500
 MaxVelocity=117041.198542
 MaxAccel=199948.927545
 BacklashAmount=0.000000
-SoftMaxLimit=1225740.000000
+SoftMaxLimit=1123595.506000
 SoftMinLimit=0.000000
 EnableDelay=0
 CountsPerUnitAux=10000.000000
@@ -538,7 +539,7 @@ CountsPerUnit=25536.261500
 MaxVelocity=85120.871667
 MaxAccel=199948.927545
 BacklashAmount=0.000000
-SoftMaxLimit=1225740.000000
+SoftMaxLimit=1225740.552000
 SoftMinLimit=0.000000
 EnableDelay=0
 CountsPerUnitAux=10000.000000
@@ -555,7 +556,7 @@ MaxVelocity=37649.986675
 MaxAccel=200082.786330
 BacklashAmount=0.000000
 SoftMaxLimit=0.000000
-SoftMinLimit=-451799.000000
+SoftMinLimit=-451799.840100
 EnableDelay=0
 CountsPerUnitAux=10000.000000
 AuxPosEnable=0
@@ -2112,7 +2113,7 @@ Type=Input
 Desc=Probe
 Enabled=1
 Negated=0
-Mapping=ESS/Probe Zero Height
+Mapping=ESS/Zero Plate
 LogEnabled=1
 [Signal162]
 ID=162
@@ -2136,7 +2137,7 @@ Type=Input
 Desc=E-Stop
 Enabled=1
 Negated=0
-Mapping=ESS/ESTOP
+Mapping=ESS/Estop
 LogEnabled=1
 [Signal165]
 ID=165
@@ -2288,15 +2289,15 @@ Type=Input
 Desc=Probe1
 Enabled=1
 Negated=0
-Mapping=ESS/Probe Tool length
+Mapping=ESS/Fixed Probe
 LogEnabled=1
 [Signal184]
 ID=184
 Type=Input
 Desc=Probe2
-Enabled=0
+Enabled=1
 Negated=0
-Mapping=None
+Mapping=ESS/TouchXYZ Probe
 LogEnabled=1
 [Signal185]
 ID=185
@@ -3806,8 +3807,8 @@ w=640
 h=480
 [RegFileDiag]
 aot=1
-x=2515
-y=263
+x=2598
+y=265
 w=400
 h=516
 PoundVarlbound=0
@@ -5783,6 +5784,313 @@ Macro6=33
 Macro7=0
 Macro8=0
 Macro9=0
+[iReg1]
+Name=nf/TRC/cutDepth
+Desc=Depth of cuts.
+InitialValue=-0.05
+Persistent=1
+Value=0
+[iReg2]
+Name=nf/TRC/materialTop
+Desc=Top of stock.
+InitialValue=0
+Persistent=0
+[iReg3]
+Name=nf/TRC/plungeRate
+Desc=Feed rate of a plunge move.
+InitialValue=15
+Persistent=1
+Value=15
+[iReg4]
+Name=nf/TRC/safeZ
+Desc=Safe Z position.
+InitialValue=0.25
+Persistent=1
+Value=0.25
+[iReg5]
+Name=nf/TRC/spinRpm
+Desc=RPM of the spindle.
+InitialValue=24000
+Persistent=1
+Value=24000
+[iReg6]
+Name=nf/TRC/subAdd
+Desc=Subtract or remove material.
+InitialValue=-1
+Persistent=0
+[iReg7]
+Name=nf/TRC/totalDepth
+Desc=Total depth of cut.
+InitialValue=-0.1
+Persistent=1
+Value=0
+[iReg8]
+Name=nf/OtableToolToChange
+Desc=ToolToChange
+InitialValue=0
+Persistent=1
+Value=0
+[iReg9]
+Name=nf/OtableToolDesc
+Desc=Tool Description
+InitialValue=0
+Persistent=1
+[iReg10]
+Name=nf/OtableOffsetVal
+Desc=OffsetVal
+InitialValue=0
+Persistent=1
+Value=0
+[iReg11]
+Name=nf/OtableHalfOffsetVal
+Desc=HalfOffsetVal
+InitialValue=0
+Persistent=1
+Value=0
+[iReg12]
+Name=nf/OtableTargetDimention
+Desc=TargetDimention
+InitialValue=0
+Persistent=1
+Value=0
+[iReg13]
+Name=nf/OtableActualMeasure
+Desc=ActualMeasure
+InitialValue=0
+Persistent=1
+Value=0
+[iReg14]
+Name=nf/Otablehalfoffset
+Desc=halfoffset
+InitialValue=0
+Persistent=1
+Value=0
+[iReg15]
+Name=nf/OtableXwear
+Desc=X Wear
+InitialValue=0
+Persistent=1
+Value=1
+[iReg16]
+Name=MacrosLoaded
+Desc=AreMacrosLoaded
+InitialValue=0
+Persistent=1
+Value=0
+[iReg17]
+Name=circlesize
+Desc=SizeOfCircle
+InitialValue=0
+Persistent=1
+Value=0
+[iReg18]
+Name=circlerange
+Desc=RangeOfCircle
+InitialValue=0
+Persistent=1
+Value=0
+[iReg19]
+Name=FindCenter
+Desc=FindTheCenter
+InitialValue=0
+Persistent=1
+Value=0
+[iReg20]
+Name=CycleStart
+Desc=CycleStart
+InitialValue=0
+Persistent=1
+Value=0
+[iReg21]
+Name=Probe/OperationHolder
+Desc=Current probing operation
+InitialValue=0
+Persistent=1
+Value=0
+[iReg22]
+Name=Probe/X-
+Desc=X- Pos holder
+InitialValue=0
+Persistent=0
+[iReg23]
+Name=Probe/X+
+Desc=X+ Pos holder
+InitialValue=0
+Persistent=0
+[iReg24]
+Name=Probe/Y-
+Desc=Y- Pos holder
+InitialValue=0
+Persistent=0
+[iReg25]
+Name=Probe/Y+
+Desc=Y+ Pos holder
+InitialValue=0
+Persistent=0
+[iReg26]
+Name=Probe/Z-
+Desc=Z- Pos holder
+InitialValue=0
+Persistent=0
+[iReg27]
+Name=Probe/info
+Desc=Send probe information.
+InitialValue=0
+Persistent=1
+Value=0
+[iReg28]
+Name=Probe/status
+Desc=Current status of probing routine.
+InitialValue=0
+Persistent=1
+Value=0
+[iReg29]
+Name=Probe/probecount
+Desc=Waiting on probe to strike screen cycle counter.
+InitialValue=0
+Persistent=1
+Value=0
+[iReg30]
+Name=Probe/returningcount
+Desc=Waiting on return move to probing start loc.
+InitialValue=0
+Persistent=1
+Value=0
+[iReg31]
+Name=Probe/Speed
+Desc=The speed we probe at.
+InitialValue=0
+Persistent=1
+Value=0
+[iReg32]
+Name=Probe/ProbeStart
+Desc=Where we started out probe move.
+InitialValue=0
+Persistent=1
+Value=0
+[iReg33]
+Name=Probe/probefinal
+Desc=Where our probe struck.
+InitialValue=0
+Persistent=1
+Value=0
+[iReg34]
+Name=2025/XPlate
+InitialValue=0
+Persistent=1
+Value=1.7
+[iReg35]
+Name=2025/YPlate
+InitialValue=0
+Persistent=1
+Value=0.23
+[iReg36]
+Name=2025/TCX
+InitialValue=0
+Persistent=1
+Value=24
+[iReg37]
+Name=2025/TCY
+InitialValue=0
+Persistent=1
+Value=6
+[iReg38]
+Name=2025/TCZ
+InitialValue=0
+Persistent=1
+Value=1.5
+[iReg39]
+Name=2025/PlateThickness
+InitialValue=0
+Persistent=1
+Value=0.2
+[iReg40]
+Name=2025/LaserOffsetX
+Persistent=1
+Value=2.958
+[iReg41]
+Name=2025/LaserOffsetY
+Persistent=1
+Value=-0.3513
+[iReg42]
+Name=2025/ParkLocationX
+Persistent=1
+Value=24
+[iReg43]
+Name=2025/ParkLocationY
+Persistent=1
+Value=40
+[iReg44]
+Name=2025/ParkLocationZ
+Persistent=1
+Value=1
+[iReg45]
+Name=2025/ZHeightSurface
+Persistent=1
+Value=0.2
+[iReg46]
+Name=2025/FixedPlateTouchZ
+Persistent=1
+Value=3.0207672119142
+[iReg47]
+Name=2025/LastFixedPlateTouchZ
+Persistent=1
+Value=reset
+[iReg48]
+Name=2025/FirstTouchSpeed
+Persistent=1
+Value=10
+[iReg49]
+Name=2025/SecondTouchSpeed
+Persistent=1
+Value=5
+[iReg50]
+Name=2025/TouchRetractHeight
+Persistent=1
+Value=0.5
+[iReg51]
+Name=2025/MoveToPlateDistance
+Persistent=1
+Value=0.5
+[iReg52]
+Name=2025/ProbingSearchDistance
+Persistent=1
+Value=7
+[iReg53]
+Name=2025/IgnoreM6
+InitialValue=0
+Persistent=1
+Value=0
+[iReg54]
+Name=2025/UseMachineCoord
+Persistent=1
+Value=0
+[iReg55]
+Name=2025/UseSafeZ
+Persistent=1
+Value=0
+[iReg56]
+Name=2025/UseMatOffset
+Persistent=1
+Value=31.0
+[iReg57]
+Name=2025/ZClearance
+Persistent=1
+Value=0.5
+[iReg58]
+Name=2025/MaterialOffset
+Persistent=1
+Value=0
+[iReg59]
+Name=2025/FixedPlateProbe
+InitialValue=31.1
+Persistent=1
+Value=31.1
+[iReg60]
+Name=2025/MovablePlateProbe
+InitialValue=31.0
+Persistent=1
+Value=31.0
 [ESS]
 iMach4VersionWarning_4612=1
 BoardIpAddr=192.168.1.99
@@ -5814,11 +6122,11 @@ iAnalogOutSendAllMessagesToLog=1
 iUseAnalogOut0=0
 iUseAnalogOut1=0
 Spindle-Mode=PWM
-SpindlePwmFrequency=1000.00
+SpindlePwmFrequency=300.00
 RPMSourceSpindleIndex=1
 RPMSourceSpindleEncoderA=0
 PwmDutyCycleZeroAtMinRPM=0
-iReportSpindleRPM=0
+iReportSpindleRPM=1
 UseSpindlePID=0
 UsePidWhileThreading=0
 CreatePidLogFile=0
@@ -5905,22 +6213,22 @@ Port1-Pin9-ActiveLow=1
 Port1-Pin9-NoiseFilterValue=0.00
 Port1-Pin9-OutputPinStopState=No Change
 Port1-Pin9-OutputPinFeedHoldState=No Change
-Port1-Pin10-Alias=Motor0 ++
+Port1-Pin10-Alias=Estop
 Port1-Pin10-ActiveLow=1
 Port1-Pin10-NoiseFilterValue=100.00
 Port1-Pin10-OutputPinStopState=-----
 Port1-Pin10-OutputPinFeedHoldState=-----
-Port1-Pin11-Alias=Motor1 ++
+Port1-Pin11-Alias=Motor0 ++
 Port1-Pin11-ActiveLow=1
 Port1-Pin11-NoiseFilterValue=100.00
 Port1-Pin11-OutputPinStopState=-----
 Port1-Pin11-OutputPinFeedHoldState=-----
-Port1-Pin12-Alias=Motor2 ++
+Port1-Pin12-Alias=Motor1 ++
 Port1-Pin12-ActiveLow=1
 Port1-Pin12-NoiseFilterValue=100.00
 Port1-Pin12-OutputPinStopState=-----
 Port1-Pin12-OutputPinFeedHoldState=-----
-Port1-Pin13-Alias=Motor3 ++
+Port1-Pin13-Alias=Motor2 ++
 Port1-Pin13-ActiveLow=1
 Port1-Pin13-NoiseFilterValue=100.00
 Port1-Pin13-OutputPinStopState=-----
@@ -5930,8 +6238,8 @@ Port1-Pin14-ActiveLow=0
 Port1-Pin14-NoiseFilterValue=0.00
 Port1-Pin14-OutputPinStopState=No Change
 Port1-Pin14-OutputPinFeedHoldState=No Change
-Port1-Pin15-Alias=Probe Zero Height
-Port1-Pin15-ActiveLow=0
+Port1-Pin15-Alias=Motor3 ++
+Port1-Pin15-ActiveLow=1
 Port1-Pin15-NoiseFilterValue=0.00
 Port1-Pin15-OutputPinStopState=-----
 Port1-Pin15-OutputPinFeedHoldState=-----
@@ -5950,18 +6258,18 @@ Port2-Pin1-ActiveLow=0
 Port2-Pin1-NoiseFilterValue=0.00
 Port2-Pin1-OutputPinStopState=No Change
 Port2-Pin1-OutputPinFeedHoldState=No Change
-Port2-Pin2-Alias={P2-2}
+Port2-Pin2-Alias=Fixed Probe
 Port2-Pin2-ActiveLow=0
-Port2-Pin2-NoiseFilterValue=0.00
+Port2-Pin2-NoiseFilterValue=50.00
 Port2-Pin2-OutputPinStopState=-----
 Port2-Pin2-OutputPinFeedHoldState=-----
-Port2-Pin3-Alias={P2-3}
+Port2-Pin3-Alias=Zero Plate
 Port2-Pin3-ActiveLow=0
-Port2-Pin3-NoiseFilterValue=0.00
+Port2-Pin3-NoiseFilterValue=50.00
 Port2-Pin3-OutputPinStopState=-----
 Port2-Pin3-OutputPinFeedHoldState=-----
-Port2-Pin4-Alias={P2-4}
-Port2-Pin4-ActiveLow=0
+Port2-Pin4-Alias=TouchXYZ Probe
+Port2-Pin4-ActiveLow=1
 Port2-Pin4-NoiseFilterValue=0.00
 Port2-Pin4-OutputPinStopState=-----
 Port2-Pin4-OutputPinFeedHoldState=-----
@@ -5990,8 +6298,8 @@ Port2-Pin9-ActiveLow=0
 Port2-Pin9-NoiseFilterValue=0.00
 Port2-Pin9-OutputPinStopState=-----
 Port2-Pin9-OutputPinFeedHoldState=-----
-Port2-Pin10-Alias=ESTOP
-Port2-Pin10-ActiveLow=1
+Port2-Pin10-Alias={P2-10}
+Port2-Pin10-ActiveLow=0
 Port2-Pin10-NoiseFilterValue=0.00
 Port2-Pin10-OutputPinStopState=-----
 Port2-Pin10-OutputPinFeedHoldState=-----
@@ -6081,7 +6389,7 @@ Port3-Pin10-NoiseFilterValue=0.00
 Port3-Pin10-OutputPinStopState=-----
 Port3-Pin10-OutputPinFeedHoldState=-----
 Port3-Pin11-Alias={P3-11}
-Port3-Pin11-ActiveLow=1
+Port3-Pin11-ActiveLow=0
 Port3-Pin11-NoiseFilterValue=0.00
 Port3-Pin11-OutputPinStopState=-----
 Port3-Pin11-OutputPinFeedHoldState=-----
@@ -6116,7 +6424,7 @@ Port3-Pin17-NoiseFilterValue=0.00
 Port3-Pin17-OutputPinStopState=No Change
 Port3-Pin17-OutputPinFeedHoldState=No Change
 ISigMap-EStop-Enable=1
-ISigMap-EStop=ESTOP
+ISigMap-EStop=Estop
 ISigMap-Motor0-Home-Enable=1
 ISigMap-Motor0-Home=Motor0 ++
 ISigMap-Motor1-Home-Enable=1
@@ -6177,10 +6485,11 @@ ISigMap-Index-Enable=0
 ISigMap-SpindleAtSpeed-Enable=0
 ISigMap-SpindleAtZero-Enable=0
 ISigMap-Probe-Enable=1
-ISigMap-Probe=Probe Zero Height
+ISigMap-Probe=Zero Plate
 ISigMap-Probe1-Enable=1
-ISigMap-Probe1=Probe Tool length
-ISigMap-Probe2-Enable=0
+ISigMap-Probe1=Fixed Probe
+ISigMap-Probe2-Enable=1
+ISigMap-Probe2=TouchXYZ Probe
 ISigMap-Probe3-Enable=0
 ISigMap-THCOn-Enable=0
 ISigMap-THCUp-Enable=0
@@ -6552,292 +6861,4 @@ i_HC_PierceCountWarningValue=0
 i_HC_UseXYVelocityPWM=0
 ShowWarp9SplashScreen=1
 i_HC_PierceCountCurrentValue=0
-[iReg1]
-Name=nf/TRC/cutDepth
-Desc=Depth of cuts.
-InitialValue=-0.05
-Persistent=1
-Value=0
-[iReg2]
-Name=nf/TRC/materialTop
-Desc=Top of stock.
-InitialValue=0
-Persistent=0
-[iReg3]
-Name=nf/TRC/plungeRate
-Desc=Feed rate of a plunge move.
-InitialValue=15
-Persistent=1
-Value=15
-[iReg4]
-Name=nf/TRC/safeZ
-Desc=Safe Z position.
-InitialValue=0.25
-Persistent=1
-Value=0.25
-[iReg5]
-Name=nf/TRC/spinRpm
-Desc=RPM of the spindle.
-InitialValue=24000
-Persistent=1
-Value=24000
-[iReg6]
-Name=nf/TRC/subAdd
-Desc=Subtract or remove material.
-InitialValue=-1
-Persistent=0
-[iReg7]
-Name=nf/TRC/totalDepth
-Desc=Total depth of cut.
-InitialValue=-0.1
-Persistent=1
-Value=0
-[iReg8]
-Name=nf/OtableToolToChange
-Desc=ToolToChange
-InitialValue=0
-Persistent=1
-Value=0
-[iReg9]
-Name=nf/OtableToolDesc
-Desc=Tool Description
-InitialValue=0
-Persistent=1
-[iReg10]
-Name=nf/OtableOffsetVal
-Desc=OffsetVal
-InitialValue=0
-Persistent=1
-Value=0
-[iReg11]
-Name=nf/OtableHalfOffsetVal
-Desc=HalfOffsetVal
-InitialValue=0
-Persistent=1
-Value=0
-[iReg12]
-Name=nf/OtableTargetDimention
-Desc=TargetDimention
-InitialValue=0
-Persistent=1
-Value=0
-[iReg13]
-Name=nf/OtableActualMeasure
-Desc=ActualMeasure
-InitialValue=0
-Persistent=1
-Value=0
-[iReg14]
-Name=nf/Otablehalfoffset
-Desc=halfoffset
-InitialValue=0
-Persistent=1
-Value=0
-[iReg15]
-Name=nf/OtableXwear
-Desc=X Wear
-InitialValue=0
-Persistent=1
-Value=1
-[iReg16]
-Name=MacrosLoaded
-Desc=AreMacrosLoaded
-InitialValue=0
-Persistent=1
-Value=0
-[iReg17]
-Name=circlesize
-Desc=SizeOfCircle
-InitialValue=0
-Persistent=1
-Value=0
-[iReg18]
-Name=circlerange
-Desc=RangeOfCircle
-InitialValue=0
-Persistent=1
-Value=0
-[iReg19]
-Name=FindCenter
-Desc=FindTheCenter
-InitialValue=0
-Persistent=1
-Value=0
-[iReg20]
-Name=CycleStart
-Desc=CycleStart
-InitialValue=0
-Persistent=1
-Value=0
-[iReg21]
-Name=Probe/OperationHolder
-Desc=Current probing operation
-InitialValue=0
-Persistent=1
-Value=0
-[iReg22]
-Name=Probe/X-
-Desc=X- Pos holder
-InitialValue=0
-Persistent=0
-[iReg23]
-Name=Probe/X+
-Desc=X+ Pos holder
-InitialValue=0
-Persistent=0
-[iReg24]
-Name=Probe/Y-
-Desc=Y- Pos holder
-InitialValue=0
-Persistent=0
-[iReg25]
-Name=Probe/Y+
-Desc=Y+ Pos holder
-InitialValue=0
-Persistent=0
-[iReg26]
-Name=Probe/Z-
-Desc=Z- Pos holder
-InitialValue=0
-Persistent=0
-[iReg27]
-Name=Probe/info
-Desc=Send probe information.
-InitialValue=0
-Persistent=1
-Value=0
-[iReg28]
-Name=Probe/status
-Desc=Current status of probing routine.
-InitialValue=0
-Persistent=1
-Value=0
-[iReg29]
-Name=Probe/probecount
-Desc=Waiting on probe to strike screen cycle counter.
-InitialValue=0
-Persistent=1
-Value=0
-[iReg30]
-Name=Probe/returningcount
-Desc=Waiting on return move to probing start loc.
-InitialValue=0
-Persistent=1
-Value=0
-[iReg31]
-Name=Probe/Speed
-Desc=The speed we probe at.
-InitialValue=0
-Persistent=1
-Value=0
-[iReg32]
-Name=Probe/ProbeStart
-Desc=Where we started out probe move.
-InitialValue=0
-Persistent=1
-Value=0
-[iReg33]
-Name=Probe/probefinal
-Desc=Where our probe struck.
-InitialValue=0
-Persistent=1
-Value=0
-[iReg34]
-Name=2025/XPlate
-InitialValue=0
-Persistent=1
-Value=4
-[iReg35]
-Name=2025/YPlate
-InitialValue=0
-Persistent=1
-Value=7
-[iReg36]
-Name=2025/TCX
-InitialValue=0
-Persistent=1
-Value=24
-[iReg37]
-Name=2025/TCY
-InitialValue=0
-Persistent=1
-Value=6
-[iReg38]
-Name=2025/TCZ
-InitialValue=0
-Persistent=1
-Value=1.5
-[iReg39]
-Name=2025/PlateThickness
-InitialValue=0
-Persistent=1
-Value=0.125
-[iReg40]
-Name=2025/LaserOffsetX
-Persistent=1
-Value=6
-[iReg41]
-Name=2025/LaserOffsetY
-Persistent=1
-Value=5
-[iReg42]
-Name=2025/ParkLocationX
-Persistent=1
-Value=24
-[iReg43]
-Name=2025/ParkLocationY
-Persistent=1
-Value=40
-[iReg44]
-Name=2025/ParkLocationZ
-Persistent=1
-Value=1
-[iReg45]
-Name=2025/ZHeightSurface
-Persistent=1
-Value=0.125
-[iReg46]
-Name=2025/FixedPlateTouchZ
-Persistent=1
-Value=-0.10393323728735
-[iReg47]
-Name=2025/LastFixedPlateTouchZ
-Persistent=1
-Value=-1.5150271408595
-[iReg48]
-Name=2025/FirstTouchSpeed
-Persistent=1
-Value=10
-[iReg49]
-Name=2025/SecondTouchSpeed
-Persistent=1
-Value=5
-[iReg50]
-Name=2025/TouchRetractHeight
-Persistent=1
-Value=0.5
-[iReg51]
-Name=2025/MoveToPlateDistance
-Persistent=1
-Value=0.5
-[iReg52]
-Name=2025/ProbingSearchDistance
-Persistent=1
-Value=7
-[iReg53]
-Name=2025/IgnoreM6
-Persistent=1
-Value=0
-[iReg54]
-Name=2025/UseMachineCoord
-Persistent=1
-Value=0
-[iReg55]
-Name=2025/UseSafeZ
-Persistent=1
-Value=0
-[iReg56]
-Name=2025/UseMatOffset
-Persistent=1
-Value=0
 
